@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MS659 on techStop</title>
+    <link>https://techstop.github.io/tags/ms659/</link>
+    <description>Recent content in MS659 on techStop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Jan 2018 01:27:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://techstop.github.io/tags/ms659/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LG Optimus F3 Freedom Kernel</title>
+      <link>https://techstop.github.io/lg-optimus-f3-freedom-kernel/</link>
+      <pubDate>Mon, 22 Jan 2018 01:27:40 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/lg-optimus-f3-freedom-kernel/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/lg-optimus-f3-kernels-300x234.jpg&#34; alt=&#34;LG Optimus F3 Freedom Kernel&#34; title=&#34;LG Optimus F3 Freedom Kernel&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;Want more control over your device? Consider installing the LG Optimus F3 Freedom kernel lite or overclocked. With these kernels you&amp;rsquo;ll have features like init-d or overclocking. There&amp;rsquo;s also a few governors to play with to help manage performance.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LG Optimus F3 ROMs</title>
+      <link>https://techstop.github.io/lg-optimus-f3-roms/</link>
+      <pubDate>Sun, 21 Jan 2018 22:42:23 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/lg-optimus-f3-roms/</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-0.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-1.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-2.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The LG Optimus F3 ROMs really enhance the user experience and make this device much more ejoyable. Aside from the usual deodex, debloating, and zipaligning, Xperion rom adds other elements that otherwise do not come in the factory rom. The Xperion theme that comes with the rom is quite a nice touch.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

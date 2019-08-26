@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LG Optimus F3 Freedom Kernel - techStop</title>
+  <meta name="author" content="Antonio">
+  <meta name="description" content="A tech blog about linux and android.">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <meta name="generator" content="Hugo 0.55.6" />
+  <link href="https://techstop.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="techStop" />
+  <link href="https://techstop.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="techStop" />
+  <link rel="icon" href="https://techstop.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://techstop.github.io/img/apple-touch-icon.png" />
+</head>
+<body>
+    <header class="site-header">
+  <style>
+    .site-header h2 .logo {
+    background: url(https://techstop.github.io/img/techStop_header.png) no-repeat 0 0;
+    }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .site-header h2 .logo {
+        background-image: url(https://techstop.github.io/img/techStop_header.png);
+    } }
+    .site-header {
+      background: #2a373d url(https://techstop.github.io/img/techStop_header.png) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "var(--cookie-bg)",
+      "text": "var(--cookie-font)"
+    },
+    "button": {
+      "background": "var(--color-primary)",
+      "hover": "var(--color-secondary)"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "dismiss": "Close"
+  }
+})});
+</script>
+
+  
+  <button onclick="topFunction()" id="myBtn" title="Back to top">&#8682;</button>
+</header>
+<nav class="navbar">
+  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+    <i class="fa fa-bars"></i>
+  </label>
+    <a href="https://techstop.github.io/" class="logo">techStop</a>
+  <input type="checkbox" id="chkToggle"></input>
+  <ul class="main-nav" id="js-menu"><li>
+      <a href="https://techstop.github.io/" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/linux/" class="nav-links">Linux</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/android/" class="nav-links">Android</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/tutorials/" class="nav-links">Tutorials</a>
+    </li>
+      <li>
+        <a href="https://techstop.github.io/search/" class="nav-links"><button type="submit" style="background: none; border: none; padding: 0;" title="Search"><i class="fa fa-search"></i></button></a>
+      </li>
+  </ul>
+</nav>
+<div style="float: right; margin-top: 10px; margin-right: 20px;">
+<a href="//github.com/GameTheory-" id="social-icon" class="icon-github" target="_blank" title="Github"></a>
+<a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+</div>
+<div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox" title="Dark Mode">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+    <br>
+    <div class="container clearfix">
+      <main>
+  <div class="content">
+    <article>
+      <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
+      
+  <h1><a href="https://techstop.github.io/lg-optimus-f3-freedom-kernel/" title="LG Optimus F3 Freedom Kernel">LG Optimus F3 Freedom Kernel</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="Jan 22, 2018">Jan 22, 2018</time></span></div>
+
+      <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/f3/lg-optimus-f3-kernels-300x234.jpg" alt="LG Optimus F3 Freedom Kernel" title="LG Optimus F3 Freedom Kernel"  width="100px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+
+<p>Want more control over your device? Consider installing the LG Optimus F3 Freedom kernel lite or overclocked. With these kernels you&rsquo;ll have features like init-d or overclocking. There&rsquo;s also a few governors to play with to help manage performance.</p>
+
+<h4 style="text-align: center;"><strong>When There's Freedom, There's Potential...<br>Freedom Kernel</strong></h4>
+
+<p>There are two kernels to choose from within an Aroma installer. Full details below&hellip;</p>
+
+<p><strong>Both kernels are for the MS659 and P659.</strong></p>
+
+<p><strong>Freedom Lite features:</strong></p>
+
+<ul>
+<li>Unsecured</li>
+<li>Loki&rsquo;d</li>
+<li>Frandom built in for increased speed</li>
+<li>Android TRIM Support</li>
+<li>Conservative governor</li>
+<li>SmartassV2 governor</li>
+<li>Intellidemand governor</li>
+<li>Superbad governor</li>
+<li>Init.d support</li>
+</ul>
+
+<p><strong>Freedom Overclocked features:</strong></p>
+
+<ul>
+<li>1.404 ghz CPU overclock</li>
+<li>1.3 ghz L2 cache boost clock – details</li>
+<li>Plus all features of Freedom Lite</li>
+</ul>
+
+<p><strong>Instructions:</strong></p>
+
+<ol>
+<li>Boot into recovery.</li>
+<li>Make a backup if you haven&rsquo;t already.</li>
+<li>Flash the zip and choose the kernel you wish to install.</li>
+<li>Done! Reboot!</li>
+</ol>
+
+<div>
+  <a title="Freedom Kernel" href="https://github.com/GameTheory-/android_kernel_lge_f3/releases/download/v1.0/Freedom_f310c_9-9-2014.zip" target="">
+  <button id="cta-btn"><i class="fa fa-download"></i> Freedom Kernel</button>
+  </a>
+</div>
+      <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2flg-optimus-f3-freedom-kernel%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=LG%20Optimus%20F3%20Freedom%20Kernel&amp;url=https%3a%2f%2ftechstop.github.io%2flg-optimus-f3-freedom-kernel%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2flg-optimus-f3-freedom-kernel%2f&title=LG%20Optimus%20F3%20Freedom%20Kernel" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+      
+        Tags:
+        
+          <a href="https://techstop.github.io/tags/lg-optimus-f3">lg optimus f3</a>, 
+        
+          <a href="https://techstop.github.io/tags/ms659">ms659</a>, 
+        
+          <a href="https://techstop.github.io/tags/p659">p659</a>, 
+        
+          <a href="https://techstop.github.io/tags/android">android</a>, 
+        
+          <a href="https://techstop.github.io/tags/kernel">kernel</a>
+        
+      
+    </article>
+    <hr>
+    
+      <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1F4AC;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
+
+    
+  </div>
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
+
+      </main>
+    </div>
+    <script>
+const myScript = document.getElementById('myScriptId');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    
+      document.location.reload(true)
+    
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('theme');
+    
+      document.location.reload(true)
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+  
+    myScript.setAttribute('theme', 'github-dark');
+  
+}
+</script>
+<style>
+  .font-row-one {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+  .font-row-two {
+    font-size: 12px;
+  }
+</style>
+<footer class="main-footer">
+  <div class="container clearfix">
+    <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
+  </div>
+  <script src="https://techstop.github.io/bundle.min.4980076a9845e1c23b5f38d614dcf7ad0c37bf711703a3368f9039a17f812986.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script src="https://techstop.github.io/js/plugins.js"></script>
+  
+  </footer>
+</body>
+</html>

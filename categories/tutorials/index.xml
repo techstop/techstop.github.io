@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on techStop</title>
+    <link>https://techstop.github.io/categories/tutorials/</link>
+    <description>Recent content in Tutorials on techStop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Feb 2019 00:36:55 +0000</lastBuildDate>
+    
+	<atom:link href="https://techstop.github.io/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Admob Tutorial</title>
+      <link>https://techstop.github.io/admob-tutorial/</link>
+      <pubDate>Thu, 07 Feb 2019 00:36:55 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/admob-tutorial/</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/admob-tutorial/admob-tutorial-0.png&#34; alt=&#34;Admob Tutorial&#34; title=&#34;Admob Tutorial&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/admob-tutorial/admob-tutorial-1.png&#34; alt=&#34;Admob Tutorial&#34; title=&#34;Admob Tutorial&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In this Android Admob tutorial we will go over how to ad admob to your android app. With admob you can monetize your app and make some income for your efforts. There are a few types of admob ad units that you can ad to your app. For this admob tutorial we will be adding the smart banner which can display banner ads of different sizes eliminating the need to set a fixed size.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android WebView</title>
+      <link>https://techstop.github.io/android-webview/</link>
+      <pubDate>Mon, 04 Feb 2019 22:27:34 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/android-webview/</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-webview/android-webview-0.png&#34; alt=&#34;Android WebView&#34; title=&#34;Android WebView&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-webview/android-webview-1.png&#34; alt=&#34;Android WebView&#34; title=&#34;Android WebView&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage permissions for our DownloadListener for android 6+.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android Toolbar</title>
+      <link>https://techstop.github.io/android-toolbar/</link>
+      <pubDate>Mon, 21 Jan 2019 16:36:29 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/android-toolbar/</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-toolbar/android-toolbar-0.png&#34; alt=&#34;Android Toolbar&#34; title=&#34;Android Toolbar&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-toolbar/android-toolbar-1.png&#34; alt=&#34;Android Toolbar&#34; title=&#34;Android Toolbar&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Often times users are looking to create an Android Toolbar so they can customize it to their liking. In this tutorial we&amp;rsquo;ll go over how to create an Android custom Toolbar and show you a few modifications you can do to the Toolbar for your app.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android BroadcastReceiver</title>
+      <link>https://techstop.github.io/android-broadcastreceiver/</link>
+      <pubDate>Sat, 19 Jan 2019 00:50:48 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/android-broadcastreceiver/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/broadcastreceiver/android-broadcastreceiver.png&#34; alt=&#34;Android BroadcastReceiver&#34; title=&#34;Android BroadcastReceiver&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;Today we will be using an android BroadcastReceiver to run code on boot up. There can be many reasons to run code on boot up. One good use case would be to enable settings that a user has selected within your app to be set on every boot up.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How To Reduce Apk Size</title>
+      <link>https://techstop.github.io/reduce-apk-size/</link>
+      <pubDate>Sun, 25 Nov 2018 00:34:06 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/reduce-apk-size/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reduce-apk-size/How-To-Reduce-Apk-Size.png&#34; alt=&#34;How To Reduce Apk Size&#34; title=&#34;How To Reduce Apk Size&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&amp;rsquo;ll give your users a smooth experience throughout your apps&amp;rsquo; UI along with a smaller foot print.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How To Get Android Mounts and Partition Images</title>
+      <link>https://techstop.github.io/android-mounts-and-partition-images/</link>
+      <pubDate>Thu, 22 Nov 2018 00:50:19 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/android-mounts-and-partition-images/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-mounts/android-mounts-and-partition-images.png&#34; alt=&#34;How To Get Android Mounts and Partition Images&#34; title=&#34;How To Get Android Mounts and Partition Images&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;In this guide I will be showing you how to get the android mounts and partition images. There could be many reasons for needing the android mounts and partition images. A couple reasons that come to mind could be to make backups of your partitions in case you need to fix your phone from a bad flash later on. Or you might want to customize a boot.img or system.img to add in some custom features. Whatever your reason, just follow the guide and you&amp;rsquo;ll be pulling those partitions in no time.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Open File as Root</title>
+      <link>https://techstop.github.io/open-file-as-root/</link>
+      <pubDate>Tue, 08 May 2018 22:33:30 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/open-file-as-root/</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-0.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-1.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;If you need to open file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open files or folders with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer included in the ubuntu family as of version 17.10 or any derivatives of ubuntu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install ADB On Linux</title>
+      <link>https://techstop.github.io/install-adb-on-linux/</link>
+      <pubDate>Mon, 07 May 2018 21:16:16 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/install-adb-on-linux/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/adb-linux/install_adb_on_linux.png&#34; alt=&#34;Install ADB On Linux&#34; title=&#34;Install ADB On Linux&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;If you’re looking to install adb on Linux, but don’t want to install Android Studio then this guide is for you. Android Studio is a development environment for creating android apps, but it’s a large download and installation if all you need is adb and fastboot. Below is a guide to install just adb and fastboot which will be a very small download and quick installation.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

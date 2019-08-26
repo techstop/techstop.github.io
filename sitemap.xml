@@ -3,18 +3,425 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://techstop.github.io/admob-tutorial/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/categories/android/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://techstop.github.io/categories/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://techstop.github.io/post/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/categories/tutorials/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/android-studio/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/app-development/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/java/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/android-webview/</loc>
+    <lastmod>2019-02-04T22:27:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/android-toolbar/</loc>
+    <lastmod>2019-01-21T16:36:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/android-broadcastreceiver/</loc>
+    <lastmod>2019-01-19T00:50:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/android/</loc>
+    <lastmod>2018-12-10T16:36:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/freedom-kernel-for-the-zmax-pro/</loc>
+    <lastmod>2018-12-10T16:36:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/kernel/</loc>
+    <lastmod>2018-12-10T16:36:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/zte-z981/</loc>
+    <lastmod>2018-12-10T16:36:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/reduce-apk-size/</loc>
+    <lastmod>2018-11-25T00:34:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/tutorials/</loc>
+    <lastmod>2018-11-25T00:34:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/android-mounts-and-partition-images/</loc>
+    <lastmod>2018-11-22T00:50:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/linux/</loc>
+    <lastmod>2018-11-22T00:50:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/categories/linux/</loc>
+    <lastmod>2018-11-22T00:50:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/arc-dark-theme-for-gedit/</loc>
+    <lastmod>2018-07-04T20:18:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/apk-utility/</loc>
+    <lastmod>2018-06-08T01:35:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/decompile-apk/</loc>
+    <lastmod>2018-06-08T01:35:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/apktool/</loc>
+    <lastmod>2018-06-08T01:35:25+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/open-file-as-root/</loc>
+    <lastmod>2018-05-08T22:33:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/adb/</loc>
+    <lastmod>2018-05-07T21:16:16+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/install-adb-on-linux/</loc>
+    <lastmod>2018-05-07T21:16:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/mktool/</loc>
+    <lastmod>2018-04-27T19:57:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/mktool/</loc>
+    <lastmod>2018-04-27T19:57:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/unpack-boot.img/</loc>
+    <lastmod>2018-04-27T19:57:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/backup-android/</loc>
+    <lastmod>2018-04-19T23:49:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/backup-and-debloat-android-no-root/</loc>
+    <lastmod>2018-04-19T23:49:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/debloat-android/</loc>
+    <lastmod>2018-04-19T23:49:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/mkv-to-mp4/</loc>
+    <lastmod>2018-03-30T00:04:34+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/mkv-to-mp4/</loc>
+    <lastmod>2018-03-30T00:04:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/apps/</loc>
+    <lastmod>2018-03-19T19:52:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/reboot-utility/</loc>
+    <lastmod>2018-03-19T19:52:17+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/reboot-utility/</loc>
+    <lastmod>2018-03-19T19:52:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/recovery-reboot/</loc>
+    <lastmod>2018-03-03T22:58:20+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/recovery-reboot/</loc>
+    <lastmod>2018-03-03T22:58:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/h631/</loc>
+    <lastmod>2018-01-23T23:52:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/lg-g-stylo/</loc>
+    <lastmod>2018-01-23T23:52:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-g-stylo-katana-rom/</loc>
+    <lastmod>2018-01-23T23:52:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/ms631/</loc>
+    <lastmod>2018-01-23T23:52:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/rom/</loc>
+    <lastmod>2018-01-23T23:52:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-g-stylo-twrp-recovery/</loc>
+    <lastmod>2018-01-23T23:28:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/twrp-recovery/</loc>
+    <lastmod>2018-01-23T23:28:58+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/d500/</loc>
+    <lastmod>2018-01-23T01:28:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/lg-optimus-f6/</loc>
+    <lastmod>2018-01-23T01:28:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-optimus-f6-freedom-kernel/</loc>
+    <lastmod>2018-01-23T01:28:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/ms500/</loc>
+    <lastmod>2018-01-23T01:28:24+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-g-stylo-flashable-v10j/</loc>
+    <lastmod>2018-01-22T23:56:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/v10j/</loc>
+    <lastmod>2018-01-22T23:56:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-g-stylo-unbrick-guide/</loc>
+    <lastmod>2018-01-22T23:55:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/unbrick/</loc>
+    <lastmod>2018-01-22T23:55:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-optimus-f6-xperion-rom/</loc>
+    <lastmod>2018-01-22T20:23:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/lg-optimus-f3/</loc>
+    <lastmod>2018-01-22T01:27:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-optimus-f3-freedom-kernel/</loc>
+    <lastmod>2018-01-22T01:27:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/ms659/</loc>
+    <lastmod>2018-01-22T01:27:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/p659/</loc>
+    <lastmod>2018-01-22T01:27:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-optimus-f3-roms/</loc>
+    <lastmod>2018-01-21T22:42:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-optimus-f7-kernel/</loc>
+    <lastmod>2018-01-21T19:51:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/lg-optimus-f7-lg870/</loc>
+    <lastmod>2018-01-21T19:51:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/lg-lucid-2-vs870/</loc>
+    <lastmod>2018-01-21T00:02:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-lucid-2-xperion-rom/</loc>
+    <lastmod>2018-01-21T00:02:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/lg-spirit-4g-ms870/</loc>
+    <lastmod>2018-01-20T00:04:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-spirit-4g-roms/</loc>
+    <lastmod>2018-01-20T00:04:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/lg-motion-4g-kernel/</loc>
+    <lastmod>2018-01-18T00:58:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/lg-motion-4g-ms770/</loc>
+    <lastmod>2018-01-18T00:58:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/huawei-ascend-m860/</loc>
+    <lastmod>2018-01-17T03:11:09+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/huawei-ascend-m860-centurion-rom/</loc>
+    <lastmod>2018-01-17T03:11:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/privacy-policy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/search/</loc>
+    <priority>0.1</priority>
   </url>
   
 </urlset>

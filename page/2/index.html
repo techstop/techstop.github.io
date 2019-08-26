@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>techStop</title>
+  <meta name="author" content="Antonio">
+  <meta name="description" content="A tech blog about linux and android.">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <meta name="generator" content="Hugo 0.55.6" />
+  <link href="https://techstop.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="techStop" />
+  <link href="https://techstop.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="techStop" />
+  <link rel="icon" href="https://techstop.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://techstop.github.io/img/apple-touch-icon.png" />
+</head>
+<body>
+    <header class="site-header">
+  <style>
+    .site-header h2 .logo {
+    background: url(https://techstop.github.io/img/techStop_header.png) no-repeat 0 0;
+    }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .site-header h2 .logo {
+        background-image: url(https://techstop.github.io/img/techStop_header.png);
+    } }
+    .site-header {
+      background: #2a373d url(https://techstop.github.io/img/techStop_header.png) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+      <div class="transparent-layer">
+        
+      </div>
+    
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "var(--cookie-bg)",
+      "text": "var(--cookie-font)"
+    },
+    "button": {
+      "background": "var(--color-primary)",
+      "hover": "var(--color-secondary)"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "dismiss": "Close"
+  }
+})});
+</script>
+
+  
+  <button onclick="topFunction()" id="myBtn" title="Back to top">&#8682;</button>
+</header>
+<nav class="navbar">
+  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+    <i class="fa fa-bars"></i>
+  </label>
+    <a href="https://techstop.github.io/" class="logo">techStop</a>
+  <input type="checkbox" id="chkToggle"></input>
+  <ul class="main-nav" id="js-menu"><li>
+      <a href="https://techstop.github.io/" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/linux/" class="nav-links">Linux</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/android/" class="nav-links">Android</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/tutorials/" class="nav-links">Tutorials</a>
+    </li>
+      <li>
+        <a href="https://techstop.github.io/search/" class="nav-links"><button type="submit" style="background: none; border: none; padding: 0;" title="Search"><i class="fa fa-search"></i></button></a>
+      </li>
+  </ul>
+</nav>
+<div style="float: right; margin-top: 10px; margin-right: 20px;">
+<a href="//github.com/GameTheory-" id="social-icon" class="icon-github" target="_blank" title="Github"></a>
+<a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+</div>
+<div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox" title="Dark Mode">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+    <br>
+    <div class="container clearfix">
+      <main>
+  <article class="content">
+  
+  
+      <article>
+  
+  <h1><a href="https://techstop.github.io/android-mounts-and-partition-images/" title="How To Get Android Mounts and Partition Images">How To Get Android Mounts and Partition Images</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="Nov 22, 2018">Nov 22, 2018</time></span></div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/android-mounts/android-mounts-and-partition-images.png" alt="How To Get Android Mounts and Partition Images" title="How To Get Android Mounts and Partition Images"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>In this guide I will be showing you how to get the android mounts and partition images. There could be many reasons for needing the android mounts and partition images. A couple reasons that come to mind could be to make backups of your partitions in case you need to fix your phone from a bad flash later on. Or you might want to customize a boot.img or system.img to add in some custom features. Whatever your reason, just follow the guide and you&rsquo;ll be pulling those partitions in no time.&hellip;</p>
+  <a class="read-more" href="https://techstop.github.io/android-mounts-and-partition-images/" title="How To Get Android Mounts and Partition Images">Read more &raquo;</a>
+  <hr>
+</article>
+
+  
+      <article>
+  
+  <h1><a href="https://techstop.github.io/arc-dark-theme-for-gedit/" title="Arc Dark Theme For Gedit">Arc Dark Theme For Gedit</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="Jul 4, 2018">Jul 4, 2018</time></span></div>
+
+  <p><p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/arc-theme/arc-dark-theme-for-gedit-0.png" alt="Arc Dark Theme For Gedit" title="Arc Dark Theme For Gedit"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/arc-theme/arc-dark-theme-for-gedit-1.png" alt="Arc Dark Theme For Gedit" title="Arc Dark Theme For Gedit"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+</p>
+
+<p>If you like the dark version of the Arc Theme for your desktop environment and would like the theme for your text editor, then look no further. Here I have the Arc Dark Theme for Gedit. The arc dark theme will work with gedit and pluma or most other text editors that support themes. The download link can be found below with simple installation instructions.</p>
+&hellip;</p>
+  <a class="read-more" href="https://techstop.github.io/arc-dark-theme-for-gedit/" title="Arc Dark Theme For Gedit">Read more &raquo;</a>
+  <hr>
+</article>
+
+  
+      <article>
+  
+  <h1><a href="https://techstop.github.io/apk-utility/" title="APK Utility">APK Utility</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="Jun 8, 2018">Jun 8, 2018</time></span></div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/apk-utility/apk-utility.png" alt="APK Utility" title="APK Utility"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>If you&rsquo;ve been looking for an easy to use tool for decompiling and compiling apk and jar files then look no further. APK Utility is as easy to use as it gets. The utility also has the ability to tag frameworks. This feature is very useful when you need to install frameworks for multiple different devices without having to remove one for the other. If you&rsquo;re familiar with <a href="https://ibotpeaches.github.io/Apktool/documentation/" target="_blank">apktool</a> which this tool uses then you&rsquo;ll know what I&rsquo;m referring to.&hellip;</p>
+  <a class="read-more" href="https://techstop.github.io/apk-utility/" title="APK Utility">Read more &raquo;</a>
+  <hr>
+</article>
+
+  
+      <article>
+  
+  <h1><a href="https://techstop.github.io/open-file-as-root/" title="Open File as Root">Open File as Root</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="May 8, 2018">May 8, 2018</time></span></div>
+
+  <p><p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/open-as-root/open-file-as-root-0.png" alt="Open File as Root" title="Open File as Root"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/open-as-root/open-file-as-root-1.png" alt="Open File as Root" title="Open File as Root"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+</p>
+
+<p>If you need to open file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open files or folders with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer included in the ubuntu family as of version 17.10 or any derivatives of ubuntu.</p>
+&hellip;</p>
+  <a class="read-more" href="https://techstop.github.io/open-file-as-root/" title="Open File as Root">Read more &raquo;</a>
+  <hr>
+</article>
+
+  
+      <article>
+  
+  <h1><a href="https://techstop.github.io/install-adb-on-linux/" title="Install ADB On Linux">Install ADB On Linux</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="May 7, 2018">May 7, 2018</time></span></div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/adb-linux/install_adb_on_linux.png" alt="Install ADB On Linux" title="Install ADB On Linux"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>If you’re looking to install adb on Linux, but don’t want to install Android Studio then this guide is for you. Android Studio is a development environment for creating android apps, but it’s a large download and installation if all you need is adb and fastboot. Below is a guide to install just adb and fastboot which will be a very small download and quick installation.&hellip;</p>
+  <a class="read-more" href="https://techstop.github.io/install-adb-on-linux/" title="Install ADB On Linux">Read more &raquo;</a>
+  <hr>
+</article>
+
+  
+      <article>
+  
+  <h1><a href="https://techstop.github.io/mktool/" title="mktool">mktool</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="Apr 27, 2018">Apr 27, 2018</time></span></div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/mktool/mktool.png" alt="mktool" title="mktool"  width="100px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>If you need to unpack and repack boot.img, recovery.img, or loki images, then this is the tool for you. With mktool you don&rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.&hellip;</p>
+  <a class="read-more" href="https://techstop.github.io/mktool/" title="mktool">Read more &raquo;</a>
+  <hr>
+</article>
+
+  
+  <div class="pagination">
+
+  <a class="btn newer" href="/" title="Newer">&laquo; Newer</a>
+
+
+  <p class="counter">Page 2 of 5</p>
+
+
+  <a class="btn older" href="/page/3/" title="Older">Older &raquo;</a>
+
+</div>
+
+</article>
+
+
+      </main>
+    </div>
+    <script>
+const myScript = document.getElementById('myScriptId');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('theme');
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+  
+}
+</script>
+<style>
+  .font-row-one {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+  .font-row-two {
+    font-size: 12px;
+  }
+</style>
+<footer class="main-footer">
+  <div class="container clearfix">
+    <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
+  </div>
+  <script src="https://techstop.github.io/bundle.min.4980076a9845e1c23b5f38d614dcf7ad0c37bf711703a3368f9039a17f812986.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script src="https://techstop.github.io/js/plugins.js"></script>
+  
+  </footer>
+</body>
+</html>

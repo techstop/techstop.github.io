@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on techStop</title>
+    <link>https://techstop.github.io/categories/linux/</link>
+    <description>Recent content in Linux on techStop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Nov 2018 00:50:19 +0000</lastBuildDate>
+    
+	<atom:link href="https://techstop.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Get Android Mounts and Partition Images</title>
+      <link>https://techstop.github.io/android-mounts-and-partition-images/</link>
+      <pubDate>Thu, 22 Nov 2018 00:50:19 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/android-mounts-and-partition-images/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-mounts/android-mounts-and-partition-images.png&#34; alt=&#34;How To Get Android Mounts and Partition Images&#34; title=&#34;How To Get Android Mounts and Partition Images&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;In this guide I will be showing you how to get the android mounts and partition images. There could be many reasons for needing the android mounts and partition images. A couple reasons that come to mind could be to make backups of your partitions in case you need to fix your phone from a bad flash later on. Or you might want to customize a boot.img or system.img to add in some custom features. Whatever your reason, just follow the guide and you&amp;rsquo;ll be pulling those partitions in no time.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Arc Dark Theme For Gedit</title>
+      <link>https://techstop.github.io/arc-dark-theme-for-gedit/</link>
+      <pubDate>Wed, 04 Jul 2018 20:18:44 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/arc-dark-theme-for-gedit/</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/arc-theme/arc-dark-theme-for-gedit-0.png&#34; alt=&#34;Arc Dark Theme For Gedit&#34; title=&#34;Arc Dark Theme For Gedit&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/arc-theme/arc-dark-theme-for-gedit-1.png&#34; alt=&#34;Arc Dark Theme For Gedit&#34; title=&#34;Arc Dark Theme For Gedit&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;If you like the dark version of the Arc Theme for your desktop environment and would like the theme for your text editor, then look no further. Here I have the Arc Dark Theme for Gedit. The arc dark theme will work with gedit and pluma or most other text editors that support themes. The download link can be found below with simple installation instructions.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>APK Utility</title>
+      <link>https://techstop.github.io/apk-utility/</link>
+      <pubDate>Fri, 08 Jun 2018 01:35:25 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/apk-utility/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/apk-utility/apk-utility.png&#34; alt=&#34;APK Utility&#34; title=&#34;APK Utility&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;If you&amp;rsquo;ve been looking for an easy to use tool for decompiling and compiling apk and jar files then look no further. APK Utility is as easy to use as it gets. The utility also has the ability to tag frameworks. This feature is very useful when you need to install frameworks for multiple different devices without having to remove one for the other. If you&amp;rsquo;re familiar with &lt;a href=&#34;https://ibotpeaches.github.io/Apktool/documentation/&#34; target=&#34;_blank&#34;&gt;apktool&lt;/a&gt; which this tool uses then you&amp;rsquo;ll know what I&amp;rsquo;m referring to.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Open File as Root</title>
+      <link>https://techstop.github.io/open-file-as-root/</link>
+      <pubDate>Tue, 08 May 2018 22:33:30 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/open-file-as-root/</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-0.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-1.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;If you need to open file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open files or folders with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer included in the ubuntu family as of version 17.10 or any derivatives of ubuntu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Install ADB On Linux</title>
+      <link>https://techstop.github.io/install-adb-on-linux/</link>
+      <pubDate>Mon, 07 May 2018 21:16:16 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/install-adb-on-linux/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/adb-linux/install_adb_on_linux.png&#34; alt=&#34;Install ADB On Linux&#34; title=&#34;Install ADB On Linux&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;If you’re looking to install adb on Linux, but don’t want to install Android Studio then this guide is for you. Android Studio is a development environment for creating android apps, but it’s a large download and installation if all you need is adb and fastboot. Below is a guide to install just adb and fastboot which will be a very small download and quick installation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mktool</title>
+      <link>https://techstop.github.io/mktool/</link>
+      <pubDate>Fri, 27 Apr 2018 19:57:23 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/mktool/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/mktool/mktool.png&#34; alt=&#34;mktool&#34; title=&#34;mktool&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;If you need to unpack and repack boot.img, recovery.img, or loki images, then this is the tool for you. With mktool you don&amp;rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&amp;rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Backup and Debloat Android No Root</title>
+      <link>https://techstop.github.io/backup-and-debloat-android-no-root/</link>
+      <pubDate>Thu, 19 Apr 2018 23:49:56 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/backup-and-debloat-android-no-root/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/backupdebloat/Backup-and-Debloat-Android-No-Root.png&#34; alt=&#34;Backup and Debloat Android No Root&#34; title=&#34;Backup and Debloat Android No Root&#34;  width=&#34;200px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;If you&amp;rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&amp;rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&amp;rsquo;re here reading this, it&amp;rsquo;s likely because there is no root for your device. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called &lt;strong&gt;Backup and Debloat Android No Root&lt;/strong&gt; to give you some control back over your device.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MKV to MP4</title>
+      <link>https://techstop.github.io/mkv-to-mp4/</link>
+      <pubDate>Fri, 30 Mar 2018 00:04:34 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/mkv-to-mp4/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/mkv2mp4/mkv-to-mp4.png&#34; alt=&#34;MKV to MP4&#34; title=&#34;MKV to MP4&#34;  width=&#34;200px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;I&amp;rsquo;ve created a simple bash script to convert mkv to mp4 container quickly. The script will allow you to batch convert multiple mkv files or convert one at a time depending on your needs. You can also append a subtitle srt file to your mp4 with this this script.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

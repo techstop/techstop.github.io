@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Android BroadcastReceiver - techStop</title>
+  <meta name="author" content="Antonio">
+  <meta name="description" content="A tech blog about linux and android.">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <meta name="generator" content="Hugo 0.55.6" />
+  <link href="https://techstop.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="techStop" />
+  <link href="https://techstop.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="techStop" />
+  <link rel="icon" href="https://techstop.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://techstop.github.io/img/apple-touch-icon.png" />
+</head>
+<body>
+    <header class="site-header">
+  <style>
+    .site-header h2 .logo {
+    background: url(https://techstop.github.io/img/techStop_header.png) no-repeat 0 0;
+    }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .site-header h2 .logo {
+        background-image: url(https://techstop.github.io/img/techStop_header.png);
+    } }
+    .site-header {
+      background: #2a373d url(https://techstop.github.io/img/techStop_header.png) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "var(--cookie-bg)",
+      "text": "var(--cookie-font)"
+    },
+    "button": {
+      "background": "var(--color-primary)",
+      "hover": "var(--color-secondary)"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "dismiss": "Close"
+  }
+})});
+</script>
+
+  
+  <button onclick="topFunction()" id="myBtn" title="Back to top">&#8682;</button>
+</header>
+<nav class="navbar">
+  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+    <i class="fa fa-bars"></i>
+  </label>
+    <a href="https://techstop.github.io/" class="logo">techStop</a>
+  <input type="checkbox" id="chkToggle"></input>
+  <ul class="main-nav" id="js-menu"><li>
+      <a href="https://techstop.github.io/" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/linux/" class="nav-links">Linux</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/android/" class="nav-links">Android</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/tutorials/" class="nav-links">Tutorials</a>
+    </li>
+      <li>
+        <a href="https://techstop.github.io/search/" class="nav-links"><button type="submit" style="background: none; border: none; padding: 0;" title="Search"><i class="fa fa-search"></i></button></a>
+      </li>
+  </ul>
+</nav>
+<div style="float: right; margin-top: 10px; margin-right: 20px;">
+<a href="//github.com/GameTheory-" id="social-icon" class="icon-github" target="_blank" title="Github"></a>
+<a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+</div>
+<div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox" title="Dark Mode">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+    <br>
+    <div class="container clearfix">
+      <main>
+  <div class="content">
+    <article>
+      <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
+      
+  <h1><a href="https://techstop.github.io/android-broadcastreceiver/" title="Android BroadcastReceiver">Android BroadcastReceiver</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="Jan 19, 2019">Jan 19, 2019</time></span></div>
+
+      <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/broadcastreceiver/android-broadcastreceiver.png" alt="Android BroadcastReceiver" title="Android BroadcastReceiver"  width="100px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+
+<p>Today we will be using an android BroadcastReceiver to run code on boot up. There can be many reasons to run code on boot up. One good use case would be to enable settings that a user has selected within your app to be set on every boot up.</p>
+
+<p>We will place the code we need to run on boot up in a Service class that we will be initiating from our BroadcastReceiver class.</p>
+
+<p>The code in this tutorial will be in the full project which I have uploaded to github and linked near the bottom of this page. Feel free to fork or download the project from github. So lets get started.</p>
+
+<h2 id="android-broadcastreceiver-example-tutorial">Android BroadcastReceiver Example Tutorial</h2>
+
+<p>Lets begin by creating a new project in Android Studio with an Empty Activity if you haven&rsquo;t already. We can call the project BroadcastReceiver.</p>
+
+<p>Create a new java class called BootUpService. The BootUpService class will extend Service. This Service will be responsible for running what we need on boot up. Here&rsquo;s what it should look like…</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Service</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.IBinder</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootUpService</span> <span class="kd">extends</span> <span class="n">Service</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">IBinder</span> <span class="nf">onBind</span><span class="o">(</span><span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">onStartCommand</span><span class="o">(</span><span class="n">Intent</span> <span class="n">intent</span><span class="o">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="o">,</span> <span class="kt">int</span> <span class="n">startId</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Any code you need to run on boot up can be placed here.
+</span><span class="c1"></span>    <span class="c1">// This is just a sample Toast message to show our BroadcastReceiver works.
+</span><span class="c1"></span>    <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Our BroadcastReceiver works! Fantastic!&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+
+    <span class="c1">// Stops the Service after it&#39;s done.
+</span><span class="c1"></span>    <span class="n">stopSelf</span><span class="o">();</span>
+    <span class="c1">// Do not restart the Service till the next reboot.
+</span><span class="c1"></span>    <span class="k">return</span> <span class="n">START_NOT_STICKY</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Make sure to declare the BootUpService class in your AndroidManifest.xml like this…</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;service</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpService&#34;</span> <span class="nt">/&gt;</span></code></pre></div>
+
+<p>Now lets create another java class called BootUpReceiver which will extend BroadcastReceiver. The BroadcastReceiver is going to check that boot up has completed and then run our BootUpService class. Here&rsquo;s what it looks like…</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.content.BroadcastReceiver</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootUpReceiver</span> <span class="kd">extends</span> <span class="n">BroadcastReceiver</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceive</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Start our BootUpService class once boot up has completed
+</span><span class="c1"></span>    <span class="k">if</span> <span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_BOOT_COMPLETED</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">intent</span><span class="o">.</span><span class="na">getAction</span><span class="o">()))</span> <span class="o">{</span>
+      <span class="n">Intent</span> <span class="n">serviceIntent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">BootUpService</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+      <span class="n">context</span><span class="o">.</span><span class="na">startService</span><span class="o">(</span><span class="n">serviceIntent</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>We now need to add permission and declare the BroadcastReceiver in the AndroidManifest.xml as follows…</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.RECEIVE_BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpReceiver&#34;</span> <span class="na">android:enabled=</span><span class="s">&#34;true&#34;</span> <span class="na">android:exported=</span><span class="s">&#34;false&#34;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;intent-filter&gt;</span>
+    <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/intent-filter&gt;</span>
+<span class="nt">&lt;/receiver&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>There you have it. That is all you need to setup a BroadcastReceiver with a Service to run your code on every boot up. Do keep in mind that the user needs to open your app at least once after they have installed it for a BroadcastReceiver to work (This is a security feature in android).</p>
+
+<p>The full project is on github. You can download or fork it from the link below and import it to your favorite IDE, though Android Studio is recommended.</p>
+
+<div>
+  <a title="Android BroadcastReceiver" href="https://github.com/GameTheory-/android-broadcastreceiver" target="_blank">
+  <button id="cta-btn"><i class="fa fa-download"></i> Android BroadcastReceiver</button>
+  </a>
+</div>
+      <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fandroid-broadcastreceiver%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Android%20BroadcastReceiver&amp;url=https%3a%2f%2ftechstop.github.io%2fandroid-broadcastreceiver%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fandroid-broadcastreceiver%2f&title=Android%20BroadcastReceiver" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+      
+        Tags:
+        
+          <a href="https://techstop.github.io/tags/android-studio">android studio</a>, 
+        
+          <a href="https://techstop.github.io/tags/app-development">app development</a>, 
+        
+          <a href="https://techstop.github.io/tags/java">java</a>
+        
+      
+    </article>
+    <hr>
+    
+      <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1F4AC;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
+
+    
+  </div>
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
+
+      </main>
+    </div>
+    <script>
+const myScript = document.getElementById('myScriptId');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    
+      document.location.reload(true)
+    
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('theme');
+    
+      document.location.reload(true)
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+  
+    myScript.setAttribute('theme', 'github-dark');
+  
+}
+</script>
+<style>
+  .font-row-one {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+  .font-row-two {
+    font-size: 12px;
+  }
+</style>
+<footer class="main-footer">
+  <div class="container clearfix">
+    <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
+  </div>
+  <script src="https://techstop.github.io/bundle.min.4980076a9845e1c23b5f38d614dcf7ad0c37bf711703a3368f9039a17f812986.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script src="https://techstop.github.io/js/plugins.js"></script>
+  
+  </footer>
+</body>
+</html>

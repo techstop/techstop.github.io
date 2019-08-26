@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>H631 on techStop</title>
+    <link>https://techstop.github.io/tags/h631/</link>
+    <description>Recent content in H631 on techStop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Jan 2018 23:52:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://techstop.github.io/tags/h631/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LG G Stylo Katana ROM</title>
+      <link>https://techstop.github.io/lg-g-stylo-katana-rom/</link>
+      <pubDate>Tue, 23 Jan 2018 23:52:15 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/lg-g-stylo-katana-rom/</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-0.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-1.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-2.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The LG G Stylo Katana ROM is based on the 5.1.1 v10J firmware for the MetroPCS and T-Mobile LG G Stylo. Katana brings many UI and performance enhancements beyond the stock factory rom from LG, thus improving the user experience. The rom is lightweight and operates smoothly. Katana also comes with a nice theme that was tastefully done. Full details below&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LG G Stylo TWRP Recovery</title>
+      <link>https://techstop.github.io/lg-g-stylo-twrp-recovery/</link>
+      <pubDate>Tue, 23 Jan 2018 23:28:58 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/lg-g-stylo-twrp-recovery/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG-Stylo-TWRP-Recovery.png&#34; alt=&#34;LG G Stylo TWRP Recovery&#34; title=&#34;LG G Stylo TWRP Recovery&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;This guide is to help you install the LG G Stylo TWRP recovery so that you can make backups, flash roms, and kernels or any flashable zips for this device.  If you plan on experimenting with your device, than this is a must have.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LG G Stylo Flashable v10j</title>
+      <link>https://techstop.github.io/lg-g-stylo-flashable-v10j/</link>
+      <pubDate>Mon, 22 Jan 2018 23:56:44 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/lg-g-stylo-flashable-v10j/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/flashable-v10J-firmware.png&#34; alt=&#34;LG G Stylo Flashable v10j&#34; title=&#34;LG G Stylo Flashable v10j&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;This is an LG G Stylo flashable v10J firmware for the Metro PCS and T-Mobile variants. ​The flashable firmware rom comes rooted, so you don&amp;rsquo;t need to root or re-install twrp recovery.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LG G Stylo Unbrick Guide</title>
+      <link>https://techstop.github.io/lg-g-stylo-unbrick-guide/</link>
+      <pubDate>Mon, 22 Jan 2018 23:55:23 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/lg-g-stylo-unbrick-guide/</guid>
+      <description>&lt;p&gt;The LG G Stylo unbrick guide is to assist you in recovering your device in the event of a bootloop or soft brick. You can also use this guide to update to the latest firmware.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

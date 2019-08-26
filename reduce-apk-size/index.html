@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>How To Reduce Apk Size - techStop</title>
+  <meta name="author" content="Antonio">
+  <meta name="description" content="A tech blog about linux and android.">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <meta name="generator" content="Hugo 0.55.6" />
+  <link href="https://techstop.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="techStop" />
+  <link href="https://techstop.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="techStop" />
+  <link rel="icon" href="https://techstop.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://techstop.github.io/img/apple-touch-icon.png" />
+</head>
+<body>
+    <header class="site-header">
+  <style>
+    .site-header h2 .logo {
+    background: url(https://techstop.github.io/img/techStop_header.png) no-repeat 0 0;
+    }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .site-header h2 .logo {
+        background-image: url(https://techstop.github.io/img/techStop_header.png);
+    } }
+    .site-header {
+      background: #2a373d url(https://techstop.github.io/img/techStop_header.png) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "var(--cookie-bg)",
+      "text": "var(--cookie-font)"
+    },
+    "button": {
+      "background": "var(--color-primary)",
+      "hover": "var(--color-secondary)"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "dismiss": "Close"
+  }
+})});
+</script>
+
+  
+  <button onclick="topFunction()" id="myBtn" title="Back to top">&#8682;</button>
+</header>
+<nav class="navbar">
+  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+    <i class="fa fa-bars"></i>
+  </label>
+    <a href="https://techstop.github.io/" class="logo">techStop</a>
+  <input type="checkbox" id="chkToggle"></input>
+  <ul class="main-nav" id="js-menu"><li>
+      <a href="https://techstop.github.io/" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/linux/" class="nav-links">Linux</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/android/" class="nav-links">Android</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/tutorials/" class="nav-links">Tutorials</a>
+    </li>
+      <li>
+        <a href="https://techstop.github.io/search/" class="nav-links"><button type="submit" style="background: none; border: none; padding: 0;" title="Search"><i class="fa fa-search"></i></button></a>
+      </li>
+  </ul>
+</nav>
+<div style="float: right; margin-top: 10px; margin-right: 20px;">
+<a href="//github.com/GameTheory-" id="social-icon" class="icon-github" target="_blank" title="Github"></a>
+<a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+</div>
+<div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox" title="Dark Mode">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+    <br>
+    <div class="container clearfix">
+      <main>
+  <div class="content">
+    <article>
+      <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
+      
+  <h1><a href="https://techstop.github.io/reduce-apk-size/" title="How To Reduce Apk Size">How To Reduce Apk Size</a></h1>
+
+<div class="post-info"><span class="post-meta"><time datetime="Nov 25, 2018">Nov 25, 2018</time></span></div>
+
+      <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/reduce-apk-size/How-To-Reduce-Apk-Size.png" alt="How To Reduce Apk Size" title="How To Reduce Apk Size"  width="500px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+
+<p>How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&rsquo;ll give your users a smooth experience throughout your apps&rsquo; UI along with a smaller foot print.</p>
+
+<p>There are many ways to optimize your app. In this tutorial I will show you how to reduce apk size with three of the best and easiest methods. Let&rsquo;s get started&hellip;</p>
+
+<h2 id="shrink-your-code">Shrink Your Code</h2>
+
+<p>We will first start by shrinking your code with ProGuard. This removes unused classes, fields, methods, and attributes from your app as well as from code libraries you may have added in your project.</p>
+
+<p>Open your apps&rsquo; build.gradle file in Android Studio and under &ldquo;buildTypes/release&rdquo; add the following line&hellip;</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">minifyEnabled</span> <span class="kc">true</span></code></pre></div>
+
+<p>After enabling minifyEnabled your &ldquo;<strong>buildTypes/release</strong>&rdquo; should look like this&hellip;</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+  <span class="n">release</span> <span class="o">{</span>
+    <span class="n">minifyEnabled</span> <span class="kc">true</span>
+    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>You should now build your app and test it to make sure it&rsquo;s working fine. If for some reason you get any build errors after enabling minifyEnabled do not worry, just keep following the tutorial.</p>
+
+<h2 id="shrink-your-code-even-more">Shrink Your Code Even More</h2>
+
+<p>Next we will be shrinking our code at the bytecode level to further reduce apk size and help our app run faster&hellip;</p>
+
+<p>In the same build.gradle file under &ldquo;<strong>buildTypes/release</strong>&rdquo; replace &ldquo;<strong>proguard-android.txt</strong>&rdquo; with &ldquo;<strong>proguard-android-optimize.txt</strong>&rdquo;. Your &ldquo;<strong>buildTypes/release</strong>&rdquo; should now look like this&hellip;</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+  <span class="n">release</span> <span class="o">{</span>
+    <span class="n">minifyEnabled</span> <span class="kc">true</span>
+    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Again build your app and test it to make sure it&rsquo;s working fine. If for some reason you get any build errors after changing the ProGuard do not worry, just keep following the tutorial.</p>
+
+<h2 id="shrink-your-resources">Shrink Your Resources</h2>
+
+<p>In this part of the tutorial we will be shrinking our resources alongside the code shrinking we already did to further reduce apk size. This will remove any unused resources that were a result from the code shrinking we did in the previous parts of this tutorial.</p>
+
+<p>So once again in your build.gradle file under &ldquo;<strong>buildTypes/release</strong>&rdquo; add the following line&hellip;</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">shrinkResources</span> <span class="kc">true</span></code></pre></div>
+
+<p>Your &ldquo;<strong>buildTypes/release</strong>&rdquo; should now look like this&hellip;</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+  <span class="n">release</span> <span class="o">{</span>
+    <span class="n">minifyEnabled</span> <span class="kc">true</span>
+    <span class="n">shrinkResources</span> <span class="kc">true</span>
+    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Now build your app and test it. If your app builds and runs without issues, then you do not need to continue with this tutorial. However if you&rsquo;re getting build errors then continue reading.</p>
+
+<h2 id="fix-errors-after-optimizing-apk">Fix Errors After Optimizing APK</h2>
+
+<p>If you have completed the tutorial up to this point, it&rsquo;s possible that you may be experiencing build errors. This is because the optimizations we have done to reduce apk size can be very aggressive and may have removed code or resources the app actually needs to run properly. In my experience this usually happens with &ldquo;<strong>adsense</strong>&rdquo; and &ldquo;<strong>ShareActionProvider</strong>&rdquo; code, but don&rsquo;t worry - we will add some proguard rules to fix this.</p>
+
+<p>Lets add some rules in your &ldquo;<strong>proguard-rules.pro</strong>&rdquo; file to make sure that any code or resources your app needs are not removed. I have been using these rules in my own apps with much success.</p>
+
+<p>In Android Studio open your apps&rsquo; proguard-rules.pro file and add the following rules after the last line&hellip;</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">safeparcel</span><span class="o">.</span><span class="na">SafeParcelable</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">***</span> <span class="n">NULL</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="o">-</span><span class="n">keepnames</span> <span class="kd">class</span> <span class="err">* </span><span class="nc">implements</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">Parcelable</span>
+<span class="o">-</span><span class="n">keepclassmembers</span> <span class="kd">class</span> <span class="err">* </span><span class="nc">implements</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">Parcelable</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">***</span> <span class="n">CREATOR</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span>
+<span class="o">-</span><span class="n">keep</span> <span class="nd">@android.support.annotation.Keep</span> <span class="kd">class</span> <span class="err">*
+</span><span class="err">-</span><span class="nc">keepclasseswithmembers</span> <span class="kd">class</span> <span class="err">* {
+</span><span class="err">  @</span><span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span> <span class="o">;</span>
+<span class="o">}</span>
+<span class="o">-</span><span class="n">keepclasseswithmembers</span> <span class="kd">class</span> <span class="err">* {
+</span><span class="err">  @</span><span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span> <span class="o">;</span>
+<span class="o">}</span>
+
+<span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">KeepName</span>
+<span class="o">-</span><span class="n">keepnames</span> <span class="nd">@com.google.android.gms.common.annotation.KeepName</span> <span class="kd">class</span> <span class="err">*
+</span><span class="err">-</span><span class="nc">keepclassmembernames</span> <span class="kd">class</span> <span class="err">* {
+</span><span class="err">  @</span><span class="nc">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">KeepName</span> <span class="o">*;</span>
+<span class="o">}</span>
+
+<span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">DynamiteApi</span>
+<span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="nd">@com.google.android.gms.common.util.DynamiteApi</span> <span class="kd">class</span> <span class="err">* {
+</span><span class="err">  </span><span class="nc">public</span> <span class="o">;</span>
+  <span class="kd">public</span> <span class="o">;</span>
+<span class="o">}</span>
+
+<span class="o">-</span><span class="n">keep</span> <span class="kd">class</span> <span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">v7</span><span class="o">.</span><span class="na">widget</span><span class="o">.</span><span class="na">ShareActionProvider</span> <span class="o">{</span> <span class="o">*;</span> <span class="o">}</span>
+
+<span class="o">-</span><span class="n">dontwarn</span> <span class="n">android</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">NetworkSecurityPolicy</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>You can now build your app and test it. After adding the above rules your app should now be building and running fine.</p>
+
+<p>This will conclude the tutorial. You should now be able to reduce your apk size and have a more optimized app to give your app users a better experience with your app.</p>
+
+<p>For more info visit the android developers <a href="https://developer.android.com/studio/build/shrink-code" target="_blank">website</a>.</p>
+      <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2freduce-apk-size%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=How%20To%20Reduce%20Apk%20Size&amp;url=https%3a%2f%2ftechstop.github.io%2freduce-apk-size%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2freduce-apk-size%2f&title=How%20To%20Reduce%20Apk%20Size" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+      
+        Tags:
+        
+          <a href="https://techstop.github.io/tags/android-studio">android studio</a>, 
+        
+          <a href="https://techstop.github.io/tags/app-development">app development</a>, 
+        
+          <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
+        
+      
+    </article>
+    <hr>
+    
+      <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1F4AC;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
+
+    
+  </div>
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
+
+      </main>
+    </div>
+    <script>
+const myScript = document.getElementById('myScriptId');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    
+      document.location.reload(true)
+    
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('theme');
+    
+      document.location.reload(true)
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+  
+    myScript.setAttribute('theme', 'github-dark');
+  
+}
+</script>
+<style>
+  .font-row-one {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+  .font-row-two {
+    font-size: 12px;
+  }
+</style>
+<footer class="main-footer">
+  <div class="container clearfix">
+    <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
+  </div>
+  <script src="https://techstop.github.io/bundle.min.4980076a9845e1c23b5f38d614dcf7ad0c37bf711703a3368f9039a17f812986.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script src="https://techstop.github.io/js/plugins.js"></script>
+  
+  </footer>
+</body>
+</html>
