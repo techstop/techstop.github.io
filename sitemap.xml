@@ -3,36 +3,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://techstop.github.io/categories/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/linux/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/categories/linux/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/post/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/tutorials/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/categories/tutorials/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/ubuntu-18-04-3-release/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/</loc>
+    <lastmod>2019-08-10T15:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://techstop.github.io/admob-tutorial/</loc>
     <lastmod>2019-02-07T00:36:55+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://techstop.github.io/categories/android/</loc>
-    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/categories/</loc>
-    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/post/</loc>
-    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/</loc>
-    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/categories/tutorials/</loc>
     <lastmod>2019-02-07T00:36:55+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -51,12 +80,6 @@
   
   <url>
     <loc>https://techstop.github.io/tags/java/</loc>
-    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/</loc>
     <lastmod>2019-02-07T00:36:55+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -105,26 +128,8 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/tutorials/</loc>
-    <lastmod>2018-11-25T00:34:06+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/android-mounts-and-partition-images/</loc>
     <lastmod>2018-11-22T00:50:19+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/categories/linux/</loc>
-    <lastmod>2018-11-22T00:50:19+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/linux/</loc>
-    <lastmod>2018-11-22T00:50:19+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

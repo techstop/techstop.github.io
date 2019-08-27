@@ -6,10 +6,28 @@
     <description>Recent content in Tags on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Feb 2019 00:36:55 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Aug 2019 15:17:49 -0400</lastBuildDate>
     
 	<atom:link href="https://techstop.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux</title>
+      <link>https://techstop.github.io/tags/linux/</link>
+      <pubDate>Sat, 10 Aug 2019 15:17:49 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://techstop.github.io/tags/tutorials/</link>
+      <pubDate>Sat, 10 Aug 2019 15:17:49 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/tags/tutorials/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>android studio</title>
@@ -62,24 +80,6 @@
       <pubDate>Mon, 10 Dec 2018 16:36:18 +0000</pubDate>
       
       <guid>https://techstop.github.io/tags/zte-z981/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorials</title>
-      <link>https://techstop.github.io/tags/tutorials/</link>
-      <pubDate>Sun, 25 Nov 2018 00:34:06 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/tutorials/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://techstop.github.io/tags/linux/</link>
-      <pubDate>Thu, 22 Nov 2018 00:50:19 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/linux/</guid>
       <description></description>
     </item>
     

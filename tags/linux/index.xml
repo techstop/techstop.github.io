@@ -6,10 +6,54 @@
     <description>Recent content in Linux on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Nov 2018 00:50:19 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Aug 2019 15:17:49 -0400</lastBuildDate>
     
 	<atom:link href="https://techstop.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ubuntu 18.04.3 Release with Linux Kernel 5.0</title>
+      <link>https://techstop.github.io/ubuntu-18-04-3-release/</link>
+      <pubDate>Sat, 10 Aug 2019 15:17:49 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/ubuntu-18-04-3-release/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/ubuntu/ubuntu.png&#34; alt=&#34;ubuntu&#34; title=&#34;ubuntu&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;The ubuntu flavours finally get the highly anticipated linux kernel 5.0. This new kernel brings performance improvements, bug fixes, and more hardware support. You also get an updated X.org and graphics drivers. The 18.04.3 point release was released on Aug 8th 2019.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How To Get Android Mounts and Partition Images</title>
