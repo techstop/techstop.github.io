@@ -204,24 +204,12 @@ window.cookieconsent.initialise({
 
 <p>After enabling minifyEnabled your &ldquo;<strong>buildTypes/release</strong>&rdquo; should look like this&hellip;</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
   <span class="n">release</span> <span class="o">{</span>
     <span class="n">minifyEnabled</span> <span class="kc">true</span>
     <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="o">}</span></code></pre></div>
 
 <p>You should now build your app and test it to make sure it&rsquo;s working fine. If for some reason you get any build errors after enabling minifyEnabled do not worry, just keep following the tutorial.</p>
 
@@ -231,24 +219,12 @@ window.cookieconsent.initialise({
 
 <p>In the same build.gradle file under &ldquo;<strong>buildTypes/release</strong>&rdquo; replace &ldquo;<strong>proguard-android.txt</strong>&rdquo; with &ldquo;<strong>proguard-android-optimize.txt</strong>&rdquo;. Your &ldquo;<strong>buildTypes/release</strong>&rdquo; should now look like this&hellip;</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
   <span class="n">release</span> <span class="o">{</span>
     <span class="n">minifyEnabled</span> <span class="kc">true</span>
     <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="o">}</span></code></pre></div>
 
 <p>Again build your app and test it to make sure it&rsquo;s working fine. If for some reason you get any build errors after changing the ProGuard do not worry, just keep following the tutorial.</p>
 
@@ -262,26 +238,13 @@ window.cookieconsent.initialise({
 
 <p>Your &ldquo;<strong>buildTypes/release</strong>&rdquo; should now look like this&hellip;</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
   <span class="n">release</span> <span class="o">{</span>
     <span class="n">minifyEnabled</span> <span class="kc">true</span>
     <span class="n">shrinkResources</span> <span class="kc">true</span>
     <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="o">}</span></code></pre></div>
 
 <p>Now build your app and test it. If your app builds and runs without issues, then you do not need to continue with this tutorial. However if you&rsquo;re getting build errors then continue reading.</p>
 
@@ -293,44 +256,7 @@ window.cookieconsent.initialise({
 
 <p>In Android Studio open your apps&rsquo; proguard-rules.pro file and add the following rules after the last line&hellip;</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">safeparcel</span><span class="o">.</span><span class="na">SafeParcelable</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">safeparcel</span><span class="o">.</span><span class="na">SafeParcelable</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">***</span> <span class="n">NULL</span><span class="o">;</span>
 <span class="o">}</span>
 
@@ -362,9 +288,7 @@ window.cookieconsent.initialise({
 
 <span class="o">-</span><span class="n">keep</span> <span class="kd">class</span> <span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">v7</span><span class="o">.</span><span class="na">widget</span><span class="o">.</span><span class="na">ShareActionProvider</span> <span class="o">{</span> <span class="o">*;</span> <span class="o">}</span>
 
-<span class="o">-</span><span class="n">dontwarn</span> <span class="n">android</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">NetworkSecurityPolicy</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="o">-</span><span class="n">dontwarn</span> <span class="n">android</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">NetworkSecurityPolicy</span></code></pre></div>
 
 <p>You can now build your app and test it. After adding the above rules your app should now be building and running fine.</p>
 

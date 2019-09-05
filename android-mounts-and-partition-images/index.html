@@ -225,18 +225,9 @@ window.cookieconsent.initialise({
 
 <p><span style="color: green;"><strong>/dev/block/platform/msm_sdcc.1/by-name</strong></span>/system</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">/dev/block/platform/msm_sdcc.1/by-name/system /system ext4 ro,seclabel,relatime,errors<span class="o">=</span>panic,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/dev/block/platform/msm_sdcc.1/by-name/system /system ext4 ro,seclabel,relatime,errors<span class="o">=</span>panic,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span>
 /dev/block/platform/msm_sdcc.1/by-name/userdata /data ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,errors<span class="o">=</span><span class="k">continue</span>,commit<span class="o">=</span><span class="m">20</span>,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span>
-/dev/block/platform/msm_sdcc.1/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,errors<span class="o">=</span><span class="k">continue</span>,commit<span class="o">=</span><span class="m">20</span>,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span></code></pre></td></tr></table>
-</div>
-</div>
+/dev/block/platform/msm_sdcc.1/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,errors<span class="o">=</span><span class="k">continue</span>,commit<span class="o">=</span><span class="m">20</span>,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span></code></pre></div>
 
 <h2 id="getting-partitions">Getting Partitions</h2>
 
@@ -248,22 +239,11 @@ window.cookieconsent.initialise({
 
 <p><span style="color: green;"><strong>/dev/block/mmcblk0p17</strong></span></p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">lrwxrwxrwx <span class="m">1</span> root root  <span class="m">20</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 aboot -&gt; /dev/block/mmcblk0p7
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lrwxrwxrwx <span class="m">1</span> root root  <span class="m">20</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 aboot -&gt; /dev/block/mmcblk0p7
 lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 boot -&gt; /dev/block/mmcblk0p17
 lrwxrwxrwx <span class="m">1</span> root root  <span class="m">20</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 modem -&gt; /dev/block/mmcblk0p2
 lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 recovery -&gt; /dev/block/mmcblk0p18
-lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 system -&gt; /dev/block/mmcblk0p24</code></pre></td></tr></table>
-</div>
-</div>
+lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 system -&gt; /dev/block/mmcblk0p24</code></pre></div>
 
 <h2 id="pulling-partition-images">Pulling Partition Images</h2>
 
@@ -275,16 +255,8 @@ lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> <span c
 
 <p>If you are still in the adb root shell then enter the following 2 commands in terminal to exit root shell and adb. If you have already exited you can skip this step&hellip;</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
-exit</code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
+exit</code></pre></div>
 
 <p>To copy the boot.img from your phone&rsquo;s internal SD to your desktop enter the following command&hellip;</p>
 

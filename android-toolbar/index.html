@@ -235,31 +235,7 @@ window.cookieconsent.initialise({
 <p>In order to create an android toolbar you must change the base theme in your &ldquo;styles.xml&rdquo; to one with &ldquo;NoActionBar&rdquo;. Lets also add &ldquo;Title&rdquo; and &ldquo;SubTitle&rdquo; elements to our &ldquo;styles.xml&rdquo;. I have left some items commented out that you can uncomment if you wish to use them.</p>
 
 <p><strong>styles.xml</strong>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources&gt;</span>
   <span class="c">&lt;!-- Base application theme. --&gt;</span>
   <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;AppTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat.NoActionBar&#34;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>@color/colorPrimary<span class="nt">&lt;/item&gt;</span>
@@ -278,29 +254,12 @@ window.cookieconsent.initialise({
       <span class="c">&lt;!--&lt;item name=&#34;android:textSize&#34;&gt;14sp&lt;/item&gt;--&gt;</span>
       <span class="c">&lt;!--&lt;item name=&#34;android:textStyle&#34;&gt;bold&lt;/item&gt;--&gt;</span>
   <span class="nt">&lt;/style&gt;</span>
-<span class="nt">&lt;/resources&gt;</span></code></pre></td></tr></table>
-</div>
-</div></p>
+<span class="nt">&lt;/resources&gt;</span></code></pre></div></p>
 
 <p>Right click on your &ldquo;layout&rdquo; directory and create a new Layout resource file called &ldquo;toolbar.xml&rdquo;. This will be our Toolbar layout that we will reference from any activity layout where we&rsquo;ll want to have a Toolbar.</p>
 
 <p><strong>toolbar.xml</strong>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;android.support.v7.widget.Toolbar</span>
   <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
   <span class="na">xmlns:app=</span><span class="s">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
@@ -310,55 +269,12 @@ window.cookieconsent.initialise({
   <span class="na">android:minHeight=</span><span class="s">&#34;?attr/actionBarSize&#34;</span>
   <span class="na">android:background=</span><span class="s">&#34;?attr/colorPrimary&#34;</span>
   <span class="na">android:theme=</span><span class="s">&#34;@style/ThemeOverlay.AppCompat.Dark.ActionBar&#34;</span>
-  <span class="na">app:popupTheme=</span><span class="s">&#34;@style/ThemeOverlay.AppCompat&#34;</span> <span class="nt">/&gt;</span></code></pre></td></tr></table>
-</div>
-</div></p>
+  <span class="na">app:popupTheme=</span><span class="s">&#34;@style/ThemeOverlay.AppCompat&#34;</span> <span class="nt">/&gt;</span></code></pre></div></p>
 
 <p>Next we will add the Toolbar to our &ldquo;MainActivity.java&rdquo; class. Create the toolBar() method where we will enable any features we would like for our Toolbar. We then reference the toolBar() method from the onCreate() method. I have left some items commented out that you can uncomment if you wish to use them.</p>
 
 <p><strong>MainActivity.java</strong>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.androidtoolbar</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.androidtoolbar</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
@@ -394,9 +310,7 @@ window.cookieconsent.initialise({
 </span><span class="c1"></span>      <span class="n">getSupportActionBar</span><span class="o">().</span><span class="na">setElevation</span><span class="o">(</span><span class="n">8</span><span class="o">);</span>
     <span class="o">}</span>
   <span class="o">}</span>
-<span class="o">}</span></code></pre></td></tr></table>
-</div>
-</div></p>
+<span class="o">}</span></code></pre></div></p>
 
 <p>Now open the &ldquo;activity_main.xml&rdquo; file in your layout directory and add the Toolbar layout as the first element at the top. Here&rsquo;s what the Toolbar element should look like…</p>
 
@@ -405,26 +319,7 @@ window.cookieconsent.initialise({
 <p>This is what our &ldquo;activity_main.xml&rdquo; file should look like…</p>
 
 <p><strong>activity_main.xml</strong>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
   <span class="na">xmlns:tools=</span><span class="s">&#34;http://schemas.android.com/tools&#34;</span>
   <span class="na">android:orientation=</span><span class="s">&#34;vertical&#34;</span>
@@ -438,54 +333,23 @@ window.cookieconsent.initialise({
     <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
     <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
     <span class="na">android:text=</span><span class="s">&#34;Hello World!&#34;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/LinearLayout&gt;</span></code></pre></td></tr></table>
-</div>
-</div></p>
+<span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div></p>
 
 <p>Keep in mind that your &ldquo;activity_main.xml&rdquo; can be any layout you wish like for example it can be a RelativeLayout, ConstraintLayout, or any other layout you may need. You will always have to include your Toolbar as the first element of the layout unless you wish to have the Toolbar at a different location in your layout.</p>
 
 <p>We can now add some functionality to our Android Toolbar by adding an Overflow menu on the right side of the Toolbar. The Overflow menu is perfect for things like app settings, change log, and many other uses. So first open your &ldquo;strings.xml&rdquo; file in your &ldquo;values&rdquo; directory and add the following strings that we&rsquo;ll need for our menu.</p>
 
 <p><strong>strings.xml</strong>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources&gt;</span>
   <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;app_name&#34;</span><span class="nt">&gt;</span>Android Toolbar<span class="nt">&lt;/string&gt;</span>
   <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;toast_message&#34;</span><span class="nt">&gt;</span>Toast Message<span class="nt">&lt;/string&gt;</span>
   <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;another_toast_message&#34;</span><span class="nt">&gt;</span>Another Toast Message<span class="nt">&lt;/string&gt;</span>
-<span class="nt">&lt;/resources&gt;</span></code></pre></td></tr></table>
-</div>
-</div></p>
+<span class="nt">&lt;/resources&gt;</span></code></pre></div></p>
 
 <p>Now right click on the &ldquo;res&rdquo; directory and create a new Directory called &ldquo;menu&rdquo;. Then right click on the new &ldquo;menu&rdquo; directory and create a new Menu resource file called &ldquo;menu.xml&rdquo;. You should now have a &ldquo;menu.xml&rdquo; file inside a new directory called &ldquo;menu&rdquo;. Now edit the file so that it looks as follows…</p>
 
 <p><strong>menu.xml</strong>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;menu</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
   <span class="na">xmlns:app=</span><span class="s">&#34;http://schemas.android.com/apk/res-auto&#34;</span><span class="nt">&gt;</span>
 
@@ -498,82 +362,12 @@ window.cookieconsent.initialise({
     <span class="na">android:id=</span><span class="s">&#34;@+id/anotherMessage&#34;</span>
     <span class="na">android:title=</span><span class="s">&#34;@string/another_toast_message&#34;</span>
     <span class="na">app:showAsAction=</span><span class="s">&#34;never&#34;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/menu&gt;</span></code></pre></td></tr></table>
-</div>
-</div></p>
+<span class="nt">&lt;/menu&gt;</span></code></pre></div></p>
 
 <p>The final step is to add the menu and our menu items to our &ldquo;MainActivity.java&rdquo; class. Here we add a couple of Toast messages just to give you the right idea.</p>
 
 <p><strong>MainActivity.java</strong>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.androidtoolbar</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.androidtoolbar</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
@@ -636,9 +430,7 @@ window.cookieconsent.initialise({
     <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">onOptionsItemSelected</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
   <span class="o">}</span>
 
-<span class="o">}</span></code></pre></td></tr></table>
-</div>
-</div></p>
+<span class="o">}</span></code></pre></div></p>
 
 <p>This will conclude the Android custom Toolbar tutorial. The full project is on github. You can download or fork it from the link below and import it to your favorite IDE, though Android Studio is recommended.</p>
 

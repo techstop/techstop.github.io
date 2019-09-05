@@ -202,43 +202,7 @@ window.cookieconsent.initialise({
 
 <p>Create a new java class called BootUpService. The BootUpService class will extend Service. This Service will be responsible for running what we need on boot up. Here&rsquo;s what it should look like…</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.app.Service</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
@@ -269,9 +233,7 @@ window.cookieconsent.initialise({
 </span><span class="c1"></span>    <span class="k">return</span> <span class="n">START_NOT_STICKY</span><span class="o">;</span>
   <span class="o">}</span>
 
-<span class="o">}</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="o">}</span></code></pre></div>
 
 <p>Make sure to declare the BootUpService class in your AndroidManifest.xml like this…</p>
 
@@ -279,29 +241,7 @@ window.cookieconsent.initialise({
 
 <p>Now lets create another java class called BootUpReceiver which will extend BroadcastReceiver. The BroadcastReceiver is going to check that boot up has completed and then run our BootUpService class. Here&rsquo;s what it looks like…</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.content.BroadcastReceiver</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
@@ -318,32 +258,17 @@ window.cookieconsent.initialise({
     <span class="o">}</span>
   <span class="o">}</span>
 
-<span class="o">}</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="o">}</span></code></pre></div>
 
 <p>We now need to add permission and declare the BroadcastReceiver in the AndroidManifest.xml as follows…</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.RECEIVE_BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.RECEIVE_BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
 
 <span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpReceiver&#34;</span> <span class="na">android:enabled=</span><span class="s">&#34;true&#34;</span> <span class="na">android:exported=</span><span class="s">&#34;false&#34;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;intent-filter&gt;</span>
     <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/intent-filter&gt;</span>
-<span class="nt">&lt;/receiver&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="nt">&lt;/receiver&gt;</span></code></pre></div>
 
 <p>There you have it. That is all you need to setup a BroadcastReceiver with a Service to run your code on every boot up. Do keep in mind that the user needs to open your app at least once after they have installed it for a BroadcastReceiver to work (This is a security feature in android).</p>
 
