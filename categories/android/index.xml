@@ -470,6 +470,50 @@
     </item>
     
     <item>
+      <title>How To Reduce Apk Size</title>
+      <link>https://techstop.github.io/reduce-apk-size/</link>
+      <pubDate>Sun, 25 Nov 2018 00:34:06 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/reduce-apk-size/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reduce-apk-size/How-To-Reduce-Apk-Size.png&#34; alt=&#34;How To Reduce Apk Size&#34; title=&#34;How To Reduce Apk Size&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&amp;rsquo;ll give your users a smooth experience throughout your apps&amp;rsquo; UI along with a smaller foot print.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>How To Get Android Mounts and Partition Images</title>
       <link>https://techstop.github.io/android-mounts-and-partition-images/</link>
       <pubDate>Thu, 22 Nov 2018 00:50:19 +0000</pubDate>

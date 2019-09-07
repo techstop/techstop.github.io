@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Android</title>
+      <link>https://techstop.github.io/tags/android/</link>
+      <pubDate>Thu, 07 Feb 2019 00:36:55 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>android studio</title>
       <link>https://techstop.github.io/tags/android-studio/</link>
       <pubDate>Thu, 07 Feb 2019 00:36:55 +0000</pubDate>
@@ -57,20 +66,11 @@
     </item>
     
     <item>
-      <title>Android</title>
-      <link>https://techstop.github.io/tags/android/</link>
+      <title>Kernels</title>
+      <link>https://techstop.github.io/tags/kernels/</link>
       <pubDate>Mon, 10 Dec 2018 16:36:18 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kernel</title>
-      <link>https://techstop.github.io/tags/kernel/</link>
-      <pubDate>Mon, 10 Dec 2018 16:36:18 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/kernel/</guid>
+      <guid>https://techstop.github.io/tags/kernels/</guid>
       <description></description>
     </item>
     
@@ -84,11 +84,20 @@
     </item>
     
     <item>
-      <title>zte z981</title>
-      <link>https://techstop.github.io/tags/zte-z981/</link>
+      <title>z981</title>
+      <link>https://techstop.github.io/tags/z981/</link>
       <pubDate>Mon, 10 Dec 2018 16:36:18 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/zte-z981/</guid>
+      <guid>https://techstop.github.io/tags/z981/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zte</title>
+      <link>https://techstop.github.io/tags/zte/</link>
+      <pubDate>Mon, 10 Dec 2018 16:36:18 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/tags/zte/</guid>
       <description></description>
     </item>
     
@@ -111,56 +120,11 @@
     </item>
     
     <item>
-      <title>ADB</title>
-      <link>https://techstop.github.io/tags/adb/</link>
-      <pubDate>Mon, 07 May 2018 21:16:16 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/adb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mktool</title>
-      <link>https://techstop.github.io/tags/mktool/</link>
-      <pubDate>Fri, 27 Apr 2018 19:57:23 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/mktool/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>unpack boot.img</title>
       <link>https://techstop.github.io/tags/unpack-boot.img/</link>
       <pubDate>Fri, 27 Apr 2018 19:57:23 +0000</pubDate>
       
       <guid>https://techstop.github.io/tags/unpack-boot.img/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Backup Android</title>
-      <link>https://techstop.github.io/tags/backup-android/</link>
-      <pubDate>Thu, 19 Apr 2018 23:49:56 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/backup-android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debloat Android</title>
-      <link>https://techstop.github.io/tags/debloat-android/</link>
-      <pubDate>Thu, 19 Apr 2018 23:49:56 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/debloat-android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MKV to MP4</title>
-      <link>https://techstop.github.io/tags/mkv-to-mp4/</link>
-      <pubDate>Fri, 30 Mar 2018 00:04:34 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/mkv-to-mp4/</guid>
       <description></description>
     </item>
     
@@ -174,24 +138,6 @@
     </item>
     
     <item>
-      <title>Reboot Utility</title>
-      <link>https://techstop.github.io/tags/reboot-utility/</link>
-      <pubDate>Mon, 19 Mar 2018 19:52:17 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/reboot-utility/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recovery Reboot</title>
-      <link>https://techstop.github.io/tags/recovery-reboot/</link>
-      <pubDate>Sat, 03 Mar 2018 22:58:20 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/recovery-reboot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>H631</title>
       <link>https://techstop.github.io/tags/h631/</link>
       <pubDate>Tue, 23 Jan 2018 23:52:15 +0000</pubDate>
@@ -201,11 +147,11 @@
     </item>
     
     <item>
-      <title>LG G Stylo</title>
-      <link>https://techstop.github.io/tags/lg-g-stylo/</link>
+      <title>LG</title>
+      <link>https://techstop.github.io/tags/lg/</link>
       <pubDate>Tue, 23 Jan 2018 23:52:15 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/lg-g-stylo/</guid>
+      <guid>https://techstop.github.io/tags/lg/</guid>
       <description></description>
     </item>
     
@@ -219,20 +165,11 @@
     </item>
     
     <item>
-      <title>Rom</title>
-      <link>https://techstop.github.io/tags/rom/</link>
+      <title>roms</title>
+      <link>https://techstop.github.io/tags/roms/</link>
       <pubDate>Tue, 23 Jan 2018 23:52:15 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/rom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TWRP Recovery</title>
-      <link>https://techstop.github.io/tags/twrp-recovery/</link>
-      <pubDate>Tue, 23 Jan 2018 23:28:58 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/twrp-recovery/</guid>
+      <guid>https://techstop.github.io/tags/roms/</guid>
       <description></description>
     </item>
     
@@ -246,47 +183,11 @@
     </item>
     
     <item>
-      <title>LG Optimus F6</title>
-      <link>https://techstop.github.io/tags/lg-optimus-f6/</link>
-      <pubDate>Tue, 23 Jan 2018 01:28:24 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/lg-optimus-f6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>MS500</title>
       <link>https://techstop.github.io/tags/ms500/</link>
       <pubDate>Tue, 23 Jan 2018 01:28:24 +0000</pubDate>
       
       <guid>https://techstop.github.io/tags/ms500/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>v10J</title>
-      <link>https://techstop.github.io/tags/v10j/</link>
-      <pubDate>Mon, 22 Jan 2018 23:56:44 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/v10j/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Unbrick</title>
-      <link>https://techstop.github.io/tags/unbrick/</link>
-      <pubDate>Mon, 22 Jan 2018 23:55:23 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/unbrick/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LG Optimus F3</title>
-      <link>https://techstop.github.io/tags/lg-optimus-f3/</link>
-      <pubDate>Mon, 22 Jan 2018 01:27:40 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/lg-optimus-f3/</guid>
       <description></description>
     </item>
     
@@ -309,47 +210,56 @@
     </item>
     
     <item>
-      <title>LG Optimus F7 LG870</title>
-      <link>https://techstop.github.io/tags/lg-optimus-f7-lg870/</link>
+      <title>LG870</title>
+      <link>https://techstop.github.io/tags/lg870/</link>
       <pubDate>Sun, 21 Jan 2018 19:51:44 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/lg-optimus-f7-lg870/</guid>
+      <guid>https://techstop.github.io/tags/lg870/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>LG Lucid 2 VS870</title>
-      <link>https://techstop.github.io/tags/lg-lucid-2-vs870/</link>
+      <title>VS870</title>
+      <link>https://techstop.github.io/tags/vs870/</link>
       <pubDate>Sun, 21 Jan 2018 00:02:26 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/lg-lucid-2-vs870/</guid>
+      <guid>https://techstop.github.io/tags/vs870/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>LG Spirit 4G MS870</title>
-      <link>https://techstop.github.io/tags/lg-spirit-4g-ms870/</link>
+      <title>MS870</title>
+      <link>https://techstop.github.io/tags/ms870/</link>
       <pubDate>Sat, 20 Jan 2018 00:04:30 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/lg-spirit-4g-ms870/</guid>
+      <guid>https://techstop.github.io/tags/ms870/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>LG Motion 4G MS770</title>
-      <link>https://techstop.github.io/tags/lg-motion-4g-ms770/</link>
+      <title>MS770</title>
+      <link>https://techstop.github.io/tags/ms770/</link>
       <pubDate>Thu, 18 Jan 2018 00:58:18 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/lg-motion-4g-ms770/</guid>
+      <guid>https://techstop.github.io/tags/ms770/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Huawei Ascend M860</title>
-      <link>https://techstop.github.io/tags/huawei-ascend-m860/</link>
+      <title>Huawei</title>
+      <link>https://techstop.github.io/tags/huawei/</link>
       <pubDate>Wed, 17 Jan 2018 03:11:09 +0000</pubDate>
       
-      <guid>https://techstop.github.io/tags/huawei-ascend-m860/</guid>
+      <guid>https://techstop.github.io/tags/huawei/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>M860</title>
+      <link>https://techstop.github.io/tags/m860/</link>
+      <pubDate>Wed, 17 Jan 2018 03:11:09 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/tags/m860/</guid>
       <description></description>
     </item>
     

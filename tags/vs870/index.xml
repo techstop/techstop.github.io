@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VS870 on techStop</title>
+    <link>https://techstop.github.io/tags/vs870/</link>
+    <description>Recent content in VS870 on techStop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jan 2018 00:02:26 +0000</lastBuildDate>
+    
+	<atom:link href="https://techstop.github.io/tags/vs870/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LG Lucid 2 Xperion ROM</title>
+      <link>https://techstop.github.io/lg-lucid-2-xperion-rom/</link>
+      <pubDate>Sun, 21 Jan 2018 00:02:26 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/lg-lucid-2-xperion-rom/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/vs870/LG-Lucid-2-ROM.png&#34; alt=&#34;LG Lucid 2 Xperion ROM&#34; title=&#34;LG Lucid 2 Xperion ROM&#34;  width=&#34;100px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;The LG Lucid 2 Xperion rom improves upon the factory stock rom to deliver a better experience. With many mods and tweaks, I&amp;rsquo;m sure you&amp;rsquo;ll agree. Maybe you&amp;rsquo;re bored of your Lucid 2, well this rom can surely breathe some new life to your device. There&amp;rsquo;s also an unsercured kernel for further debloating the Lucid 2 should you have the need.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

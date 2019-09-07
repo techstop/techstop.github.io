@@ -72,6 +72,12 @@
   </url>
   
   <url>
+    <loc>https://techstop.github.io/tags/android/</loc>
+    <lastmod>2019-02-07T00:36:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://techstop.github.io/tags/android-studio/</loc>
     <lastmod>2019-02-07T00:36:55+00:00</lastmod>
     <priority>0</priority>
@@ -105,18 +111,12 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/android/</loc>
-    <lastmod>2018-12-10T16:36:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/freedom-kernel-for-the-zmax-pro/</loc>
     <lastmod>2018-12-10T16:36:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/kernel/</loc>
+    <loc>https://techstop.github.io/tags/kernels/</loc>
     <lastmod>2018-12-10T16:36:18+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -128,7 +128,13 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/zte-z981/</loc>
+    <loc>https://techstop.github.io/tags/z981/</loc>
+    <lastmod>2018-12-10T16:36:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/zte/</loc>
     <lastmod>2018-12-10T16:36:18+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -171,20 +177,8 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/adb/</loc>
-    <lastmod>2018-05-07T21:16:16+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/install-adb-on-linux/</loc>
     <lastmod>2018-05-07T21:16:16+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/mktool/</loc>
-    <lastmod>2018-04-27T19:57:23+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -199,26 +193,8 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/backup-android/</loc>
-    <lastmod>2018-04-19T23:49:56+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/backup-and-debloat-android-no-root/</loc>
     <lastmod>2018-04-19T23:49:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/debloat-android/</loc>
-    <lastmod>2018-04-19T23:49:56+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/mkv-to-mp4/</loc>
-    <lastmod>2018-03-30T00:04:34+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -233,20 +209,8 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/reboot-utility/</loc>
-    <lastmod>2018-03-19T19:52:17+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/reboot-utility/</loc>
     <lastmod>2018-03-19T19:52:17+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/recovery-reboot/</loc>
-    <lastmod>2018-03-03T22:58:20+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -261,7 +225,7 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/lg-g-stylo/</loc>
+    <loc>https://techstop.github.io/tags/lg/</loc>
     <lastmod>2018-01-23T23:52:15+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -278,7 +242,7 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/rom/</loc>
+    <loc>https://techstop.github.io/tags/roms/</loc>
     <lastmod>2018-01-23T23:52:15+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -289,19 +253,7 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/twrp-recovery/</loc>
-    <lastmod>2018-01-23T23:28:58+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/tags/d500/</loc>
-    <lastmod>2018-01-23T01:28:24+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/lg-optimus-f6/</loc>
     <lastmod>2018-01-23T01:28:24+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -323,31 +275,13 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/v10j/</loc>
-    <lastmod>2018-01-22T23:56:44+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/lg-g-stylo-unbrick-guide/</loc>
     <lastmod>2018-01-22T23:55:23+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/unbrick/</loc>
-    <lastmod>2018-01-22T23:55:23+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/lg-optimus-f6-xperion-rom/</loc>
     <lastmod>2018-01-22T20:23:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/lg-optimus-f3/</loc>
-    <lastmod>2018-01-22T01:27:40+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -378,14 +312,8 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/lg-optimus-f7-lg870/</loc>
+    <loc>https://techstop.github.io/tags/lg870/</loc>
     <lastmod>2018-01-21T19:51:44+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/lg-lucid-2-vs870/</loc>
-    <lastmod>2018-01-21T00:02:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -395,8 +323,8 @@
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/lg-spirit-4g-ms870/</loc>
-    <lastmod>2018-01-20T00:04:30+00:00</lastmod>
+    <loc>https://techstop.github.io/tags/vs870/</loc>
+    <lastmod>2018-01-21T00:02:26+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -406,18 +334,24 @@
   </url>
   
   <url>
+    <loc>https://techstop.github.io/tags/ms870/</loc>
+    <lastmod>2018-01-20T00:04:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://techstop.github.io/lg-motion-4g-kernel/</loc>
     <lastmod>2018-01-18T00:58:18+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/lg-motion-4g-ms770/</loc>
+    <loc>https://techstop.github.io/tags/ms770/</loc>
     <lastmod>2018-01-18T00:58:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/huawei-ascend-m860/</loc>
+    <loc>https://techstop.github.io/tags/huawei/</loc>
     <lastmod>2018-01-17T03:11:09+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -425,6 +359,12 @@
   <url>
     <loc>https://techstop.github.io/huawei-ascend-m860-centurion-rom/</loc>
     <lastmod>2018-01-17T03:11:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/m860/</loc>
+    <lastmod>2018-01-17T03:11:09+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
