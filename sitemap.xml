@@ -440,4 +440,8 @@
     <priority>0.1</priority>
   </url>
   
+  <url>
+    <loc>https://techstop.github.io/blog-tags/</loc>
+  </url>
+  
 </urlset>
