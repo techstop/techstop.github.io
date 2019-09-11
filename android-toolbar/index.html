@@ -139,7 +139,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/android-toolbar/" title="Android Toolbar">Android Toolbar</a></h1>
 
-<div class="post-info">Published: Jan 21, 2019</div>
+<div class="post-info">Published: Jan 21, 2019 &middot; Updated: Sep 11, 2019</div>
 
     <p><div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/android-toolbar/android-toolbar-0.png" alt="Android Toolbar" title="Android Toolbar"  width="100px">
@@ -246,7 +246,7 @@ window.cookieconsent.initialise({
 
 <p><strong>toolbar.xml</strong>
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span class="nt">&lt;android.support.v7.widget.Toolbar</span>
+<span class="nt">&lt;androidx.appcompat.widget.Toolbar</span>
   <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
   <span class="na">xmlns:app=</span><span class="s">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
   <span class="na">android:id=</span><span class="s">&#34;@+id/myToolbar&#34;</span>
@@ -262,9 +262,10 @@ window.cookieconsent.initialise({
 <p><strong>MainActivity.java</strong>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.androidtoolbar</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.widget.Toolbar</span><span class="o">;</span>
+
 <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.support.v7.widget.Toolbar</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.view.Menu</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.view.MenuItem</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
@@ -355,9 +356,10 @@ window.cookieconsent.initialise({
 <p><strong>MainActivity.java</strong>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.androidtoolbar</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.widget.Toolbar</span><span class="o">;</span>
+
 <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.support.v7.widget.Toolbar</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.view.Menu</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.view.MenuItem</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
