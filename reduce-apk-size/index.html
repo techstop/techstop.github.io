@@ -139,7 +139,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/reduce-apk-size/" title="How To Reduce Apk Size">How To Reduce Apk Size</a></h1>
 
-<div class="post-info">Published: Nov 25, 2018</div>
+<div class="post-info">Published: Nov 25, 2018 &middot; Updated: Sep 11, 2019</div>
 
     <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/reduce-apk-size/How-To-Reduce-Apk-Size.png" alt="How To Reduce Apk Size" title="How To Reduce Apk Size"  width="500px">
@@ -184,7 +184,7 @@ window.cookieconsent.initialise({
 
 <p>We will first start by shrinking your code with ProGuard. This removes unused classes, fields, methods, and attributes from your app as well as from code libraries you may have added in your project.</p>
 
-<p>Open your apps&rsquo; build.gradle file in Android Studio and under &ldquo;buildTypes/release&rdquo; add the following line&hellip;</p>
+<p>Open your apps&rsquo; build.gradle file in Android Studio under &ldquo;buildTypes/release&rdquo; add the following line&hellip;</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">minifyEnabled</span> <span class="kc">true</span></code></pre></div>
 
@@ -254,10 +254,10 @@ window.cookieconsent.initialise({
 <span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span>
 <span class="o">-</span><span class="n">keep</span> <span class="nd">@android.support.annotation.Keep</span> <span class="kd">class</span> <span class="err">*
 </span><span class="err">-</span><span class="nc">keepclasseswithmembers</span> <span class="kd">class</span> <span class="err">* {
-</span><span class="err">  @</span><span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span> <span class="o">;</span>
+</span><span class="err">  @</span><span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span> <span class="o">&lt;</span><span class="n">fields</span><span class="o">&gt;;</span>
 <span class="o">}</span>
 <span class="o">-</span><span class="n">keepclasseswithmembers</span> <span class="kd">class</span> <span class="err">* {
-</span><span class="err">  @</span><span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span> <span class="o">;</span>
+</span><span class="err">  @</span><span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span> <span class="o">&lt;</span><span class="n">methods</span><span class="o">&gt;;</span>
 <span class="o">}</span>
 
 <span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">KeepName</span>
@@ -268,11 +268,11 @@ window.cookieconsent.initialise({
 
 <span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">DynamiteApi</span>
 <span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="nd">@com.google.android.gms.common.util.DynamiteApi</span> <span class="kd">class</span> <span class="err">* {
-</span><span class="err">  </span><span class="nc">public</span> <span class="o">;</span>
-  <span class="kd">public</span> <span class="o">;</span>
+</span><span class="err">  </span><span class="nc">public</span> <span class="o">&lt;</span><span class="n">fields</span><span class="o">&gt;;</span>
+  <span class="kd">public</span> <span class="o">&lt;</span><span class="n">methods</span><span class="o">&gt;;</span>
 <span class="o">}</span>
 
-<span class="o">-</span><span class="n">keep</span> <span class="kd">class</span> <span class="nc">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">v7</span><span class="o">.</span><span class="na">widget</span><span class="o">.</span><span class="na">ShareActionProvider</span> <span class="o">{</span> <span class="o">*;</span> <span class="o">}</span>
+<span class="o">-</span><span class="n">keep</span> <span class="kd">class</span> <span class="nc">androidx</span><span class="o">.</span><span class="na">appcompat</span><span class="o">.</span><span class="na">widget</span><span class="o">.</span><span class="na">ShareActionProvider</span> <span class="o">{</span> <span class="o">*;</span> <span class="o">}</span>
 
 <span class="o">-</span><span class="n">dontwarn</span> <span class="n">android</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">NetworkSecurityPolicy</span></code></pre></div>
 
