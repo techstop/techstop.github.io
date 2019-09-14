@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Posts - techStop</title>
+  <title>Move Chrome Cache Location in Linux - techStop</title>
   <meta name="author" content="Antonio">
   <meta name="description" content="A tech blog about linux and android.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
@@ -137,15 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/lg-lucid-2-xperion-rom/" title="LG Lucid 2 Xperion ROM">LG Lucid 2 Xperion ROM</a></h1>
+  <h1><a href="https://techstop.github.io/move-chrome-cache-location-in-linux/" title="Move Chrome Cache Location in Linux">Move Chrome Cache Location in Linux</a></h1>
 
-<div class="post-info">Published: Jan 21, 2018</div>
+<div class="post-info">Published: Sep 14, 2019</div>
 
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/vs870/LG-Lucid-2-ROM.png" alt="LG Lucid 2 Xperion ROM" title="LG Lucid 2 Xperion ROM"  width="100px">
+    <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/chrome/chrome.png" alt="Chrome Browser" title="Chrome Browser"  width="200px">
 </div>
 
 <div id="myModal" class="modal">
@@ -155,172 +152,181 @@ window.cookieconsent.initialise({
 </div>
 
 <script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
 
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
 </script>
 
-<p>The LG Lucid 2 Xperion rom improves upon the factory stock rom to deliver a better experience. With many mods and tweaks, I&rsquo;m sure you&rsquo;ll agree. Maybe you&rsquo;re bored of your Lucid 2, well this rom can surely breathe some new life to your device. There&rsquo;s also an unsercured kernel for further debloating the Lucid 2 should you have the need.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/lg">lg</a>, 
-    
-      <a href="https://techstop.github.io/tags/vs870">vs870</a>, 
-    
-      <a href="https://techstop.github.io/tags/android">android</a>, 
-    
-      <a href="https://techstop.github.io/tags/roms">roms</a>, 
-    
-      <a href="https://techstop.github.io/tags/phones">phones</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/lg-lucid-2-xperion-rom/" title="LG Lucid 2 Xperion ROM">Read more &raquo;</a></p>
-  <hr>
-</article>
+
+<p>Often times users may want to move the chrome cache location for whatever reason. If you’re like me and have a primary SSD for your operating system and a secondary HDD for storage, then you may want to move the chrome cache location to another drive to reduce writes to your SSD. Reducing heavy caching to your SSD can prolong its lifespan.</p>
+
+<p>It’s fairly straight forward to move the chrome cache location to another drive in linux.</p>
+
+<p>There are two methods for doing this. The first involves editing the launcher with a cache directory. The problem here is that you’ll have to repeat this method every time chrome updates.</p>
+
+<p>The second method and the one we will be using in this tutorial will be using a symlink. This is a “set it and forget it” method. Once you set your symlink, you will not have to worry about it again, not even after chrome updates.</p>
+
+<h2 id="move-chrome-cache-location"><strong>Move Chrome Cache Location</strong></h2>
+
+<p>The symlink command generally looks like this…</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">ln -s [new-location] [old-location]</code></pre></div>
+
+<p><strong>This has been tested on xubuntu and ubuntu.</strong></p>
+
+<ol>
+<li>Make sure to close chrome browser.</li>
+<li>Create a hidden folder in your new location called &ldquo;<strong>.google-chrome</strong>&ldquo;</li>
+<li>Delete the old chrome location usually found at &ldquo;<strong>/home/USERNAME/.cache/google-chrome</strong>&rdquo;. You can use the following command for this.
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf ~/.cache/google-chrome</code></pre></div></li>
+<li>Now re-create the old chrome location you deleted as a symlink to the new location with this command.
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ln -s /new/location/path/.google-chrome ~/.cache/google-chrome</code></pre></div></li>
+</ol>
+
+<p>After opening chrome, if you&rsquo;d like to check, open your file manager and go to &ldquo;<strong>/home/USERNAME/.cache/google-chrome</strong>&rdquo;. Right click on the folder and select &ldquo;<strong>Properties</strong>&rdquo;. You should see that for &ldquo;<strong>Volume</strong>&rdquo; it should show the new cache location.</p>
+
+<p>That is all. You have now moved the chrome cache location in linux and don&rsquo;t need to worry about it anymore.</p>
+    <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fmove-chrome-cache-location-in-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Move%20Chrome%20Cache%20Location%20in%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2fmove-chrome-cache-location-in-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fmove-chrome-cache-location-in-linux%2f&title=Move%20Chrome%20Cache%20Location%20in%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
 
     
-        <article>
-  
-  <h1><a href="https://techstop.github.io/lg-spirit-4g-roms/" title="LG Spirit 4G ROMs">LG Spirit 4G ROMs</a></h1>
-
-<div class="post-info">Published: Jan 20, 2018</div>
-
-  <p>The LG Spirit 4G ROMs really enhance the user experience and make this device much more ejoyable. These roms have really been customized to make you wonder why stick to the stock factory rom. The roms can also be further customized with themes and other customizations to suit your needs. The Samurai rom with the white theme happens to be my personal favorites!</p>
-  
-    Tags:
+      Tags:
+      
+        <a href="https://techstop.github.io/tags/linux">linux</a>, 
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
+      
     
-      <a href="https://techstop.github.io/tags/lg">lg</a>, 
-    
-      <a href="https://techstop.github.io/tags/ms870">ms870</a>, 
-    
-      <a href="https://techstop.github.io/tags/android">android</a>, 
-    
-      <a href="https://techstop.github.io/tags/roms">roms</a>, 
-    
-      <a href="https://techstop.github.io/tags/phones">phones</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/lg-spirit-4g-roms/" title="LG Spirit 4G ROMs">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/lg-motion-4g-kernel/" title="LG Motion 4G Kernel">LG Motion 4G Kernel</a></h1>
-
-<div class="post-info">Published: Jan 18, 2018</div>
-
-  <p>The LG Motion 4G Kernel further enhances the user experience by really putting the power in your hands. Whether you want to overclock to boost performance or underclock to save battery, the kernel can give you that ability. Freedom Kernel is for the LG Motion 4G MS770. See kernel details below&hellip;</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/lg">lg</a>, 
-    
-      <a href="https://techstop.github.io/tags/ms770">ms770</a>, 
-    
-      <a href="https://techstop.github.io/tags/android">android</a>, 
-    
-      <a href="https://techstop.github.io/tags/kernels">kernels</a>, 
-    
-      <a href="https://techstop.github.io/tags/phones">phones</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/lg-motion-4g-kernel/" title="LG Motion 4G Kernel">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/huawei-ascend-m860-centurion-rom/" title="Huawei Ascend M860 Centurion ROM">Huawei Ascend M860 Centurion ROM</a></h1>
-
-<div class="post-info">Published: Jan 17, 2018</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/m860/Huawei-Ascend-M860-Centurion-ROM.png" alt="Huawei Ascend M860 Centurion ROM" title="Huawei Ascend M860 Centurion ROM"  width="100px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
-
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
-</script>
-
-<p>The Huawei Ascend M860 Centurion rom is based on Froyo 2.2.2. This rom is for the MetroPCS variant. Centurion rom offers enhancements beyond the factory stock rom for a better user experience.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/huawei">huawei</a>, 
-    
-      <a href="https://techstop.github.io/tags/m860">m860</a>, 
-    
-      <a href="https://techstop.github.io/tags/android">android</a>, 
-    
-      <a href="https://techstop.github.io/tags/roms">roms</a>, 
-    
-      <a href="https://techstop.github.io/tags/phones">phones</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/huawei-ascend-m860-centurion-rom/" title="Huawei Ascend M860 Centurion ROM">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-    <div class="pagination">
-
-  <a class="btn newer" href="/post/page/5/" title="Newer">&laquo; Newer</a>
-
-
-  <p class="counter">Page 6 of 6</p>
-
-
-</div>
-
+    <div style="margin-top: 18px; text-align: center;">
+      
+      
+      
+        <a href="https://techstop.github.io/make-xfce-look-modern/" title="Make Xfce Look Modern">Next Article &raquo;</a>
+      
+    </div>
   </article>
+  <hr>
+  
+    <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1F4AC;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
+
+  
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
 
         </div>
       </main>
