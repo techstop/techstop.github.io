@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Move Chrome Cache Location in Linux - techStop</title>
+  <title>Create Bootable Usb With Terminal in Linux - techStop</title>
   <meta name="author" content="Antonio">
   <meta name="description" content="A tech blog about linux and android.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/move-chrome-cache-location-in-linux/" title="Move Chrome Cache Location in Linux">Move Chrome Cache Location in Linux</a></h1>
+  <h1><a href="https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/" title="Create Bootable Usb With Terminal in Linux">Create Bootable Usb With Terminal in Linux</a></h1>
 
-<div class="post-info">Published: Sep 14, 2019</div>
+<div class="post-info">Published: Sep 15, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/chrome/chrome.png" alt="Chrome Browser" title="Chrome Browser"  width="200px">
+<img class="myImg" src="https://techstop.github.io/images/linux/dd0.png" alt="dd" title="dd"  width="200px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,44 +176,85 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>Often times users may want to move the chrome cache location for whatever reason. If you’re like me and have a primary SSD for your operating system and a secondary HDD for storage, then you may want to move the chrome cache location to another drive to reduce writes to your SSD. Reducing heavy caching to your SSD can prolong its lifespan.</p>
+<p>If you&rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&rsquo;t work. For these rare occasions the dd linux command line utility never fails. This is my preferred method and the one I&rsquo;ll cover in this tutorial.</p>
 
-<p>It’s fairly straight forward to move the chrome cache location to another drive in linux.</p>
+<h2 id="create-a-bootable-usb"><strong>Create A Bootable USB</strong></h2>
 
-<p>There are two methods for doing this. The first involves editing the launcher with a cache directory. The problem here is that you’ll have to repeat this method every time chrome updates.</p>
+<p>Once you have downloaded the iso image for the linux distro you&rsquo;d like to test or install, you&rsquo;ll need to plug your usb stick to your computer to get its partition path. To do this we will use <strong>lsblk</strong> in the terminal to get the partition path for the usb stick.</p>
 
-<p>The second method and the one we will be using in this tutorial will be using a symlink. This is a “set it and forget it” method. Once you set your symlink, you will not have to worry about it again, not even after chrome updates.</p>
+<p>Open the terminal and run this command:
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsblk</code></pre></div></p>
 
-<h2 id="move-chrome-cache-location"><strong>Move Chrome Cache Location</strong></h2>
+<p><strong>Note:</strong> The root directory for all drives attached to your computer in linux is:</p>
 
-<p>The symlink command generally looks like this…</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/dev</code></pre></div>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">ln -s [new-location] [old-location]</code></pre></div>
+<p>The name of my usb stick is <strong>Kingston</strong> which is also the brand. As you can see in the screenshot, its partition is:</p>
 
-<p><strong>This has been tested on xubuntu and ubuntu.</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sdd</code></pre></div>
 
-<ol>
-<li>Make sure to close chrome browser.</li>
-<li>Create a hidden folder in your new location called &ldquo;<strong>.google-chrome</strong>&ldquo;</li>
-<li>Delete the old chrome location usually found at &ldquo;<strong>/home/USERNAME/.cache/google-chrome</strong>&rdquo;. You can use the following command for this.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf ~/.cache/google-chrome</code></pre></div></li>
-<li>Now re-create the old chrome location you deleted as a symlink to the new location with this command.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ln -s /new/location/path/.google-chrome ~/.cache/google-chrome</code></pre></div></li>
-</ol>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/dd1.png" alt="lsblk" title="lsblk"  width="200px">
+</div>
 
-<p>After opening chrome, if you&rsquo;d like to check, open your file manager and go to &ldquo;<strong>/home/USERNAME/.cache/google-chrome</strong>&rdquo;. Right click on the folder and select &ldquo;<strong>Properties</strong>&rdquo;. You should see that for &ldquo;<strong>Volume</strong>&rdquo; it should show the new cache location.</p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
-<p>That is all. You have now moved the chrome cache location in linux and don&rsquo;t need to worry about it anymore.</p>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+
+<p>Now that we know the partition, this is what the full partition path would look like.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/dev/sdd</code></pre></div>
+
+<p>Assuming that the iso image for the linux distro you wish to burn to your usb stick is in your downloads directory, this is what the command looks like to create the bootable usb. When you run the command you will need to enter your login password. Once you&rsquo;ve entered the command, just wait a couple minutes for it to finish.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/home/USERNAME/Downloads/FILENAME.iso <span class="nv">of</span><span class="o">=</span>/dev/sdd <span class="nv">conv</span><span class="o">=</span>fdatasync</code></pre></div>
+
+<p>As you can see &ldquo;<strong>if=</strong>&rdquo; contains the path to our iso image file and &ldquo;<strong>of=</strong>&rdquo; contains the usb stick partition path.</p>
+
+<h2 id="boot-from-usb-stick"><strong>Boot From USB Stick</strong></h2>
+
+<p>Now that you&rsquo;ve created your bootable usb with the terminal in linux, it is time to boot from it. With the usb stick attached to your computer perform a reboot or shutdown. In the startup screen you&rsquo;ll see a key you need to press to get to the boot options (i.e. Esc, F2, F10). In the boot options select to boot from the usb stick.</p>
+
+<p>That is all! You will now boot linux from the usb.</p>
+
+<p>If you have any questions feel free to ask in the comments below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fmove-chrome-cache-location-in-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fcreate-bootable-usb-with-terminal-in-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Move%20Chrome%20Cache%20Location%20in%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2fmove-chrome-cache-location-in-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Create%20Bootable%20Usb%20With%20Terminal%20in%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2fcreate-bootable-usb-with-terminal-in-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fmove-chrome-cache-location-in-linux%2f&title=Move%20Chrome%20Cache%20Location%20in%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fcreate-bootable-usb-with-terminal-in-linux%2f&title=Create%20Bootable%20Usb%20With%20Terminal%20in%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -227,13 +268,9 @@ window.cookieconsent.initialise({
     
     <div style="margin-top: 18px; text-align: center;">
       
-        <a href="https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/" title="Create Bootable Usb With Terminal in Linux">&laquo; Previous Article</a>
       
       
-        &nbsp; &nbsp; &middot; &nbsp; &nbsp;
-      
-      
-        <a href="https://techstop.github.io/make-xfce-look-modern/" title="Make Xfce Look Modern">Next Article &raquo;</a>
+        <a href="https://techstop.github.io/move-chrome-cache-location-in-linux/" title="Move Chrome Cache Location in Linux">Next Article &raquo;</a>
       
     </div>
   </article>
