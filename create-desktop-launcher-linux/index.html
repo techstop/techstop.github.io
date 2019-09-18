@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Create Bootable Usb With Terminal in Linux - techStop</title>
+  <title>Create A Desktop Launcher In Linux - techStop</title>
   <meta name="author" content="Antonio">
   <meta name="description" content="A tech blog about linux and android.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/" title="Create Bootable Usb With Terminal in Linux">Create Bootable Usb With Terminal in Linux</a></h1>
+  <h1><a href="https://techstop.github.io/create-desktop-launcher-linux/" title="Create A Desktop Launcher In Linux">Create A Desktop Launcher In Linux</a></h1>
 
-<div class="post-info">Published: Sep 15, 2019</div>
+<div class="post-info">Published: Sep 18, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/dd0.png" alt="dd" title="dd"  width="200px">
+<img class="myImg" src="https://techstop.github.io/images/linux/desktop-launcher.png" alt="Desktop Launcher File" title="Desktop Launcher File"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,85 +176,53 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>If you&rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&rsquo;t work. For these rare occasions the dd linux command line utility never fails. This is my preferred method and the one I&rsquo;ll cover in this tutorial.</p>
+<p>There may be times when you will need to create a <strong>.desktop</strong> launcher file in linux. The desktop file is a shortcut to an application for launching it. This desktop file adds a launcher to your applications menu and can also be placed in docks or anywhere you&rsquo;d like.</p>
 
-<h2 id="create-a-bootable-usb"><strong>Create A Bootable USB</strong></h2>
+<p>Most applications create their own .desktop launcher file when installed. However, there&rsquo;s the rare occasion when an application will not create one. A good example is the <strong>NetBeans IDE</strong> which doesn&rsquo;t create a desktop launcher.</p>
 
-<p>Once you have downloaded the iso image for the linux distro you&rsquo;d like to test or install, you&rsquo;ll need to plug your usb stick to your computer to get its partition path. To do this we will use <strong>lsblk</strong> in the terminal to get the partition path for the usb stick.</p>
+<p>In this tutorial I will show you how to create a desktop launcher file for any application and script that will be accessible from your applications menu and any dock or folder.</p>
 
-<p>Open the terminal and run this command:
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsblk</code></pre></div></p>
+<h2 id="how-to-create-a-desktop-launcher"><strong>How To Create A Desktop Launcher</strong></h2>
 
-<p><strong>Note:</strong> The root directory for all drives attached to your computer in linux is:</p>
+<p>The &ldquo;.desktop&rdquo; launcher file in linux is just a text file with a &ldquo;<strong>.desktop</strong>&rdquo; extension at the end. Here&rsquo;s an example of the contents for a desktop launcher I created for <a href="https://www.gimp.org/" target="_blank">GIMP</a>.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/dev</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>Desktop Entry<span class="o">]</span>
+<span class="nv">Type</span><span class="o">=</span>Application
+<span class="nv">Name</span><span class="o">=</span>GIMP
+<span class="nv">Comment</span><span class="o">=</span>GNU Image Manipulation Program
+<span class="nv">Icon</span><span class="o">=</span>/usr/share/icons/hicolor/48x48/apps/gimp.png
+<span class="nv">Exec</span><span class="o">=</span>/usr/bin/gimp
+<span class="nv">Categories</span><span class="o">=</span>Graphics<span class="p">;</span>
+<span class="nv">Terminal</span><span class="o">=</span>false</code></pre></div>
 
-<p>The name of my usb stick is <strong>Kingston</strong> which is also the brand. As you can see in the screenshot, its partition is:</p>
+<ul>
+<li><strong>[Desktop Entry]</strong> - This lets the system know it&rsquo;s a desktop launcher file.</li>
+<li><strong>Type</strong> - This will always be set to <strong>Application</strong>.</li>
+<li><strong>Name</strong> - You can add whatever name you wish to give the application.</li>
+<li><strong>Comment</strong> - This describes the application and shows in hint popups when you rest the mouse cursor on the launcher.</li>
+<li><strong>Icon</strong> - Set the path to any icon image of your liking. You can download one, create it yourself, or use a system icon.</li>
+<li><strong>Exec</strong> - This will be the path to the executable or script.</li>
+<li><strong>Categories</strong> - The launcher will be placed under this category in the applications menu. You can choose an appropriate category from your applications menu.</li>
+<li><strong>Terminal</strong> - This is false for an executable and true for a script that needs to display output in a terminal.</li>
+</ul>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sdd</code></pre></div>
+<p>Once you&rsquo;ve added all the fields above to your desktop launcher file, save it with a &ldquo;<strong>.desktop</strong>&rdquo; extension. For this example I named mine &ldquo;<strong>gimp-app.desktop</strong>&rdquo;. Now move the desktop file you created to &ldquo;<strong>/home/USERNAME/.local/share/applications</strong>&rdquo;. Change &ldquo;<strong>USERNAME</strong>&rdquo; with your own user name. Finally you can check your applications menu for your new desktop launcher.</p>
 
-<div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/dd1.png" alt="lsblk" title="lsblk"  width="200px">
-</div>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-
-
-<p>Now that we know the partition, this is what the full partition path would look like.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/dev/sdd</code></pre></div>
-
-<p>Assuming that the iso image for the linux distro you wish to burn to your usb stick is in your downloads directory, this is what the command looks like to create the bootable usb. When you run the command you will need to enter your login password. Once you&rsquo;ve entered the command, just wait a couple minutes for it to finish.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/home/USERNAME/Downloads/FILENAME.iso <span class="nv">of</span><span class="o">=</span>/dev/sdd <span class="nv">conv</span><span class="o">=</span>fdatasync</code></pre></div>
-
-<p>As you can see &ldquo;<strong>if=</strong>&rdquo; contains the path to our iso image file and &ldquo;<strong>of=</strong>&rdquo; contains the usb stick partition path.</p>
-
-<h2 id="boot-from-usb-stick"><strong>Boot From USB Stick</strong></h2>
-
-<p>Now that you&rsquo;ve created your bootable usb with the terminal in linux, it is time to boot from it. With the usb stick attached to your computer perform a reboot or shutdown. In the startup screen you&rsquo;ll see a key you need to press to get to the boot options (i.e. Esc, F2, F10). In the boot options select to boot from the usb stick.</p>
-
-<p>That is all! You will now boot linux from the usb.</p>
+<p>As you can see it is really simple to create a .desktop launcher file on linux for any application whether it&rsquo;s third party, one you created, or any script.</p>
 
 <p>If you have any questions feel free to ask in the comments below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fcreate-bootable-usb-with-terminal-in-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fcreate-desktop-launcher-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Create%20Bootable%20Usb%20With%20Terminal%20in%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2fcreate-bootable-usb-with-terminal-in-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Create%20A%20Desktop%20Launcher%20In%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2fcreate-desktop-launcher-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fcreate-bootable-usb-with-terminal-in-linux%2f&title=Create%20Bootable%20Usb%20With%20Terminal%20in%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fcreate-desktop-launcher-linux%2f&title=Create%20A%20Desktop%20Launcher%20In%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -268,13 +236,9 @@ window.cookieconsent.initialise({
     
     <div style="margin-top: 18px; text-align: center;">
       
-        <a href="https://techstop.github.io/create-desktop-launcher-linux/" title="Create A Desktop Launcher In Linux">&laquo; Previous Article</a>
       
       
-        &nbsp; &nbsp; &middot; &nbsp; &nbsp;
-      
-      
-        <a href="https://techstop.github.io/move-chrome-cache-location-in-linux/" title="Move Chrome Cache Location in Linux">Next Article &raquo;</a>
+        <a href="https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/" title="Create Bootable Usb With Terminal in Linux">Next Article &raquo;</a>
       
     </div>
   </article>

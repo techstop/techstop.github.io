@@ -4,55 +4,60 @@
   
   <url>
     <loc>https://techstop.github.io/categories/</loc>
-    <lastmod>2019-09-15T19:19:16-04:00</lastmod>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/create-desktop-launcher-linux/</loc>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/categories/linux/</loc>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/linux/</loc>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/post/</loc>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/</loc>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/categories/tutorials/</loc>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/tutorials/</loc>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/</loc>
+    <lastmod>2019-09-18T12:36:21-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/</loc>
     <lastmod>2019-09-15T19:19:16-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/categories/linux/</loc>
-    <lastmod>2019-09-15T19:19:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/linux/</loc>
-    <lastmod>2019-09-15T19:19:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/post/</loc>
-    <lastmod>2019-09-15T19:19:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/</loc>
-    <lastmod>2019-09-15T19:19:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/categories/tutorials/</loc>
-    <lastmod>2019-09-15T19:19:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/tutorials/</loc>
-    <lastmod>2019-09-15T19:19:16-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/</loc>
-    <lastmod>2019-09-15T19:19:16-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

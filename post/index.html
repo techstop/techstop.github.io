@@ -140,6 +140,60 @@ window.cookieconsent.initialise({
     
         <article>
   
+  <h1><a href="https://techstop.github.io/create-desktop-launcher-linux/" title="Create A Desktop Launcher In Linux">Create A Desktop Launcher In Linux</a></h1>
+
+<div class="post-info">Published: Sep 18, 2019</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/desktop-launcher.png" alt="Desktop Launcher File" title="Desktop Launcher File"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>There may be times when you will need to create a <strong>.desktop</strong> launcher file in linux. The desktop file is a shortcut to an application for launching it. This desktop file adds a launcher to your applications menu and can also be placed in docks or anywhere you&rsquo;d like.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>, 
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/create-desktop-launcher-linux/" title="Create A Desktop Launcher In Linux">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+    
+        <article>
+  
   <h1><a href="https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/" title="Create Bootable Usb With Terminal in Linux">Create Bootable Usb With Terminal in Linux</a></h1>
 
 <div class="post-info">Published: Sep 15, 2019</div>
@@ -472,60 +526,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/xfce-4-14-on-xubuntu-18-04/" title="Install Xfce 4.14 on Xubuntu 18.04">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/ubuntu-18-04-3-release/" title="Ubuntu 18.04.3 Release with Linux Kernel 5.0">Ubuntu 18.04.3 Release with Linux Kernel 5.0</a></h1>
-
-<div class="post-info">Published: Aug 10, 2019</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/ubuntu/ubuntu.png" alt="ubuntu" title="ubuntu"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
-
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
-</script>
-
-<p>The ubuntu flavours finally get the highly anticipated linux kernel 5.0. This new kernel brings performance improvements, bug fixes, and more hardware support. You also get an updated X.org and graphics drivers. The 18.04.3 point release was released on Aug 8th 2019.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/ubuntu-18-04-3-release/" title="Ubuntu 18.04.3 Release with Linux Kernel 5.0">Read more &raquo;</a></p>
   <hr>
 </article>
 
