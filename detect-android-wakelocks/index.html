@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Manipulate Text in Files With Sed - techStop</title>
+  <title>Detect Android Wakelocks - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow along this tutorial to learn some basic usage for the sed linux command line utility. Learn how to manipulate text in files with sed using robust and powerful options.">
+  <meta name="description" content="Detect Android wakelocks on your mobile device with a simple adb command that does not require root. The output of the command will tell you exactly which apps are causing the android wakelocks so you can take action.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,101 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/manipulate-text-files-sed/" title="Manipulate Text in Files With Sed">Manipulate Text in Files With Sed</a></h1>
+  <h1><a href="https://techstop.github.io/detect-android-wakelocks/" title="Detect Android Wakelocks">Detect Android Wakelocks</a></h1>
 
-<div class="post-info">Published: Sep 22, 2019</div>
+<div class="post-info">Published: Sep 23, 2019</div>
 
-    <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/sed.png" alt="Sed Text Stream Editor" title="Sed Text Stream Editor"  width="150px">
+    <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/wake-1.png" alt="Android Wakelocks" title="Android Wakelocks"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+ <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/wake-2.png" alt="Android Wakelocks" title="Android Wakelocks"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+</p>
+
+<p>If you&rsquo;re noticing that your android device is suddenly draining battery quicker than normal, it can be due to an android wakelock. Once you know the quick battery drain is not due to a faulty battery, you&rsquo;ll need to detect what&rsquo;s causing the wakelock. This is likely a misbehaving app.</p>
+
+<p>A misbehaving app can prevent your android device from going into deep sleep. Such behavior can be attributed to a poorly coded app or a malicious app doing nefarious things in the background. One example of a malicious app could be one that is crypto mining without your consent or knowledge in the background. It is wise to always get your apps from a reputable source, most preferably the Google Play Store.</p>
+
+<p>A wakelock is not all bad. In fact, they are needed for some services that need to continue running in the background periodically. A good example of an app that needs to run a wakelock is your email app. An email app needs a wakelock to be able to sync your new emails as they are received. These types of android wakelocks are usually quick, only lasting a few minutes at a time.</p>
+
+<h2 id="detect-android-wakelocks"><strong>Detect Android Wakelocks</strong></h2>
+
+<p>Now that we&rsquo;ve covered a little background on android wakelocks, it&rsquo;s time to learn to detect them. Detecting an android wakelock is simple and straight forward. In this tutorial we&rsquo;ll cover a method that does not require root.</p>
+
+<ol>
+<li>Go to your phone&rsquo;s &ldquo;<strong>settings &gt; system &gt; about phone</strong>&rdquo; and click on &ldquo;<strong>build number</strong>&rdquo; 7 times. This unlocks developer options. Now go back to the previous menu and click on &ldquo;<strong>Developer options</strong>&rdquo; and look for and enable &ldquo;<strong>USB debugging</strong>&rdquo;.</li>
+<li>Make sure to have <a href="https://developer.android.com/studio/releases/platform-tools.html#downloads" target="_blank">ADB</a> installed on your PC. Plug your phone to your PC with the USB cable and in a terminal on your PC run this command.
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adb devices</code></pre></div>
+If your device is detected by ADB, you will see your device&rsquo;s serial number.</li>
+<li>Now run this command to detect the wakelocks.
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adb shell dumpsys power <span class="p">|</span> grep -i wake_lock</code></pre></div></li>
+</ol>
+
+<p>If there are no wakelocks at the time of running the above command, no wakelocks will be detected. Otherwise, you&rsquo;ll see wakelocks like in the screenshot below.</p>
+
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/wake-0.png" alt="Android Wakelocks" title="Android Wakelocks"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,126 +265,41 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>The sed linux utility is a powerful stream editor. Sed can manipulate text from standard input or from a file. It is much like a typical text editor. Where sed sets itself apart is in its ability to filter text in a pipeline to expand its capabilities.</p>
+<p>If you look at the screen shot above, the command shows 2 wakelocks. One wakelock is &ldquo;<strong>com.android.calendar</strong>&rdquo; which is my Calendar. The other is &ldquo;<strong>com.google.android.gms</strong>&rdquo; which is Google Mobile Services. Both of these wakelocks are safe and not an issue.</p>
 
-<p>Sed can work wonders in a shell script. You can pipe other commands to sed or use variables. Use it to process files of all sizes. Find specific strings of text and patterns in your input and manipulate the text to your needs. With sed you can also edit a file directly or save to a new file. The possibilities with sed are near endless.</p>
+<p>If you identify a wakelock to be from a misbehaving app you installed, you can simply uninstall it. Now if it&rsquo;s from a system app, you may not be able to uninstall it. You can check to see if it can be disabled. If not you can try a more aggressive solution in the following post I made by using the debloat option.</p>
 
-<p>In this tutorial I will show you some basic and common uses of sed to manipulate text.</p>
-
-<h2 id="manipulate-text-with-sed"><strong>Manipulate Text With Sed</strong></h2>
-
-<p>Basic sed syntax.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>command<span class="o">]</span> <span class="o">[</span>file-to-eidt<span class="o">]</span></code></pre></div>
-
-<p>Sed has an extensive list of options to manipulate input. For this tutorial we will be using 2 options.</p>
-
-<ul>
-<li>[-e] Doesn&rsquo;t edit the file in place, but rather shows the edited output in your terminal. This is good for testing before actually editing a file directly.</li>
-<li>[-i] Edits a file in place. Can also make a backup if you add a suffix. Example: [-i-bak]</li>
-</ul>
-
-<p>Create a file called &ldquo;<strong>test</strong>&rdquo; and add the following sentence to it.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">We will learn how to use sed to edit text input streams.</code></pre></div>
-
-<p>We will use the above sentence to practice with sed.</p>
-
-<p><strong>Replace a string with another string.</strong></p>
-
-<p>In this first example we will replace the word &ldquo;<strong>learn</strong>&rdquo; with &ldquo;<strong>follow</strong>&rdquo;. We will first run a test with the [-e] option just to be sure before making the final edit.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -e <span class="s1">&#39;s/learn/follow/g&#39;</span> test</code></pre></div>
-
-<p>You should see the word learn replaced with follow in your terminal output. Now lets make the edit directly to the file with the [-i] option.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;s/learn/follow/g&#39;</span> test</code></pre></div>
-
-<p>If you open the test file you&rsquo;ll see the word learn replaced with follow. Now lets change it back to learn, only this time we will make a backup of the original file.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i-bak <span class="s1">&#39;s/follow/learn/g&#39;</span> test</code></pre></div>
-
-<p>As you can see a backup file called &ldquo;<strong>test-bak</strong>&rdquo; was created and then the original file was edited. Lets instead use sed to create a new file called &ldquo;<strong>my-file</strong>&rdquo; with our changes.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed <span class="s1">&#39;s/follow/learn/g&#39;</span> <span class="nb">test</span> &gt; my-file</code></pre></div>
-
-<p>You should now have the new file with the word follow replaced with learn while the original test file still shows the word follow.</p>
-
-<p>Now that you&rsquo;ve learned a few basic examples with sed we can move at a faster pace through the tutorial.</p>
-
-<h2 id="more-sed-examples"><strong>More Sed Examples</strong></h2>
-
-<p><strong>Delete all empty lines with sed.</strong></p>
-
-<p>If you have a file with multiple lines separated by empty lines you can remove the empty lines easily with sed.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/^\s*$/d&#39;</span> filename</code></pre></div>
-
-<p><strong>Delete a word or phrase.</strong></p>
-
-<p>Delete every instance of a word or phrase.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;s/word-to-remove//g&#39;</span> filename</code></pre></div>
-
-<p><strong>Append to the beginning of every line.</strong></p>
-
-<p>Add a word or phrase to the beginning of each line in a file.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;s/^/word-or-phrase/&#39;</span> filename</code></pre></div>
-
-<p><strong>Append to the end of every line.</strong></p>
-
-<p>Add a word or phrase to the end of each line in a file.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;s/$/words or patterns/&#39;</span> filename</code></pre></div>
-
-<p><strong>Convert all file contents to uppercase.</strong></p>
-
-<p>Convert every letter in a file to uppercase.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;s/\(.*\)/\U\1/&#39;</span> filename</code></pre></div>
-
-<p><strong>Convert all file contents to lowercase.</strong></p>
-
-<p>Convert every letter in a file to lowercase.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;s/\(.*\)/\L\1/&#39;</span> filename</code></pre></div>
+<p><a href="https://techstop.github.io/backup-and-debloat-android-no-root/">Backup and Debloat Android No Root</a></p>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>Sed is an extensive and powerful text stream editor and we only scratched the surface on what it can do. If you&rsquo;d like to learn more about sed, have a look at the manual. Just run this command in terminal.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">man sed</code></pre></div>
+<p>That will be all for this tutorial. You should now be able to easily detect an android wakelock and take control of your battery life back.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fmanipulate-text-files-sed%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fdetect-android-wakelocks%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Manipulate%20Text%20in%20Files%20With%20Sed&amp;url=https%3a%2f%2ftechstop.github.io%2fmanipulate-text-files-sed%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Detect%20Android%20Wakelocks&amp;url=https%3a%2f%2ftechstop.github.io%2fdetect-android-wakelocks%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fmanipulate-text-files-sed%2f&title=Manipulate%20Text%20in%20Files%20With%20Sed" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fdetect-android-wakelocks%2f&title=Detect%20Android%20Wakelocks" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
     
       Tags:
       
-        <a href="https://techstop.github.io/tags/linux">linux</a>, 
+        <a href="https://techstop.github.io/tags/android">android</a>, 
       
         <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
       
     
     <div style="margin-top: 18px; text-align: center;">
       
-        <a href="https://techstop.github.io/detect-android-wakelocks/" title="Detect Android Wakelocks">&laquo; Previous Article</a>
       
       
-        &nbsp; &nbsp; &middot; &nbsp; &nbsp;
-      
-      
-        <a href="https://techstop.github.io/create-desktop-launcher-linux/" title="Create A Desktop Launcher In Linux">Next Article &raquo;</a>
+        <a href="https://techstop.github.io/manipulate-text-files-sed/" title="Manipulate Text in Files With Sed">Next Article &raquo;</a>
       
     </div>
   </article>
