@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Detect Android Wakelocks - techStop</title>
+  <title>Dark Mode for Any Website With Dark Reader - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Detect Android wakelocks on your mobile device with a simple adb command that does not require root. The output of the command will tell you exactly which apps are causing the android wakelocks so you can take action.">
+  <meta name="description" content="Enable dark mode for any website with Dark Reader. Dark Reader is a browser extension that is available for major browsers such as Chrome, Firefox, and Safari.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,101 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/detect-android-wakelocks/" title="Detect Android Wakelocks">Detect Android Wakelocks</a></h1>
+  <h1><a href="https://techstop.github.io/dark-mode-for-any-website-with-dark-reader/" title="Dark Mode for Any Website With Dark Reader">Dark Mode for Any Website With Dark Reader</a></h1>
 
-<div class="post-info">Published: Sep 23, 2019</div>
+<div class="post-info">Published: Sep 25, 2019</div>
 
-    <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/wake-1.png" alt="Android Wakelocks" title="Android Wakelocks"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
- <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/wake-2.png" alt="Android Wakelocks" title="Android Wakelocks"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-</p>
-
-<p>If you&rsquo;re noticing that your android device is suddenly draining battery quicker than normal, it can be due to an android wakelock. Once you know the quick battery drain is not due to a faulty battery, you&rsquo;ll need to detect what&rsquo;s causing the wakelock. This is likely a misbehaving app.</p>
-
-<p>A misbehaving app can prevent your android device from going into deep sleep. Such behavior can be attributed to a poorly coded app or a malicious app doing nefarious things in the background. One example of a malicious app could be one that is crypto mining without your consent or knowledge in the background. It is wise to always get your apps from a reputable source, most preferably the Google Play Store.</p>
-
-<p>A wakelock is not all bad. In fact, they are needed for some services that need to continue running in the background periodically. A good example of an app that needs to run a wakelock is your email app. An email app needs a wakelock to be able to sync your new emails as they are received. These types of android wakelocks are usually quick, only lasting a few minutes at a time.</p>
-
-<h2 id="detect-android-wakelocks"><strong>Detect Android Wakelocks</strong></h2>
-
-<p>Now that we&rsquo;ve covered a little background on android wakelocks, it&rsquo;s time to learn to detect them. Detecting an android wakelock is simple and straight forward. In this tutorial we&rsquo;ll cover a method that does not require root.</p>
-
-<ol>
-<li>Go to your phone&rsquo;s &ldquo;<strong>settings &gt; system &gt; about phone</strong>&rdquo; and click on &ldquo;<strong>build number</strong>&rdquo; 7 times. This unlocks developer options. Now go back to the previous menu and click on &ldquo;<strong>Developer options</strong>&rdquo; and look for and enable &ldquo;<strong>USB debugging</strong>&rdquo;.</li>
-<li>Make sure to have <a href="https://developer.android.com/studio/releases/platform-tools.html#downloads" target="_blank">ADB</a> installed on your PC. Plug your phone to your PC with the USB cable and in a terminal on your PC run this command.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adb devices</code></pre></div>
-If your device is detected by ADB, you will see your device&rsquo;s serial number.</li>
-<li>Now run this command to detect the wakelocks.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adb shell dumpsys power <span class="p">|</span> grep -i wake_lock</code></pre></div></li>
-</ol>
-
-<p>If there are no wakelocks at the time of running the above command, no wakelocks will be detected. Otherwise, you&rsquo;ll see wakelocks like in the screenshot below.</p>
-
-<div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/wake-0.png" alt="Android Wakelocks" title="Android Wakelocks"  width="150px">
+    <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/misc/dm.png" alt="Dark mode for any website with Dark Reader" title="Dark mode for any website with Dark Reader"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -265,34 +176,46 @@ If your device is detected by ADB, you will see your device&rsquo;s serial numbe
 </script>
 
 
-<p>If you look at the screen shot above, the command shows 2 wakelocks. One wakelock is &ldquo;<strong>com.android.calendar</strong>&rdquo; which is my Calendar. The other is &ldquo;<strong>com.google.android.gms</strong>&rdquo; which is Google Mobile Services. Both of these wakelocks are safe and not an issue.</p>
+<p>With the rise of dark themed OSes and apps, it&rsquo;s no surprise that browser extensions that enable dark mode or night mode have become popular. The Dark Reader browser extension claims to enable dark mode for any website. Dark Reader is available for major browsers like Chrome, Firefox, and Safari.</p>
 
-<p>If you identify a wakelock to be from a misbehaving app you installed, you can simply uninstall it. Now if it&rsquo;s from a system app, you may not be able to uninstall it. You can check to see if it can be disabled. If not you can try a more aggressive solution in the following post I made by using the debloat option.</p>
+<p>Having the option to enable night mode or dark mode for any website can be really useful. You can enable dark mode to reduce eye strain, read at night or in dim lighting, or simply because a dark themed website is your preference.</p>
 
-<p><a href="https://techstop.github.io/backup-and-debloat-android-no-root/">Backup and Debloat Android No Root</a></p>
+<p>I&rsquo;ve been using Dark Reader for a few months and am happy to report that it does a fantastic job of making websites dark. I find that it has the perfect balance of contrast making everything on the webpage easy to distinguish. There&rsquo;s also no weird halo or artifacting around images or other elements on a webpage.</p>
+
+<p>Dark Reader is also quite customizable. You can enable or disable it on a per page basis. There&rsquo;s the ability to fine tune the contrast, brightness, and grayscale amongst other options. Dark Reader even lets you input your own custom code if you wish with an option called Dev Tools. The developers and other contributors have really thought of everything for this extension.</p>
+
+<h2 id="get-dark-reader"><strong>Get Dark Reader</strong></h2>
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh" target="_blank">Chrome Browser</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/darkreader/" target="_blank">Firefox Browser</a></li>
+<li><a href="https://darkreader.org/safari" target="_blank">Safari Browser</a></li>
+</ul>
+
+<p>For more information you can visit the official <a href="https://darkreader.org/" target="_blank">Dark Reader</a> website.</p>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>That will be all for this tutorial. You should now be able to easily detect an android wakelock and take control of your battery life back.</p>
+<p>Dark Reader is a wonderful free and open source project that gives you the ability to set dark mode for any website. You&rsquo;ll never have to strain your eyes again with a bright webpage.</p>
+
+<p>Please consider making a donation to this project to help keep it going. Any amount helps.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fdetect-android-wakelocks%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fdark-mode-for-any-website-with-dark-reader%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Detect%20Android%20Wakelocks&amp;url=https%3a%2f%2ftechstop.github.io%2fdetect-android-wakelocks%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Dark%20Mode%20for%20Any%20Website%20With%20Dark%20Reader&amp;url=https%3a%2f%2ftechstop.github.io%2fdark-mode-for-any-website-with-dark-reader%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fdetect-android-wakelocks%2f&title=Detect%20Android%20Wakelocks" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fdark-mode-for-any-website-with-dark-reader%2f&title=Dark%20Mode%20for%20Any%20Website%20With%20Dark%20Reader" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
     
       Tags:
       
-        <a href="https://techstop.github.io/tags/android">android</a>, 
-      
-        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
+        <a href="https://techstop.github.io/tags/browser">browser</a>
       
     
     <div style="margin-top: 18px; text-align: center;">
@@ -300,10 +223,8 @@ If your device is detected by ADB, you will see your device&rsquo;s serial numbe
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/dark-mode-for-any-website-with-dark-reader/">&laquo; Dark Mode for Any Website With Dark Reader</a></div>
       
-      
-        <div><a href="https://techstop.github.io/manipulate-text-files-sed/">Manipulate Text in Files With Sed &raquo;</a></div>
+        <div><a href="https://techstop.github.io/detect-android-wakelocks/">Detect Android Wakelocks &raquo;</a></div>
       
     </div>
   </article>
