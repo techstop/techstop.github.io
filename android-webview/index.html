@@ -139,7 +139,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/android-webview/" title="Android WebView">Android WebView</a></h1>
 
-<div class="post-info">Published: Feb 4, 2019 &middot; Updated: Sep 11, 2019</div>
+<div class="post-info">Published: Feb 4, 2019 &middot; Updated: Sep 27, 2019</div>
 
     <p><div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/android-webview/android-webview-0.png" alt="Android WebView" title="Android WebView"  width="100px">
@@ -288,6 +288,8 @@ window.cookieconsent.initialise({
 </span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setLoadWithOverviewMode</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
     <span class="c1">// Do not constrain the viewport to the web view dimensions.
 </span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setUseWideViewPort</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+    <span class="c1">// Allow website user settings to be saved and retrieved.
+</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setDomStorageEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
     <span class="c1">// Attach our web view to our WebViewClient.
 </span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">setWebViewClient</span><span class="o">(</span><span class="k">new</span> <span class="n">MyWebViewClient</span><span class="o">());</span>
     <span class="c1">// We call our url string variable to load.
@@ -319,14 +321,12 @@ window.cookieconsent.initialise({
   <span class="c1">// Check if storage write permission has been granted. If not, request it.
 </span><span class="c1"></span>  <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">getPermission</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span> <span class="o">&gt;=</span> <span class="n">23</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">ActivityCompat</span><span class="o">.</span><span class="na">checkSelfPermission</span><span class="o">(</span><span class="k">this</span><span class="o">,</span>
-          <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="o">)</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">ActivityCompat</span><span class="o">.</span><span class="na">checkSelfPermission</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="o">)</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// True if permission granted exists.
 </span><span class="c1"></span>        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
       <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
         <span class="c1">// We ask for storage write permission if it doesn&#39;t exist.
-</span><span class="c1"></span>        <span class="n">ActivityCompat</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="k">this</span><span class="o">,</span>
-          <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="o">},</span> <span class="n">WRITE_STORAGE</span><span class="o">);</span>
+</span><span class="c1"></span>        <span class="n">ActivityCompat</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="o">},</span> <span class="n">WRITE_STORAGE</span><span class="o">);</span>
         <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
       <span class="o">}</span>
     <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
