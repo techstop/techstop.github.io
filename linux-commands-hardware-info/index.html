@@ -139,7 +139,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/linux-commands-hardware-info/" title="Linux Commands To Get Hardware Info">Linux Commands To Get Hardware Info</a></h1>
 
-<div class="post-info">Published: Sep 27, 2019</div>
+<div class="post-info">Published: Sep 27, 2019 &middot; Updated: Sep 28, 2019</div>
 
     <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/inxi.png" alt="Linux commands for hardware info" title="Linux commands for hardware info"  width="150px">
@@ -190,8 +190,12 @@ window.cookieconsent.initialise({
 
 <p><strong>Lets get started, shall we&hellip;</strong></p>
 
+<p>If you do not have any of the linux utilities in this tutorial, you can install them in your terminal as follows.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install &lt;name-of-utility&gt;</code></pre></div>
+
 <ul>
-<li>These next few commands are great for getting an overview of your hardware info.</li>
+<li><strong>These next few commands are great for getting an overview of your hardware info.</strong></li>
 </ul>
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hwinfo --short</code></pre></div>
@@ -203,7 +207,7 @@ window.cookieconsent.initialise({
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">inxi -Fxz</code></pre></div>
 
 <ul>
-<li>We will now target just your CPU info.
+<li><strong>We will now target just your CPU info.</strong>
 <br /></li>
 </ul>
 
@@ -214,7 +218,7 @@ window.cookieconsent.initialise({
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw -C cpu</code></pre></div>
 
 <ul>
-<li>Lets focus on your PC memory now.</li>
+<li><strong>Lets focus on your PC memory now.</strong></li>
 </ul>
 
 <p>This command will show the memory size for each RAM stick you have installed in your PC. You do need to run this command with sudo.</p>
@@ -237,11 +241,73 @@ window.cookieconsent.initialise({
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">free -m</code></pre></div>
 
+<ul>
+<li><strong>Here are some commands to get disks, devices, and file systems.</strong></li>
+</ul>
+
+<p>I like this next command. It displays the device path for any mounted HDD, SSD, and USB drives.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo lshw -short -C disk</code></pre></div>
+
+<p>The next command is more targeted at a specific drive by using the device path you get from the previous command above.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -I /dev/sda</code></pre></div>
+
+<p>If you&rsquo;d like to get an idea of how fast your HDD or SSD read speeds are, you can run a test as follows. You just need the device path as the previous command.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -Tt /dev/sda</code></pre></div>
+
+<p>This following command is quite common. You can use it to list all disks with their partitions, mount points, and sizes.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsblk</code></pre></div>
+
+<p>This is yet another to list sector count, file system, type, and ID.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l</code></pre></div>
+
+<p>Along with file systems and mount points, this next command also lists space used and available in megabytes.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">df -m</code></pre></div>
+
+<p>These next two list USB and PCI devices.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsusb</code></pre></div>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lspci</code></pre></div>
+
+<ul>
+<li><strong>Some commands for network hardware info.</strong></li>
+</ul>
+
+<p>List hardware information for your network card.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw -C network</code></pre></div>
+
+<p>List network interfaces.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ifconfig -a</code></pre></div>
+
+<ul>
+<li><strong>Wrapping things up with installed software information.</strong></li>
+</ul>
+
+<p>Details about your current OS installation.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/os-release</code></pre></div>
+
+<p>Kernel details.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -a</code></pre></div>
+
+<p>Finally we get some details about the BIOS.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t bios</code></pre></div>
+
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>We have stepped through a few Linux commands to get hardware info, but we&rsquo;ve only scratched the surface. There&rsquo;s many more commands to acquire more hardware information.</p>
+<p>We have stepped through quite a few Linux commands to get hardware info. There&rsquo;s many more commands you can learn in time. With the one&rsquo;s we&rsquo;ve covered in this tutorial you should be covered for most situations.</p>
 
-<p>Check back to this page as I will add more commands to cover a greater range of hardware.</p>
+<p>If there&rsquo;s any more linux commands to get hardware info that you think should be included in this tutorial, feel free to share them in the comments below with some details.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
