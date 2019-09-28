@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dark Mode for Any Website With Dark Reader - techStop</title>
+  <title>Linux Commands To Get Hardware Info - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Enable dark mode for any website with Dark Reader. Dark Reader is a browser extension that is available for major browsers such as Chrome, Firefox, and Safari.">
+  <meta name="description" content="Use Linux commands to detect hardware info in your PC. Getting the hardware info you require can be achieved efficiently from the command line in linux.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/dark-mode-for-any-website-with-dark-reader/" title="Dark Mode for Any Website With Dark Reader">Dark Mode for Any Website With Dark Reader</a></h1>
+  <h1><a href="https://techstop.github.io/linux-commands-hardware-info/" title="Linux Commands To Get Hardware Info">Linux Commands To Get Hardware Info</a></h1>
 
-<div class="post-info">Published: Sep 25, 2019</div>
+<div class="post-info">Published: Sep 27, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/misc/dm.png" alt="Dark mode for any website with Dark Reader" title="Dark mode for any website with Dark Reader"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/inxi.png" alt="Linux commands for hardware info" title="Linux commands for hardware info"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,46 +176,91 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>With the rise of dark themed OSes and apps, it&rsquo;s no surprise that browser extensions that enable dark mode or night mode have become popular. The Dark Reader browser extension claims to enable dark mode for any website. Dark Reader is available for major browsers like Chrome, Firefox, and Safari.</p>
+<p>It&rsquo;s always a good idea to know how to get hardware info on your linux system. It can be very useful if you need to troubleshoot a hardware issue. There can be times when you need some specific hardware info to get the right drivers. Other times you&rsquo;ll need specific info to perform a hardware upgrade. The command line offers quite a few ways to obtain this hardware info with some tried and true linux commands.</p>
 
-<p>Having the option to enable night mode or dark mode for any website can be really useful. You can enable dark mode to reduce eye strain, read at night or in dim lighting, or simply because a dark themed website is your preference.</p>
+<p>Now there are a few GUI applications that you can install to get the hardware info, and in most cases this will suffice. My personal favorite GUI application for hardware details is <a href="https://help.ubuntu.com/community/HardInfo" target="_blank">HardInfo</a>. It&rsquo;s a fantastic piece of software. In fact, HardInfo even has some benchmarking tools to test your system&rsquo;s stability. This comes in handy after hardware upgrades or overclocking.</p>
 
-<p>I&rsquo;ve been using Dark Reader for a few months and am happy to report that it does a fantastic job of making websites dark. I find that it has the perfect balance of contrast making everything on the webpage easy to distinguish. There&rsquo;s also no weird halo or artifacting around images or other elements on a webpage.</p>
+<p>You can install HardInfo as follows.</p>
 
-<p>Dark Reader is also quite customizable. You can enable or disable it on a per page basis. There&rsquo;s the ability to fine tune the contrast, brightness, and grayscale amongst other options. Dark Reader even lets you input your own custom code if you wish with an option called Dev Tools. The developers and other contributors have really thought of everything for this extension.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install hardinfo</code></pre></div>
 
-<h2 id="get-dark-reader"><strong>Get Dark Reader</strong></h2>
+<h2 id="linux-commands-for-hardware-info"><strong>Linux Commands For Hardware Info</strong></h2>
+
+<p>Well now that we&rsquo;ve gone over a good GUI, it&rsquo;s time to dig in with what this article is really about. We will go over some Linux commands to get hardware info. Commands can allow for more specific and targeted hardware info. Probably the biggest advantage is the ability to use these commands in a shell script.</p>
+
+<p><strong>Lets get started, shall we&hellip;</strong></p>
 
 <ul>
-<li><a href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh" target="_blank">Chrome Browser</a></li>
-<li><a href="https://addons.mozilla.org/en-US/firefox/addon/darkreader/" target="_blank">Firefox Browser</a></li>
-<li><a href="https://darkreader.org/safari" target="_blank">Safari Browser</a></li>
+<li>These next few commands are great for getting an overview of your hardware info.</li>
 </ul>
 
-<p>For more information you can visit the official <a href="https://darkreader.org/" target="_blank">Dark Reader</a> website.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hwinfo --short</code></pre></div>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw --short</code></pre></div>
+
+<p>For hardware overview information, this next command is my favorite. I like the neat easy to read output that is arranged by category.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">inxi -Fxz</code></pre></div>
+
+<ul>
+<li>We will now target just your CPU info.
+<br /></li>
+</ul>
+
+<p>You may not need so much information like the previous commands, but just for your cpu.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lscpu</code></pre></div>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw -C cpu</code></pre></div>
+
+<ul>
+<li>Lets focus on your PC memory now.</li>
+</ul>
+
+<p>This command will show the memory size for each RAM stick you have installed in your PC. You do need to run this command with sudo.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t memory <span class="p">|</span> grep -i size</code></pre></div>
+
+<p>This command also gives you the RAM speed.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo lshw -short -C memory</code></pre></div>
+
+<p>Now here is a very useful command. Ever wanted an easy way to know the max amount of ram you can install in your PC? Well this command does just that.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t memory <span class="p">|</span> grep -i max</code></pre></div>
+
+<p>If you want to know if there are any empty ram slots available in your PC, you don&rsquo;t need to open it. You can find out with this command. If the command output is empty, that means all ram slots are full.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw -short -C memory <span class="p">|</span> grep -i empty</code></pre></div>
+
+<p>This final command gives us our memory usage.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">free -m</code></pre></div>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>Dark Reader is a wonderful free and open source project that gives you the ability to set dark mode for any website. You&rsquo;ll never have to strain your eyes again with a bright webpage.</p>
+<p>We have stepped through a few Linux commands to get hardware info, but we&rsquo;ve only scratched the surface. There&rsquo;s many more commands to acquire more hardware information.</p>
 
-<p>Please consider making a donation to this project to help keep it going. Any amount helps.</p>
+<p>Check back to this page as I will add more commands to cover a greater range of hardware.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fdark-mode-for-any-website-with-dark-reader%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2flinux-commands-hardware-info%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Dark%20Mode%20for%20Any%20Website%20With%20Dark%20Reader&amp;url=https%3a%2f%2ftechstop.github.io%2fdark-mode-for-any-website-with-dark-reader%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Linux%20Commands%20To%20Get%20Hardware%20Info&amp;url=https%3a%2f%2ftechstop.github.io%2flinux-commands-hardware-info%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fdark-mode-for-any-website-with-dark-reader%2f&title=Dark%20Mode%20for%20Any%20Website%20With%20Dark%20Reader" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2flinux-commands-hardware-info%2f&title=Linux%20Commands%20To%20Get%20Hardware%20Info" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
     
       Tags:
       
-        <a href="https://techstop.github.io/tags/browser">browser</a>
+        <a href="https://techstop.github.io/tags/linux">linux</a>, 
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
       
     
     <div style="margin-top: 18px; text-align: center;">
@@ -223,10 +268,8 @@ window.cookieconsent.initialise({
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/linux-commands-hardware-info/">&laquo; Linux Commands To Get Hardware Info</a></div>
       
-      
-        <div><a href="https://techstop.github.io/detect-android-wakelocks/">Detect Android Wakelocks &raquo;</a></div>
+        <div><a href="https://techstop.github.io/dark-mode-for-any-website-with-dark-reader/">Dark Mode for Any Website With Dark Reader &raquo;</a></div>
       
     </div>
   </article>
