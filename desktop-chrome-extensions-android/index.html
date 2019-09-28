@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Linux Commands To Get Hardware Info - techStop</title>
+  <title>Add Desktop Chrome Extensions From Android - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Use Linux commands to detect hardware info in your PC. Getting the hardware info you require can be achieved efficiently from the command line in linux.">
+  <meta name="description" content="Add Desktop Chrome Extensions from Android devices. Never forget a Chrome desktop extension again if you come across it on your Android device.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/linux-commands-hardware-info/" title="Linux Commands To Get Hardware Info">Linux Commands To Get Hardware Info</a></h1>
+  <h1><a href="https://techstop.github.io/desktop-chrome-extensions-android/" title="Add Desktop Chrome Extensions From Android">Add Desktop Chrome Extensions From Android</a></h1>
 
-<div class="post-info">Published: Sep 27, 2019 &middot; Updated: Sep 28, 2019</div>
+<div class="post-info">Published: Sep 28, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/inxi.png" alt="Linux commands for hardware info" title="Linux commands for hardware info"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/chrome/ext001.png" alt="Add Desktop Chrome Extensions from Android" title="Add Desktop Chrome Extensions from Android"  width="100px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,157 +176,141 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>It&rsquo;s always a good idea to know how to get hardware info on your linux system. It can be very useful if you need to troubleshoot a hardware issue. There can be times when you need some specific hardware info to get the right drivers. Other times you&rsquo;ll need specific info to perform a hardware upgrade. The command line offers quite a few ways to obtain this hardware info with some tried and true linux commands.</p>
+<p>If you&rsquo;re ever browsing the internet on your Android device and stumble upon a Chrome extension you may be interested in, you can add it to your PC desktop browser right from Android. The next time you open Chrome browser on your PC, you will receive a prompt to install the extension. This comes in handy if you&rsquo;re not near your PC and don&rsquo;t want to risk forgetting the extension.</p>
 
-<p>Now there are a few GUI applications that you can install to get the hardware info, and in most cases this will suffice. My personal favorite GUI application for hardware details is <a href="https://help.ubuntu.com/community/HardInfo" target="_blank">HardInfo</a>. It&rsquo;s a fantastic piece of software. In fact, HardInfo even has some benchmarking tools to test your system&rsquo;s stability. This comes in handy after hardware upgrades or overclocking.</p>
+<p>There is one catch, the Chrome web store in inaccessible from android. If you try to access the web store page on android, you will be directed to a page that allows you to send a reminder to yourself as pictured below. Now this is not a problem since you can still open an extension&rsquo;s web store page on android which is all you need.</p>
 
-<p>You can install HardInfo as follows.</p>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/chrome/ext002.png" alt="Add Desktop Chrome Extensions from Android" title="Add Desktop Chrome Extensions from Android"  width="100px">
+</div>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install hardinfo</code></pre></div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
-<h2 id="linux-commands-for-hardware-info"><strong>Linux Commands For Hardware Info</strong></h2>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
 
-<p>Well now that we&rsquo;ve gone over a good GUI, it&rsquo;s time to dig in with what this article is really about. We will go over some Linux commands to get hardware info. Commands can allow for more specific and targeted hardware info. Probably the biggest advantage is the ability to use these commands in a shell script.</p>
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
 
-<p><strong>Lets get started, shall we&hellip;</strong></p>
 
-<p>If you do not have any of the linux utilities in this tutorial, you can install them in your terminal as follows.</p>
+<p>You can always access an extension&rsquo;s web store page directly through search results or a link that was shared with you by someone else.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install &lt;name-of-utility&gt;</code></pre></div>
+<p>To try it for yourself, you can do a search for an extension. To test, your search can be &ldquo;<strong>Search Preview extension</strong>&rdquo;.</p>
 
-<ul>
-<li><strong>These next few commands are great for getting an overview of your hardware info.</strong></li>
-</ul>
+<p>As you can see from the picture below, the first search result is for the Chrome Search Preview extension.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hwinfo --short</code></pre></div>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/chrome/ext003.png" alt="Add Desktop Chrome Extensions from Android" title="Add Desktop Chrome Extensions from Android"  width="100px">
+</div>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw --short</code></pre></div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
-<p>For hardware overview information, this next command is my favorite. I like the neat easy to read output that is arranged by category.</p>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">inxi -Fxz</code></pre></div>
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
 
-<ul>
-<li><strong>We will now target just your CPU info.</strong>
-<br /></li>
-</ul>
 
-<p>You may not need so much information like the previous commands, but just for your cpu.</p>
+<p>Once you click on the extension&rsquo;s link in the search result, you&rsquo;ll be taken to the extension&rsquo;s web store page. On this page you&rsquo;ll see a button that reads &ldquo;<strong>Add to Desktop</strong>&ldquo;</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lscpu</code></pre></div>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/chrome/ext001.png" alt="Add Desktop Chrome Extensions from Android" title="Add Desktop Chrome Extensions from Android"  width="100px">
+</div>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw -C cpu</code></pre></div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
-<ul>
-<li><strong>Lets focus on your PC memory now.</strong></li>
-</ul>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
 
-<p>This command will show the memory size for each RAM stick you have installed in your PC. You do need to run this command with sudo.</p>
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t memory <span class="p">|</span> grep -i size</code></pre></div>
 
-<p>This command also gives you the RAM speed.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo lshw -short -C memory</code></pre></div>
-
-<p>Now here is a very useful command. Ever wanted an easy way to know the max amount of ram you can install in your PC? Well this command does just that.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t memory <span class="p">|</span> grep -i max</code></pre></div>
-
-<p>If you want to know if there are any empty ram slots available in your PC, you don&rsquo;t need to open it. You can find out with this command. If the command output is empty, that means all ram slots are full.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw -short -C memory <span class="p">|</span> grep -i empty</code></pre></div>
-
-<p>This final command gives us our memory usage.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">free -m</code></pre></div>
-
-<ul>
-<li><strong>Here are some commands to get disks, devices, and file systems.</strong></li>
-</ul>
-
-<p>I like this next command. It displays the device path for any mounted HDD, SSD, and USB drives.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo lshw -short -C disk</code></pre></div>
-
-<p>The next command is more targeted at a specific drive by using the device path you get from the previous command above.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -I /dev/sda</code></pre></div>
-
-<p>If you&rsquo;d like to get an idea of how fast your HDD or SSD read speeds are, you can run a test as follows. You just need the device path as the previous command.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -Tt /dev/sda</code></pre></div>
-
-<p>This following command is quite common. You can use it to list all disks with their partitions, mount points, and sizes.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsblk</code></pre></div>
-
-<p>This is yet another to list sector count, file system, type, and ID.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l</code></pre></div>
-
-<p>Along with file systems and mount points, this next command also lists space used and available in megabytes.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">df -m</code></pre></div>
-
-<p>These next two list USB and PCI devices.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsusb</code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lspci</code></pre></div>
-
-<ul>
-<li><strong>Some commands for network hardware info.</strong></li>
-</ul>
-
-<p>List hardware information for your network card.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lshw -C network</code></pre></div>
-
-<p>List network interfaces.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ifconfig -a</code></pre></div>
-
-<ul>
-<li><strong>Wrapping things up with installed software information.</strong></li>
-</ul>
-
-<p>Details about your current OS installation.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/os-release</code></pre></div>
-
-<p>Kernel details.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -a</code></pre></div>
-
-<p>Finally we get some details about the BIOS.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t bios</code></pre></div>
-
-<h2 id="conclusion"><strong>Conclusion</strong></h2>
-
-<p>We have stepped through quite a few Linux commands to get hardware info. There&rsquo;s many more commands you can learn in time. With the one&rsquo;s we&rsquo;ve covered in this tutorial you should be covered for most situations.</p>
-
-<p>If there&rsquo;s any more linux commands to get hardware info that you think should be included in this tutorial, feel free to share them in the comments below with some details.</p>
+<p>You just need to click the button and once you open Chrome browser on your PC, you will get a prompt to enable the extension. As simple as that, you&rsquo;ve just added a desktop Chrome extension from Android.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2flinux-commands-hardware-info%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fdesktop-chrome-extensions-android%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Linux%20Commands%20To%20Get%20Hardware%20Info&amp;url=https%3a%2f%2ftechstop.github.io%2flinux-commands-hardware-info%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Add%20Desktop%20Chrome%20Extensions%20From%20Android&amp;url=https%3a%2f%2ftechstop.github.io%2fdesktop-chrome-extensions-android%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2flinux-commands-hardware-info%2f&title=Linux%20Commands%20To%20Get%20Hardware%20Info" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fdesktop-chrome-extensions-android%2f&title=Add%20Desktop%20Chrome%20Extensions%20From%20Android" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
     
       Tags:
       
-        <a href="https://techstop.github.io/tags/linux">linux</a>, 
-      
-        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
+        <a href="https://techstop.github.io/tags/browser">browser</a>
       
     
     <div style="margin-top: 18px; text-align: center;">
@@ -334,10 +318,8 @@ window.cookieconsent.initialise({
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/desktop-chrome-extensions-android/">&laquo; Add Desktop Chrome Extensions From Android</a></div>
       
-      
-        <div><a href="https://techstop.github.io/dark-mode-for-any-website-with-dark-reader/">Dark Mode for Any Website With Dark Reader &raquo;</a></div>
+        <div><a href="https://techstop.github.io/linux-commands-hardware-info/">Linux Commands To Get Hardware Info &raquo;</a></div>
       
     </div>
   </article>

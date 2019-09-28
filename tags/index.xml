@@ -6,10 +6,19 @@
     <description>Recent content in Tags on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 23:29:38 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 28 Sep 2019 18:21:04 -0400</lastBuildDate>
     
 	<atom:link href="https://techstop.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>browser</title>
+      <link>https://techstop.github.io/tags/browser/</link>
+      <pubDate>Sat, 28 Sep 2019 18:21:04 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/tags/browser/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Linux</title>
@@ -26,15 +35,6 @@
       <pubDate>Fri, 27 Sep 2019 23:29:38 -0400</pubDate>
       
       <guid>https://techstop.github.io/tags/tutorials/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>browser</title>
-      <link>https://techstop.github.io/tags/browser/</link>
-      <pubDate>Wed, 25 Sep 2019 20:09:10 -0400</pubDate>
-      
-      <guid>https://techstop.github.io/tags/browser/</guid>
       <description></description>
     </item>
     
