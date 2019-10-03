@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Write Bash Functions - techStop</title>
+  <title>Create a Menu in a Bash Script - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow this tutorial to learn how to write bash functions. Functions are a great way to reduce the amount of code you have to write and to keep your code neat.">
+  <meta name="description" content="Learn how to create a menu in a bash script. Follow this tutorial to learn how to create menus that will add more versatility and a better user experience for your bash scripts.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/bash-functions/" title="Write Bash Functions">Write Bash Functions</a></h1>
+  <h1><a href="https://techstop.github.io/menu-bash-script/" title="Create a Menu in a Bash Script">Create a Menu in a Bash Script</a></h1>
 
-<div class="post-info">Published: Sep 30, 2019</div>
+<div class="post-info">Published: Oct 2, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/func.png" alt="Writing Bash Functions" title="Writing Bash Functions"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/menu.png" alt="Create a Menu in Bash Script" title="Create a Menu in Bash Script"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,95 +176,101 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>Writing bash functions is a great way to make your scripts modular. If you find you&rsquo;ll be needing to repeat sets of commands or code logic, it&rsquo;s a good idea to use functions to avoid redundancy in your script. Bash functions also help keep your code neat and easier to maintain.</p>
+<p>Creating a menu in a bash script can be quite useful and at times necessary. A bash menu can allow you to provide options for user input. Upon user selection of an option in your menu, you can run a command or sequence of commands and display outputs.</p>
 
-<p>A great way to use functions is writing a separate script with just your functions. You can then load your function script from another script as needed.</p>
+<p>There are a few ways to create menus in a bash script. For this tutorial we will be creating a somewhat advanced menu that is quite flexible and easy to understand. We will be using bash functions, so it&rsquo;s a good idea to get familiar with functions. You can read about functions in one of my tutorials found <a href="https://techstop.github.io/bash-functions/">here</a>.</p>
 
-<p>Bash functions are treated as commands. However, functions need to be defined at the top of your script. The same applies if you&rsquo;re loading a script with your functions, you need to define it at the top of your script.</p>
+<h2 id="creating-a-bash-script-menu"><strong>Creating a Bash Script Menu</strong></h2>
 
-<h2 id="writing-bash-functions"><strong>Writing Bash Functions</strong></h2>
+<p>You will need to place your menu at the bottom of your script since we will be calling functions from the menu and functions need to be placed at the top. Code that makes calls to functions needs to be below the functions.</p>
 
-<p>Lets take a look at some bash function examples.</p>
-
-<p>This is what your typical bash function looks like:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my_function<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="s1">&#39;This is a function.&#39;</span>
-<span class="o">}</span></code></pre></div>
-
-<p>To call the function above is as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my_function</code></pre></div>
-
-<p>Here&rsquo;s what it would look like in a script:</p>
+<p>Taking a look at the following example script you can see that all code is in functions except the menu code.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
-my_function<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="s1">&#39;This is a function.&#39;</span>
+menu_option_one<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">&#34;Hello John!!!&#34;</span>
 <span class="o">}</span>
 
-my_function</code></pre></div>
-
-<p>Now lets change our function so that we can pass an argument to it.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my_function<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="nv">$1</span>
-<span class="o">}</span></code></pre></div>
-
-<p>To use the function above, you can pass it an argument like this:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my_function <span class="s1">&#39;This is a function.&#39;</span></code></pre></div>
-
-<p>This is what it would look like in a script:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-my_function<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="nv">$1</span>
+menu_option_two<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">&#34;Some super cool code by John.&#34;</span>
 <span class="o">}</span>
 
-my_function <span class="s1">&#39;This is a function.&#39;</span></code></pre></div>
-
-<p>Now lets use a more advanced example. We will now load a function from one script to another.</p>
-
-<p>We need two script files for this example. The first script we name <strong>file1.sh</strong> and the second <strong>file2.sh</strong>.</p>
-
-<p><strong>file1.sh</strong>:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nb">source</span> /path/to/file2.sh <span class="s1">&#39;This is a function in another script.&#39;</span></code></pre></div>
-
-<p><strong>file2.sh</strong>:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nv">message</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
-
-my_function<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="nv">$message</span>
+press_enter<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+  <span class="nb">echo</span> -n <span class="s2">&#34;	Press Enter to continue &#34;</span>
+  <span class="nb">read</span>
+  clear
 <span class="o">}</span>
 
-my_function</code></pre></div>
+incorrect_selection<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">&#34;Incorrect selection! Try again.&#34;</span>
+<span class="o">}</span>
 
-<p>The first script file is calling the second script and passing it a string argument to print with the echo command within the function. The string argument we pass is held in the $message variable.</p>
+<span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span>
+  clear
+  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+  <span class="nb">echo</span> <span class="s2">&#34;    	1  -  Menu Option 1&#34;</span>
+  <span class="nb">echo</span> <span class="s2">&#34;    	2  -  Menu Option 2&#34;</span>
+  <span class="nb">echo</span> <span class="s2">&#34;    	0  -  Exit&#34;</span>
+  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+  <span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span>
+  <span class="nb">read</span> selection
+  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+  <span class="k">case</span> <span class="nv">$selection</span> in
+    <span class="m">1</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_one <span class="p">;</span> press_enter <span class="p">;;</span>
+    <span class="m">2</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_two <span class="p">;</span> press_enter <span class="p">;;</span>
+    <span class="m">0</span> <span class="o">)</span> clear <span class="p">;</span> <span class="nb">exit</span> <span class="p">;;</span>
+    * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
+  <span class="k">esac</span>
+<span class="k">done</span></code></pre></div>
 
-<p>Now we would simply execute the <strong>file1.sh</strong> file and see the following output:</p>
+<p>Create a file called &ldquo;<strong>file.sh</strong>&rdquo; and copy the code above to it and give it execute permissions then run it in a terminal. Try all the menu options to give yourself a better understanding before you continue with this tutorial.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">This is a function in another script.</code></pre></div>
+<p>Now lets break things down a bit to learn what&rsquo;s going on in this script.</p>
 
-<p>That will be all for this tutorial. I hope you enjoyed writing bash functions.</p>
+<p>The menu is a loop that repeats itself until the selection is zero &ldquo;0&rdquo;. Since the menu is not in a function, it will load as soon as you run the script.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span></code></pre></div>
+
+<p>Looking at the following line, you&rsquo;ll notice an echo command prompting the user to enter a selection. The &ldquo;-n&rdquo; flag for this echo command keeps the cursor on the same line rather then on the next.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span></code></pre></div>
+
+<p>Once the user enters the selection, the read command passes the selection to the case statement.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">read</span> selection</code></pre></div>
+
+<p>Now if you look at the case statement, each option starts with the clear command. This clears the screen and removes the input line to make the script appear more like a GUI.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">case</span> <span class="nv">$selection</span> in
+  <span class="m">1</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_one <span class="p">;</span> press_enter <span class="p">;;</span>
+  <span class="m">2</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_two <span class="p">;</span> press_enter <span class="p">;;</span>
+  <span class="m">0</span> <span class="o">)</span> clear <span class="p">;</span> <span class="nb">exit</span> <span class="p">;;</span>
+  * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
+<span class="k">esac</span></code></pre></div>
+
+<p>Also notice how each command in the case statement is separated by semicolons &ldquo;;&rdquo;. The second command is a call to a function.</p>
+
+<p>The press_enter function prompts the user so they can continue when ready. This will give the user all the time they need to read any output.</p>
+
+<p>Now the final option in the case statement is just in case the user enters a selection that does not exist. Since it&rsquo;s the final option, it is defined by an asterisk &ldquo;*&ldquo;.</p>
+
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+
+<p>You have now created a bash script menu. This should expand the versatility and user experience of your scripts and add a little aesthetics for the user. You can also call a submenu from your main menu by placing your submenu in a function.</p>
+
+<p>That&rsquo;s all. Hope you enjoyed the tutorial. Feel free to comment below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fbash-functions%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fmenu-bash-script%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Write%20Bash%20Functions&amp;url=https%3a%2f%2ftechstop.github.io%2fbash-functions%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Create%20a%20Menu%20in%20a%20Bash%20Script&amp;url=https%3a%2f%2ftechstop.github.io%2fmenu-bash-script%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fbash-functions%2f&title=Write%20Bash%20Functions" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fmenu-bash-script%2f&title=Create%20a%20Menu%20in%20a%20Bash%20Script" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -281,10 +287,8 @@ my_function</code></pre></div>
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/menu-bash-script/">&laquo; Create a Menu in a Bash Script</a></div>
       
-      
-        <div><a href="https://techstop.github.io/desktop-chrome-extensions-android/">Add Desktop Chrome Extensions From Android &raquo;</a></div>
+        <div><a href="https://techstop.github.io/bash-functions/">Write Bash Functions &raquo;</a></div>
       
     </div>
   </article>
