@@ -133,6 +133,60 @@ window.cookieconsent.initialise({
     
         <article>
   
+  <h1><a href="https://techstop.github.io/bash-script-colors/" title="Colors In Bash Scripts">Colors In Bash Scripts</a></h1>
+
+<div class="post-info">Published: Oct 3, 2019</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/ansi.png" alt="Colors In Bash Scripts" title="Colors In Bash Scripts"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>Using colors in bash scripts can be very useful. If you&rsquo;ve written your bash script with menus and prompts, it&rsquo;s a good idea to use ansi color codes to make your outputs more readable to the user. In this tutorial I&rsquo;ll cover some ways that you can use colors in your bash scripts for a more GUI like experience.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/bash-script-colors/" title="Colors In Bash Scripts">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+    
+        <article>
+  
   <h1><a href="https://techstop.github.io/menu-bash-script/" title="Create a Menu in a Bash Script">Create a Menu in a Bash Script</a></h1>
 
 <div class="post-info">Published: Oct 2, 2019</div>
@@ -432,60 +486,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/manipulate-text-files-sed/" title="Manipulate Text in Files With Sed">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/create-desktop-launcher-linux/" title="Create A Desktop Launcher In Linux">Create A Desktop Launcher In Linux</a></h1>
-
-<div class="post-info">Published: Sep 18, 2019</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/desktop-launcher.png" alt="Desktop Launcher File" title="Desktop Launcher File"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
-
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
-</script>
-
-<p>There may be times when you will need to create a <strong>.desktop</strong> launcher file in linux. The desktop file is a shortcut to an application for launching it. This desktop file adds a launcher to your applications menu and can also be placed in docks or anywhere you&rsquo;d like.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/create-desktop-launcher-linux/" title="Create A Desktop Launcher In Linux">Read more &raquo;</a></p>
   <hr>
 </article>
 

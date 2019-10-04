@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Colors In Bash Scripts - techStop</title>
+  <meta name="author" content="Antonio">
+  <meta name="description" content="Using colors in bash scripts are a great way to make your scripts look good. Follow this tutorial to learn how to use ansi color codes in your bash scripts.">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://techstop.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="techStop" />
+  <link href="https://techstop.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="techStop" />
+  <link rel="icon" href="https://techstop.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://techstop.github.io/img/apple-touch-icon.png" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114983197-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114983197-2');
+</script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8645513020646755",
+          enable_page_level_ads: true
+     });
+</script>
+
+</head>
+<body>
+    <header class="site-header">
+  <style>
+    .site-header h2 .logo {
+    background: url(https://techstop.github.io/img/techStop_header.png) no-repeat 0 0;
+    }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .site-header h2 .logo {
+        background-image: url(https://techstop.github.io/img/techStop_header.png);
+    } }
+    .site-header {
+      background: #2a373d url(https://techstop.github.io/img/techStop_header.png) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "var(--cookie-bg)",
+      "text": "var(--cookie-font)"
+    },
+    "button": {
+      "background": "var(--color-primary)",
+      "hover": "var(--color-secondary)"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "dismiss": "Close"
+  }
+})});
+</script>
+
+  
+  <button onclick="topFunction()" id="myBtn" title="Back to top">&#8682;</button>
+</header>
+<nav class="navbar">
+  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+    <i class="fa fa-bars"></i>
+  </label>
+    <a href="https://techstop.github.io/" class="logo">techStop</a>
+  <input type="checkbox" id="chkToggle"></input>
+  <ul class="main-nav" id="js-menu"><li>
+      <a href="https://techstop.github.io/" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/linux/" class="nav-links">Linux</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/android/" class="nav-links">Android</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/tutorials/" class="nav-links">Tutorials</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/blog-tags/" class="nav-links">Tags</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/search/" class="nav-links"><button type="submit" style="background: none; border: none; padding: 0;" title="Search"><i class="fa fa-search"></i></button></a>
+    </li>
+  </ul>
+</nav>
+<div style="float: right; margin-top: 10px; margin-right: 20px;">
+<a href="//github.com/GameTheory-" id="social-icon" class="icon-github" target="_blank" title="Github"></a>
+<a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+</div>
+<div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox" title="Dark Mode">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+      <label class="theme-switch-label">Dark Mode</label>
+    </div>
+    <br>
+    <div class="container clearfix">
+      <main>
+        <div class="content">
+  <article>
+    <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
+    
+  <h1><a href="https://techstop.github.io/bash-script-colors/" title="Colors In Bash Scripts">Colors In Bash Scripts</a></h1>
+
+<div class="post-info">Published: Oct 3, 2019</div>
+
+    <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/ansi.png" alt="Colors In Bash Scripts" title="Colors In Bash Scripts"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+
+<p>Using colors in bash scripts can be very useful. If you&rsquo;ve written your bash script with menus and prompts, it&rsquo;s a good idea to use ansi color codes to make your outputs more readable to the user. In this tutorial I&rsquo;ll cover some ways that you can use colors in your bash scripts for a more GUI like experience.</p>
+
+<p>Ansi color codes always start with these characters &ldquo;<strong>\e[</strong>&rdquo; followed by the numbers that determine the color you want. There are color codes for the foreground(text) and background. There are also color codes for bold, underlines, and high intensity colors.</p>
+
+<p>Colors in bash scripts can be used to distinguish text. For example, you can make error outputs in red text while prompts with instructions in green text. Use bold and underlines to emphasize words and phrases. Background colors can be used for section separation. There&rsquo;s many ways to put color codes into good use in your bash scripts.</p>
+
+<h2 id="style-your-bash-script-with-ansi-colors"><strong>Style Your Bash Script With Ansi Colors</strong></h2>
+
+<p>Lets start off by creating a file called &ldquo;<strong>test.sh</strong>&rdquo;. Now copy the code below to the file and give it execute permissions and then run the file in your terminal.</p>
+
+<p><strong>test.sh:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="c1"># Ansi color code variables</span>
+<span class="nv">red</span><span class="o">=</span><span class="s2">&#34;\e[0;91m&#34;</span>
+<span class="nv">blue</span><span class="o">=</span><span class="s2">&#34;\e[0;94m&#34;</span>
+<span class="nv">expand_bg</span><span class="o">=</span><span class="s2">&#34;\e[K&#34;</span>
+<span class="nv">blue_bg</span><span class="o">=</span><span class="s2">&#34;\e[0;104m</span><span class="si">${</span><span class="nv">expand_bg</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nv">red_bg</span><span class="o">=</span><span class="s2">&#34;\e[0;101m</span><span class="si">${</span><span class="nv">expand_bg</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nv">green_bg</span><span class="o">=</span><span class="s2">&#34;\e[0;102m</span><span class="si">${</span><span class="nv">expand_bg</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nv">green</span><span class="o">=</span><span class="s2">&#34;\e[0;92m&#34;</span>
+<span class="nv">white</span><span class="o">=</span><span class="s2">&#34;\e[0;97m&#34;</span>
+<span class="nv">bold</span><span class="o">=</span><span class="s2">&#34;\e[1m&#34;</span>
+<span class="nv">uline</span><span class="o">=</span><span class="s2">&#34;\e[4m&#34;</span>
+<span class="nv">reset</span><span class="o">=</span><span class="s2">&#34;\e[0m&#34;</span>
+
+<span class="c1"># horizontally expanded backgrounds</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">blue_bg</span><span class="si">}${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red_bg</span><span class="si">}${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green_bg</span><span class="si">}${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+
+<span class="c1"># colored text</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">blue</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">white</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+
+<span class="c1"># bold colored text</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}${</span><span class="nv">bold</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">blue</span><span class="si">}${</span><span class="nv">bold</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}${</span><span class="nv">bold</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">white</span><span class="si">}${</span><span class="nv">bold</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+
+<span class="c1"># underlined colored text</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}${</span><span class="nv">uline</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">blue</span><span class="si">}${</span><span class="nv">uline</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}${</span><span class="nv">uline</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">white</span><span class="si">}${</span><span class="nv">uline</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+
+<span class="c1"># ansi across multiple lines</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}</span><span class="s2">This is a sentence across&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;three lines to show how an ansi color&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;works across multiple lines with echo.</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+
+<span class="c1"># combining ansi in one line</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}</span><span class="s2">This sentence </span><span class="si">${</span><span class="nv">green</span><span class="si">}</span><span class="s2">displays </span><span class="si">${</span><span class="nv">blue</span><span class="si">}</span><span class="s2">ansi code used in </span><span class="si">${</span><span class="nv">white</span><span class="si">}${</span><span class="nv">bold</span><span class="si">}</span><span class="s2">combination.</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
+
+<p>Lets break things down a bit&hellip;</p>
+
+<p>As you can see, we used a few colors and also applied underlines, bold text, and backgrounds.</p>
+
+<p>It&rsquo;s a good idea to place your color codes in global variables at the top of your script to keep your code neat.</p>
+
+<p>Notice how we always use the echo &ldquo;-e&rdquo; flag on lines with color codes. This tells echo to enable interpretation of escapes so that the color codes work. We also place the color code variables in curly brackets &ldquo;${}&rdquo; to separate it from normal text.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
+
+<p>For paragraphs or multi line outputs you do not need the echo &ldquo;-e&rdquo; for every line as displayed below.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}</span><span class="s2">This is a sentence across&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;three lines to show how an ansi color&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;works across multiple lines with echo.</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
+
+<p>We also use a &ldquo;<strong>reset</strong>&rdquo; variable containing &ldquo;<strong>\e[0m</strong>&rdquo;. This is to stop the ansi code in use, otherwise it will continue running into further output as you saw in the example above with the multi lines.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">reset</span><span class="o">=</span><span class="s2">&#34;\e[0m&#34;</span></code></pre></div>
+
+<h2 id="ansi-codes-list-for-bash"><strong>Ansi Codes List For Bash</strong></h2>
+
+<p>Here is a good list of Ansi color codes you can use in your bash scripts.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># Regular Colors
+</span><span class="gh"></span>
+| Value    | Color  |
+| -------- | ------ |
+| \e[0;30m | Black  |
+| \e[0;31m | Red    |
+| \e[0;32m | Green  |
+| \e[0;33m | Yellow |
+| \e[0;34m | Blue   |
+| \e[0;35m | Purple |
+| \e[0;36m | Cyan   |
+| \e[0;37m | White  |
+
+<span class="gh"># Bold
+</span><span class="gh"></span>
+| Value    | Color    |
+| -------- | -------- |
+| \e[1;30m | Black    |
+| \e[1;31m | Red      |
+| \e[1;32m | Green    |
+| \e[1;33m | Yellow   |
+| \e[1;34m | Blue     |
+| \e[1;35m | Purple   |
+| \e[1;36m | Cyan     |
+| \e[1;37m | White    |
+| \e[1m    | No Color |
+
+<span class="gh"># Underline
+</span><span class="gh"></span>
+| Value    | Color    |
+| -------- | -------- |
+| \e[4;30m | Black    |
+| \e[4;31m | Red      |
+| \e[4;32m | Green    |
+| \e[4;33m | Yellow   |
+| \e[4;34m | Blue     |
+| \e[4;35m | Purple   |
+| \e[4;36m | Cyan     |
+| \e[4;37m | White    |
+| \e[4m    | No Color |
+
+<span class="gh"># Background
+</span><span class="gh"></span>
+| Value  | Color  |
+| ------ | ------ |
+| \e[40m | Black  |
+| \e[41m | Red    |
+| \e[42m | Green  |
+| \e[43m | Yellow |
+| \e[44m | Blue   |
+| \e[45m | Purple |
+| \e[46m | Cyan   |
+| \e[47m | White  |
+
+<span class="gh"># Expand Background Horizontally
+</span><span class="gh"></span>
+| Value |   Color  |
+| ----- | -------- |
+| \e[K  | No Color |
+
+<span class="gh"># High Intensty
+</span><span class="gh"></span>
+| Value    | Color  |
+| -------- | ------ |
+| \e[0;90m | Black  |
+| \e[0;91m | Red    |
+| \e[0;92m | Green  |
+| \e[0;93m | Yellow |
+| \e[0;94m | Blue   |
+| \e[0;95m | Purple |
+| \e[0;96m | Cyan   |
+| \e[0;97m | White  |
+
+<span class="gh"># Bold High Intensty
+</span><span class="gh"></span>
+| Value    | Color  |
+| -------- | ------ |
+| \e[1;90m | Black  |
+| \e[1;91m | Red    |
+| \e[1;92m | Green  |
+| \e[1;93m | Yellow |
+| \e[1;94m | Blue   |
+| \e[1;95m | Purple |
+| \e[1;96m | Cyan   |
+| \e[1;97m | White  |
+
+<span class="gh"># High Intensty backgrounds
+</span><span class="gh"></span>
+| Value     | Color  |
+| --------- | ------ |
+| \e[0;100m | Black  |
+| \e[0;101m | Red    |
+| \e[0;102m | Green  |
+| \e[0;103m | Yellow |
+| \e[0;104m | Blue   |
+| \e[0;105m | Purple |
+| \e[0;106m | Cyan   |
+| \e[0;107m | White  |
+
+<span class="gh"># Reset
+</span><span class="gh"></span>
+| Value | Color  |
+| ----- | ------ |
+| \e[0m | Reset  |</code></pre></div>
+
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+
+<p>That will be all for this tutorial. You should now be able to style your bash scripts to make them more aesthetically pleasing for your users.</p>
+    <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fbash-script-colors%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Colors%20In%20Bash%20Scripts&amp;url=https%3a%2f%2ftechstop.github.io%2fbash-script-colors%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fbash-script-colors%2f&title=Colors%20In%20Bash%20Scripts" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+    
+      Tags:
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      
+        <a href="https://techstop.github.io/tags/linux">linux</a>
+      
+    
+    <div style="margin-top: 18px; text-align: center;">
+      
+        <span>&middot; <strong>More Articles</strong> &middot;</span>
+      
+      
+      
+        <div><a href="https://techstop.github.io/menu-bash-script/">Create a Menu in a Bash Script &raquo;</a></div>
+      
+    </div>
+  </article>
+  <hr>
+  
+    <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1F4AC;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
+
+  
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
+
+        </div>
+      </main>
+    </div>
+    <script>
+const myScript = document.getElementById('myScriptId');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    
+      document.location.reload(true)
+    
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('theme');
+    
+      document.location.reload(true)
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+  
+    myScript.setAttribute('theme', 'github-dark');
+  
+}
+</script>
+<style>
+  .font-row-one {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+  .font-row-two {
+    font-size: 12px;
+  }
+</style>
+<footer class="main-footer">
+  <div class="container clearfix">
+    <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
+  </div>
+  <script src="https://techstop.github.io/bundle.min.4980076a9845e1c23b5f38d614dcf7ad0c37bf711703a3368f9039a17f812986.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script src="https://techstop.github.io/js/plugins.js"></script>
+</footer>
+</body>
+</html>
