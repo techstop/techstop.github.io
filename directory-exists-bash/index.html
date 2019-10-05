@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Check If Directory Exists In Linux With Bash - techStop</title>
+  <meta name="author" content="Antonio">
+  <meta name="description" content="Learn how to check if a directory exists in linux using bash. This tutorial will teach you a few simple ways to do directory checks with bash.">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://techstop.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="techStop" />
+  <link href="https://techstop.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="techStop" />
+  <link rel="icon" href="https://techstop.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://techstop.github.io/img/apple-touch-icon.png" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114983197-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114983197-2');
+</script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8645513020646755",
+          enable_page_level_ads: true
+     });
+</script>
+
+</head>
+<body>
+    <header class="site-header">
+  <style>
+    .site-header h2 .logo {
+    background: url(https://techstop.github.io/img/techStop_header.png) no-repeat 0 0;
+    }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .site-header h2 .logo {
+        background-image: url(https://techstop.github.io/img/techStop_header.png);
+    } }
+    .site-header {
+      background: #2a373d url(https://techstop.github.io/img/techStop_header.png) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "var(--cookie-bg)",
+      "text": "var(--cookie-font)"
+    },
+    "button": {
+      "background": "var(--color-primary)",
+      "hover": "var(--color-secondary)"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "dismiss": "Close"
+  }
+})});
+</script>
+
+  
+  <button onclick="topFunction()" id="myBtn" title="Back to top">&#8682;</button>
+</header>
+<nav class="navbar">
+  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+    <i class="fa fa-bars"></i>
+  </label>
+    <a href="https://techstop.github.io/" class="logo">techStop</a>
+  <input type="checkbox" id="chkToggle"></input>
+  <ul class="main-nav" id="js-menu"><li>
+      <a href="https://techstop.github.io/" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/linux/" class="nav-links">Linux</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/android/" class="nav-links">Android</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/tutorials/" class="nav-links">Tutorials</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/blog-tags/" class="nav-links">Tags</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/search/" class="nav-links"><button type="submit" style="background: none; border: none; padding: 0;" title="Search"><i class="fa fa-search"></i></button></a>
+    </li>
+  </ul>
+</nav>
+<div style="float: right; margin-top: 10px; margin-right: 20px;">
+<a href="//github.com/GameTheory-" id="social-icon" class="icon-github" target="_blank" title="Github"></a>
+<a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+</div>
+<div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox" title="Dark Mode">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+      <label class="theme-switch-label">Dark Mode</label>
+    </div>
+    <br>
+    <div class="container clearfix">
+      <main>
+        <div class="content">
+  <article>
+    <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
+    
+  <h1><a href="https://techstop.github.io/directory-exists-bash/" title="Check If Directory Exists In Linux With Bash">Check If Directory Exists In Linux With Bash</a></h1>
+
+<div class="post-info">Published: Oct 5, 2019</div>
+
+    <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/dir.png" alt="Check If Directory Exists In Linux With Bash" title="Check If Directory Exists In Linux With Bash"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+
+<p>It&rsquo;s useful to know how to check if a directory exists in linux from a bash script. A directory is a folder within a path in your linux system where all sorts of files and directories are stored. Your Music folder is a directory to store music files and your Downloads folder is a directory where all sorts files are downloaded from the web. You get the idea.</p>
+
+<h2 id="if-directory-exists"><strong>If Directory Exists</strong></h2>
+
+<p>Lets start off with a simple example. You can copy all examples in this tutorial to a file and run the file yourself in a terminal to test for yourself.</p>
+
+<p><strong>Check if a directory exists:</strong>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
+
+<span class="k">if</span> <span class="o">[</span> -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> exists&#34;</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> does not exist&#34;</span>
+<span class="k">fi</span></code></pre></div></p>
+
+<p><strong>Lets break down the sample above:</strong></p>
+
+<ul>
+<li>The &ldquo;$dload_dir&rdquo; variable value is the default Downloads directory in the system.</li>
+<li>The &ldquo;$HOME&rdquo; linux built-in variable points to the path &ldquo;<strong>/home/username/</strong>&rdquo;.</li>
+<li>Left square bracket &ldquo;[&rdquo; is a &ldquo;test&rdquo; command.</li>
+<li>&rdquo;-d&rdquo; tells the test command to check if the file exists and if it&rsquo;s a directory.</li>
+</ul>
+
+<p>When you run the code above it will output the directory &ldquo;exists&rdquo; and &ldquo;does not exist&rdquo; if it doesn&rsquo;t.</p>
+
+<p>We will now do the opposite and check if the directory does not exist.</p>
+
+<p><strong>Check if a directory does not exists:</strong>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
+
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> does not exist&#34;</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> exists&#34;</span>
+<span class="k">fi</span></code></pre></div></p>
+
+<p>The sample above is nearly the same, but we add a &ldquo;!&rdquo; symbol and swap the two echo commands. The &ldquo;!&rdquo; symbol tells the test command to instead check if the directory does not exist.</p>
+
+<p>Now that we&rsquo;ve covered the basics to checking for a directory, lets get a little more advanced.</p>
+
+<p><strong>Check if a directory exists and if not, then create it:</strong>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads/myfolder
+
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  mkdir <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> was created.&#34;</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> already exists&#34;</span>
+<span class="k">fi</span></code></pre></div></p>
+
+<p>In the code above we use the &ldquo;mkdir&rdquo; command to create a new directory.</p>
+
+<p>If you run the code above it will create a directory named &ldquo;myfolder&rdquo; in the Downloads directory and let you know it was created. If you run the code a second time, it will say that it already exists.</p>
+
+<p><strong>Check if a directory is empty:</strong>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ls -A <span class="nv">$dload_dir</span><span class="k">)</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> is not empty.&#34;</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> is empty&#34;</span>
+<span class="k">fi</span></code></pre></div></p>
+
+<p>In the sample above we use the list &ldquo;ls&rdquo; command with the &ldquo;-A&rdquo; flag which tells ls to list all files and directories including the hidden ones in the Downloads directory. If files or directories are found, it lets you know the directory is not empty.</p>
+
+<p><strong>Pass any directory to a bash script:</strong>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="nv">my_dir</span><span class="o">=</span><span class="nv">$1</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ls -A <span class="nv">$my_dir</span><span class="k">)</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$my_dir</span><span class="s2"> is not empty.&#34;</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$my_dir</span><span class="s2"> is empty&#34;</span>
+<span class="k">fi</span></code></pre></div></p>
+
+<p>Copy the code above to a file and name the file &ldquo;<strong>file.sh</strong>&rdquo; then give the file execute permissions.</p>
+
+<p>Now to use the script you just created, you pass it the directory you wish to check. Like this:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">./file.sh <span class="nv">$HOME</span>/Downloads</code></pre></div>
+
+<p>If you noticed, the variable has changed to &ldquo;<strong>$1</strong>&rdquo;. This allows the script to take one argument which would be the directory you pass to it.</p>
+
+<p>You can use this script to check if any directory is empty by simply passing the directory to the script as demonstrated.</p>
+
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+
+<p>This brings the tutorial to an end. This was a quick look at how to do checks on directories in linux with bash.</p>
+    <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fdirectory-exists-bash%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Check%20If%20Directory%20Exists%20In%20Linux%20With%20Bash&amp;url=https%3a%2f%2ftechstop.github.io%2fdirectory-exists-bash%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fdirectory-exists-bash%2f&title=Check%20If%20Directory%20Exists%20In%20Linux%20With%20Bash" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+    
+      Tags:
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      
+        <a href="https://techstop.github.io/tags/linux">linux</a>
+      
+    
+    <div style="margin-top: 18px; text-align: center;">
+      
+        <span>&middot; <strong>More Articles</strong> &middot;</span>
+      
+      
+      
+        <div><a href="https://techstop.github.io/bash-script-colors/">Colors In Bash Scripts &raquo;</a></div>
+      
+    </div>
+  </article>
+  <hr>
+  
+    <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1F4AC;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
+
+  
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
+
+        </div>
+      </main>
+    </div>
+    <script>
+const myScript = document.getElementById('myScriptId');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    
+      document.location.reload(true)
+    
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('theme');
+    
+      document.location.reload(true)
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+  
+    myScript.setAttribute('theme', 'github-dark');
+  
+}
+</script>
+<style>
+  .font-row-one {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+  .font-row-two {
+    font-size: 12px;
+  }
+</style>
+<footer class="main-footer">
+  <div class="container clearfix">
+    <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
+  </div>
+  <script src="https://techstop.github.io/bundle.min.4980076a9845e1c23b5f38d614dcf7ad0c37bf711703a3368f9039a17f812986.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script src="https://techstop.github.io/js/plugins.js"></script>
+</footer>
+</body>
+</html>
