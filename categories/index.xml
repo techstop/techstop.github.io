@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Android</title>
+      <link>https://techstop.github.io/categories/android/</link>
+      <pubDate>Fri, 11 Oct 2019 21:21:05 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>news</title>
       <link>https://techstop.github.io/categories/news/</link>
       <pubDate>Fri, 11 Oct 2019 21:21:05 -0400</pubDate>
@@ -21,7 +30,7 @@
     </item>
     
     <item>
-      <title>Linux</title>
+      <title>linux</title>
       <link>https://techstop.github.io/categories/linux/</link>
       <pubDate>Tue, 08 Oct 2019 20:09:14 -0400</pubDate>
       
@@ -30,20 +39,11 @@
     </item>
     
     <item>
-      <title>Tutorials</title>
+      <title>tutorials</title>
       <link>https://techstop.github.io/categories/tutorials/</link>
       <pubDate>Tue, 08 Oct 2019 20:09:14 -0400</pubDate>
       
       <guid>https://techstop.github.io/categories/tutorials/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android</title>
-      <link>https://techstop.github.io/categories/android/</link>
-      <pubDate>Mon, 23 Sep 2019 19:45:09 -0400</pubDate>
-      
-      <guid>https://techstop.github.io/categories/android/</guid>
       <description></description>
     </item>
     
