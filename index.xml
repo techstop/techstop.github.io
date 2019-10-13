@@ -6,10 +6,56 @@
     <description>Recent content on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2019 21:21:05 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2019 22:01:52 -0400</lastBuildDate>
     
 	<atom:link href="https://techstop.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Remove Unused Kernels Ubuntu 18.04</title>
+      <link>https://techstop.github.io/ubuntu-unused-kernels/</link>
+      <pubDate>Sat, 12 Oct 2019 22:01:52 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/ubuntu-unused-kernels/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/lh2.png&#34; alt=&#34;Remove Unused Kernels Ubuntu 18.04&#34; title=&#34;Remove Unused Kernels Ubuntu 18.04&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;A question often asked&amp;hellip; How do I remove old unused kernels from ubuntu 18.04?&lt;/p&gt;
+
+&lt;p&gt;Each time you receive a kernel update in your ubuntu 18.04 system updates, you end up with the old kernels remaining in your system. This can be useful in the event that the new kernel causes issues, you can always boot the old kernels. In time, old unused kernels can accumulate taking up unnecessary space on your drive.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Listen To Podcasts With The Google App</title>

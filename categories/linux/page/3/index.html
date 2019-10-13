@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>linux - techStop</title>
+  <title>Linux - techStop</title>
   <meta name="author" content="Antonio">
   <meta name="description" content="TechStop is a tech website with a focus on Linux and Android. Check out our tutorials and tech articles for the Linux and Android platforms and other technologies.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
@@ -130,6 +130,60 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
+    
+        <article>
+  
+  <h1><a href="https://techstop.github.io/pause-and-resume-wget-downloads/" title="Pause and Resume Wget Downloads">Pause and Resume Wget Downloads</a></h1>
+
+<div class="post-info">Published: Sep 9, 2019</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/wget.png" alt="wget" title="wget"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>There are many download managers out there that get the job done, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you have any large files to download or need to use the ftp protocol, wget is your best bet. I&rsquo;ll show you a few neat ways to use wget.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>, 
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/pause-and-resume-wget-downloads/" title="Pause and Resume Wget Downloads">Read more &raquo;</a></p>
+  <hr>
+</article>
+
     
         <article>
   
@@ -439,96 +493,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/apk-utility/" title="APK Utility">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/open-file-as-root/" title="Open File as Root">Open File as Root</a></h1>
-
-<div class="post-info">Published: May 8, 2018</div>
-
-  <p><p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/open-as-root/open-file-as-root-0.png" alt="Open File as Root" title="Open File as Root"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
-
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
-</script>
-
-<div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/open-as-root/open-file-as-root-1.png" alt="Open File as Root" title="Open File as Root"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
-
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
-</script>
-</p>
-
-<p>If you need to open file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open files or folders with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer included in the ubuntu family as of version 17.10 or any derivatives of ubuntu.</p>
-</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/open-file-as-root/" title="Open File as Root">Read more &raquo;</a></p>
   <hr>
 </article>
 

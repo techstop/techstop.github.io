@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Listen To Podcasts With The Google App - techStop</title>
+  <title>Remove Unused Kernels Ubuntu 18.04 - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="The Google app is a great way to listen to podcasts. Follow this walk through to learn how to use the Google app to find and listen to your favorite podcasts for free.">
+  <meta name="description" content="Free up space by removing unused kernels in ubuntu 18.04. Follow this tutorial which will teach you how to list and remove the old kernels remaining on your ubuntu 18.04 system.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/google-app-podcasts/" title="Listen To Podcasts With The Google App">Listen To Podcasts With The Google App</a></h1>
+  <h1><a href="https://techstop.github.io/ubuntu-unused-kernels/" title="Remove Unused Kernels Ubuntu 18.04">Remove Unused Kernels Ubuntu 18.04</a></h1>
 
-<div class="post-info">Published: Oct 11, 2019</div>
+<div class="post-info">Published: Oct 12, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/android/g00.png" alt="Podcasts With The Google App" title="Podcasts With The Google App"  width="90px">
+<img class="myImg" src="https://techstop.github.io/images/linux/lh2.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,20 +176,24 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>There are many podcast apps in the Google Play Store, but you already have a really good app for podcasts pre-installed on your android device that&rsquo;s free. The Google app is excellent for finding and listening to podcasts and has an integrated assistant with voice commands.</p>
+<p>A question often asked&hellip; How do I remove old unused kernels from ubuntu 18.04?</p>
 
-<p>Podcasts are a great way to listen to your favorite news outlets and talk shows. You can listen to them at your convenience any time you like. Play them in the background while you get ready for work in the morning, during a workout, while driving, on a train or bus, or just doing chores around your home. You can use your favorite listening device, like a pair of headphones or bluetooth speakers.</p>
+<p>Each time you receive a kernel update in your ubuntu 18.04 system updates, you end up with the old kernels remaining in your system. This can be useful in the event that the new kernel causes issues, you can always boot the old kernels. In time, old unused kernels can accumulate taking up unnecessary space on your drive.</p>
 
-<p>With the Google app, podcasts are free and don&rsquo;t require a subscription. Many are commercial free while others will have a short commercial which is not a big deal and definitely not a deal breaker.</p>
+<p>I usually use my system for a few days with a new kernel update before removing the old kernels. This gives me time to assess whether the new kernel is stable and my system is running fine. Once I&rsquo;m certain the system is stable with the new kernel, I will then proceed to remove the old kernels.</p>
 
-<h2 id="setup-podcasts-with-the-google-app"><strong>Setup Podcasts with the Google app</strong></h2>
+<h2 id="remove-unused-kernels"><strong>Remove Unused Kernels</strong></h2>
 
-<p>Adding podcast sources is fairly straight forward, though google could have made it a more prominent feature and easier to discover. Follow these steps to add some podcast sources&hellip;</p>
+<p>It&rsquo;s a good idea to view the list of installed kernels on your system to be sure that there are old kernels to remove.</p>
 
-<p>Open the Google app and click on &ldquo;<strong>More &gt; Settings &gt; Google Assistant &gt; Services &gt; News &gt; Add news sources</strong>&rdquo;.</p>
+<p>You can list all the kernels on your system with the following dpkg command.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dpkg --list <span class="p">|</span> egrep -i <span class="s1">&#39;linux-image|linux-headers&#39;</span></code></pre></div>
+
+<p>Your output should list all the kernels installed on your system like this:</p>
 
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/android/g02.png" alt="Podcasts With The Google App" title="Podcasts With The Google App"  width="90px">
+<img class="myImg" src="https://techstop.github.io/images/linux/lh0.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -223,10 +227,14 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>From here you can add as many podcast sources as you&rsquo;d like.</p>
+<p>To remove the unused kernels you can run the following command:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt --purge autoremove</code></pre></div>
+
+<p>Here&rsquo;s what the output of apt looks like:</p>
 
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/android/g03.png" alt="Podcasts With The Google App" title="Podcasts With The Google App"  width="90px">
+<img class="myImg" src="https://techstop.github.io/images/linux/lh1.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -260,104 +268,30 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>Some of my personal favorite podcasts include Business Insider, Wall Street Journal, NPR News, and BBC World News. The podcast sources are arranged by category and are easy to sort through.</p>
-
-<p>Once you&rsquo;re ready to listen to your podcasts, there are a few ways to start listening to them.</p>
-
-<p>If you have the assistant setup for <a href="https://support.google.com/websearch/answer/2940021?co=GENIE.Platform%3DAndroid&hl=en" target="_blank">voice actions</a>, you can say &ldquo;<strong>OK Google</strong>&rdquo;. When the assistant is ready you can say &ldquo;<strong>play the news</strong>&rdquo; and it will play your podcasts one after the other. You can also tap the microphone in the Google app and say &ldquo;<strong>play the news</strong>&rdquo;.</p>
-
-<p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/android/g04.png" alt="Podcasts With The Google App" title="Podcasts With The Google App"  width="90px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
- <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/android/g01.png" alt="Podcasts With The Google App" title="Podcasts With The Google App"  width="90px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-</p>
-
-<p>Another way to access the podcasts is to open the Google app and click on &ldquo;<strong>Updates</strong>&rdquo; then tap the keyboard icon and type &ldquo;<strong>play the news</strong>&rdquo;. After listening to podcasts a few times, in the &ldquo;<strong>Updates</strong>&rdquo; screen you&rsquo;ll start seeing a button that says &ldquo;<strong>play the news</strong>&rdquo; which you can click on.</p>
+<p>Notice in the output above that 661 megabytes of space will be freed by removing the old unused kernels from my ubuntu 18.04 system.</p>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>That is all for this quick look at listening to podcasts with the Google app. This has been my favorite and go to way of enjoying my podcasts even though I also have another paid service.</p>
+<p>This was a brief look at how to list and remove old unused kernels from ubuntu 18.04. This can be an easy way for you to free up space on your system that you may not even be aware is being consumed.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fgoogle-app-podcasts%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fubuntu-unused-kernels%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Listen%20To%20Podcasts%20With%20The%20Google%20App&amp;url=https%3a%2f%2ftechstop.github.io%2fgoogle-app-podcasts%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Remove%20Unused%20Kernels%20Ubuntu%2018.04&amp;url=https%3a%2f%2ftechstop.github.io%2fubuntu-unused-kernels%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fgoogle-app-podcasts%2f&title=Listen%20To%20Podcasts%20With%20The%20Google%20App" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fubuntu-unused-kernels%2f&title=Remove%20Unused%20Kernels%20Ubuntu%2018.04" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
     
       Tags:
       
-        <a href="https://techstop.github.io/tags/android">android</a>, 
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
       
-        <a href="https://techstop.github.io/tags/apps">apps</a>
+        <a href="https://techstop.github.io/tags/linux">linux</a>
       
     
     <div style="margin-top: 18px; text-align: center;">
@@ -365,10 +299,8 @@ window.cookieconsent.initialise({
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/ubuntu-unused-kernels/">&laquo; Remove Unused Kernels Ubuntu 18.04</a></div>
       
-      
-        <div><a href="https://techstop.github.io/bash-arrays/">Bash Arrays &raquo;</a></div>
+        <div><a href="https://techstop.github.io/google-app-podcasts/">Listen To Podcasts With The Google App &raquo;</a></div>
       
     </div>
   </article>
