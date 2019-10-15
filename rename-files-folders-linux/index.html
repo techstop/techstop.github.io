@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Remove Unused Kernels Ubuntu 18.04 - techStop</title>
+  <title>Rename Files &amp; Folders Linux Command Line - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Free up space by removing unused kernels in ubuntu 18.04. Follow this tutorial which will teach you how to list and remove the old kernels remaining on your ubuntu 18.04 system.">
+  <meta name="description" content="Learn how to rename files and folders in linux from the command line. Follow this tutorial which will teach you how to use the mv and rename commands to rename files and folders.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/ubuntu-unused-kernels/" title="Remove Unused Kernels Ubuntu 18.04">Remove Unused Kernels Ubuntu 18.04</a></h1>
+  <h1><a href="https://techstop.github.io/rename-files-folders-linux/" title="Rename Files &amp; Folders Linux Command Line">Rename Files &amp; Folders Linux Command Line</a></h1>
 
-<div class="post-info">Published: Oct 12, 2019</div>
+<div class="post-info">Published: Oct 14, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/lh2.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/mv.png" alt="Rename Files &amp; Folders Linux Command Line" title="Rename Files &amp; Folders Linux Command Line"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,113 +176,111 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>A question often asked&hellip; How do I remove old unused kernels from ubuntu 18.04?</p>
+<p>Lets take a look at how to rename files and folders in linux from the command line.</p>
 
-<p>Each time you receive a kernel update in your ubuntu 18.04 system updates, you end up with the old kernels remaining in your system. This can be useful in the event that the new kernel causes issues, you can always boot the old kernels. In time, old unused kernels can accumulate taking up unnecessary space on your drive.</p>
+<p>Sure you can use your GUI and be done with it, but learning to do it from the command line can be quite useful. There&rsquo;s also the added benefit of being able to use these commands in bash scripts.</p>
 
-<p>I usually use my system for a few days with a new kernel update before removing the old kernels. This gives me time to assess whether the new kernel is stable and my system is running fine. Once I&rsquo;m certain the system is stable with the new kernel, I will then proceed to remove the old kernels.</p>
+<p>In a bash script you can loop through lots of files or folders to rename them quickly and efficiently. Knowing the right commands for the job is key.</p>
 
-<h2 id="remove-unused-kernels"><strong>Remove Unused Kernels</strong></h2>
+<p>We will be going over three different methods to rename files and folders:</p>
 
-<p>It&rsquo;s a good idea to view the list of installed kernels on your system to be sure that there are old kernels to remove.</p>
+<ul>
+<li><strong>mv</strong> - For moving source to folder or renaming source.</li>
+<li><strong>rename</strong> - For renaming source.</li>
+<li><strong>for loop</strong> - To loop through multiple sources.</li>
+</ul>
 
-<p>You can list all the kernels on your system with the following dpkg command.</p>
+<h2 id="renaming-files"><strong>Renaming Files</strong></h2>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dpkg --list <span class="p">|</span> egrep -i <span class="s1">&#39;linux-image|linux-headers&#39;</span></code></pre></div>
+<p><strong>Renaming a single file with mv:</strong></p>
 
-<p>Your output should list all the kernels installed on your system like this:</p>
+<p>This will rename &ldquo;<strong>file01.bak</strong>&rdquo; to &ldquo;<strong>file02.txt</strong>&rdquo;.</p>
 
-<div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/lh0.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="150px">
-</div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mv file01.bak file02.txt</code></pre></div>
 
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
+<p><strong>Renaming multiple files with mv:</strong></p>
 
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
+<p>First lets create some files for testing in an empty folder.</p>
 
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
+<p>This command will create four empty files:</p>
 
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">touch file<span class="o">{</span><span class="m">1</span>..4<span class="o">}</span>.bak</code></pre></div>
 
-<p>To remove the unused kernels you can run the following command:</p>
+<p>You should now have the following files in your folder:</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt --purge autoremove</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
 
-<p>Here&rsquo;s what the output of apt looks like:</p>
+<p>Now lets run the mv command in a for loop to rename the files and replace the &ldquo;<strong>.bak</strong>&rdquo; extension with &ldquo;<strong>.txt</strong>&ldquo;:</p>
 
-<div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/lh1.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="150px">
-</div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">%.bak</span><span class="si">}</span><span class="s2">.txt&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
 
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
+<p>The files should now be renamed as follows:</p>
 
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.txt  file2.txt  file3.txt  file4.txt</code></pre></div>
 
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
+<p><strong>Renaming multiple files with rename:</strong></p>
 
+<p>Now we shall use the rename command. If you don&rsquo;t have rename installed you can install it as follows:</p>
 
-<p>Notice in the output above that 661 megabytes of space will be freed by removing the old unused kernels from my ubuntu 18.04 system.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install rename</code></pre></div>
+
+<p>If you&rsquo;ve been following this tutorial so far then you should have 4 &ldquo;<strong>.txt</strong>&rdquo; files in your folder which we will be working with.</p>
+
+<p>Lets run the following command to rename the files and replace the &ldquo;<strong>.txt</strong>&rdquo; extension with &ldquo;<strong>.bak</strong>&ldquo;:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/.txt/.bak/&#39;</span> *.txt</code></pre></div>
+
+<p>The files should now be renamed as follows:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
+
+<h2 id="renaming-folders"><strong>Renaming Folders</strong></h2>
+
+<p><strong>Renaming a single folder with mv:</strong></p>
+
+<p>This will rename &ldquo;<strong>dir1</strong>&rdquo; to &ldquo;<strong>dir2</strong>&rdquo;.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mv dir1 dir2</code></pre></div>
+
+<p><strong>Removing spaces from multiple folder names with mv:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">// /</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
+
+<p><strong>Renaming multiple folders with rename:</strong></p>
+
+<p>Renaming multiple folders is much easier and straightforward with the rename command. The mv command is not ideal for this scenario, so we will use the rename command.</p>
+
+<p>Lets create multiple folders in an empty directory.</p>
+
+<p>This command will create four empty folders:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir dir<span class="o">{</span><span class="m">1</span>..4<span class="o">}</span></code></pre></div>
+
+<p>You should now have the following folders in your directory:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">dir1 dir2 dir3 dir4</code></pre></div>
+
+<p>Now lets rename the folders to replace the single digit numbers with triple digits.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/dir/dir00/&#39;</span> dir*/</code></pre></div>
+
+<p>This should be your result:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">dir001 dir002 dir003 dir004</code></pre></div>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>This was a brief look at how to list and remove old unused kernels from ubuntu 18.04. This can be an easy way for you to free up space on your system that you may not even be aware is being consumed.</p>
+<p>This was a quick look at how to rename files and folders in linux from the command line. While the mv command would do just fine, the rename command proves to be more efficient and versatile for renaming files and folders.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fubuntu-unused-kernels%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2frename-files-folders-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Remove%20Unused%20Kernels%20Ubuntu%2018.04&amp;url=https%3a%2f%2ftechstop.github.io%2fubuntu-unused-kernels%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Rename%20Files%20%26%20Folders%20Linux%20Command%20Line&amp;url=https%3a%2f%2ftechstop.github.io%2frename-files-folders-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fubuntu-unused-kernels%2f&title=Remove%20Unused%20Kernels%20Ubuntu%2018.04" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2frename-files-folders-linux%2f&title=Rename%20Files%20%26%20Folders%20Linux%20Command%20Line" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -299,10 +297,8 @@ window.cookieconsent.initialise({
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/rename-files-folders-linux/">&laquo; Rename Files &amp; Folders Linux Command Line</a></div>
       
-      
-        <div><a href="https://techstop.github.io/google-app-podcasts/">Listen To Podcasts With The Google App &raquo;</a></div>
+        <div><a href="https://techstop.github.io/ubuntu-unused-kernels/">Remove Unused Kernels Ubuntu 18.04 &raquo;</a></div>
       
     </div>
   </article>
