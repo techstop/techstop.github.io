@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Rename Files &amp; Folders Linux Command Line - techStop</title>
+  <title>Bash Exit Status - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Learn how to rename files and folders in linux from the command line. Follow this tutorial which will teach you how to use the mv and rename commands to rename files and folders.">
+  <meta name="description" content="Learn how to get the bash exit status for bash commands. Follow this tutorial which will teach you how to get the exit status codes for any bash commands.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/rename-files-folders-linux/" title="Rename Files &amp; Folders Linux Command Line">Rename Files &amp; Folders Linux Command Line</a></h1>
+  <h1><a href="https://techstop.github.io/bash-exit-status/" title="Bash Exit Status">Bash Exit Status</a></h1>
 
-<div class="post-info">Published: Oct 14, 2019</div>
+<div class="post-info">Published: Oct 15, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/mv.png" alt="Rename Files &amp; Folders Linux Command Line" title="Rename Files &amp; Folders Linux Command Line"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/stat.png" alt="Bash Exit Status" title="Bash Exit Status"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,111 +176,127 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>Lets take a look at how to rename files and folders in linux from the command line.</p>
+<p>Regardless of whether a bash command ends successfully or not, it returns and exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.</p>
 
-<p>Sure you can use your GUI and be done with it, but learning to do it from the command line can be quite useful. There&rsquo;s also the added benefit of being able to use these commands in bash scripts.</p>
+<p>The exit status of a bash command is always an integer (number). A successful command will have an exit status of zero (0), while a command that fails will have an exit status from 1 to 255.</p>
 
-<p>In a bash script you can loop through lots of files or folders to rename them quickly and efficiently. Knowing the right commands for the job is key.</p>
+<p>There is a special variable you can use to get the exit status of the previously executed command. You can easily print the exit status variable ($?) with the echo command.</p>
 
-<p>We will be going over three different methods to rename files and folders:</p>
+<p><strong>Take a look at this example or try it yourself:</strong></p>
+
+<p>Here we run the date command and then print its exit status with the echo command.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+date
+<span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<p>As you can see the date was printed on the first line and the successful exit status of zero on the second line.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Tue Oct 15 20:27:27 AST 2019
+0</code></pre></div>
+
+<p><strong>Testing with a bad command:</strong></p>
+
+<p>Now we use the same example, but with a bad command (datefoo) that doesn&rsquo;t exist.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+datefoo
+<span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<p>This now gives us a command not found error followed by the exit status code (127).</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">./x: line 3: datefoo: command not found
+127</code></pre></div>
+
+<p><strong>Save the exit status in a variable:</strong></p>
+
+<p>Saving the exit status for a command in a variable can be useful so that you can use the status later on in your bash script.</p>
+
+<p>In this example we run three commands and save the exit status for each in a variable. One of the commands is not a real command as one of our previous examples.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="c1"># Prints username</span>
+<span class="nb">echo</span> <span class="k">$(</span>whoami<span class="k">)</span>
+<span class="nv">var0</span><span class="o">=</span><span class="nv">$?</span>
+
+<span class="c1"># Bad command</span>
+datefoo
+<span class="nv">var1</span><span class="o">=</span><span class="nv">$?</span>
+
+<span class="c1"># Prints the time and date</span>
+date
+<span class="nv">var2</span><span class="o">=</span><span class="nv">$?</span>
+
+<span class="nb">echo</span> <span class="s2">&#34;These are the exit statuses for the commands above:&#34;</span>
+<span class="nb">echo</span> <span class="nv">$var0</span>
+<span class="nb">echo</span> <span class="nv">$var1</span>
+<span class="nb">echo</span> <span class="nv">$var2</span></code></pre></div>
+
+<p><strong>Set the exit status in your bash script:</strong></p>
+
+<p>Lets assume that we have a script called &ldquo;<strong>test.sh</strong>&rdquo; for this example.</p>
+
+<p>Here we have the cat command try to read a file that does not exist.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+cat foo.txt
+
+<span class="k">if</span> <span class="nb">test</span> <span class="nv">$?</span> -eq <span class="m">0</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&#34;The cat command succeeded because the file exists.&#34;</span>
+  <span class="nb">exit</span> <span class="m">0</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&#34;The cat command failed because the file does not exist.&#34;</span>
+  <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span></code></pre></div>
+
+<p>To run the file and get the exit status, we execute the following 2 commands in our terminal:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">./test.sh
+<span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<p>Since our script was designed to fail for this example, we get the error message and exit status 1 that we declared ourselves.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">cat: foo.txt: No such file or directory
+The cat command failed because the file does not exist.
+1</code></pre></div>
+
+<p><strong>Here are some standard linux status error codes that you can use in your scripts:</strong></p>
 
 <ul>
-<li><strong>mv</strong> - For moving source to folder or renaming source.</li>
-<li><strong>rename</strong> - For renaming source.</li>
-<li><strong>for loop</strong> - To loop through multiple sources.</li>
+<li>0 - Success</li>
+<li>1 - Catchall for general errors</li>
+<li>2 - Misuse of shell builtins (according to Bash documentation)</li>
+<li>126 - Command invoked cannot execute</li>
+<li>127 - “command not found”</li>
+<li>128 - Invalid argument to exit</li>
+<li>128+n - Fatal error signal “n”</li>
+<li>130 - Script terminated by Control-C</li>
+<li>255* - Exit status out of range</li>
 </ul>
-
-<h2 id="renaming-files"><strong>Renaming Files</strong></h2>
-
-<p><strong>Renaming a single file with mv:</strong></p>
-
-<p>This will rename &ldquo;<strong>file01.bak</strong>&rdquo; to &ldquo;<strong>file02.txt</strong>&rdquo;.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mv file01.bak file02.txt</code></pre></div>
-
-<p><strong>Renaming multiple files with mv:</strong></p>
-
-<p>First lets create some files for testing in an empty folder.</p>
-
-<p>This command will create four empty files:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">touch file<span class="o">{</span><span class="m">1</span>..4<span class="o">}</span>.bak</code></pre></div>
-
-<p>You should now have the following files in your folder:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
-
-<p>Now lets run the mv command in a for loop to rename the files and replace the &ldquo;<strong>.bak</strong>&rdquo; extension with &ldquo;<strong>.txt</strong>&ldquo;:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">%.bak</span><span class="si">}</span><span class="s2">.txt&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
-
-<p>The files should now be renamed as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.txt  file2.txt  file3.txt  file4.txt</code></pre></div>
-
-<p><strong>Renaming multiple files with rename:</strong></p>
-
-<p>Now we shall use the rename command. If you don&rsquo;t have rename installed you can install it as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install rename</code></pre></div>
-
-<p>If you&rsquo;ve been following this tutorial so far then you should have 4 &ldquo;<strong>.txt</strong>&rdquo; files in your folder which we will be working with.</p>
-
-<p>Lets run the following command to rename the files and replace the &ldquo;<strong>.txt</strong>&rdquo; extension with &ldquo;<strong>.bak</strong>&ldquo;:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/.txt/.bak/&#39;</span> *.txt</code></pre></div>
-
-<p>The files should now be renamed as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
-
-<h2 id="renaming-folders"><strong>Renaming Folders</strong></h2>
-
-<p><strong>Renaming a single folder with mv:</strong></p>
-
-<p>This will rename &ldquo;<strong>dir1</strong>&rdquo; to &ldquo;<strong>dir2</strong>&rdquo;.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mv dir1 dir2</code></pre></div>
-
-<p><strong>Removing spaces from multiple folder names with mv:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">// /</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
-
-<p><strong>Renaming multiple folders with rename:</strong></p>
-
-<p>Renaming multiple folders is much easier and straightforward with the rename command. The mv command is not ideal for this scenario, so we will use the rename command.</p>
-
-<p>Lets create multiple folders in an empty directory.</p>
-
-<p>This command will create four empty folders:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir dir<span class="o">{</span><span class="m">1</span>..4<span class="o">}</span></code></pre></div>
-
-<p>You should now have the following folders in your directory:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">dir1 dir2 dir3 dir4</code></pre></div>
-
-<p>Now lets rename the folders to replace the single digit numbers with triple digits.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/dir/dir00/&#39;</span> dir*/</code></pre></div>
-
-<p>This should be your result:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">dir001 dir002 dir003 dir004</code></pre></div>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>This was a quick look at how to rename files and folders in linux from the command line. While the mv command would do just fine, the rename command proves to be more efficient and versatile for renaming files and folders.</p>
+<p>This was a quick look at some bash exit status examples. Status exit codes can be quite useful. In large bash scripts it may be a good idea to set some exit status codes for easier troubleshooting of some parts of your code. They&rsquo;re also great to setup conditional statements.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2frename-files-folders-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fbash-exit-status%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Rename%20Files%20%26%20Folders%20Linux%20Command%20Line&amp;url=https%3a%2f%2ftechstop.github.io%2frename-files-folders-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Bash%20Exit%20Status&amp;url=https%3a%2f%2ftechstop.github.io%2fbash-exit-status%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2frename-files-folders-linux%2f&title=Rename%20Files%20%26%20Folders%20Linux%20Command%20Line" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fbash-exit-status%2f&title=Bash%20Exit%20Status" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -297,10 +313,8 @@ window.cookieconsent.initialise({
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/bash-exit-status/">&laquo; Bash Exit Status</a></div>
       
-      
-        <div><a href="https://techstop.github.io/ubuntu-unused-kernels/">Remove Unused Kernels Ubuntu 18.04 &raquo;</a></div>
+        <div><a href="https://techstop.github.io/rename-files-folders-linux/">Rename Files &amp; Folders Linux Command Line &raquo;</a></div>
       
     </div>
   </article>
