@@ -139,7 +139,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/bash-exit-status/" title="Bash Exit Status">Bash Exit Status</a></h1>
 
-<div class="post-info">Published: Oct 15, 2019</div>
+<div class="post-info">Published: Oct 15, 2019 &middot; Updated: Oct 16, 2019</div>
 
     <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/stat.png" alt="Bash Exit Status" title="Bash Exit Status"  width="150px">
@@ -211,14 +211,14 @@ datefoo
 
 <p>This now gives us a command not found error followed by the exit status code (127).</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">./x: line 3: datefoo: command not found
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">./test.sh: line 3: datefoo: command not found
 127</code></pre></div>
 
 <p><strong>Save the exit status in a variable:</strong></p>
 
 <p>Saving the exit status for a command in a variable can be useful so that you can use the status later on in your bash script.</p>
 
-<p>In this example we run three commands and save the exit status for each in a variable. One of the commands is not a real command as one of our previous examples.</p>
+<p>In this example we run three commands and save the exit status for each in a variable. One of the commands is not a real command like one of our previous examples.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
@@ -238,6 +238,16 @@ date
 <span class="nb">echo</span> <span class="nv">$var0</span>
 <span class="nb">echo</span> <span class="nv">$var1</span>
 <span class="nb">echo</span> <span class="nv">$var2</span></code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">gametheory
+./test.sh: line 8: datefoo: command not found
+Wed Oct 16 12:29:09 AST 2019
+These are the exit statuses for the commands above:
+0
+127
+0</code></pre></div>
 
 <p><strong>Set the exit status in your bash script:</strong></p>
 
