@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>linux - techStop</title>
+  <title>Linux - techStop</title>
   <meta name="author" content="Antonio">
   <meta name="description" content="TechStop is a tech website with a focus on Linux and Android. Check out our tutorials and tech articles for the Linux and Android platforms and other technologies.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
@@ -130,6 +130,63 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
+    
+        <article>
+  
+  <h1><a href="https://techstop.github.io/redirect-append-to-file/" title="Redirect and Append to a File in Linux">Redirect and Append to a File in Linux</a></h1>
+
+<div class="post-info">Published: Oct 18, 2019</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/redirect.png" alt="Redirect and Append to a File in Linux" title="Redirect and Append to a File in Linux"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>On every linux system you can redirect and append to the end of a file.</p>
+
+<p>Linux has &ldquo;stdout&rdquo; which stands for &ldquo;standard output&rdquo;. Whenever you run a command in your terminal, the result is displayed in the stdout. You can redirect and append stdout to the end of a file.</p>
+</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/redirect-append-to-file/" title="Redirect and Append to a File in Linux">Read more &raquo;</a></p>
+  <hr>
+</article>
+
     
         <article>
   
@@ -403,60 +460,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/directory-exists-bash/" title="Check If Directory Exists In Linux With Bash">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/bash-script-colors/" title="Colors In Bash Scripts">Colors In Bash Scripts</a></h1>
-
-<div class="post-info">Published: Oct 3, 2019</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/ansi.png" alt="Colors In Bash Scripts" title="Colors In Bash Scripts"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
-
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
-</script>
-
-<p>Using colors in bash scripts can be very useful. If you&rsquo;ve written your bash script with menus and prompts, it&rsquo;s a good idea to use ansi color codes to make your outputs more readable to the user. In this tutorial I&rsquo;ll cover some ways that you can use colors in your bash scripts for a more GUI like experience.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/bash-script-colors/" title="Colors In Bash Scripts">Read more &raquo;</a></p>
   <hr>
 </article>
 

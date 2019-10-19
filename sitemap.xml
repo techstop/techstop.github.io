@@ -3,56 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://techstop.github.io/bash-exit-status/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://techstop.github.io/categories/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/post/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/categories/linux/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://techstop.github.io/tags/linux/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://techstop.github.io/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <loc>https://techstop.github.io/categories/linux/</loc>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://techstop.github.io/categories/tutorials/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <loc>https://techstop.github.io/post/</loc>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/redirect-append-to-file/</loc>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/tags/</loc>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://techstop.github.io/tags/tutorials/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/categories/tutorials/</loc>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/</loc>
+    <lastmod>2019-10-18T21:30:46-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://techstop.github.io/bash-exit-status/</loc>
+    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -66,13 +71,19 @@
   </url>
   
   <url>
+    <loc>https://techstop.github.io/tags/android/</loc>
+    <lastmod>2019-10-11T21:21:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://techstop.github.io/categories/android/</loc>
     <lastmod>2019-10-11T21:21:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://techstop.github.io/tags/android/</loc>
+    <loc>https://techstop.github.io/tags/apps/</loc>
     <lastmod>2019-10-11T21:21:05-04:00</lastmod>
     <priority>0</priority>
   </url>
@@ -80,12 +91,6 @@
   <url>
     <loc>https://techstop.github.io/google-app-podcasts/</loc>
     <lastmod>2019-10-11T21:21:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://techstop.github.io/tags/apps/</loc>
-    <lastmod>2019-10-11T21:21:05-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
