@@ -133,6 +133,60 @@ window.cookieconsent.initialise({
     
         <article>
   
+  <h1><a href="https://techstop.github.io/time-command-linux/" title="Time a Command in Linux">Time a Command in Linux</a></h1>
+
+<div class="post-info">Published: Oct 19, 2019</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/time.png" alt="Time a Command in Linux" title="Time a Command in Linux"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>Getting familiar with timing commands in linux is a good idea. This is a good way to time long operations in a bash script or from the terminal. You can time most commands and any bash script. My favorite use case is for timing source code compilation from build scripts.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/time-command-linux/" title="Time a Command in Linux">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+    
+        <article>
+  
   <h1><a href="https://techstop.github.io/redirect-append-to-file/" title="Redirect and Append to a File in Linux">Redirect and Append to a File in Linux</a></h1>
 
 <div class="post-info">Published: Oct 18, 2019</div>
@@ -406,60 +460,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/google-app-podcasts/" title="Listen To Podcasts With The Google App">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/bash-arrays/" title="Bash Arrays">Bash Arrays</a></h1>
-
-<div class="post-info">Published: Oct 8, 2019</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/array.png" alt="Bash Arrays" title="Bash Arrays"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
-
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
-</script>
-
-<p>Bash arrays are quite powerful and robust, but not often used in the command line. They are variables which contain multiple values often referred to as items or elements. Arrays do not have a maximum limit for items they can contain nor do the values need to be assigned or indexed contiguously.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/bash-arrays/" title="Bash Arrays">Read more &raquo;</a></p>
   <hr>
 </article>
 
