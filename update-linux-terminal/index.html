@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Time a Command in Linux - techStop</title>
+  <title>Update Linux in a Terminal - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow this tutorial to learn how to time a command in linux. The time command can be used to time bash scripts with long operations as well as individual commands.">
+  <meta name="description" content="Follow this tutorial to learn how to update linux in a terminal. Performing your software updates in a terminal can be quicker and more efficient with the apt command line tool.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/time-command-linux/" title="Time a Command in Linux">Time a Command in Linux</a></h1>
+  <h1><a href="https://techstop.github.io/update-linux-terminal/" title="Update Linux in a Terminal">Update Linux in a Terminal</a></h1>
 
-<div class="post-info">Published: Oct 19, 2019</div>
+<div class="post-info">Published: Oct 20, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/time.png" alt="Time a Command in Linux" title="Time a Command in Linux"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/apt.png" alt="Update Linux in a Terminal" title="Update Linux in a Terminal"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,140 +176,51 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>Getting familiar with timing commands in linux is a good idea. This is a good way to time long operations in a bash script or from the terminal. You can time most commands and any bash script. My favorite use case is for timing source code compilation from build scripts.</p>
+<p>Keeping linux updated is a simple hassle free task, unlike that other OS. On linux you can use a GUI app or update in a terminal. Both methods achieve the same result, but users usually have a preference. For me that&rsquo;s the terminal.</p>
 
-<h2 id="using-the-time-command"><strong>Using The Time Command</strong></h2>
+<p>It&rsquo;s very important to keep your system up to date to keep it protected against vulnerabilities. Hackers are always trying new and different ways to obtain your valuable data. Updating will also install software improvements and new features when available.</p>
 
-<p>Before we go any further, you need to know that there are two versions of the time command on your system. You&rsquo;ll have &ldquo;<strong>/usr/bin/time</strong>&rdquo; and the shell built-in time command. The shell built-in time has less options and not suitable for all use cases.</p>
+<h2 id="update-with-a-gui"><strong>Update With a GUI</strong></h2>
 
-<p><strong>Timing the ping command:</strong></p>
+<p>Most linux distributions come with a GUI app to install updates. I&rsquo;m currently using Xubuntu which comes with &ldquo;Software Updater&rdquo;. It&rsquo;s a simple app that checks for updates and installs them for you.</p>
 
-<p>Here we ping the Bing website just for demonstration.</p>
+<p>Now in my experience with the GUI app in both Ubuntu and Xubuntu, if an application repository changes name you do not get a prompt to confirm this. This is a problem because without your consent, that particular app is not updated and held back. This is why I prefer and recommend the terminal to update since it always gives you the prompt to confirm the repo name change.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">time</span> ping bing.com</code></pre></div>
+<h2 id="update-in-terminal"><strong>Update In Terminal</strong></h2>
 
-<p><strong>Output:</strong></p>
+<p>Updating linux software in the terminal is actually quite simple and only requires two commands.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">PING bing.com (204.79.197.200) 56(84) bytes of data.
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=1 ttl=115 time=70.5 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=2 ttl=115 time=60.7 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=3 ttl=115 time=57.1 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=4 ttl=115 time=69.2 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=5 ttl=115 time=56.1 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=6 ttl=115 time=76.5 ms
+<p>We will be going over updating Debian and Debian based distros like Ubuntu and all of its derivatives with APT. The Advanced Package Tool(APT) is the command line tool for managing software efficiently from your terminal.</p>
 
---- bing.com ping statistics ---
-6 packets transmitted, 6 received, 0% packet loss, time 5006ms
-rtt min/avg/max/mdev = 56.187/65.064/76.519/7.522 ms
+<p><strong>Update software database:</strong></p>
 
-real	0m5.480s
-user	0m0.002s
-sys	0m0.002s</code></pre></div>
+<p>First we need to update the local software database with the latest software as follows:</p>
 
-<p>The final three lines are your time results. In real time, the ping command took 5 seconds.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update</code></pre></div>
 
-<ul>
-<li><strong>real:</strong> The wall clock time. This is the complete elapsed time it took this operation from beginning to end. This is the time most commonly used.</li>
-<li><strong>user:</strong> The amount of CPU time spent in user-mode within the process (outside the kernel).</li>
-<li><strong>sys:</strong> The amount of CPU time spent in the kernel within the process (within the kernel).</li>
-</ul>
+<p><strong>Perform the update:</strong></p>
 
-<p>Let us now use the formatting switch &ldquo;-f&rdquo; and elapsed clock &ldquo;%E&rdquo; option to print the time in a normal clock output.</p>
+<p>Once the software database updates, then you can update all the software on your system as follows:</p>
 
-<p>To use the &ldquo;-f&rdquo; switch we need to use &ldquo;/usr/bin/time&rdquo; instead of the shell built-in time.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt upgrade</code></pre></div>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ping bing.com</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<p>As you can see, we now only get a normal clock output showing the operation took 5 seconds.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">PING bing.com (13.107.21.200) 56(84) bytes of data.
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=113 time=154 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=113 time=147 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=113 time=170 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=4 ttl=113 time=190 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=5 ttl=113 time=169 ms
-
---- bing.com ping statistics ---
-6 packets transmitted, 5 received, 16% packet loss, time 5006ms
-rtt min/avg/max/mdev = 147.314/166.390/190.495/14.935 ms
-0:05.11</code></pre></div>
-
-<p><strong>Get a detailed output of the time command:</strong></p>
-
-<p>If you find that you need more detailed information for the time command output, you can use the &ldquo;-v&rdquo; switch as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -v ping bing.com</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">PING bing.com (13.107.21.200) 56(84) bytes of data.
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=113 time=195 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=113 time=169 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=113 time=193 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=6 ttl=113 time=235 ms
-
---- bing.com ping statistics ---
-7 packets transmitted, 4 received, 42% packet loss, time 6057ms
-rtt min/avg/max/mdev = 169.307/198.564/235.162/23.584 ms
-	Command being timed: &#34;ping bing.com&#34;
-	User time (seconds): 0.00
-	System time (seconds): 0.00
-	Percent of CPU this job got: 0%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.74
-	Average shared text size (kbytes): 0
-	Average unshared data size (kbytes): 0
-	Average stack size (kbytes): 0
-	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 2924
-	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 136
-	Voluntary context switches: 15
-	Involuntary context switches: 0
-	Swaps: 0
-	File system inputs: 0
-	File system outputs: 0
-	Socket messages sent: 0
-	Socket messages received: 0
-	Signals delivered: 0
-	Page size (bytes): 4096
-	Exit status: 0</code></pre></div>
-
-<p><strong>Time a bash script:</strong></p>
-
-<p>If you&rsquo;re running a bash script with plenty of commands and long operations, you can simply time the script as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ./script.sh</code></pre></div>
-
-<p><strong>Redirect the time output to a file:</strong></p>
-
-<p>If you ever have the need to log the time into a file, you can use the &ldquo;-o&rdquo; switch and point to the file as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -o /path/to/file.txt ping bing.com</code></pre></div>
-
-<p>To append the time log to an already existing file, you can use the &ldquo;-a&rdquo; switch as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -a /path/to/file.txt ping bing.com</code></pre></div>
+<p>You rarely ever need to reboot after an update unless you also receive a kernel update. After running the second command above, if you see any kernel update mentioned in your terminal, then you should reboot your PC after the update process is done.</p>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>To time a command in linux is easy to use and quite useful. It&rsquo;s excellent for timing those long operations while you are away from your system. The time command has plenty more switches and options which you can view in your terminal by viewing the manual as follows&hellip;</p>
+<p>Updating linux in the terminal is easier than what some new linux users think. I really recommend going forward that you use this method as your preferred way of keeping your system up to date.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">man time</code></pre></div>
-
-<p>That will be all for this quick look at the time command.</p>
+<p>Well that is all for this quick look at updating linux in a terminal.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2ftime-command-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fupdate-linux-terminal%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Time%20a%20Command%20in%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2ftime-command-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Update%20Linux%20in%20a%20Terminal&amp;url=https%3a%2f%2ftechstop.github.io%2fupdate-linux-terminal%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ftime-command-linux%2f&title=Time%20a%20Command%20in%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fupdate-linux-terminal%2f&title=Update%20Linux%20in%20a%20Terminal" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -326,10 +237,8 @@ rtt min/avg/max/mdev = 169.307/198.564/235.162/23.584 ms
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/update-linux-terminal/">&laquo; Update Linux in a Terminal</a></div>
       
-      
-        <div><a href="https://techstop.github.io/redirect-append-to-file/">Redirect and Append to a File in Linux &raquo;</a></div>
+        <div><a href="https://techstop.github.io/time-command-linux/">Time a Command in Linux &raquo;</a></div>
       
     </div>
   </article>
