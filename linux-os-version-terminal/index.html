@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Update Linux in a Terminal - techStop</title>
+  <title>Check Linux OS Version in Terminal - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow this tutorial to learn how to update linux in a terminal. Performing your software updates in a terminal can be quicker and more efficient with the apt command line tool.">
+  <meta name="description" content="Follow this tutorial to learn how to check linux OS version in terminal. We will be going over a few ways to get your OS and kernel information from the command line.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/update-linux-terminal/" title="Update Linux in a Terminal">Update Linux in a Terminal</a></h1>
+  <h1><a href="https://techstop.github.io/linux-os-version-terminal/" title="Check Linux OS Version in Terminal">Check Linux OS Version in Terminal</a></h1>
 
-<div class="post-info">Published: Oct 20, 2019 &middot; Updated: Oct 21, 2019</div>
+<div class="post-info">Published: Oct 21, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/apt.png" alt="Update Linux in a Terminal" title="Update Linux in a Terminal"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/osv.png" alt="Check Linux OS Version in Terminal" title="Check Linux OS Version in Terminal"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,95 +176,157 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>Keeping linux updated is a simple hassle free task, unlike that other OS. On linux you can use a GUI app or update in a terminal. Both methods achieve the same result, but users usually have a preference. For me that&rsquo;s the terminal.</p>
+<p>There are a few ways to check your kernel and linux os version, but today we will cover some commands to do this in a terminal.</p>
 
-<p>It&rsquo;s very important to keep your system up to date to keep it protected against vulnerabilities. Hackers are always trying new and different ways to obtain your valuable data. Updating will also install software improvements and new features when available.</p>
+<p>Knowing how to check your kernel and linux os version in a terminal can be useful if you ever need help in a forum where they might ask for this information. You can also use this info in a bash script to determine what actions to take in your script based on the kernel and linux os version. Whatever the case may be, it&rsquo;s a good idea to get familiar with these commands.</p>
 
-<h2 id="update-with-a-gui"><strong>Update With a GUI</strong></h2>
+<h2 id="linux-os-version"><strong>Linux OS Version</strong></h2>
 
-<p>Most linux distributions come with a GUI app to install updates. I&rsquo;m currently using Xubuntu which comes with &ldquo;Software Updater&rdquo;. It&rsquo;s a simple app that checks for updates and installs them for you.</p>
+<p><strong>Get Linux Standard Base info:</strong></p>
 
-<p>Now in my experience with the GUI app in both Ubuntu and Xubuntu, if an application repository changes name you do not get a prompt to confirm this. This is a problem because without your consent, that particular app is not updated and held back. This is why I prefer and recommend the terminal to update since it always gives you the prompt to confirm the repo name change.</p>
-
-<h2 id="update-in-terminal"><strong>Update In Terminal</strong></h2>
-
-<p>Updating linux software in the terminal is actually quite simple and only requires two commands.</p>
-
-<p>We will be going over updating Debian and Debian based distros like Ubuntu and all of its derivatives with APT. The Advanced Package Tool(APT) is the command line tool for managing software efficiently from your terminal.</p>
-
-<p><strong>Update software database:</strong></p>
-
-<p>First we need to update the local software database with the latest software as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsb_release -a</code></pre></div>
 
 <p><strong>Output:</strong></p>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Get:34 http://mirror.umd.edu/ubuntu bionic-security/main amd64 Packages [531 kB]
-Get:35 http://mirror.umd.edu/ubuntu bionic-security/main i386 Packages [382 kB]
-Get:36 http://mirror.umd.edu/ubuntu bionic-security/main amd64 DEP-11 Metadata [38.5 kB]
-Get:42 http://mirror.umd.edu/ubuntu bionic-security/universe DEP-11 48x48 Icons [16.4 kB]  
-Get:43 http://mirror.umd.edu/ubuntu bionic-security/universe DEP-11 64x64 Icons [108 kB]
-Get:44 http://mirror.umd.edu/ubuntu bionic-security/multiverse amd64 DEP-11 Metadata [2,464 B]
-Fetched 8,178 kB in 12s (660 kB/s)
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-7 packages can be upgraded. Run &#39;apt list --upgradable&#39; to see them.</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.3 LTS
+Release:	18.04
+Codename:	bionic</code></pre></div>
 
-<p><strong>Perform the upgrade:</strong></p>
+<p><strong>Or:</strong></p>
 
-<p>Once the software database updates, then you can update all the software on your system as follows:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt upgrade</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/lsb-release</code></pre></div>
 
 <p><strong>Output:</strong></p>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-Calculating upgrade... Done
-The following NEW packages will be installed:
-  linux-headers-5.0.0-32 linux-headers-5.0.0-32-generic linux-image-5.0.0-32-generic
-  linux-modules-5.0.0-32-generic linux-modules-extra-5.0.0-32-generic
-The following packages will be upgraded:
-  distro-info-data libtiff5 libtiff5:i386 linux-generic-hwe-18.04
-  linux-headers-generic-hwe-18.04 linux-image-generic-hwe-18.04 linux-libc-dev
-7 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
-Need to get 68.7 MB of archives.
-After this operation, 332 MB of additional disk space will be used.
-Do you want to continue? [Y/n]</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION=&#34;Ubuntu 18.04.3 LTS&#34;</code></pre></div>
 
-<p>You rarely ever need to reboot after an update unless you also receive a <strong>kernel update(linux-headers)</strong>. After running the second command above, if you see any kernel update mentioned in your terminal, then you should reboot your PC after the update process is done.</p>
+<p><strong>Get Linux Standard Base version only:</strong></p>
 
-<p><strong>Update and upgrade in a one line command:</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsb_release -r</code></pre></div>
 
-<p>This one line command combines the previous two commands in a single one-liner. You&rsquo;ll notice it contains a &ldquo;-y&rdquo; switch at the end. This will automatically say &ldquo;yes&rdquo; to the prompt asking if you wish to update.</p>
+<p><strong>Output:</strong></p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Release:	18.04</code></pre></div>
 
-<p><strong>Update a single package(application):</strong></p>
+<p><strong>Get full Linux OS information:</strong></p>
 
-<p>If you only wish to update a single package and not the entire system, you can run the following command:
-<em>Replace &ldquo;package_name&rdquo; with the package you wish to update</em></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/*release</code></pre></div>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt upgrade package_name</code></pre></div>
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION=&#34;Ubuntu 18.04.3 LTS&#34;
+NAME=&#34;Ubuntu&#34;
+VERSION=&#34;18.04.3 LTS (Bionic Beaver)&#34;
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME=&#34;Ubuntu 18.04.3 LTS&#34;
+VERSION_ID=&#34;18.04&#34;
+HOME_URL=&#34;https://www.ubuntu.com/&#34;
+SUPPORT_URL=&#34;https://help.ubuntu.com/&#34;
+BUG_REPORT_URL=&#34;https://bugs.launchpad.net/ubuntu/&#34;
+PRIVACY_POLICY_URL=&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;
+VERSION_CODENAME=bionic
+UBUNTU_CODENAME=bionic</code></pre></div>
+
+<p><strong>Or:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/os-release</code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">NAME=&#34;Ubuntu&#34;
+VERSION=&#34;18.04.3 LTS (Bionic Beaver)&#34;
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME=&#34;Ubuntu 18.04.3 LTS&#34;
+VERSION_ID=&#34;18.04&#34;
+HOME_URL=&#34;https://www.ubuntu.com/&#34;
+SUPPORT_URL=&#34;https://help.ubuntu.com/&#34;
+BUG_REPORT_URL=&#34;https://bugs.launchpad.net/ubuntu/&#34;
+PRIVACY_POLICY_URL=&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;
+VERSION_CODENAME=bionic
+UBUNTU_CODENAME=bionic</code></pre></div>
+
+<p><strong>A few more system details:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hostnamectl</code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">   Static hostname: ubuntu
+         Icon name: computer-desktop
+           Chassis: desktop
+        Machine ID: 76b1059e1a6c4453b277aa20f39b4bca
+           Boot ID: e936fa2f2f9e4f56a6176921a76acdb8
+  Operating System: Ubuntu 18.04.3 LTS
+            Kernel: Linux 5.0.0-32-generic
+      Architecture: x86-64</code></pre></div>
+
+<h2 id="kernel-version"><strong>Kernel Version</strong></h2>
+
+<p><strong>Print the kernel version:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -r</code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">5.0.0-32-generic</code></pre></div>
+
+<p><strong>Print the kernel version and instruction set:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -mrs</code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux 5.0.0-32-generic x86_64</code></pre></div>
+
+<p><strong>Print all kernel information:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -a</code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux ubuntu 5.0.0-32-generic #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux</code></pre></div>
+
+<p><strong>Additional kernel information:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /proc/version</code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux version 5.0.0-32-generic (buildd@lgw01-amd64-015) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019</code></pre></div>
+
+<p><strong>OS type, kernel release number, and version:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /proc/sys/kernel/<span class="o">{</span>ostype,osrelease,version<span class="o">}</span></code></pre></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux
+5.0.0-32-generic
+#34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019</code></pre></div>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>Updating linux in the terminal is easier than what some new linux users think. I really recommend going forward that you use this method as your preferred way of keeping your system up to date.</p>
-
-<p>Well that is all for this quick look at updating linux in a terminal.</p>
+<p>This concludes our look at how to check your kernel and Linux OS version in terminal. You now know a few ways to obtain the kernel and linux OS information for any situation.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fupdate-linux-terminal%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2flinux-os-version-terminal%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Update%20Linux%20in%20a%20Terminal&amp;url=https%3a%2f%2ftechstop.github.io%2fupdate-linux-terminal%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Check%20Linux%20OS%20Version%20in%20Terminal&amp;url=https%3a%2f%2ftechstop.github.io%2flinux-os-version-terminal%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fupdate-linux-terminal%2f&title=Update%20Linux%20in%20a%20Terminal" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2flinux-os-version-terminal%2f&title=Check%20Linux%20OS%20Version%20in%20Terminal" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -281,10 +343,8 @@ Do you want to continue? [Y/n]</code></pre></div>
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/linux-os-version-terminal/">&laquo; Check Linux OS Version in Terminal</a></div>
       
-      
-        <div><a href="https://techstop.github.io/time-command-linux/">Time a Command in Linux &raquo;</a></div>
+        <div><a href="https://techstop.github.io/update-linux-terminal/">Update Linux in a Terminal &raquo;</a></div>
       
     </div>
   </article>

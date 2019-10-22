@@ -6,10 +6,56 @@
     <description>Recent content in Linux on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Oct 2019 22:44:45 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 21 Oct 2019 20:29:00 -0400</lastBuildDate>
     
 	<atom:link href="https://techstop.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Check Linux OS Version in Terminal</title>
+      <link>https://techstop.github.io/linux-os-version-terminal/</link>
+      <pubDate>Mon, 21 Oct 2019 20:29:00 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/linux-os-version-terminal/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/osv.png&#34; alt=&#34;Check Linux OS Version in Terminal&#34; title=&#34;Check Linux OS Version in Terminal&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;There are a few ways to check your kernel and linux os version, but today we will cover some commands to do this in a terminal.&lt;/p&gt;
+
+&lt;p&gt;Knowing how to check your kernel and linux os version in a terminal can be useful if you ever need help in a forum where they might ask for this information. You can also use this info in a bash script to determine what actions to take in your script based on the kernel and linux os version. Whatever the case may be, it&amp;rsquo;s a good idea to get familiar with these commands.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Update Linux in a Terminal</title>
