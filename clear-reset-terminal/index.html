@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Check Linux OS Version in Terminal - techStop</title>
+  <title>Clear or Reset Terminal - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow this tutorial to learn how to check linux OS version in terminal. We will be going over a few ways to get your OS and kernel information from the command line.">
+  <meta name="description" content="Follow this tutorial to learn how to clear or reset terminal. We will be going over a few commands to cleanup your terminal when it&#39;s full of commands and output.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/linux-os-version-terminal/" title="Check Linux OS Version in Terminal">Check Linux OS Version in Terminal</a></h1>
+  <h1><a href="https://techstop.github.io/clear-reset-terminal/" title="Clear or Reset Terminal">Clear or Reset Terminal</a></h1>
 
-<div class="post-info">Published: Oct 21, 2019</div>
+<div class="post-info">Published: Oct 22, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/osv.png" alt="Check Linux OS Version in Terminal" title="Check Linux OS Version in Terminal"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/crt.png" alt="Clear or Reset Terminal" title="Clear or Reset Terminal"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,48 +176,13 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>There are a few ways to check your kernel and linux os version, but today we will cover some commands to do this in a terminal.</p>
+<p>Whenever you&rsquo;re using the terminal extensively you may find your terminal cluttered with commands and output. This can be rather annoying and even confusing at times with the bash prompt at the bottom of your terminal screen. The solution to this is to clear or reset terminal.</p>
 
-<p>Knowing how to check your kernel and linux os version in a terminal can be useful if you ever need help in a forum where they might ask for this information. You can also use this info in a bash script to determine what actions to take in your script based on the kernel and linux os version. Whatever the case may be, it&rsquo;s a good idea to get familiar with these commands.</p>
+<p>To clear or reset the terminal in linux is a simple task. We will go over a few commands to do this. Each command will have a notable difference and will be up to you which serves your needs best.</p>
 
-<h2 id="linux-os-version"><strong>Linux OS Version</strong></h2>
+<h2 id="clear-terminal"><strong>Clear Terminal</strong></h2>
 
-<p><strong>Get Linux Standard Base info:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsb_release -a</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">No LSB modules are available.
-Distributor ID:	Ubuntu
-Description:	Ubuntu 18.04.3 LTS
-Release:	18.04
-Codename:	bionic</code></pre></div>
-
-<p><strong>Or:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/lsb-release</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=18.04
-DISTRIB_CODENAME=bionic
-DISTRIB_DESCRIPTION=&#34;Ubuntu 18.04.3 LTS&#34;</code></pre></div>
-
-<p><strong>Get Linux Standard Base version only:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsb_release -r</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Release:	18.04</code></pre></div>
-
-<p><strong>Get full Linux OS information:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/*release</code></pre></div>
-
-<p><strong>Output:</strong></p>
+<p>Assuming your terminal is cluttered with commands and output, and your bash prompt is now at the bottom as follows:</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=18.04
@@ -234,99 +199,44 @@ SUPPORT_URL=&#34;https://help.ubuntu.com/&#34;
 BUG_REPORT_URL=&#34;https://bugs.launchpad.net/ubuntu/&#34;
 PRIVACY_POLICY_URL=&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;
 VERSION_CODENAME=bionic
-UBUNTU_CODENAME=bionic</code></pre></div>
+UBUNTU_CODENAME=bionic
+gametheory@ubuntu:~$</code></pre></div>
 
-<p><strong>Or:</strong></p>
+<p>You can run the clear command to clean the terminal and have your bash prompt back at the top.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/os-release</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">clear</code></pre></div>
 
-<p><strong>Output:</strong></p>
+<p>Now notice that after running the clear command you can scroll up with your mouse wheel to see previous output. Essentially the clear command just pushes the clutter up and out of view.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">NAME=&#34;Ubuntu&#34;
-VERSION=&#34;18.04.3 LTS (Bionic Beaver)&#34;
-ID=ubuntu
-ID_LIKE=debian
-PRETTY_NAME=&#34;Ubuntu 18.04.3 LTS&#34;
-VERSION_ID=&#34;18.04&#34;
-HOME_URL=&#34;https://www.ubuntu.com/&#34;
-SUPPORT_URL=&#34;https://help.ubuntu.com/&#34;
-BUG_REPORT_URL=&#34;https://bugs.launchpad.net/ubuntu/&#34;
-PRIVACY_POLICY_URL=&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;
-VERSION_CODENAME=bionic
-UBUNTU_CODENAME=bionic</code></pre></div>
+<p>You can also use the keyboard shortcut &ldquo;<strong>Ctrl + L</strong>&rdquo; to achieve the same as the clear command.</p>
 
-<p><strong>A few more system details:</strong></p>
+<h2 id="reset-terminal"><strong>Reset Terminal</strong></h2>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hostnamectl</code></pre></div>
+<p>The reset command also cleans up the clutter by re-initializing your terminal. However, the difference is that you cannot scroll up to view previous output. This resets the terminal like if you were opening it for the first time.</p>
 
-<p><strong>Output:</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">reset</code></pre></div>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">   Static hostname: ubuntu
-         Icon name: computer-desktop
-           Chassis: desktop
-        Machine ID: 76b1059e1a6c4453b277aa20f39b4bca
-           Boot ID: e936fa2f2f9e4f56a6176921a76acdb8
-  Operating System: Ubuntu 18.04.3 LTS
-            Kernel: Linux 5.0.0-32-generic
-      Architecture: x86-64</code></pre></div>
+<p>Notice that when you run the reset command the terminal takes 1-2 seconds to re-initialize.</p>
 
-<h2 id="kernel-version"><strong>Kernel Version</strong></h2>
+<p><strong>tput reset command:</strong></p>
 
-<p><strong>Print the kernel version:</strong></p>
+<p>The tput reset command does the same as the reset command. The difference here is that it resets the terminal instantly.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -r</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">5.0.0-32-generic</code></pre></div>
-
-<p><strong>Print the kernel version and instruction set:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -mrs</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux 5.0.0-32-generic x86_64</code></pre></div>
-
-<p><strong>Print all kernel information:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -a</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux ubuntu 5.0.0-32-generic #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux</code></pre></div>
-
-<p><strong>Additional kernel information:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /proc/version</code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux version 5.0.0-32-generic (buildd@lgw01-amd64-015) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019</code></pre></div>
-
-<p><strong>OS type, kernel release number, and version:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /proc/sys/kernel/<span class="o">{</span>ostype,osrelease,version<span class="o">}</span></code></pre></div>
-
-<p><strong>Output:</strong></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux
-5.0.0-32-generic
-#34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">tput reset</code></pre></div>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>This concludes our look at how to check your kernel and Linux OS version in terminal. You now know a few ways to obtain the kernel and linux OS information for any situation.</p>
+<p>I mostly use the clear command, but occasionally when I don&rsquo;t want my terminal scrollable, I use the reset command instead. That is all for this quick look at how to clear or reset terminal in linux.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2flinux-os-version-terminal%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fclear-reset-terminal%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Check%20Linux%20OS%20Version%20in%20Terminal&amp;url=https%3a%2f%2ftechstop.github.io%2flinux-os-version-terminal%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Clear%20or%20Reset%20Terminal&amp;url=https%3a%2f%2ftechstop.github.io%2fclear-reset-terminal%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2flinux-os-version-terminal%2f&title=Check%20Linux%20OS%20Version%20in%20Terminal" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fclear-reset-terminal%2f&title=Clear%20or%20Reset%20Terminal" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -343,10 +253,8 @@ UBUNTU_CODENAME=bionic</code></pre></div>
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/clear-reset-terminal/">&laquo; Clear or Reset Terminal</a></div>
       
-      
-        <div><a href="https://techstop.github.io/update-linux-terminal/">Update Linux in a Terminal &raquo;</a></div>
+        <div><a href="https://techstop.github.io/linux-os-version-terminal/">Check Linux OS Version in Terminal &raquo;</a></div>
       
     </div>
   </article>
