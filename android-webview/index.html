@@ -228,164 +228,164 @@ window.cookieconsent.initialise({
 <p>Now create a new java class called &ldquo;MyWebView&rdquo; where we will setup our webview. I&rsquo;ve included comments in the code so that you know what each attribute and method is for.</p>
 
 <p><strong>MyWebView.java</strong>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.webviewexample</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">webviewexample</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">android.Manifest</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.annotation.SuppressLint</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.app.DownloadManager</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.content.pm.PackageManager</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.graphics.Bitmap</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.net.Uri</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Build</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Environment</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.webkit.CookieManager</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.webkit.DownloadListener</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.webkit.URLUtil</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.webkit.WebView</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.webkit.WebViewClient</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.widget.ProgressBar</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">Manifest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">SuppressLint</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">app</span><span class="p">.</span><span class="na">DownloadManager</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">content</span><span class="p">.</span><span class="na">pm</span><span class="p">.</span><span class="na">PackageManager</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">graphics</span><span class="p">.</span><span class="na">Bitmap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">net</span><span class="p">.</span><span class="na">Uri</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">os</span><span class="p">.</span><span class="na">Build</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">os</span><span class="p">.</span><span class="na">Bundle</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">os</span><span class="p">.</span><span class="na">Environment</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">view</span><span class="p">.</span><span class="na">View</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">webkit</span><span class="p">.</span><span class="na">CookieManager</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">webkit</span><span class="p">.</span><span class="na">DownloadListener</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">webkit</span><span class="p">.</span><span class="na">URLUtil</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">webkit</span><span class="p">.</span><span class="na">WebView</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">webkit</span><span class="p">.</span><span class="na">WebViewClient</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">widget</span><span class="p">.</span><span class="na">ProgressBar</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">widget</span><span class="p">.</span><span class="na">Toast</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">androidx.annotation.NonNull</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">androidx.core.app.ActivityCompat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">NonNull</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">appcompat</span><span class="p">.</span><span class="na">app</span><span class="p">.</span><span class="na">AppCompatActivity</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">core</span><span class="p">.</span><span class="na">app</span><span class="p">.</span><span class="na">ActivityCompat</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">java.util.Objects</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Objects</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyWebView</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="nf">class</span> <span class="n">MyWebView</span> <span class="nf">extends</span> <span class="n">AppCompatActivity</span> <span class="p">{</span>
   <span class="c1">// Declare our web view.
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="n">WebView</span> <span class="n">webview</span><span class="o">;</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">WebView</span> <span class="n">webview</span><span class="p">;</span>
 
   <span class="c1">// We can pass URLs from any other class to this string.
-</span><span class="c1"></span>  <span class="kd">static</span> <span class="n">String</span> <span class="n">url</span><span class="o">;</span>
+</span><span class="c1"></span>  <span class="kd">static</span> <span class="nf">String</span> <span class="n">url</span><span class="p">;</span>
 
   <span class="c1">// Optional progress bar for page loading progress.
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="n">ProgressBar</span> <span class="n">progress</span><span class="o">;</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">ProgressBar</span> <span class="n">progress</span><span class="p">;</span>
 
   <span class="c1">// A request code for our storage write request.
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">WRITE_STORAGE</span> <span class="o">=</span> <span class="n">1</span><span class="o">;</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">static</span> <span class="kd">final</span> <span class="nf">int</span> <span class="n">WRITE_STORAGE</span> <span class="o">=</span> <span class="n">1</span><span class="p">;</span>
 
-  <span class="nd">@SuppressLint</span><span class="o">(</span><span class="s">&#34;SetJavaScriptEnabled&#34;</span><span class="o">)</span>
+  <span class="nd">@SuppressLint</span><span class="p">(</span><span class="s">&#34;SetJavaScriptEnabled&#34;</span><span class="p">)</span>
   <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_webview</span><span class="o">);</span>
+  <span class="kd">protected</span> <span class="nf">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="n">Bundle</span> <span class="nf">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+    <span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_webview</span><span class="p">);</span>
 
     <span class="c1">// Optional progress bar for page loading progress.
-</span><span class="c1"></span>    <span class="n">progress</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">progressBar</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">progress</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">progressBar</span><span class="p">);</span>
 
     <span class="c1">// Attach our web view to our layout.
-</span><span class="c1"></span>    <span class="n">webview</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">webView</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">webView</span><span class="p">);</span>
     <span class="c1">// Needed to interact with elements on most web pages.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setJavaScriptEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">getSettings</span><span class="p">().</span><span class="na">setJavaScriptEnabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
     <span class="c1">// This enables pinch to zoom.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setBuiltInZoomControls</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">getSettings</span><span class="p">().</span><span class="na">setBuiltInZoomControls</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
     <span class="c1">// Do not display the zoom controls on the screen.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setDisplayZoomControls</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">getSettings</span><span class="p">().</span><span class="na">setDisplayZoomControls</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
     <span class="c1">// Loads a page to fit in the screen (zoomed out).
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setLoadWithOverviewMode</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">getSettings</span><span class="p">().</span><span class="na">setLoadWithOverviewMode</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
     <span class="c1">// Do not constrain the viewport to the web view dimensions.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setUseWideViewPort</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">getSettings</span><span class="p">().</span><span class="na">setUseWideViewPort</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
     <span class="c1">// Allow website user settings to be saved and retrieved.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setDomStorageEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">getSettings</span><span class="p">().</span><span class="na">setDomStorageEnabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
     <span class="c1">// Attach our web view to our WebViewClient.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">setWebViewClient</span><span class="o">(</span><span class="k">new</span> <span class="n">MyWebViewClient</span><span class="o">());</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">setWebViewClient</span><span class="p">(</span><span class="k">new</span> <span class="n">MyWebViewClient</span><span class="p">());</span>
     <span class="c1">// We call our url string variable to load.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">loadUrl</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">loadUrl</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
 
     <span class="c1">// Adds a DownloadListener to our web view. This allows us to click on
 </span><span class="c1"></span>    <span class="c1">// download links and have items download to our downloads directory.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">setDownloadListener</span><span class="o">(</span><span class="k">new</span> <span class="n">DownloadListener</span><span class="o">()</span> <span class="o">{</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onDownloadStart</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">String</span> <span class="n">userAgent</span><span class="o">,</span> <span class="n">String</span> <span class="n">contentDisposition</span><span class="o">,</span> <span class="n">String</span> <span class="n">mimetype</span><span class="o">,</span> <span class="kt">long</span> <span class="n">contentLength</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="n">URLUtil</span><span class="o">.</span><span class="na">guessFileName</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">contentDisposition</span><span class="o">,</span> <span class="n">mimetype</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">cookie</span> <span class="o">=</span> <span class="n">CookieManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getCookie</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
-        <span class="n">DownloadManager</span> <span class="n">dm</span> <span class="o">=</span> <span class="o">(</span><span class="n">DownloadManager</span><span class="o">)</span> <span class="n">getSystemService</span><span class="o">(</span><span class="n">DOWNLOAD_SERVICE</span><span class="o">);</span>
-        <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">url</span><span class="o">));</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">setAllowedNetworkTypes</span><span class="o">(</span><span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">NETWORK_WIFI</span> <span class="o">|</span> <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">NETWORK_MOBILE</span><span class="o">);</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">setAllowedOverRoaming</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">allowScanningByMediaScanner</span><span class="o">();</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">setDestinationInExternalPublicDir</span><span class="o">(</span><span class="n">Environment</span><span class="o">.</span><span class="na">DIRECTORY_DOWNLOADS</span><span class="o">,</span> <span class="n">fileName</span><span class="o">);</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">addRequestHeader</span><span class="o">(</span><span class="s">&#34;Cookie&#34;</span><span class="o">,</span> <span class="n">cookie</span><span class="o">);</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">setNotificationVisibility</span><span class="o">(</span><span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">VISIBILITY_VISIBLE_NOTIFY_COMPLETED</span><span class="o">);</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="p">.</span><span class="na">setDownloadListener</span><span class="p">(</span><span class="k">new</span> <span class="n">DownloadListener</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">public</span> <span class="nf">void</span> <span class="n">onDownloadStart</span><span class="p">(</span><span class="n">String</span> <span class="nf">url</span><span class="p">,</span> <span class="n">String</span> <span class="nf">userAgent</span><span class="p">,</span> <span class="n">String</span> <span class="nf">contentDisposition</span><span class="p">,</span> <span class="n">String</span> <span class="nf">mimetype</span><span class="p">,</span> <span class="kt">long</span> <span class="nf">contentLength</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="nf">fileName</span> <span class="o">=</span> <span class="n">URLUtil</span><span class="p">.</span><span class="na">guessFileName</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">contentDisposition</span><span class="p">,</span> <span class="n">mimetype</span><span class="p">);</span>
+        <span class="n">String</span> <span class="nf">cookie</span> <span class="o">=</span> <span class="n">CookieManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getCookie</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+        <span class="n">DownloadManager</span> <span class="nf">dm</span> <span class="o">=</span> <span class="p">(</span><span class="n">DownloadManager</span><span class="p">)</span> <span class="n">getSystemService</span><span class="p">(</span><span class="n">DOWNLOAD_SERVICE</span><span class="p">);</span>
+        <span class="n">DownloadManager</span><span class="p">.</span><span class="na">Request</span> <span class="nf">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DownloadManager</span><span class="p">.</span><span class="na">Request</span><span class="p">(</span><span class="n">Uri</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">url</span><span class="p">));</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setAllowedNetworkTypes</span><span class="p">(</span><span class="n">DownloadManager</span><span class="p">.</span><span class="na">Request</span><span class="p">.</span><span class="na">NETWORK_WIFI</span> <span class="o">|</span> <span class="n">DownloadManager</span><span class="p">.</span><span class="na">Request</span><span class="p">.</span><span class="na">NETWORK_MOBILE</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setAllowedOverRoaming</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">allowScanningByMediaScanner</span><span class="p">();</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setDestinationInExternalPublicDir</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="na">DIRECTORY_DOWNLOADS</span><span class="p">,</span> <span class="n">fileName</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">addRequestHeader</span><span class="p">(</span><span class="s">&#34;Cookie&#34;</span><span class="p">,</span> <span class="n">cookie</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="na">setNotificationVisibility</span><span class="p">(</span><span class="n">DownloadManager</span><span class="p">.</span><span class="na">Request</span><span class="p">.</span><span class="na">VISIBILITY_VISIBLE_NOTIFY_COMPLETED</span><span class="p">);</span>
         <span class="c1">// Check for storage write permission before attempting to download.
-</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="n">getPermission</span><span class="o">())</span> <span class="o">{</span>
-          <span class="n">Objects</span><span class="o">.</span><span class="na">requireNonNull</span><span class="o">(</span><span class="n">dm</span><span class="o">).</span><span class="na">enqueue</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
-        <span class="o">}</span>
-      <span class="o">}</span>
-    <span class="o">});</span>
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">getPermission</span><span class="p">())</span> <span class="p">{</span>
+          <span class="n">Objects</span><span class="p">.</span><span class="na">requireNonNull</span><span class="p">(</span><span class="n">dm</span><span class="p">).</span><span class="na">enqueue</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
 
-  <span class="o">}</span>
+  <span class="p">}</span>
 
   <span class="c1">// Check if storage write permission has been granted. If not, request it.
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">getPermission</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span> <span class="o">&gt;=</span> <span class="n">23</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">ActivityCompat</span><span class="o">.</span><span class="na">checkSelfPermission</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="o">)</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">boolean</span> <span class="n">getPermission</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Build</span><span class="p">.</span><span class="na">VERSION</span><span class="p">.</span><span class="na">SDK_INT</span> <span class="o">&gt;=</span> <span class="n">23</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">ActivityCompat</span><span class="p">.</span><span class="na">checkSelfPermission</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">Manifest</span><span class="p">.</span><span class="na">permission</span><span class="p">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="p">)</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="p">.</span><span class="na">PERMISSION_GRANTED</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// True if permission granted exists.
-</span><span class="c1"></span>        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span><span class="c1"></span>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="c1">// We ask for storage write permission if it doesn&#39;t exist.
-</span><span class="c1"></span>        <span class="n">ActivityCompat</span><span class="o">.</span><span class="na">requestPermissions</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]{</span><span class="n">Manifest</span><span class="o">.</span><span class="na">permission</span><span class="o">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="o">},</span> <span class="n">WRITE_STORAGE</span><span class="o">);</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-      <span class="o">}</span>
-    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span><span class="c1"></span>        <span class="n">ActivityCompat</span><span class="p">.</span><span class="na">requestPermissions</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">new</span> <span class="n">String</span><span class="p">[]{</span><span class="n">Manifest</span><span class="p">.</span><span class="na">permission</span><span class="p">.</span><span class="na">WRITE_EXTERNAL_STORAGE</span><span class="p">},</span> <span class="n">WRITE_STORAGE</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="c1">// True for SDK &lt; 23
-</span><span class="c1"></span>      <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
+</span><span class="c1"></span>      <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 
   <span class="c1">// Check if user granted or denied storage write permission when requested and
 </span><span class="c1"></span>  <span class="c1">// run code for either situation. This method is optional, but useful.
 </span><span class="c1"></span>  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionsResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">requestCode</span> <span class="o">==</span> <span class="n">WRITE_STORAGE</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">grantResults</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span> <span class="o">&amp;&amp;</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Permission Granted!&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-        <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Permission Denied!&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nf">void</span> <span class="n">onRequestPermissionsResult</span><span class="p">(</span><span class="kt">int</span> <span class="nf">requestCode</span><span class="p">,</span> <span class="nd">@NonNull</span> <span class="n">String</span><span class="p">[]</span> <span class="nf">permissions</span><span class="p">,</span> <span class="nd">@NonNull</span> <span class="kt">int</span><span class="p">[]</span> <span class="nf">grantResults</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">requestCode</span> <span class="o">==</span> <span class="n">WRITE_STORAGE</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">grantResults</span><span class="p">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span> <span class="o">&amp;&amp;</span> <span class="n">grantResults</span><span class="p">[</span><span class="n">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="p">.</span><span class="na">PERMISSION_GRANTED</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span> <span class="s">&#34;Permission Granted!&#34;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span> <span class="s">&#34;Permission Denied!&#34;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 
   <span class="c1">// Attach our web view to our WebViewClient.
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="kd">class</span> <span class="nc">MyWebViewClient</span> <span class="kd">extends</span> <span class="n">WebViewClient</span> <span class="o">{</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">class</span> <span class="n">MyWebViewClient</span> <span class="nf">extends</span> <span class="n">WebViewClient</span> <span class="p">{</span>
     <span class="c1">// This method makes sure that any links we click will open within
 </span><span class="c1"></span>    <span class="c1">// our app instead of launching in the default web browser.
 </span><span class="c1"></span>    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">shouldOverrideUrlLoading</span><span class="o">(</span><span class="n">WebView</span> <span class="n">view</span><span class="o">,</span> <span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">shouldOverrideUrlLoading</span><span class="o">(</span><span class="n">view</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
-    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">shouldOverrideUrlLoading</span><span class="p">(</span><span class="n">WebView</span> <span class="nf">view</span><span class="p">,</span> <span class="n">String</span> <span class="nf">url</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kd">super</span><span class="p">.</span><span class="na">shouldOverrideUrlLoading</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">url</span><span class="p">);</span>
+    <span class="p">}</span>
 
     <span class="c1">// Since this method is called every time a new page starts to load, it&#39;s
 </span><span class="c1"></span>    <span class="c1">// perfect to run our Progress Bar.
 </span><span class="c1"></span>    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPageStarted</span><span class="o">(</span><span class="n">WebView</span> <span class="n">view</span><span class="o">,</span> <span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">Bitmap</span> <span class="n">favicon</span><span class="o">)</span> <span class="o">{</span>
-      <span class="n">progress</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
-      <span class="kd">super</span><span class="o">.</span><span class="na">onPageStarted</span><span class="o">(</span><span class="n">view</span><span class="o">,</span> <span class="n">url</span><span class="o">,</span> <span class="n">favicon</span><span class="o">);</span>
-    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">void</span> <span class="n">onPageStarted</span><span class="p">(</span><span class="n">WebView</span> <span class="nf">view</span><span class="p">,</span> <span class="n">String</span> <span class="nf">url</span><span class="p">,</span> <span class="n">Bitmap</span> <span class="nf">favicon</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">progress</span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">View</span><span class="p">.</span><span class="na">VISIBLE</span><span class="p">);</span>
+      <span class="kd">super</span><span class="p">.</span><span class="na">onPageStarted</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">favicon</span><span class="p">);</span>
+    <span class="p">}</span>
 
     <span class="c1">// Called whenever a page has finished loading. Here we can end our
 </span><span class="c1"></span>    <span class="c1">// page loading progress bar and take it out of view.
 </span><span class="c1"></span>    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPageFinished</span><span class="o">(</span><span class="n">WebView</span> <span class="n">view</span><span class="o">,</span> <span class="n">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
-      <span class="n">progress</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
-      <span class="kd">super</span><span class="o">.</span><span class="na">onPageFinished</span><span class="o">(</span><span class="n">view</span><span class="o">,</span> <span class="n">url</span><span class="o">);</span>
-    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">void</span> <span class="n">onPageFinished</span><span class="p">(</span><span class="n">WebView</span> <span class="nf">view</span><span class="p">,</span> <span class="n">String</span> <span class="nf">url</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">progress</span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">View</span><span class="p">.</span><span class="na">GONE</span><span class="p">);</span>
+      <span class="kd">super</span><span class="p">.</span><span class="na">onPageFinished</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">url</span><span class="p">);</span>
+    <span class="p">}</span>
 
-  <span class="o">}</span>
+  <span class="p">}</span>
 
   <span class="c1">// If we have clicked through multiple pages, this allows the back button
 </span><span class="c1"></span>  <span class="c1">// to take us back through each page.
 </span><span class="c1"></span>  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onBackPressed</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">webview</span><span class="o">.</span><span class="na">canGoBack</span><span class="o">())</span> <span class="o">{</span>
-      <span class="n">webview</span><span class="o">.</span><span class="na">goBack</span><span class="o">();</span>
-    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-      <span class="kd">super</span><span class="o">.</span><span class="na">onBackPressed</span><span class="o">();</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></div></p>
+  <span class="kd">public</span> <span class="nf">void</span> <span class="n">onBackPressed</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">webview</span><span class="p">.</span><span class="na">canGoBack</span><span class="p">())</span> <span class="p">{</span>
+      <span class="n">webview</span><span class="p">.</span><span class="na">goBack</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">super</span><span class="p">.</span><span class="na">onBackPressed</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div></p>
 
 <p>Create a new layout resource file for our WebView called &ldquo;activity_webview.xml&rdquo;.</p>
 
@@ -411,35 +411,35 @@ window.cookieconsent.initialise({
 <p>Now we setup our Buttons with the URLs in the MainActivity class…</p>
 
 <p><strong>MainActivity.java</strong>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.webviewexample</span><span class="o">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">webviewexample</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">appcompat</span><span class="p">.</span><span class="na">app</span><span class="p">.</span><span class="na">AppCompatActivity</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">content</span><span class="p">.</span><span class="na">Intent</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">os</span><span class="p">.</span><span class="na">Bundle</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">view</span><span class="p">.</span><span class="na">View</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="nf">class</span> <span class="n">MainActivity</span> <span class="nf">extends</span> <span class="n">AppCompatActivity</span> <span class="p">{</span>
   <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-  <span class="o">}</span>
+  <span class="kd">protected</span> <span class="nf">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="n">Bundle</span> <span class="nf">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
+    <span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_main</span><span class="p">);</span>
+  <span class="p">}</span>
 
   <span class="c1">// This button will pass the Google website url to MyWebView.class
-</span><span class="c1"></span>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">googleButton</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">MyWebView</span><span class="o">.</span><span class="na">url</span> <span class="o">=</span> <span class="s">&#34;https://www.google.com/&#34;</span><span class="o">;</span>
-    <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">MyWebView</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-    <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
-  <span class="o">}</span>
+</span><span class="c1"></span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">googleButton</span><span class="p">(</span><span class="n">View</span> <span class="nf">view</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">MyWebView</span><span class="p">.</span><span class="na">url</span> <span class="o">=</span> <span class="s">&#34;https://www.google.com/&#34;</span><span class="p">;</span>
+    <span class="n">Intent</span> <span class="nf">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">MyWebView</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">);</span>
+  <span class="p">}</span>
 
   <span class="c1">// This button will pass the techStop website url to MyWebView.class
-</span><span class="c1"></span>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">itgButton</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">MyWebView</span><span class="o">.</span><span class="na">url</span> <span class="o">=</span> <span class="s">&#34;https://techstop.github.io/&#34;</span><span class="o">;</span>
-    <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">MyWebView</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-    <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></div></p>
+</span><span class="c1"></span>  <span class="kd">public</span> <span class="nf">void</span> <span class="n">itgButton</span><span class="p">(</span><span class="n">View</span> <span class="nf">view</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">MyWebView</span><span class="p">.</span><span class="na">url</span> <span class="o">=</span> <span class="s">&#34;https://techstop.github.io/&#34;</span><span class="p">;</span>
+    <span class="n">Intent</span> <span class="nf">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">MyWebView</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+    <span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div></p>
 
 <p>We now need to add the buttons to the MainActivity layout…</p>
 
@@ -697,7 +697,7 @@ if (currentTheme) {
     <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.4980076a9845e1c23b5f38d614dcf7ad0c37bf711703a3368f9039a17f812986.js"></script>
+  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
