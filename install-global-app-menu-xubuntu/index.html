@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Upgrade Kept Back Packages in Linux - techStop</title>
+  <title>Install a Global App Menu in Xubuntu 18.04 - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow this tutorial to learn how to upgrade kept back packages in linux. We will show you a simple command to upgrade your kept back packages and get rid of warning.">
+  <meta name="description" content="Follow this tutorial to learn how to install a global app menu in xubuntu 18.04. We will show you a simple way to install a global app menu plugin for the xfce panel.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/upgrade-kept-back-packages/" title="Upgrade Kept Back Packages in Linux">Upgrade Kept Back Packages in Linux</a></h1>
+  <h1><a href="https://techstop.github.io/install-global-app-menu-xubuntu/" title="Install a Global App Menu in Xubuntu 18.04">Install a Global App Menu in Xubuntu 18.04</a></h1>
 
-<div class="post-info">Published: Oct 29, 2019</div>
+<div class="post-info">Published: Oct 31, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/kept.png" alt="Upgrade Kept Back Packages in Linux" title="Upgrade Kept Back Packages in Linux"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/xfce/gm1.png" alt="Install a Global App Menu on Xubuntu 18.04" title="Install a Global App Menu on Xubuntu 18.04"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,37 +176,144 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>Occasionally when updating your linux system from a terminal, you&rsquo;ll notice a warning stating &ldquo;The following packages have been kept back&rdquo;. This means that when updating, those packages will not be upgraded. Today we&rsquo;ll look at how to upgrade kept back packages in linux.</p>
+<p>If you ever used ubuntu when it still used the unity desktop, chances are you liked the unity global app menu and would like to have it on Xubuntu 18.04. Hate it or love it, ubuntu did some things really well when it used unity, like the HUD and the Global App Menu. Luckily, we don&rsquo;t need unity to install a global app menu in Xubuntu 18.04.</p>
 
-<p>According to <a href="https://debian-administration.org/article/69/Some_upgrades_show_packages_being_kept_back" target="_blank">Debian Administration</a>, if the dependencies have changed on one of the packages you have installed so that a new package must be installed to perform the upgrade then that will be listed as &ldquo;kept-back&rdquo;.</p>
+<p>Xubuntu 18.04 has a plugin for the xfce4-panel that you can install to get the global app menu setup for your applications. This plugin is built using the Unity protocol and libraries and provides all features found in the Unity implementation.</p>
 
-<p>You&rsquo;ll normally see this warning when performing a system upgrade with the following commands:</p>
+<p>In my testing, the global app menu worked quite well and felt just like it did in the unity desktop.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade</code></pre></div>
+<h2 id="install-the-global-app-menu"><strong>Install The Global App Menu</strong></h2>
 
-<p>Now, while probably not a big deal, if you&rsquo;re like me, you&rsquo;ll probably want to resolve this.</p>
+<p>To install the global app menu in xubuntu 18.04 is a simple process. Just run the following command in terminal:</p>
 
-<h2 id="upgrade-kept-back-packages"><strong>Upgrade Kept Back Packages</strong></h2>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install xfce4-appmenu-plugin</code></pre></div>
 
-<p>After you&rsquo;ve received the un-welcomed warning, to upgrade the kept back packages is quite simple. You can run the following command:</p>
+<p>Once you&rsquo;ve installed the plugin, add it to your xfce panel.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt dist-upgrade</code></pre></div>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/xfce/gm0.png" alt="Install a Global App Menu on Xubuntu 18.04" title="Install a Global App Menu on Xubuntu 18.04"  width="150px">
+</div>
 
-<p>Once you run this command, your kept back packages will be upgraded and any new required dependencies will be installed.</p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+
+<p>After adding the global app menu plugin to your xfce panel, you need to log out and then log back in to enable it.</p>
+
+<p>The global app menu spreads out across your xfce panel just like it did in the ubuntu unity desktop. If you like, you can also make it compact as shown in the screenshots below. Just go to the plugin properties.</p>
+
+<p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/xfce/gm2.png" alt="Install a Global App Menu on Xubuntu 18.04" title="Install a Global App Menu on Xubuntu 18.04"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+ <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/xfce/gm3.png" alt="Install a Global App Menu on Xubuntu 18.04" title="Install a Global App Menu on Xubuntu 18.04"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+</p>
+
+<p>If you&rsquo;d like to see the way I customize my Xfce desktop, take a look at the following link:</p>
+
+<p><a href="https://techstop.github.io/make-xfce-look-modern/">Make Xfce Look Modern</a></p>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>That is all for this quick look at how to upgrade kept back packages in linux. That wasn&rsquo;t too bad. Right?</p>
+<p>That is all for this quick look at how to install a global app menu in Xubuntu 18.04. If you&rsquo;re a fan of this feature from the unity desktop, but have switched to Xubuntu, you don&rsquo;t need to miss out.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fupgrade-kept-back-packages%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2finstall-global-app-menu-xubuntu%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Upgrade%20Kept%20Back%20Packages%20in%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2fupgrade-kept-back-packages%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Install%20a%20Global%20App%20Menu%20in%20Xubuntu%2018.04&amp;url=https%3a%2f%2ftechstop.github.io%2finstall-global-app-menu-xubuntu%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fupgrade-kept-back-packages%2f&title=Upgrade%20Kept%20Back%20Packages%20in%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2finstall-global-app-menu-xubuntu%2f&title=Install%20a%20Global%20App%20Menu%20in%20Xubuntu%2018.04" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -223,10 +330,8 @@ window.cookieconsent.initialise({
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/install-global-app-menu-xubuntu/">&laquo; Install a Global App Menu in Xubuntu 18.04</a></div>
       
-      
-        <div><a href="https://techstop.github.io/remove-orphaned-packages-linux/">Remove Orphaned Packages in Linux &raquo;</a></div>
+        <div><a href="https://techstop.github.io/upgrade-kept-back-packages/">Upgrade Kept Back Packages in Linux &raquo;</a></div>
       
     </div>
   </article>

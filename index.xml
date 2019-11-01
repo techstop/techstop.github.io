@@ -6,10 +6,54 @@
     <description>Recent content on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Oct 2019 20:53:17 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2019 22:07:03 -0400</lastBuildDate>
     
 	<atom:link href="https://techstop.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install a Global App Menu in Xubuntu 18.04</title>
+      <link>https://techstop.github.io/install-global-app-menu-xubuntu/</link>
+      <pubDate>Thu, 31 Oct 2019 22:07:03 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/install-global-app-menu-xubuntu/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/xfce/gm1.png&#34; alt=&#34;Install a Global App Menu on Xubuntu 18.04&#34; title=&#34;Install a Global App Menu on Xubuntu 18.04&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;If you ever used ubuntu when it still used the unity desktop, chances are you liked the unity global app menu and would like to have it on Xubuntu 18.04. Hate it or love it, ubuntu did some things really well when it used unity, like the HUD and the Global App Menu. Luckily, we don&amp;rsquo;t need unity to install a global app menu in Xubuntu 18.04.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Upgrade Kept Back Packages in Linux</title>
