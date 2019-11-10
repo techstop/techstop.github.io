@@ -133,6 +133,60 @@ window.cookieconsent.initialise({
     
         <article>
   
+  <h1><a href="https://techstop.github.io/fix-screen-tearing-xfce/" title="Fix Screen Tearing in Xfce">Fix Screen Tearing in Xfce</a></h1>
+
+<div class="post-info">Published: Nov 9, 2019</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/xfce/scrt0.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+    
+    var modal = document.getElementById('myModal');
+    var i;
+    
+    var img = document.getElementsByClassName('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for(i = 0; i < img.length; i++) {
+        img[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+<p>Xubuntu has always been one of my favorite distros, but it has always been plagued by the dreaded screen tearing because of the Xfce desktop environment. Screen tearing is when the GPU is out of sync with the display which causes artifacting and looks like tears between the top and bottom halves of your screen. This can be rather annoying, but luckily there&rsquo;s easy ways to fix screen tearing in Xfce.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/fix-screen-tearing-xfce/" title="Fix Screen Tearing in Xfce">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+    
+        <article>
+  
   <h1><a href="https://techstop.github.io/install-global-app-menu-xubuntu/" title="Install a Global App Menu in Xubuntu 18.04">Install a Global App Menu in Xubuntu 18.04</a></h1>
 
 <div class="post-info">Published: Oct 31, 2019</div>
@@ -404,67 +458,10 @@ window.cookieconsent.initialise({
 </article>
 
     
-        <article>
-  
-  <h1><a href="https://techstop.github.io/linux-os-version-terminal/" title="Check Linux OS Version in Terminal">Check Linux OS Version in Terminal</a></h1>
-
-<div class="post-info">Published: Oct 21, 2019</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/osv.png" alt="Check Linux OS Version in Terminal" title="Check Linux OS Version in Terminal"  width="150px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-    
-    var modal = document.getElementById('myModal');
-    var i;
-    
-    var img = document.getElementsByClassName('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    for(i = 0; i < img.length; i++) {
-        img[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-    }
-    
-    var span = document.getElementsByClassName("close")[0];
-
-    
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
-</script>
-
-<p>There are a few ways to check your kernel and linux os version, but today we will cover some commands to do this in a terminal.</p>
-
-<p>Knowing how to check your kernel and linux os version in a terminal can be useful if you ever need help in a forum where they might ask for this information. You can also use this info in a bash script to determine what actions to take in your script based on the kernel and linux os version. Whatever the case may be, it&rsquo;s a good idea to get familiar with these commands.</p>
-</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/linux-os-version-terminal/" title="Check Linux OS Version in Terminal">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
     <div class="pagination">
 
 
-  <p class="counter">Page 1 of 6</p>
+  <p class="counter">Page 1 of 7</p>
 
 
   <a class="btn older" href="/categories/tutorials/page/2/" title="Older">Older &raquo;</a>

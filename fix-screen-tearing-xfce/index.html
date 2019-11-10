@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Install a Global App Menu in Xubuntu 18.04 - techStop</title>
+  <title>Fix Screen Tearing in Xfce - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow this tutorial to learn how to install a global app menu in xubuntu 18.04. We will show you a simple way to install a global app menu plugin for the xfce panel.">
+  <meta name="description" content="Follow this tutorial to learn how to fix screen tearing in Xfce. We will show you a few simple ways to fix screen tearing in the Xfce desktop environment for Intel, AMD, and Nvidia drivers.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/install-global-app-menu-xubuntu/" title="Install a Global App Menu in Xubuntu 18.04">Install a Global App Menu in Xubuntu 18.04</a></h1>
+  <h1><a href="https://techstop.github.io/fix-screen-tearing-xfce/" title="Fix Screen Tearing in Xfce">Fix Screen Tearing in Xfce</a></h1>
 
-<div class="post-info">Published: Oct 31, 2019</div>
+<div class="post-info">Published: Nov 9, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/gm1.png" alt="Install a Global App Menu on Xubuntu 18.04" title="Install a Global App Menu on Xubuntu 18.04"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/xfce/scrt0.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,22 +176,82 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>If you ever used ubuntu when it still used the unity desktop, chances are you liked the unity global app menu and would like to have it on Xubuntu 18.04. Hate it or love it, ubuntu did some things really well when it used unity, like the HUD and the Global App Menu. Luckily, we don&rsquo;t need unity to install a global app menu in Xubuntu 18.04.</p>
+<p>Xubuntu has always been one of my favorite distros, but it has always been plagued by the dreaded screen tearing because of the Xfce desktop environment. Screen tearing is when the GPU is out of sync with the display which causes artifacting and looks like tears between the top and bottom halves of your screen. This can be rather annoying, but luckily there&rsquo;s easy ways to fix screen tearing in Xfce.</p>
 
-<p>Xubuntu 18.04 has a plugin for the xfce4-panel that you can install to get the global app menu setup for your applications. This plugin is built using the Unity protocol and libraries and provides all features found in the Unity implementation.</p>
+<h2 id="xfce-compositor">Xfce Compositor</h2>
 
-<p>In my testing, the global app menu worked quite well and felt just like it did in the unity desktop.</p>
+<p>There are a few ways to fix screen tearing in Xfce, but lets start with the easiest method first.</p>
 
-<h2 id="install-the-global-app-menu"><strong>Install The Global App Menu</strong></h2>
+<p>Note: These methods were tested on Xubuntu 18.04.</p>
 
-<p>To install the global app menu in xubuntu 18.04 is a simple process. Just run the following command in terminal:</p>
+<p>Open your Settings Manager then Window Manager Tweaks and under the Compositor tab, enable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo;. In some cases this may fix the screen tearing.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install xfce4-appmenu-plugin</code></pre></div>
+<p>If this method does not work for you then read on.</p>
 
-<p>Once you&rsquo;ve installed the plugin, add it to your xfce panel.</p>
+<h2 id="xorg-configuration">Xorg Configuration</h2>
+
+<p>This is the method that I always use to fix screen tearing in Xfce which has always worked for me.</p>
+
+<p>First find out which graphics driver you&rsquo;re using by running the following command in terminal:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">inxi -G</code></pre></div>
+
+<p>Your output from the above command should look similar to this:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">gametheory@ubuntu:~$ inxi -G
+Graphics:  Card: Intel 3rd Gen Core processor Graphics Controller
+           Display Server: x11 (X.Org 1.20.4 ) driver: intel
+           Resolution: 1920x1080@60.00hz
+           OpenGL: renderer: Mesa DRI Intel Ivybridge Mobile
+           version: 4.2 Mesa 19.0.8</code></pre></div>
+
+<p>Now make sure to disable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo; in the Xfce compositor. Then go to &ldquo;<strong>/usr/share/X11/xorg.conf.d</strong>&rdquo; and add one of the files below for your graphics card.</p>
+
+<p>For Intel drivers edit or create a file called &ldquo;<strong>10-intel.conf</strong>&rdquo; and add the following then reboot your pc:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
+  Identifier  &#34;Intel Graphics&#34;
+  Driver      &#34;intel&#34;
+  Option &#34;TearFree&#34; &#34;true&#34;
+EndSection</code></pre></div>
+
+<p>For Radeon drivers edit or create a file called &ldquo;<strong>10-radeon.conf</strong>&rdquo; and add the following then reboot your pc:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
+  Identifier &#34;Radeon&#34;
+  Driver &#34;radeon&#34;
+  Option &#34;TearFree&#34; &#34;on&#34;
+EndSection</code></pre></div>
+
+<p>For AMD drivers edit or create a file called &ldquo;<strong>10-amdgpu.conf</strong>&rdquo; and add the following then reboot your pc:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
+  Identifier &#34;AMDgpu&#34;
+  Driver &#34;amdgpu&#34;
+  Option &#34;TearFree&#34; &#34;on&#34;
+EndSection</code></pre></div>
+
+<p>For Nvidia drivers you&rsquo;ll need to enable &ldquo;modsetting&rdquo;. Run the following two commands to create a file called &ldquo;<strong>nvidia-nomodset.conf</strong>&rdquo; and update the kernel’s initramfs then reboot:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo <span class="nb">echo</span> <span class="s2">&#34;options nvidia-drm modset=1&#34;</span> &gt; /etc/modprobe.d/nvidia-nomodset.conf
+sudo update-initramfs -u</code></pre></div>
+
+<p>There are other methods to fix screen tearing for Nvidia drivers, but this seems to be one of the more reliable methods, so it may be worth a shot.</p>
+
+<h2 id="compton-compositor">Compton Compositor</h2>
+
+<p>Another solution to the screen tearing in Xfce is to disable the xfce compositor and install a lightweight compositor like Compton.</p>
+
+<p>Start by unchecking &ldquo;<strong>Enable display compositing</strong>&rdquo; to disable the xfce compositor in the Window Manager Tweaks.</p>
+
+<p>To install compton, run the following in terminal:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install compton compton-conf</code></pre></div>
+
+<p>Now we need to setup compton so that it starts on every boot-up. To do this, open &ldquo;<strong>Session and Startup</strong>&rdquo; in the Settings Manager and click on the Add button and enter what&rsquo;s in the screenshot below.</p>
 
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/gm0.png" alt="Install a Global App Menu on Xubuntu 18.04" title="Install a Global App Menu on Xubuntu 18.04"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/xfce/scrt1.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -225,12 +285,10 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>After adding the global app menu plugin to your xfce panel, you need to log out and then log back in to enable it.</p>
+<p>You can now open the Compton GUI from your applications menu and adjust any settings you&rsquo;d like.</p>
 
-<p>The global app menu spreads out across your xfce panel just like it did in the ubuntu unity desktop. If you like, you can also make it compact as shown in the screenshots below. Just go to the plugin properties.</p>
-
-<p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/gm2.png" alt="Install a Global App Menu on Xubuntu 18.04" title="Install a Global App Menu on Xubuntu 18.04"  width="150px">
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/xfce/scrt2.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -262,58 +320,23 @@ window.cookieconsent.initialise({
 		modal.style.display = "none";
 	}
 </script>
- <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/gm3.png" alt="Install a Global App Menu on Xubuntu 18.04" title="Install a Global App Menu on Xubuntu 18.04"  width="150px">
-</div>
 
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-</p>
-
-<p>If you&rsquo;d like to see the way I customize my Xfce desktop, take a look at the following link:</p>
-
-<p><a href="https://techstop.github.io/make-xfce-look-modern/">Make Xfce Look Modern</a></p>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>That is all for this quick look at how to install a global app menu in Xubuntu 18.04. If you&rsquo;re a fan of this feature from the unity desktop, but have switched to Xubuntu, you don&rsquo;t need to miss out.</p>
+<p>Xfce is a fantastic desktop environment that unfortunately has always had a screen tearing issue. Luckily, fixing screen tearing in xfce is a fairly simple task with a variety of methods.</p>
+
+<p>That&rsquo;ll be all for this tutorial. If you have any additional tips to fix screen tearing in Xfce that you&rsquo;d like to share, please comment below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2finstall-global-app-menu-xubuntu%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2ffix-screen-tearing-xfce%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Install%20a%20Global%20App%20Menu%20in%20Xubuntu%2018.04&amp;url=https%3a%2f%2ftechstop.github.io%2finstall-global-app-menu-xubuntu%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Fix%20Screen%20Tearing%20in%20Xfce&amp;url=https%3a%2f%2ftechstop.github.io%2ffix-screen-tearing-xfce%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2finstall-global-app-menu-xubuntu%2f&title=Install%20a%20Global%20App%20Menu%20in%20Xubuntu%2018.04" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ffix-screen-tearing-xfce%2f&title=Fix%20Screen%20Tearing%20in%20Xfce" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -330,10 +353,8 @@ window.cookieconsent.initialise({
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/fix-screen-tearing-xfce/">&laquo; Fix Screen Tearing in Xfce</a></div>
       
-      
-        <div><a href="https://techstop.github.io/upgrade-kept-back-packages/">Upgrade Kept Back Packages in Linux &raquo;</a></div>
+        <div><a href="https://techstop.github.io/install-global-app-menu-xubuntu/">Install a Global App Menu in Xubuntu 18.04 &raquo;</a></div>
       
     </div>
   </article>
