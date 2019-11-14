@@ -6,10 +6,54 @@
     <description>Recent content in Linux on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Nov 2019 23:57:17 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 13 Nov 2019 22:28:51 -0400</lastBuildDate>
     
 	<atom:link href="https://techstop.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Get CPU and GPU Temps in Linux</title>
+      <link>https://techstop.github.io/get-cpu-gpu-temps-linux/</link>
+      <pubDate>Wed, 13 Nov 2019 22:28:51 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/get-cpu-gpu-temps-linux/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sensors1.png&#34; alt=&#34;Get CPU and GPU Temps in Linux&#34; title=&#34;Get CPU and GPU Temps in Linux&#34;  width=&#34;150px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+
+&lt;p&gt;To get CPU and GPU temps in linux you need to install and configure lm-sensors. With lm-sensors you can monitor cpu and gpu temperatures and fan speeds as well as voltages for some systems. Lm-sensors reads the available sensors on your motherboard, cpu, and gpu and displays their output. Once configured, you can use the command line or a GUI to monitor your system&amp;rsquo;s sensors.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Fix Screen Tearing in Xfce</title>

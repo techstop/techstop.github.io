@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fix Screen Tearing in Xfce - techStop</title>
+  <title>Get CPU and GPU Temps in Linux - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow this tutorial to learn how to fix screen tearing in Xfce. We will show you a few simple ways to fix screen tearing in the Xfce desktop environment for Intel, AMD, and Nvidia drivers.">
+  <meta name="description" content="Follow this tutorial to learn how to get cpu and gpu temps in linux. We will use lm-sensors on the command line and GUI to read your system&#39;s sensors to determine cpu and gpu temps along with fan speeds and other info.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -137,12 +137,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/fix-screen-tearing-xfce/" title="Fix Screen Tearing in Xfce">Fix Screen Tearing in Xfce</a></h1>
+  <h1><a href="https://techstop.github.io/get-cpu-gpu-temps-linux/" title="Get CPU and GPU Temps in Linux">Get CPU and GPU Temps in Linux</a></h1>
 
-<div class="post-info">Published: Nov 9, 2019</div>
+<div class="post-info">Published: Nov 13, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/scrt0.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/sensors1.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,82 +176,45 @@ window.cookieconsent.initialise({
 </script>
 
 
-<p>Xubuntu has always been one of my favorite distros, but it has always been plagued by the dreaded screen tearing because of the Xfce desktop environment. Screen tearing is when the GPU is out of sync with the display which causes artifacting and looks like tears between the top and bottom halves of your screen. This can be rather annoying, but luckily there&rsquo;s easy ways to fix screen tearing in Xfce.</p>
+<p>To get CPU and GPU temps in linux you need to install and configure lm-sensors. With lm-sensors you can monitor cpu and gpu temperatures and fan speeds as well as voltages for some systems. Lm-sensors reads the available sensors on your motherboard, cpu, and gpu and displays their output. Once configured, you can use the command line or a GUI to monitor your system&rsquo;s sensors.</p>
 
-<h2 id="xfce-compositor">Xfce Compositor</h2>
+<h2 id="setup-lm-sensors"><strong>Setup lm-sensors</strong></h2>
 
-<p>There are a few ways to fix screen tearing in Xfce, but lets start with the easiest method first.</p>
+<p>First install lm-sensors by running the following command in your terminal.</p>
 
-<p>Note: These methods were tested on Xubuntu 18.04.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install lm-sensors</code></pre></div>
 
-<p>Open your Settings Manager then Window Manager Tweaks and under the Compositor tab, enable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo;. In some cases this may fix the screen tearing.</p>
+<p>Once the installation completes you will need to setup lm-sensors. It&rsquo;s a straightforward process. Just run the following command in terminal and follow the instructions you see in the terminal.</p>
 
-<p>If this method does not work for you then read on.</p>
+<p>I always say yes to all the questions asked during the setup. You can always run this command again if you&rsquo;d like to change anything.</p>
 
-<h2 id="xorg-configuration">Xorg Configuration</h2>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo sensors-detect</code></pre></div>
 
-<p>This is the method that I always use to fix screen tearing in Xfce which has always worked for me.</p>
+<p>When the setup is complete you can run this next command to get your cpu and gpu temperatures and fan speeds along with data from any other sensors detected.</p>
 
-<p>First find out which graphics driver you&rsquo;re using by running the following command in terminal:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sensors</code></pre></div>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">inxi -G</code></pre></div>
+<p>The output from this command will look similar to this:</p>
 
-<p>Your output from the above command should look similar to this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">gametheory@ubuntu:~$ sensors
+thinkpad-isa-0000
+Adapter: ISA adapter
+fan1:        2982 RPM
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">gametheory@ubuntu:~$ inxi -G
-Graphics:  Card: Intel 3rd Gen Core processor Graphics Controller
-           Display Server: x11 (X.Org 1.20.4 ) driver: intel
-           Resolution: 1920x1080@60.00hz
-           OpenGL: renderer: Mesa DRI Intel Ivybridge Mobile
-           version: 4.2 Mesa 19.0.8</code></pre></div>
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +49.0°C  (high = +87.0°C, crit = +105.0°C)
+Core 0:        +49.0°C  (high = +87.0°C, crit = +105.0°C)
+Core 1:        +48.0°C  (high = +87.0°C, crit = +105.0°C)</code></pre></div>
 
-<p>Now make sure to disable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo; in the Xfce compositor. Then go to &ldquo;<strong>/usr/share/X11/xorg.conf.d</strong>&rdquo; and add one of the files below for your graphics card.</p>
+<p>If the command line is not your thing and you prefer a GUI to monitor your system&rsquo;s sensors, then you can install xsensors. Xsensors is a gui front-end for lm-sensors.</p>
 
-<p>For Intel drivers edit or create a file called &ldquo;<strong>10-intel.conf</strong>&rdquo; and add the following then reboot your pc:</p>
+<p>To install xsensors just run the following command:</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
-  Identifier  &#34;Intel Graphics&#34;
-  Driver      &#34;intel&#34;
-  Option &#34;TearFree&#34; &#34;true&#34;
-EndSection</code></pre></div>
-
-<p>For Radeon drivers edit or create a file called &ldquo;<strong>10-radeon.conf</strong>&rdquo; and add the following then reboot your pc:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
-  Identifier &#34;Radeon&#34;
-  Driver &#34;radeon&#34;
-  Option &#34;TearFree&#34; &#34;on&#34;
-EndSection</code></pre></div>
-
-<p>For AMD drivers edit or create a file called &ldquo;<strong>10-amdgpu.conf</strong>&rdquo; and add the following then reboot your pc:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
-  Identifier &#34;AMDgpu&#34;
-  Driver &#34;amdgpu&#34;
-  Option &#34;TearFree&#34; &#34;on&#34;
-EndSection</code></pre></div>
-
-<p>For Nvidia drivers you&rsquo;ll need to enable &ldquo;modsetting&rdquo;. Run the following two commands to create a file called &ldquo;<strong>nvidia-nomodset.conf</strong>&rdquo; and update the kernel’s initramfs then reboot:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo <span class="nb">echo</span> <span class="s2">&#34;options nvidia-drm modset=1&#34;</span> &gt; /etc/modprobe.d/nvidia-nomodset.conf
-sudo update-initramfs -u</code></pre></div>
-
-<p>There are other methods to fix screen tearing for Nvidia drivers, but this seems to be one of the more reliable methods, so it may be worth a shot.</p>
-
-<h2 id="compton-compositor">Compton Compositor</h2>
-
-<p>Another solution to the screen tearing in Xfce is to disable the xfce compositor and install a lightweight compositor like Compton.</p>
-
-<p>Start by unchecking &ldquo;<strong>Enable display compositing</strong>&rdquo; to disable the xfce compositor in the Window Manager Tweaks.</p>
-
-<p>To install compton, run the following in terminal:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install compton compton-conf</code></pre></div>
-
-<p>Now we need to setup compton so that it starts on every boot-up. To do this, open &ldquo;<strong>Session and Startup</strong>&rdquo; in the Settings Manager and click on the Add button and enter what&rsquo;s in the screenshot below.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install xsensors</code></pre></div>
 
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/scrt1.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/sensors0.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -285,10 +248,12 @@ sudo update-initramfs -u</code></pre></div>
 </script>
 
 
-<p>You can now open the Compton GUI from your applications menu and adjust any settings you&rsquo;d like.</p>
+<p>Another gui that I always install in linux is &ldquo;System Profiler and Benchmark&rdquo; which displays the data from your system&rsquo;s sensors and a wealth of other system info. To install it, run the following command.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install hardinfo</code></pre></div>
 
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/scrt2.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/sensors2.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -324,19 +289,19 @@ sudo update-initramfs -u</code></pre></div>
 
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 
-<p>Xfce is a fantastic desktop environment that unfortunately has always had a screen tearing issue. Luckily, fixing screen tearing in xfce is a fairly simple task with a variety of methods.</p>
+<p>This wraps up our look at getting cpu and gpu temps in linux. Whether you prefer a gui or the command line, lm-sensors is easily the best tool for probing your system&rsquo;s sensors.</p>
 
-<p>That&rsquo;ll be all for this tutorial. If you have any additional tips to fix screen tearing in Xfce that you&rsquo;d like to share, please comment below.</p>
+<p>If you have other GUI suggestions, feel free to let us know in the comments below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2ffix-screen-tearing-xfce%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fget-cpu-gpu-temps-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Fix%20Screen%20Tearing%20in%20Xfce&amp;url=https%3a%2f%2ftechstop.github.io%2ffix-screen-tearing-xfce%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Get%20CPU%20and%20GPU%20Temps%20in%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2fget-cpu-gpu-temps-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ffix-screen-tearing-xfce%2f&title=Fix%20Screen%20Tearing%20in%20Xfce" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fget-cpu-gpu-temps-linux%2f&title=Get%20CPU%20and%20GPU%20Temps%20in%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -353,10 +318,8 @@ sudo update-initramfs -u</code></pre></div>
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/get-cpu-gpu-temps-linux/">&laquo; Get CPU and GPU Temps in Linux</a></div>
       
-      
-        <div><a href="https://techstop.github.io/install-global-app-menu-xubuntu/">Install a Global App Menu in Xubuntu 18.04 &raquo;</a></div>
+        <div><a href="https://techstop.github.io/fix-screen-tearing-xfce/">Fix Screen Tearing in Xfce &raquo;</a></div>
       
     </div>
   </article>
