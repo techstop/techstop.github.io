@@ -51,7 +51,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;If you&amp;rsquo;re ever browsing the internet on your Android device and stumble upon a Chrome extension you may be interested in, you can add it to your PC desktop browser right from Android. The next time you open Chrome browser on your PC, you will receive a prompt to install the extension. This comes in handy if you&amp;rsquo;re not near your PC and don&amp;rsquo;t want to risk forgetting the extension.&lt;/p&gt;</description>
     </item>
     
@@ -95,7 +94,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;With the rise of dark themed OSes and apps, it&amp;rsquo;s no surprise that browser extensions that enable dark mode or night mode have become popular. The Dark Reader browser extension claims to enable dark mode for any website. Dark Reader is available for major browsers like Chrome, Firefox, and Safari.&lt;/p&gt;</description>
     </item>
     
@@ -138,7 +136,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Often times users may want to move the chrome cache location for whatever reason. If you’re like me and have a primary SSD for your operating system and a secondary HDD for storage, then you may want to move the chrome cache location to another drive to reduce writes to your SSD. Reducing heavy caching to your SSD can prolong its lifespan.&lt;/p&gt;</description>
     </item>

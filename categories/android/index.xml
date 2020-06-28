@@ -51,7 +51,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;There are many podcast apps in the Google Play Store, but you already have a really good app for podcasts pre-installed on your android device that&amp;rsquo;s free. The Google app is excellent for finding and listening to podcasts and has an integrated assistant with voice commands.&lt;/p&gt;</description>
     </item>
     
@@ -128,7 +127,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;If you&amp;rsquo;re noticing that your android device is suddenly draining battery quicker than normal, it can be due to an android wakelock. Once you know the quick battery drain is not due to a faulty battery, you&amp;rsquo;ll need to detect what&amp;rsquo;s causing the wakelock. This is likely a misbehaving app.&lt;/p&gt;</description>
     </item>
     
@@ -206,7 +204,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;In this Android Admob tutorial we will go over how to ad admob to your android app. With admob you can monetize your app and make some income for your efforts. There are a few types of admob ad units that you can ad to your app. For this admob tutorial we will be adding the smart banner which can display banner ads of different sizes eliminating the need to set a fixed size.&lt;/p&gt;</description>
     </item>
     
@@ -284,7 +281,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage permissions for our DownloadListener for android 6+.&lt;/p&gt;</description>
     </item>
     
@@ -362,7 +358,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;Often times users are looking to create an Android Toolbar so they can customize it to their liking. In this tutorial we&amp;rsquo;ll go over how to create an Android custom Toolbar and show you a few modifications you can do to the Toolbar for your app.&lt;/p&gt;</description>
     </item>
     
@@ -405,7 +400,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Today we will be using an android BroadcastReceiver to run code on boot up. There can be many reasons to run code on boot up. One good use case would be to enable settings that a user has selected within your app to be set on every boot up.&lt;/p&gt;</description>
     </item>
@@ -586,7 +580,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The Freedom Kernel for the Zmax Pro Z981 has been a lot of fun to work on. I&amp;rsquo;d like to thank &lt;a href=&#34;https://androidforums.com/members/armandop_.1999347/&#34; target=&#34;_blank&#34;&gt;Armando&lt;/a&gt; from Android Forums for his great work on the LineageOS 14.1 rom for which I made the Freedom custom kernel for. I set out to add value not only to the Lineage rom, but also to the user experience and I can confidently say mission accomplished. So without further ado, please enjoy. Many Thanks.&lt;/p&gt;</description>
     </item>
     
@@ -629,7 +622,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&amp;rsquo;ll give your users a smooth experience throughout your apps&amp;rsquo; UI along with a smaller foot print.&lt;/p&gt;</description>
     </item>
@@ -674,7 +666,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;In this guide I will be showing you how to get the android mounts and partition images. There could be many reasons for needing the android mounts and partition images. A couple reasons that come to mind could be to make backups of your partitions in case you need to fix your phone from a bad flash later on. Or you might want to customize a boot.img or system.img to add in some custom features. Whatever your reason, just follow the guide and you&amp;rsquo;ll be pulling those partitions in no time.&lt;/p&gt;</description>
     </item>
     
@@ -717,7 +708,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;If you&amp;rsquo;ve been looking for an easy to use tool for decompiling and compiling apk and jar files then look no further. APK Utility is as easy to use as it gets. The utility also has the ability to tag frameworks. This feature is very useful when you need to install frameworks for multiple different devices without having to remove one for the other. If you&amp;rsquo;re familiar with &lt;a href=&#34;https://ibotpeaches.github.io/Apktool/documentation/&#34; target=&#34;_blank&#34;&gt;apktool&lt;/a&gt; which this tool uses then you&amp;rsquo;ll know what I&amp;rsquo;m referring to.&lt;/p&gt;</description>
     </item>
@@ -762,7 +752,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;If you’re looking to install adb on Linux, but don’t want to install Android Studio then this guide is for you. Android Studio is a development environment for creating android apps, but it’s a large download and installation if all you need is adb and fastboot. Below is a guide to install just adb and fastboot which will be a very small download and quick installation.&lt;/p&gt;</description>
     </item>
     
@@ -806,7 +795,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;If you need to unpack and repack boot.img, recovery.img, or loki images, then this is the tool for you. With mktool you don&amp;rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&amp;rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.&lt;/p&gt;</description>
     </item>
     
@@ -849,7 +837,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;If you&amp;rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&amp;rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&amp;rsquo;re here reading this, it&amp;rsquo;s likely because there is no root for your device. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called &lt;strong&gt;Backup and Debloat Android No Root&lt;/strong&gt; to give you some control back over your device.&lt;/p&gt;</description>
     </item>
@@ -1132,7 +1119,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;Reboot Utility is a powerful app to manage all your rebooting options. It is also a great looking app with 9 themes and 4 backgrounds to choose from.&lt;/p&gt;</description>
     </item>
     
@@ -1175,7 +1161,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Recovery Reboot is a very small and simple app to reboot into a custom recovery like TWRP or ClockworkMod. It&amp;rsquo;s a very lightweight app and small in size for those with limited storage and resources.&lt;/p&gt;</description>
     </item>
@@ -1288,7 +1273,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The LG G Stylo Katana ROM is based on the 5.1.1 v10J firmware for the MetroPCS and T-Mobile LG G Stylo. Katana brings many UI and performance enhancements beyond the stock factory rom from LG, thus improving the user experience. The rom is lightweight and operates smoothly. Katana also comes with a nice theme that was tastefully done. Full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
     
@@ -1331,7 +1315,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;This guide is to help you install the LG G Stylo TWRP recovery so that you can make backups, flash roms, and kernels or any flashable zips for this device.  If you plan on experimenting with your device, than this is a must have.&lt;/p&gt;</description>
     </item>
@@ -1376,7 +1359,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;This LG Optimus F6 Freedom kernel is packed with tons of modifications. There&amp;rsquo;s many governors and schedulers to tune the performance just right. Installation is also a breeze with the Freedom installer app in the Play Store. The app also fully controls the kernel to make sure you can tweak it to your liking. Full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
     
@@ -1419,7 +1401,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;This is an LG G Stylo flashable v10J firmware for the Metro PCS and T-Mobile variants. ​The flashable firmware rom comes rooted, so you don&amp;rsquo;t need to root or re-install twrp recovery.&lt;/p&gt;</description>
     </item>
@@ -1541,7 +1522,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The LG Optimus F6 Xperion rom brings some nice additions. It&amp;rsquo;s beautifully themed with most if not all of LG&amp;rsquo;s light blue replaced with white like most aosp roms. While debloated, it does bring a good selection of apps with some being from cyanogenmod. The rom is lightweight with some performance tweaks as well. More details below&amp;hellip;&lt;/p&gt;</description>
     </item>
     
@@ -1584,7 +1564,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Want more control over your device? Consider installing the LG Optimus F3 Freedom kernel lite or overclocked. With these kernels you&amp;rsquo;ll have features like init-d or overclocking. There&amp;rsquo;s also a few governors to play with to help manage performance.&lt;/p&gt;</description>
     </item>
@@ -1697,7 +1676,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The LG Optimus F3 ROMs really enhance the user experience and make this device much more ejoyable. Aside from the usual deodex, debloating, and zipaligning, Xperion rom adds other elements that otherwise do not come in the factory rom. The Xperion theme that comes with the rom is quite a nice touch.&lt;/p&gt;</description>
     </item>
     
@@ -1749,7 +1727,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;The LG Lucid 2 Xperion rom improves upon the factory stock rom to deliver a better experience. With many mods and tweaks, I&amp;rsquo;m sure you&amp;rsquo;ll agree. Maybe you&amp;rsquo;re bored of your Lucid 2, well this rom can surely breathe some new life to your device. There&amp;rsquo;s also an unsercured kernel for further debloating the Lucid 2 should you have the need.&lt;/p&gt;</description>
     </item>
@@ -1811,7 +1788,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;The Huawei Ascend M860 Centurion rom is based on Froyo 2.2.2. This rom is for the MetroPCS variant. Centurion rom offers enhancements beyond the factory stock rom for a better user experience.&lt;/p&gt;</description>
     </item>

@@ -210,21 +210,13 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-
 <p>In this Android Admob tutorial we will go over how to ad admob to your android app. With admob you can monetize your app and make some income for your efforts. There are a few types of admob ad units that you can ad to your app. For this admob tutorial we will be adding the smart banner which can display banner ads of different sizes eliminating the need to set a fixed size.</p>
-
 <p>The code in this tutorial will be in the full project on github linked at the bottom of this page. Feel free to fork or download the project from github.</p>
-
 <h2 id="android-admob-example">Android Admob Example</h2>
-
 <p>Begin by creating a new project in Android Studio with an Empty Activity if you haven’t already. We can call the project “<strong>Admob Tutorial</strong>”.</p>
-
 <p>You will first need to add the ads play services dependency to your <strong>build.gradle</strong> file…</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s1">&#39;com.google.android.gms:play-services-ads:18.2.0&#39;</span></code></pre></div>
-
 <p>Now add a LinearLayout for your AdView to your <strong>activity_main.xml</strong>.</p>
-
 <p><strong>activity_main.xml</strong>
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
@@ -247,93 +239,88 @@ window.cookieconsent.initialise({
     <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
     <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/RelativeLayout&gt;</span></code></pre></div></p>
-
 <p>Now we add our ad serving code to the <strong>MainActivity</strong>. Make sure to read the comments I wrote within the code that explains what parts of the code do…</p>
-
 <p><strong>MainActivity.java</strong>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">gt</span><span class="p">.</span><span class="na">admobtutorial</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.admobtutorial</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">appcompat</span><span class="p">.</span><span class="na">app</span><span class="p">.</span><span class="na">AppCompatActivity</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">os</span><span class="p">.</span><span class="na">Bundle</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">view</span><span class="p">.</span><span class="na">View</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">widget</span><span class="p">.</span><span class="na">LinearLayout</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.LinearLayout</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nf">com</span><span class="p">.</span><span class="na">google</span><span class="p">.</span><span class="na">android</span><span class="p">.</span><span class="na">gms</span><span class="p">.</span><span class="na">ads</span><span class="p">.</span><span class="na">AdListener</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">com</span><span class="p">.</span><span class="na">google</span><span class="p">.</span><span class="na">android</span><span class="p">.</span><span class="na">gms</span><span class="p">.</span><span class="na">ads</span><span class="p">.</span><span class="na">AdRequest</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">com</span><span class="p">.</span><span class="na">google</span><span class="p">.</span><span class="na">android</span><span class="p">.</span><span class="na">gms</span><span class="p">.</span><span class="na">ads</span><span class="p">.</span><span class="na">AdSize</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">com</span><span class="p">.</span><span class="na">google</span><span class="p">.</span><span class="na">android</span><span class="p">.</span><span class="na">gms</span><span class="p">.</span><span class="na">ads</span><span class="p">.</span><span class="na">AdView</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">com</span><span class="p">.</span><span class="na">google</span><span class="p">.</span><span class="na">android</span><span class="p">.</span><span class="na">gms</span><span class="p">.</span><span class="na">ads</span><span class="p">.</span><span class="na">MobileAds</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">com.google.android.gms.ads.AdListener</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.android.gms.ads.AdRequest</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.android.gms.ads.AdSize</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.android.gms.ads.AdView</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.google.android.gms.ads.MobileAds</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="nf">class</span> <span class="n">MainActivity</span> <span class="nf">extends</span> <span class="n">AppCompatActivity</span> <span class="p">{</span>
-  <span class="kd">private</span> <span class="nf">AdView</span> <span class="n">adView</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="n">AdView</span> <span class="n">adView</span><span class="o">;</span>
   <span class="c1">// Test Ad Unit ID
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">static</span> <span class="kd">final</span> <span class="nf">String</span> <span class="n">adUnitID</span> <span class="o">=</span> <span class="s">&#34;ca-app-pub-3940256099942544/6300978111&#34;</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">adUnitID</span> <span class="o">=</span> <span class="s">&#34;ca-app-pub-3940256099942544/6300978111&#34;</span><span class="o">;</span>
   <span class="c1">// Test App ID
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">static</span> <span class="kd">final</span> <span class="nf">String</span> <span class="n">appID</span> <span class="o">=</span> <span class="s">&#34;ca-app-pub-3940256099942544~3347511713&#34;</span><span class="p">;</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">appID</span> <span class="o">=</span> <span class="s">&#34;ca-app-pub-3940256099942544~3347511713&#34;</span><span class="o">;</span>
 
   <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="nf">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="n">Bundle</span> <span class="nf">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
-    <span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_main</span><span class="p">);</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
 
     <span class="c1">// Start our ad view method below.
-</span><span class="c1"></span>    <span class="n">startAdView</span><span class="p">();</span>
-  <span class="p">}</span>
+</span><span class="c1"></span>    <span class="n">startAdView</span><span class="o">();</span>
+  <span class="o">}</span>
 
   <span class="c1">// This method will load our ad view.
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">void</span> <span class="n">startAdView</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">MobileAds</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">appID</span><span class="p">);</span>
-    <span class="n">adView</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AdView</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-    <span class="n">adView</span><span class="p">.</span><span class="na">setAdSize</span><span class="p">(</span><span class="n">AdSize</span><span class="p">.</span><span class="na">SMART_BANNER</span><span class="p">);</span>
-    <span class="n">adView</span><span class="p">.</span><span class="na">setAdUnitId</span><span class="p">(</span><span class="n">adUnitID</span><span class="p">);</span>
-    <span class="n">LinearLayout</span> <span class="nf">layout</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">ad_view</span><span class="p">);</span>
-    <span class="n">AdListener</span> <span class="nf">listener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AdListener</span><span class="p">()</span> <span class="p">{</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">startAdView</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">MobileAds</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">appID</span><span class="o">);</span>
+    <span class="n">adView</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AdView</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+    <span class="n">adView</span><span class="o">.</span><span class="na">setAdSize</span><span class="o">(</span><span class="n">AdSize</span><span class="o">.</span><span class="na">SMART_BANNER</span><span class="o">);</span>
+    <span class="n">adView</span><span class="o">.</span><span class="na">setAdUnitId</span><span class="o">(</span><span class="n">adUnitID</span><span class="o">);</span>
+    <span class="n">LinearLayout</span> <span class="n">layout</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">ad_view</span><span class="o">);</span>
+    <span class="n">AdListener</span> <span class="n">listener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AdListener</span><span class="o">()</span> <span class="o">{</span>
       <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="nf">void</span> <span class="n">onAdLoaded</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">adView</span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">View</span><span class="p">.</span><span class="na">VISIBLE</span><span class="p">);</span>
-        <span class="kd">super</span><span class="p">.</span><span class="na">onAdLoaded</span><span class="p">();</span>
-      <span class="p">}</span>
-    <span class="p">};</span>
-    <span class="n">adView</span><span class="p">.</span><span class="na">setAdListener</span><span class="p">(</span><span class="n">listener</span><span class="p">);</span>
-    <span class="n">adView</span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">View</span><span class="p">.</span><span class="na">GONE</span><span class="p">);</span>
-    <span class="n">layout</span><span class="p">.</span><span class="na">addView</span><span class="p">(</span><span class="n">adView</span><span class="p">);</span>
-    <span class="n">AdRequest</span> <span class="nf">adRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AdRequest</span><span class="p">.</span><span class="na">Builder</span><span class="p">().</span><span class="na">build</span><span class="p">();</span>
-    <span class="n">adView</span><span class="p">.</span><span class="na">loadAd</span><span class="p">(</span><span class="n">adRequest</span><span class="p">);</span>
-  <span class="p">}</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdLoaded</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">adView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onAdLoaded</span><span class="o">();</span>
+      <span class="o">}</span>
+    <span class="o">};</span>
+    <span class="n">adView</span><span class="o">.</span><span class="na">setAdListener</span><span class="o">(</span><span class="n">listener</span><span class="o">);</span>
+    <span class="n">adView</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+    <span class="n">layout</span><span class="o">.</span><span class="na">addView</span><span class="o">(</span><span class="n">adView</span><span class="o">);</span>
+    <span class="n">AdRequest</span> <span class="n">adRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AdRequest</span><span class="o">.</span><span class="na">Builder</span><span class="o">().</span><span class="na">build</span><span class="o">();</span>
+    <span class="n">adView</span><span class="o">.</span><span class="na">loadAd</span><span class="o">(</span><span class="n">adRequest</span><span class="o">);</span>
+  <span class="o">}</span>
 
   <span class="c1">// Pause ad view when leaving the activity.
 </span><span class="c1"></span>  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="nf">void</span> <span class="n">onPause</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">adView</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">adView</span><span class="p">.</span><span class="na">pause</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="kd">super</span><span class="p">.</span><span class="na">onPause</span><span class="p">();</span>
-  <span class="p">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPause</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">adView</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">adView</span><span class="o">.</span><span class="na">pause</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onPause</span><span class="o">();</span>
+  <span class="o">}</span>
 
   <span class="c1">// Resume ad view when returning to the activity.
 </span><span class="c1"></span>  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="nf">void</span> <span class="n">onResume</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">super</span><span class="p">.</span><span class="na">onResume</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">adView</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">adView</span><span class="p">.</span><span class="na">resume</span><span class="p">();</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResume</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onResume</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">adView</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">adView</span><span class="o">.</span><span class="na">resume</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
 
   <span class="c1">// Destroy the ad view when the activity is destroyed.
 </span><span class="c1"></span>  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="nf">void</span> <span class="n">onDestroy</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">adView</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">adView</span><span class="p">.</span><span class="na">destroy</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="kd">super</span><span class="p">.</span><span class="na">onDestroy</span><span class="p">();</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div></p>
-
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">adView</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">adView</span><span class="o">.</span><span class="na">destroy</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></div></p>
 <p>The <strong>Ad Unit ID</strong> and the <strong>App ID</strong> are test samples provided by google for testing apps with admob. To get your real IDs you will need to sign into your admob account.</p>
-
 <p>Finally we add the admob App ID <strong>meta-data</strong> to the <strong>AndroidManifest.xml</strong>. Without this step the app will not run…</p>
-
 <p><strong>AndroidManifest.xml</strong>
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
@@ -357,9 +344,7 @@ window.cookieconsent.initialise({
     <span class="nt">&lt;/activity&gt;</span>
   <span class="nt">&lt;/application&gt;</span>
 <span class="nt">&lt;/manifest&gt;</span></code></pre></div></p>
-
 <p>This will conclude the Android Admob tutorial. The full project is on github. You can download or fork it from the link below and import it to your favorite IDE, though Android Studio is recommended.</p>
-
 <div>
   <a title="Android Admob" href="https://github.com/GameTheory-/android-admob-tutorial" target="_blank">
   <button id="cta-btn"><i class="fa fa-download"></i> Android Admob</button>
@@ -546,7 +531,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

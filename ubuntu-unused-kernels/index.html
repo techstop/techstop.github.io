@@ -176,23 +176,14 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>A question often asked&hellip; How do I remove old unused kernels from ubuntu 18.04?</p>
-
 <p>Each time you receive a kernel update in your ubuntu 18.04 system updates, you end up with the old kernels remaining in your system. This can be useful in the event that the new kernel causes issues, you can always boot the old kernels. In time, old unused kernels can accumulate taking up unnecessary space on your drive.</p>
-
 <p>I usually use my system for a few days with a new kernel update before removing the old kernels. This gives me time to assess whether the new kernel is stable and my system is running fine. Once I&rsquo;m certain the system is stable with the new kernel, I will then proceed to remove the old kernels.</p>
-
 <h2 id="remove-unused-kernels"><strong>Remove Unused Kernels</strong></h2>
-
 <p>It&rsquo;s a good idea to view the list of installed kernels on your system to be sure that there are old kernels to remove.</p>
-
 <p>You can list all the kernels on your system with the following dpkg command.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dpkg --list <span class="p">|</span> egrep -i <span class="s1">&#39;linux-image|linux-headers&#39;</span></code></pre></div>
-
 <p>Your output should list all the kernels installed on your system like this:</p>
-
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/lh0.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="150px">
 </div>
@@ -227,13 +218,9 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>To remove the unused kernels you can run the following command:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt --purge autoremove</code></pre></div>
-
 <p>Here&rsquo;s what the output of apt looks like:</p>
-
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/lh1.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="150px">
 </div>
@@ -268,11 +255,8 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>Notice in the output above that 661 megabytes of space will be freed by removing the old unused kernels from my ubuntu 18.04 system.</p>
-
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>This was a brief look at how to list and remove old unused kernels from ubuntu 18.04. This can be an easy way for you to free up space on your system that you may not even be aware is being consumed.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -449,7 +433,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

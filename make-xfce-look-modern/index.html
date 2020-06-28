@@ -242,56 +242,39 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-
 <p>Xfce is a lightweight and powerful desktop environment(DE) that&rsquo;s been around for a long time. It&rsquo;s considered one of the most stable and lightest DEs around. Xfce has a traditional layout well suited for users of all types, from the new user coming from Windows to the power user looking to get things done efficiently.</p>
-
 <p>One complaint that some users have is that Xfce looks dated, boring, and bland. So I&rsquo;m going to show you how to make Xfce look modern and beautiful. When we&rsquo;re done, it&rsquo;ll look just as modern as the bigger DE projects like Gnome.</p>
-
 <p><strong>For this tutorial I&rsquo;m using xubuntu 18.04.3.</strong></p>
-
 <h2 id="wallpaper"><strong>Wallpaper</strong></h2>
-
 <p>Lets start with the wallpaper. A good wallpaper can make a big difference in the overall look. If you like the wallpaper from the screenshots, you can download it below.</p>
-
 <div>
   <a title="Wallpaper" href="https://github.com/GameTheory-/MyStuff/raw/master/xfce/bg-01.zip" target="">
   <button id="cta-btn"><i class="fa fa-download"></i> Wallpaper</button>
   </a>
 </div>
 
-
 <h2 id="theme"><strong>Theme</strong></h2>
-
 <p>We will now install Arc-Dark theme which in my opinion is the best dark theme available. This theme looks modern an consistent. Download it here&hellip;</p>
-
 <p><a href="https://www.xfce-look.org/p/1181106/#files-panel" target="_blank">Arc-Dark-Theme</a></p>
-
 <p>The original Arc-Dark theme from the link above highlights the app icon in blue on the panel for the app in focus. I prefer a dark grey highlight which I feel looks better. If you prefer the same then you can get my modified version of Arc-Dark below.</p>
-
 <div>
   <a title="Custom Arc-Dark" href="https://github.com/GameTheory-/MyStuff/raw/master/xfce/Arc-Dark-Theme.zip" target="">
   <button id="cta-btn"><i class="fa fa-download"></i> Custom Arc-Dark</button>
   </a>
 </div>
 
-
 <ol>
 <li>Once you have the theme, extract and copy the Arc-Dark folder to <strong>/usr/share/themes</strong>. You will need sudo permissions to do this.</li>
 <li>After copying the theme to <strong>/usr/share/themes</strong> you will need to enable it in 3 locations. Open the &ldquo;<strong>Settings Manager</strong>&rdquo; and enable Arc-Dark in the following locations&hellip;</li>
 </ol>
-
 <ul>
 <li>Appearance</li>
 <li>Window Manager</li>
 <li>LightDM GTK+ Greeter Settings</li>
 </ul>
-
 <h2 id="window-manager-tweaks"><strong>Window Manager Tweaks</strong></h2>
-
 <p>In the &ldquo;<strong>Settings Manager</strong>&rdquo; under &ldquo;<strong>Window Manager Tweaks</strong>&rdquo; it is important that you disable &ldquo;<strong>Show shadows under dock windows</strong>&rdquo; in the &ldquo;<strong>Compositor</strong>&rdquo; tab. We need this disabled to setup our top panel in a later step.</p>
-
 <p>Here is a screenshot of my compositor settings.</p>
-
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/wmt0.png" alt="xfce" title="xfce"  width="150px">
 </div>
@@ -326,20 +309,15 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <h2 id="panels"><strong>Panels</strong></h2>
-
 <p>The top panel is comprised of 3 panels side by side. This is the only way to center the clock on Xfce panel without having the clock shift side to side when applicatons are opened and closed. For the panel I&rsquo;m using a mostly transparent 32 pixel height image I created with a 1.5 pixel line to look like a shadow on the bottom. You can download the panel image below.</p>
-
 <div>
   <a title="Transparent Panel" href="https://github.com/GameTheory-/MyStuff/raw/master/xfce/panel-01.zip" target="">
   <button id="cta-btn"><i class="fa fa-download"></i> Transparent Panel</button>
   </a>
 </div>
 
-
 <p>If you&rsquo;re using the image, make sure to set the panel row size to 32 pixels like in the screenshots.</p>
-
 <p><strong>Left panel screenshots</strong>
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/lp0.png" alt="xfce" title="xfce"  width="80px">
@@ -441,7 +419,6 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-
 <p><strong>Center panel screeshots</strong>
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/mp0.png" alt="xfce" title="xfce"  width="80px">
@@ -543,7 +520,6 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-
 <p><strong>Right panel screeshots</strong>
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/rp0.png" alt="xfce" title="xfce"  width="80px">
@@ -645,22 +621,16 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-
 <p><strong>Note:</strong> Make all separators transparent. For the middle panel with the clock, expand the separators.</p>
-
 <p>For the left panel I changed the Whisker Menu icon from the xfce mouse to the ubuntu icon. Here&rsquo;s the icon download.</p>
-
 <div>
   <a title="Ubuntu Icon" href="https://github.com/GameTheory-/MyStuff/raw/master/xfce/ubuntu-logo-01.zip" target="">
   <button id="cta-btn"><i class="fa fa-download"></i> Ubuntu Icon</button>
   </a>
 </div>
 
-
 <p>After downloading the icon, copy it to <strong>/usr/share/pixmaps</strong>. You&rsquo;ll need sudo permissions to do this.</p>
-
 <p>To change the whisker menu icon just right click on it and select properties then click on the icon. You can use this screenshot as a guide to set up your whisker menu.</p>
-
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/wm0.png" alt="xfce" title="xfce"  width="80px">
 </div>
@@ -695,9 +665,7 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>The bottom launcher is just another panel set to full transparency. You can use the screenshots to guide you.</p>
-
 <p><div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/bp0.png" alt="xfce" title="xfce"  width="80px">
 </div>
@@ -798,29 +766,18 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-
 <h2 id="icons"><strong>Icons</strong></h2>
-
 <p>The icon theme that I&rsquo;m using is the Pop Icon theme from <a href="https://distrowatch.com/table.php?distribution=popos" target="_blank">Pop!_OS</a>. To install it run the following commands in your terminal.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:system76/pop
 sudo apt update
 sudo apt install pop-icon-theme</code></pre></div>
-
 <p>Once installed you can open &ldquo;<strong>Settings Manager</strong>&rdquo; and go to &ldquo;<strong>Appearance</strong>&rdquo; and &ldquo;<strong>LightDM GTK+ Greeter Settings</strong>&rdquo; to enable <strong>Pop</strong> icons for both.</p>
-
 <h2 id="mouse-cursor"><strong>Mouse Cursor</strong></h2>
-
 <p>For the mouse cursor I&rsquo;m using the Breeze theme from the KDE desktop. Run the following command in the terminal to install the Breeze cursor theme.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install breeze-cursor-theme</code></pre></div>
-
 <p>Once installed you can open &ldquo;<strong>Settings Manager</strong>&rdquo; and go to &ldquo;<strong>Mouse and Touchpad</strong>&rdquo; and select &ldquo;<strong>Breeze</strong>&rdquo; in the theme tab.</p>
-
 <h2 id="notifications"><strong>Notifications</strong></h2>
-
 <p>For my notifications I have set the &ldquo;<strong>Greybird</strong>&rdquo; theme and set the opacity to 85%. Here&rsquo;s a screenshot of my notifications settings.</p>
-
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/noti0.png" alt="xfce" title="xfce"  width="100px">
 </div>
@@ -855,25 +812,15 @@ sudo apt install pop-icon-theme</code></pre></div>
 	}
 </script>
 
-
 <h2 id="text-editor-arc-dark-theme"><strong>Text Editor Arc-Dark Theme</strong></h2>
-
 <p>For your text editor you will need a separate theme. Luckily there is a matching Arc-Dark theme for most text editors.</p>
-
 <p>You can get the theme with instructions on how to apply it here&hellip;</p>
-
 <p><a href="https://techstop.github.io/arc-dark-theme-for-gedit/">Arc-Dark Theme For Gedit</a></p>
-
 <p><strong>Note:</strong> The theme says it&rsquo;s for gedit, but it works on most text editors. It has worked for me on every text editor I&rsquo;ve tried in xubuntu.</p>
-
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>Xfce may be one of the oldest desktops, but there&rsquo;s no reason why it can&rsquo;t look modern with a little elbow grease.</p>
-
 <p>If you&rsquo;d like to take your Xfce desktop to the next level, check out this article&hellip;</p>
-
 <p><a href="https://techstop.github.io/xfce-4-14-on-xubuntu-18-04/">Xfce 4.14 On Xubuntu 18.04</a></p>
-
 <p>If you have any questions or tips, feel free to ask or share in the comments below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -1050,7 +997,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

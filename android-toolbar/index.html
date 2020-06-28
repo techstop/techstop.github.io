@@ -210,17 +210,11 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-
 <p>Often times users are looking to create an Android Toolbar so they can customize it to their liking. In this tutorial we&rsquo;ll go over how to create an Android custom Toolbar and show you a few modifications you can do to the Toolbar for your app.</p>
-
 <p>The code in this tutorial will be in the full project on github linked at the bottom of this page. Feel free to fork or download the project from github. So lets get started.</p>
-
 <h2 id="android-toolbar-example-tutorial">Android Toolbar Example Tutorial</h2>
-
 <p>Begin by creating a new project in Android Studio with an Empty Activity if you haven’t already. We can call the project &ldquo;Android Toolbar&rdquo;.</p>
-
 <p>In order to create an android toolbar you must change the base theme in your &ldquo;styles.xml&rdquo; to one with &ldquo;NoActionBar&rdquo;. Lets also add &ldquo;Title&rdquo; and &ldquo;SubTitle&rdquo; elements to our &ldquo;styles.xml&rdquo;. I have left some items commented out that you can uncomment if you wish to use them.</p>
-
 <p><strong>styles.xml</strong>
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources&gt;</span>
   <span class="c">&lt;!-- Base application theme. --&gt;</span>
@@ -242,9 +236,7 @@ window.cookieconsent.initialise({
       <span class="c">&lt;!--&lt;item name=&#34;android:textStyle&#34;&gt;bold&lt;/item&gt;--&gt;</span>
   <span class="nt">&lt;/style&gt;</span>
 <span class="nt">&lt;/resources&gt;</span></code></pre></div></p>
-
 <p>Right click on your &ldquo;layout&rdquo; directory and create a new Layout resource file called &ldquo;toolbar.xml&rdquo;. This will be our Toolbar layout that we will reference from any activity layout where we&rsquo;ll want to have a Toolbar.</p>
-
 <p><strong>toolbar.xml</strong>
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;androidx.appcompat.widget.Toolbar</span>
@@ -257,55 +249,49 @@ window.cookieconsent.initialise({
   <span class="na">android:background=</span><span class="s">&#34;?attr/colorPrimary&#34;</span>
   <span class="na">android:theme=</span><span class="s">&#34;@style/ThemeOverlay.AppCompat.Dark.ActionBar&#34;</span>
   <span class="na">app:popupTheme=</span><span class="s">&#34;@style/ThemeOverlay.AppCompat&#34;</span> <span class="nt">/&gt;</span></code></pre></div></p>
-
 <p>Next we will add the Toolbar to our &ldquo;MainActivity.java&rdquo; class. Create the toolBar() method where we will enable any features we would like for our Toolbar. We then reference the toolBar() method from the onCreate() method. I have left some items commented out that you can uncomment if you wish to use them.</p>
-
 <p><strong>MainActivity.java</strong>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">androidtoolbar</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.androidtoolbar</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">appcompat</span><span class="p">.</span><span class="na">app</span><span class="p">.</span><span class="na">AppCompatActivity</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">appcompat</span><span class="p">.</span><span class="na">widget</span><span class="p">.</span><span class="na">Toolbar</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.widget.Toolbar</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">os</span><span class="p">.</span><span class="na">Bundle</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">view</span><span class="p">.</span><span class="na">Menu</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">view</span><span class="p">.</span><span class="na">MenuItem</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">widget</span><span class="p">.</span><span class="na">Toast</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.Menu</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.MenuItem</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="nf">class</span> <span class="n">MainActivity</span> <span class="nf">extends</span> <span class="n">AppCompatActivity</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
 
   <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="nf">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="n">Bundle</span> <span class="nf">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
-    <span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_main</span><span class="p">);</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
 
     <span class="c1">// Adds the Toolbar to our MainActivity.
-</span><span class="c1"></span>    <span class="n">toolBar</span><span class="p">();</span>
-  <span class="p">}</span>
+</span><span class="c1"></span>    <span class="n">toolBar</span><span class="o">();</span>
+  <span class="o">}</span>
 
   <span class="c1">// Our Toolbar
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">void</span> <span class="n">toolBar</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">Toolbar</span> <span class="nf">tb</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">myToolbar</span><span class="p">);</span>
-    <span class="n">tb</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&#34;Android Toolbar&#34;</span><span class="p">);</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">toolBar</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Toolbar</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">myToolbar</span><span class="o">);</span>
+    <span class="n">tb</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">&#34;Android Toolbar&#34;</span><span class="o">);</span>
     <span class="c1">// tb.setTitleTextAppearance(this, R.style.toolbarTitle);
 </span><span class="c1"></span>    <span class="c1">// tb.setSubtitle(&#34;My SubTitle&#34;);
 </span><span class="c1"></span>    <span class="c1">// tb.setSubtitleTextAppearance(this, R.style.toolbarSubTitle);
 </span><span class="c1"></span>    <span class="c1">// tb.setContentInsetsAbsolute(0, 54); // Best used when setting a Logo
 </span><span class="c1"></span>    <span class="c1">// tb.setContentInsetsRelative(0, 54); // Best used when setting a Logo
 </span><span class="c1"></span>    <span class="c1">// tb.setLogo(R.mipmap.ic_launcher);
-</span><span class="c1"></span>    <span class="n">setSupportActionBar</span><span class="p">(</span><span class="n">tb</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">getSupportActionBar</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="c1"></span>    <span class="n">setSupportActionBar</span><span class="o">(</span><span class="n">tb</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">getSupportActionBar</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
       <span class="c1">// This sets a shadow underneath the Toolbar
-</span><span class="c1"></span>      <span class="n">getSupportActionBar</span><span class="p">().</span><span class="na">setElevation</span><span class="p">(</span><span class="n">8</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div></p>
-
+</span><span class="c1"></span>      <span class="n">getSupportActionBar</span><span class="o">().</span><span class="na">setElevation</span><span class="o">(</span><span class="n">8</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></div></p>
 <p>Now open the &ldquo;activity_main.xml&rdquo; file in your layout directory and add the Toolbar layout as the first element at the top. Here&rsquo;s what the Toolbar element should look like…</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;include</span> <span class="na">layout=</span><span class="s">&#34;@layout/toolbar&#34;</span> <span class="nt">/&gt;</span></code></pre></div>
-
 <p>This is what our &ldquo;activity_main.xml&rdquo; file should look like…</p>
-
 <p><strong>activity_main.xml</strong>
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
@@ -322,20 +308,15 @@ window.cookieconsent.initialise({
     <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
     <span class="na">android:text=</span><span class="s">&#34;Hello World!&#34;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div></p>
-
 <p>Keep in mind that your &ldquo;activity_main.xml&rdquo; can be any layout you wish like for example it can be a RelativeLayout, ConstraintLayout, or any other layout you may need. You will always have to include your Toolbar as the first element of the layout unless you wish to have the Toolbar at a different location in your layout.</p>
-
 <p>We can now add some functionality to our Android Toolbar by adding an Overflow menu on the right side of the Toolbar. The Overflow menu is perfect for things like app settings, change log, and many other uses. So first open your &ldquo;strings.xml&rdquo; file in your &ldquo;values&rdquo; directory and add the following strings that we&rsquo;ll need for our menu.</p>
-
 <p><strong>strings.xml</strong>
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources&gt;</span>
   <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;app_name&#34;</span><span class="nt">&gt;</span>Android Toolbar<span class="nt">&lt;/string&gt;</span>
   <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;toast_message&#34;</span><span class="nt">&gt;</span>Toast Message<span class="nt">&lt;/string&gt;</span>
   <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;another_toast_message&#34;</span><span class="nt">&gt;</span>Another Toast Message<span class="nt">&lt;/string&gt;</span>
 <span class="nt">&lt;/resources&gt;</span></code></pre></div></p>
-
 <p>Now right click on the &ldquo;res&rdquo; directory and create a new Directory called &ldquo;menu&rdquo;. Then right click on the new &ldquo;menu&rdquo; directory and create a new Menu resource file called &ldquo;menu.xml&rdquo;. You should now have a &ldquo;menu.xml&rdquo; file inside a new directory called &ldquo;menu&rdquo;. Now edit the file so that it looks as follows…</p>
-
 <p><strong>menu.xml</strong>
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;menu</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
@@ -351,78 +332,74 @@ window.cookieconsent.initialise({
     <span class="na">android:title=</span><span class="s">&#34;@string/another_toast_message&#34;</span>
     <span class="na">app:showAsAction=</span><span class="s">&#34;never&#34;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/menu&gt;</span></code></pre></div></p>
-
 <p>The final step is to add the menu and our menu items to our &ldquo;MainActivity.java&rdquo; class. Here we add a couple of Toast messages just to give you the right idea.</p>
-
 <p><strong>MainActivity.java</strong>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">androidtoolbar</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.androidtoolbar</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">appcompat</span><span class="p">.</span><span class="na">app</span><span class="p">.</span><span class="na">AppCompatActivity</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">androidx</span><span class="p">.</span><span class="na">appcompat</span><span class="p">.</span><span class="na">widget</span><span class="p">.</span><span class="na">Toolbar</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.widget.Toolbar</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">os</span><span class="p">.</span><span class="na">Bundle</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">view</span><span class="p">.</span><span class="na">Menu</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">view</span><span class="p">.</span><span class="na">MenuItem</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">android</span><span class="p">.</span><span class="na">widget</span><span class="p">.</span><span class="na">Toast</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.Menu</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.MenuItem</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="nf">class</span> <span class="n">MainActivity</span> <span class="nf">extends</span> <span class="n">AppCompatActivity</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
 
   <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="nf">void</span> <span class="n">onCreate</span><span class="p">(</span><span class="n">Bundle</span> <span class="nf">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span>
-    <span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_main</span><span class="p">);</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+    <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
 
     <span class="c1">// Adds the Toolbar to our MainActivity.
-</span><span class="c1"></span>    <span class="n">toolBar</span><span class="p">();</span>
-  <span class="p">}</span>
+</span><span class="c1"></span>    <span class="n">toolBar</span><span class="o">();</span>
+  <span class="o">}</span>
 
   <span class="c1">// Our Toolbar
-</span><span class="c1"></span>  <span class="kd">private</span> <span class="nf">void</span> <span class="n">toolBar</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">Toolbar</span> <span class="nf">tb</span> <span class="o">=</span> <span class="n">findViewById</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">myToolbar</span><span class="p">);</span>
-    <span class="n">tb</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&#34;Android Toolbar&#34;</span><span class="p">);</span>
+</span><span class="c1"></span>  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">toolBar</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">Toolbar</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">myToolbar</span><span class="o">);</span>
+    <span class="n">tb</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">&#34;Android Toolbar&#34;</span><span class="o">);</span>
     <span class="c1">// tb.setTitleTextAppearance(this, R.style.toolbarTitle);
 </span><span class="c1"></span>    <span class="c1">// tb.setSubtitle(&#34;My SubTitle&#34;);
 </span><span class="c1"></span>    <span class="c1">// tb.setSubtitleTextAppearance(this, R.style.toolbarSubTitle);
 </span><span class="c1"></span>    <span class="c1">// tb.setContentInsetsAbsolute(0, 54); // Best used when setting a Logo
 </span><span class="c1"></span>    <span class="c1">// tb.setContentInsetsRelative(0, 54); // Best used when setting a Logo
 </span><span class="c1"></span>    <span class="c1">// tb.setLogo(R.mipmap.ic_launcher);
-</span><span class="c1"></span>    <span class="n">setSupportActionBar</span><span class="p">(</span><span class="n">tb</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">getSupportActionBar</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="c1"></span>    <span class="n">setSupportActionBar</span><span class="o">(</span><span class="n">tb</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">getSupportActionBar</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
       <span class="c1">// This sets a shadow underneath the Toolbar
-</span><span class="c1"></span>      <span class="n">getSupportActionBar</span><span class="p">().</span><span class="na">setElevation</span><span class="p">(</span><span class="n">8</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+</span><span class="c1"></span>      <span class="n">getSupportActionBar</span><span class="o">().</span><span class="na">setElevation</span><span class="o">(</span><span class="n">8</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
 
   <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">onCreateOptionsMenu</span><span class="p">(</span><span class="n">Menu</span> <span class="nf">menu</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="n">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// Lets inflate our menu/menu.xml file to display the Overflow menu on our Toolbar.
-</span><span class="c1"></span>    <span class="n">getMenuInflater</span><span class="p">().</span><span class="na">inflate</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">menu</span><span class="p">.</span><span class="na">menu</span><span class="p">,</span> <span class="n">menu</span><span class="p">);</span>
-    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-  <span class="p">}</span>
+</span><span class="c1"></span>    <span class="n">getMenuInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">menu</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+  <span class="o">}</span>
 
   <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">onOptionsItemSelected</span><span class="p">(</span><span class="n">MenuItem</span> <span class="nf">item</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">switch</span> <span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">getItemId</span><span class="p">())</span> <span class="p">{</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onOptionsItemSelected</span><span class="o">(</span><span class="n">MenuItem</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">switch</span> <span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getItemId</span><span class="o">())</span> <span class="o">{</span>
       <span class="c1">// Here we add items to our Overflow menu in our Toolbar.
 </span><span class="c1"></span>      <span class="c1">// You can add as many items as you need.
 </span><span class="c1"></span>      <span class="c1">// You can also run other methods or classes from these menu items.
-</span><span class="c1"></span>      <span class="k">case</span> <span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">myMessage</span><span class="o">:</span> <span class="c1">// This is the id of the item in our menu.xml
-</span><span class="c1"></span>        <span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span> <span class="s">&#34;Our Overflow menu works! Fantastic!&#34;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
-        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class="c1"></span>      <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">myMessage</span><span class="o">:</span> <span class="c1">// This is the id of the item in our menu.xml
+</span><span class="c1"></span>        <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Our Overflow menu works! Fantastic!&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
 
       <span class="c1">// This is just another toast message to give you the idea of
 </span><span class="c1"></span>      <span class="c1">// how to add multiple items to the Overflow menu.
-</span><span class="c1"></span>      <span class="k">case</span> <span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">anotherMessage</span><span class="o">:</span> <span class="c1">// This is the id of the item in our menu.xml
-</span><span class="c1"></span>        <span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span> <span class="s">&#34;Another item in our Overflow menu! Fantastic!&#34;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
-        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="kd">super</span><span class="p">.</span><span class="na">onOptionsItemSelected</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
-  <span class="p">}</span>
+</span><span class="c1"></span>      <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">anotherMessage</span><span class="o">:</span> <span class="c1">// This is the id of the item in our menu.xml
+</span><span class="c1"></span>        <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Another item in our Overflow menu! Fantastic!&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">onOptionsItemSelected</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
+  <span class="o">}</span>
 
-<span class="p">}</span></code></pre></div></p>
-
+<span class="o">}</span></code></pre></div></p>
 <p>This will conclude the Android custom Toolbar tutorial. The full project is on github. You can download or fork it from the link below and import it to your favorite IDE, though Android Studio is recommended.</p>
-
 <div>
   <a title="Android Toolbar" href="https://github.com/GameTheory-/android-toolbar" target="_blank">
   <button id="cta-btn"><i class="fa fa-download"></i> Android Toolbar</button>
@@ -609,7 +586,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

@@ -85,7 +85,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;In this Android Admob tutorial we will go over how to ad admob to your android app. With admob you can monetize your app and make some income for your efforts. There are a few types of admob ad units that you can ad to your app. For this admob tutorial we will be adding the smart banner which can display banner ads of different sizes eliminating the need to set a fixed size.&lt;/p&gt;</description>
     </item>
     
@@ -163,7 +162,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage permissions for our DownloadListener for android 6+.&lt;/p&gt;</description>
     </item>
     
@@ -241,7 +239,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;Often times users are looking to create an Android Toolbar so they can customize it to their liking. In this tutorial we&amp;rsquo;ll go over how to create an Android custom Toolbar and show you a few modifications you can do to the Toolbar for your app.&lt;/p&gt;</description>
     </item>
     
@@ -285,7 +282,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;Today we will be using an android BroadcastReceiver to run code on boot up. There can be many reasons to run code on boot up. One good use case would be to enable settings that a user has selected within your app to be set on every boot up.&lt;/p&gt;</description>
     </item>
     
@@ -328,7 +324,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&amp;rsquo;ll give your users a smooth experience throughout your apps&amp;rsquo; UI along with a smaller foot print.&lt;/p&gt;</description>
     </item>

@@ -176,13 +176,9 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>If you&rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&rsquo;re here reading this, it&rsquo;s likely because there is no root for your device. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called <strong>Backup and Debloat Android No Root</strong> to give you some control back over your device.</p>
-
 <p>Backup and Debloat Android No Root uses adb to uninstall bloatware and to make backups. Now this is nothing new. Android users have known about the adb non root method for a long time. What my tool does is simply facilitate everything in an easy to use script gui.</p>
-
 <p>Let&rsquo;s go over the different options in <strong>Backup and Debloat Android No Root</strong>&hellip;</p>
-
 <ol>
 <li>This is where you backup user installed apps as allowed by adb limitations (more on limitations later).</li>
 <li>This is a full backup of user and system apps as allowed by adb limitations.</li>
@@ -192,38 +188,24 @@ window.cookieconsent.initialise({
 <li>Remove system or user apps (my favorite option).</li>
 <li>If your android device is not recognized when plugged to your computer through usb then run this option to install android udev rules.</li>
 </ol>
-
 <p>The rest of the options are self explanatory.</p>
-
 <h2 id="limitations"><strong>Limitations</strong></h2>
-
 <p>Adb has its known limitations&hellip;</p>
-
-<p>Adb can only backup apps where the developer of the app allows the app to be backed up in the <strong>AndroidManifest.xml</strong> with a bit of code that looks like this <strong>android:allowBackup=&ldquo;false&rdquo;</strong>. In full backups those apps will be ignored (options 1 and 2). In individual app backups you will get an empty backup for those apps. For all other apps you&rsquo;ll have good reliable backups.</p>
-
+<p>Adb can only backup apps where the developer of the app allows the app to be backed up in the <strong>AndroidManifest.xml</strong> with a bit of code that looks like this <strong>android:allowBackup=&quot;false&rdquo;</strong>. In full backups those apps will be ignored (options 1 and 2). In individual app backups you will get an empty backup for those apps. For all other apps you&rsquo;ll have good reliable backups.</p>
 <p>When apps are uninstalled they will not consume any resources or be visible to the user (that&rsquo;s good!). However, apps are only uninstalled for the user and not root. This means the apps are uninstalled but remain on the device like if they are frozen (not a problem at all).</p>
-
 <h2 id="warnings"><strong>Warnings</strong></h2>
-
 <p>Do not uninstall system critical apps that may cause a boot loop. If you do, perform a factory reset to end the boot loop.</p>
-
 <p>If you uninstall apps that you later decide you want back, you can do a factory reset and the apps will reinstall. This is the only way to get the apps back.</p>
-
-<h2 id="backup-debloat"><strong>Backup &amp; Debloat</strong></h2>
-
+<h2 id="backup--debloat"><strong>Backup &amp; Debloat</strong></h2>
 <p>For Android 4.0 and up</p>
-
 <p>Tested on ubuntu &amp; xubuntu</p>
-
 <p>Make sure the &ldquo;<strong>bda</strong>&rdquo; file has execute permissions.</p>
-
 <ol>
 <li>Enable usb debugging on your device in developer options and then plug it to your computer.</li>
 <li>Execute the file as follows in a terminal:
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">./bda</code></pre></div></li>
 <li>optional - Use the &ldquo;Add Desktop Shortcut&rdquo; option for quick access</li>
 </ol>
-
 <div>
   <a title="Backup Debloat Android" href="https://github.com/GameTheory-/Backup-and-Debloat-Android-No-Root/releases" target="_blank">
   <button id="cta-btn"><i class="fa fa-download"></i> Backup Debloat Android</button>
@@ -404,7 +386,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

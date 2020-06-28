@@ -176,101 +176,55 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>Lets take a look at how to rename files and folders in linux from the command line.</p>
-
 <p>Sure you can use your GUI and be done with it, but learning to do it from the command line can be quite useful. There&rsquo;s also the added benefit of being able to use these commands in bash scripts.</p>
-
 <p>In a bash script you can loop through lots of files or folders to rename them quickly and efficiently. Knowing the right commands for the job is key.</p>
-
 <p>We will be going over three different methods to rename files and folders:</p>
-
 <ul>
 <li><strong>mv</strong> - For moving source to folder or renaming source.</li>
 <li><strong>rename</strong> - For renaming source.</li>
 <li><strong>for loop</strong> - To loop through multiple sources.</li>
 </ul>
-
 <h2 id="renaming-files"><strong>Renaming Files</strong></h2>
-
 <p><strong>Renaming a single file with mv:</strong></p>
-
 <p>This will rename &ldquo;<strong>file01.bak</strong>&rdquo; to &ldquo;<strong>file02.txt</strong>&rdquo;.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mv file01.bak file02.txt</code></pre></div>
-
 <p><strong>Renaming multiple files with mv:</strong></p>
-
 <p>First lets create some files for testing in an empty folder.</p>
-
 <p>This command will create four empty files:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">touch file<span class="o">{</span><span class="m">1</span>..4<span class="o">}</span>.bak</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">touch file<span class="o">{</span>1..4<span class="o">}</span>.bak</code></pre></div>
 <p>You should now have the following files in your folder:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
-
-<p>Now lets run the mv command in a for loop to rename the files and replace the &ldquo;<strong>.bak</strong>&rdquo; extension with &ldquo;<strong>.txt</strong>&ldquo;:</p>
-
+<p>Now lets run the mv command in a for loop to rename the files and replace the &ldquo;<strong>.bak</strong>&rdquo; extension with &ldquo;<strong>.txt</strong>&quot;:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">%.bak</span><span class="si">}</span><span class="s2">.txt&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
-
 <p>The files should now be renamed as follows:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.txt  file2.txt  file3.txt  file4.txt</code></pre></div>
-
 <p><strong>Renaming multiple files with rename:</strong></p>
-
 <p>Now we shall use the rename command. If you don&rsquo;t have rename installed you can install it as follows:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install rename</code></pre></div>
-
 <p>If you&rsquo;ve been following this tutorial so far then you should have 4 &ldquo;<strong>.txt</strong>&rdquo; files in your folder which we will be working with.</p>
-
-<p>Lets run the following command to rename the files and replace the &ldquo;<strong>.txt</strong>&rdquo; extension with &ldquo;<strong>.bak</strong>&ldquo;:</p>
-
+<p>Lets run the following command to rename the files and replace the &ldquo;<strong>.txt</strong>&rdquo; extension with &ldquo;<strong>.bak</strong>&quot;:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/.txt/.bak/&#39;</span> *.txt</code></pre></div>
-
 <p>The files should now be renamed as follows:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
-
 <h2 id="renaming-folders"><strong>Renaming Folders</strong></h2>
-
 <p><strong>Renaming a single folder with mv:</strong></p>
-
 <p>This will rename &ldquo;<strong>dir1</strong>&rdquo; to &ldquo;<strong>dir2</strong>&rdquo;.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mv dir1 dir2</code></pre></div>
-
 <p><strong>Removing spaces from multiple folder names with mv:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">// /</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
-
 <p><strong>Renaming multiple folders with rename:</strong></p>
-
 <p>Renaming multiple folders is much easier and straightforward with the rename command. The mv command is not ideal for this scenario, so we will use the rename command.</p>
-
 <p>Lets create multiple folders in an empty directory.</p>
-
 <p>This command will create four empty folders:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir dir<span class="o">{</span><span class="m">1</span>..4<span class="o">}</span></code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir dir<span class="o">{</span>1..4<span class="o">}</span></code></pre></div>
 <p>You should now have the following folders in your directory:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">dir1 dir2 dir3 dir4</code></pre></div>
-
 <p>Now lets rename the folders to replace the single digit numbers with triple digits.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/dir/dir00/&#39;</span> dir*/</code></pre></div>
-
 <p>This should be your result:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">dir001 dir002 dir003 dir004</code></pre></div>
-
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>This was a quick look at how to rename files and folders in linux from the command line. While the mv command would do just fine, the rename command proves to be more efficient and versatile for renaming files and folders.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -447,7 +401,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

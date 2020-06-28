@@ -176,81 +176,52 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>Xubuntu has always been one of my favorite distros, but it has always been plagued by the dreaded screen tearing because of the Xfce desktop environment. Screen tearing is when the GPU is out of sync with the display which causes artifacting and looks like tears between the top and bottom halves of your screen. This can be rather annoying, but luckily there&rsquo;s easy ways to fix screen tearing in Xfce.</p>
-
 <h2 id="xfce-compositor"><strong>Xfce Compositor</strong></h2>
-
 <p>There are a few ways to fix screen tearing in Xfce, but lets start with the easiest method first.</p>
-
 <p>Note: These methods were tested on Xubuntu 18.04.</p>
-
 <p>Open your Settings Manager then Window Manager Tweaks and under the Compositor tab, enable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo;. In some cases this may fix the screen tearing.</p>
-
 <p>If this method does not work for you then read on.</p>
-
 <h2 id="xorg-configuration"><strong>Xorg Configuration</strong></h2>
-
 <p>This is the method that I always use to fix screen tearing in Xfce which has always worked for me.</p>
-
 <p>First find out which graphics driver you&rsquo;re using by running the following command in terminal:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">inxi -G</code></pre></div>
-
 <p>Your output from the above command should look similar to this:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">gametheory@ubuntu:~$ inxi -G
 Graphics:  Card: Intel 3rd Gen Core processor Graphics Controller
            Display Server: x11 (X.Org 1.20.4 ) driver: intel
            Resolution: 1920x1080@60.00hz
            OpenGL: renderer: Mesa DRI Intel Ivybridge Mobile
            version: 4.2 Mesa 19.0.8</code></pre></div>
-
 <p>Now make sure to disable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo; in the Xfce compositor. Then go to &ldquo;<strong>/usr/share/X11/xorg.conf.d</strong>&rdquo; and add one of the files below for your graphics card.</p>
-
 <p>For Intel drivers edit or create a file called &ldquo;<strong>10-intel.conf</strong>&rdquo; and add the following then reboot your pc:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
   Identifier  &#34;Intel Graphics&#34;
   Driver      &#34;intel&#34;
   Option &#34;TearFree&#34; &#34;true&#34;
 EndSection</code></pre></div>
-
 <p>For Radeon drivers edit or create a file called &ldquo;<strong>10-radeon.conf</strong>&rdquo; and add the following then reboot your pc:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
   Identifier &#34;Radeon&#34;
   Driver &#34;radeon&#34;
   Option &#34;TearFree&#34; &#34;on&#34;
 EndSection</code></pre></div>
-
 <p>For AMD drivers edit or create a file called &ldquo;<strong>10-amdgpu.conf</strong>&rdquo; and add the following then reboot your pc:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
   Identifier &#34;AMDgpu&#34;
   Driver &#34;amdgpu&#34;
   Option &#34;TearFree&#34; &#34;on&#34;
 EndSection</code></pre></div>
-
 <p>For Nvidia drivers you&rsquo;ll need to enable &ldquo;modsetting&rdquo;. Run the following two commands to create a file called &ldquo;<strong>nvidia-nomodset.conf</strong>&rdquo; and update the kernel’s initramfs then reboot:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo <span class="nb">echo</span> <span class="s2">&#34;options nvidia-drm modset=1&#34;</span> &gt; /etc/modprobe.d/nvidia-nomodset.conf
 sudo update-initramfs -u</code></pre></div>
-
 <p>There are other methods to fix screen tearing for Nvidia drivers, but this seems to be one of the more reliable methods, so it may be worth a shot.</p>
-
 <h2 id="compton-compositor"><strong>Compton Compositor</strong></h2>
-
 <p>Another solution to the screen tearing in Xfce is to disable the xfce compositor and install a lightweight compositor like Compton.</p>
-
 <p>Start by unchecking &ldquo;<strong>Enable display compositing</strong>&rdquo; to disable the xfce compositor in the Window Manager Tweaks.</p>
-
 <p>To install compton, run the following in terminal:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install compton compton-conf</code></pre></div>
-
 <p>Now we need to setup compton so that it starts on every boot-up. To do this, open &ldquo;<strong>Session and Startup</strong>&rdquo; in the Settings Manager and click on the Add button and enter what&rsquo;s in the screenshot below.</p>
-
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/scrt1.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
 </div>
@@ -285,9 +256,7 @@ sudo update-initramfs -u</code></pre></div>
 	}
 </script>
 
-
 <p>You can now open the Compton GUI from your applications menu and adjust any settings you&rsquo;d like.</p>
-
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/scrt2.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
 </div>
@@ -322,11 +291,8 @@ sudo update-initramfs -u</code></pre></div>
 	}
 </script>
 
-
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>Xfce is a fantastic desktop environment that unfortunately has always had a screen tearing issue. Luckily, fixing screen tearing in xfce is a fairly simple task with a variety of methods.</p>
-
 <p>That&rsquo;ll be all for this tutorial. If you have any additional tips to fix screen tearing in Xfce that you&rsquo;d like to share, please comment below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -503,7 +469,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

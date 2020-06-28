@@ -209,17 +209,11 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-
 <p>If you&rsquo;re noticing that your android device is suddenly draining battery quicker than normal, it can be due to an android wakelock. Once you know the quick battery drain is not due to a faulty battery, you&rsquo;ll need to detect what&rsquo;s causing the wakelock. This is likely a misbehaving app.</p>
-
 <p>A misbehaving app can prevent your android device from going into deep sleep. Such behavior can be attributed to a poorly coded app or a malicious app doing nefarious things in the background. One example of a malicious app could be one that is crypto mining without your consent or knowledge in the background. It is wise to always get your apps from a reputable source, most preferably the Google Play Store.</p>
-
 <p>A wakelock is not all bad. In fact, they are needed for some services that need to continue running in the background periodically. A good example of an app that needs to run a wakelock is your email app. An email app needs a wakelock to be able to sync your new emails as they are received. These types of android wakelocks are usually quick, only lasting a few minutes at a time.</p>
-
 <h2 id="detect-android-wakelocks"><strong>Detect Android Wakelocks</strong></h2>
-
 <p>Now that we&rsquo;ve covered a little background on android wakelocks, it&rsquo;s time to learn to detect them. Detecting an android wakelock is simple and straight forward. In this tutorial we&rsquo;ll cover a method that does not require root.</p>
-
 <ol>
 <li>Go to your phone&rsquo;s &ldquo;<strong>settings &gt; system &gt; about phone</strong>&rdquo; and click on &ldquo;<strong>build number</strong>&rdquo; 7 times. This unlocks developer options. Now go back to the previous menu and click on &ldquo;<strong>Developer options</strong>&rdquo; and look for and enable &ldquo;<strong>USB debugging</strong>&rdquo;.</li>
 <li>Make sure to have <a href="https://developer.android.com/studio/releases/platform-tools.html#downloads" target="_blank">ADB</a> installed on your PC. Plug your phone to your PC with the USB cable and in a terminal on your PC run this command.
@@ -228,9 +222,7 @@ If your device is detected by ADB, you will see your device&rsquo;s serial numbe
 <li>Now run this command to detect the wakelocks.
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adb shell dumpsys power <span class="p">|</span> grep -i wake_lock</code></pre></div></li>
 </ol>
-
 <p>If there are no wakelocks at the time of running the above command, no wakelocks will be detected. Otherwise, you&rsquo;ll see wakelocks like in the screenshot below.</p>
-
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/wake-0.png" alt="Android Wakelocks" title="Android Wakelocks"  width="150px">
 </div>
@@ -265,15 +257,10 @@ If your device is detected by ADB, you will see your device&rsquo;s serial numbe
 	}
 </script>
 
-
 <p>If you look at the screen shot above, the command shows 2 wakelocks. One wakelock is &ldquo;<strong>com.android.calendar</strong>&rdquo; which is my Calendar. The other is &ldquo;<strong>com.google.android.gms</strong>&rdquo; which is Google Mobile Services. Both of these wakelocks are safe and not an issue.</p>
-
 <p>If you identify a wakelock to be from a misbehaving app you installed, you can simply uninstall it. Now if it&rsquo;s from a system app, you may not be able to uninstall it. You can check to see if it can be disabled. If not you can try a more aggressive solution in the following post I made by using the debloat option.</p>
-
 <p><a href="https://techstop.github.io/backup-and-debloat-android-no-root/">Backup and Debloat Android No Root</a></p>
-
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>That will be all for this tutorial. You should now be able to easily detect an android wakelock and take control of your battery life back.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -450,7 +437,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

@@ -176,81 +176,48 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>In this guide I will be showing you how to get the android mounts and partition images. There could be many reasons for needing the android mounts and partition images. A couple reasons that come to mind could be to make backups of your partitions in case you need to fix your phone from a bad flash later on. Or you might want to customize a boot.img or system.img to add in some custom features. Whatever your reason, just follow the guide and you&rsquo;ll be pulling those partitions in no time.</p>
-
 <p><strong>Requirements:</strong></p>
-
 <ul>
 <li>A rooted android phone</li>
 <li>ADB installed on your linux PC. Here is a <a href="https://techstop.github.io/install-adb-on-linux/">guide to install ADB</a> if you haven&rsquo;t already.</li>
 </ul>
-
 <h2 id="getting-android-mounts">Getting Android Mounts</h2>
-
 <p>Enable USB debugging in Developer options in your android phone. Then plug it to your PC with the usb cable.</p>
-
 <p>Now open a terminal on your PC and enter the following command&hellip;</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adb devices</code></pre></div>
-
 <p>If all went well you should see your phones&rsquo; serial number listed in the terminal.</p>
-
 <p>Next enter the following command&hellip;</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adb shell</code></pre></div>
-
 <p>The next command is to gain root access which we will need. Make sure your phone&rsquo;s screen is on and unlocked before entering the next command. Once you enter the command you will get a prompt on your phone asking for root permission. Make sure to allow it&hellip;</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">su</code></pre></div>
-
 <p>Now we will get the mounts with the following command&hellip;</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /proc/mounts</code></pre></div>
-
 <p>You should now see a long output in your terminal similar to the one below. I have highlighted the path for the /system mount point path. The path for your device might be a little different which is ok. As you can see, all the mounts use the same path. Copy this path from your terminal so we can use it in the next step.</p>
-
 <p><span style="color: green;"><strong>/dev/block/platform/msm_sdcc.1/by-name</strong></span>/system</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/dev/block/platform/msm_sdcc.1/by-name/system /system ext4 ro,seclabel,relatime,errors<span class="o">=</span>panic,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span>
-/dev/block/platform/msm_sdcc.1/by-name/userdata /data ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,errors<span class="o">=</span><span class="k">continue</span>,commit<span class="o">=</span><span class="m">20</span>,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span>
-/dev/block/platform/msm_sdcc.1/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,errors<span class="o">=</span><span class="k">continue</span>,commit<span class="o">=</span><span class="m">20</span>,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span></code></pre></div>
-
+/dev/block/platform/msm_sdcc.1/by-name/userdata /data ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,errors<span class="o">=</span><span class="k">continue</span>,commit<span class="o">=</span>20,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span>
+/dev/block/platform/msm_sdcc.1/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,errors<span class="o">=</span><span class="k">continue</span>,commit<span class="o">=</span>20,data<span class="o">=</span>ordered <span class="m">0</span> <span class="m">0</span></code></pre></div>
 <h2 id="getting-partitions">Getting Partitions</h2>
-
 <p>In this next step we will use the path we copied from the previous step to enter the following command to retrieve all the partitions&hellip;</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ls -al /dev/block/platform/msm_sdcc.1/by-name</code></pre></div>
-
 <p>Your output from the above command should look like the following with all the partitions labeled by name. I highlighted the boot partition path so that we can pull the boot.img in the next step&hellip;</p>
-
 <p><span style="color: green;"><strong>/dev/block/mmcblk0p17</strong></span></p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lrwxrwxrwx <span class="m">1</span> root root  <span class="m">20</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 aboot -&gt; /dev/block/mmcblk0p7
-lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 boot -&gt; /dev/block/mmcblk0p17
-lrwxrwxrwx <span class="m">1</span> root root  <span class="m">20</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 modem -&gt; /dev/block/mmcblk0p2
-lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 recovery -&gt; /dev/block/mmcblk0p18
-lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> <span class="m">2013</span>-12-31 <span class="m">20</span>:00 system -&gt; /dev/block/mmcblk0p24</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lrwxrwxrwx <span class="m">1</span> root root  <span class="m">20</span> 2013-12-31 20:00 aboot -&gt; /dev/block/mmcblk0p7
+lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> 2013-12-31 20:00 boot -&gt; /dev/block/mmcblk0p17
+lrwxrwxrwx <span class="m">1</span> root root  <span class="m">20</span> 2013-12-31 20:00 modem -&gt; /dev/block/mmcblk0p2
+lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> 2013-12-31 20:00 recovery -&gt; /dev/block/mmcblk0p18
+lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> 2013-12-31 20:00 system -&gt; /dev/block/mmcblk0p24</code></pre></div>
 <h2 id="pulling-partition-images">Pulling Partition Images</h2>
-
 <p>Now that we know our boot partition path we can use it in the next command to copy the boot.img to our internal SD on our android phone&hellip;</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">dd <span class="k">if</span><span class="o">=</span>/dev/block/mmcblk0p17 <span class="nv">of</span><span class="o">=</span>/sdcard/boot.img</code></pre></div>
-
 <p>With the above command we have now copied the boot.img to our internal SD. You can now drag and drop the boot.img from your phone&rsquo;s internal SD to your PC. Alternatively you can use the following command to pull the boot.img from the internal SD to your PC&rsquo;s desktop.</p>
-
 <p>If you are still in the adb root shell then enter the following 2 commands in terminal to exit root shell and adb. If you have already exited you can skip this step&hellip;</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
 exit</code></pre></div>
-
 <p>To copy the boot.img from your phone&rsquo;s internal SD to your desktop enter the following command&hellip;</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adb pull /sdcard/boot.img <span class="nv">$HOME</span>/Desktop</code></pre></div>
-
 <p>All done! You can use this guide to get any partition image you wish (ie. boot.img, recovery.img, system.img, etc).</p>
-
 <p>This concludes the guide. You have now learned how to find your mounts, partitions, and pull your partition images from your android phone. Enjoy!</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -429,7 +396,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

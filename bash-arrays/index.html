@@ -176,124 +176,68 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>Bash arrays are quite powerful and robust, but not often used in the command line. They are variables which contain multiple values often referred to as items or elements. Arrays do not have a maximum limit for items they can contain nor do the values need to be assigned or indexed contiguously.</p>
-
 <h2 id="writing-and-using-bash-arrays"><strong>Writing and Using Bash Arrays</strong></h2>
-
 <p>The first item in an array is indexed at position zero &ldquo;0&rdquo;. You can add multiple items to an array in one variable or through multiple variables.</p>
-
 <p><strong>In this example we have an array variable with 2 items, each quoted:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">val</span><span class="o">=(</span> <span class="s2">&#34;Hello&#34;</span> <span class="s2">&#34;World!&#34;</span> <span class="o">)</span></code></pre></div>
-
 <p><strong>Here we add 5 more items to the array:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">val</span><span class="o">+=(</span> <span class="s2">&#34;My name is&#34;</span> <span class="o">)</span>
 <span class="nv">val</span><span class="o">+=(</span> <span class="s2">&#34;John&#34;</span> <span class="o">)</span>
 <span class="nv">val</span><span class="o">+=(</span> <span class="s2">&#34;Doe&#34;</span> <span class="o">)</span>
 <span class="nv">val</span><span class="o">+=(</span> <span class="s2">&#34;and I&#39;m testing&#34;</span> <span class="o">)</span>
 <span class="nv">val</span><span class="o">+=(</span> <span class="s2">&#34;bash arrays.&#34;</span> <span class="o">)</span></code></pre></div>
-
 <p>Notice the plus &ldquo;+&rdquo; sign.</p>
-
 <p>If you&rsquo;re following, between the 2 examples our array now has 7 items in it.</p>
-
 <p><strong>Display all items in the array:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Hello World! My name is John Doe and I&#39;m testing bash arrays.</code></pre></div>
-
 <p><strong>Display each index in the array:</strong></p>
-
 <p>Here we add and exclamation &ldquo;!&rdquo; symbol to retrieve the indexes.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="p">!val[@]</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <p>Looking at the output, you can see there&rsquo;s 7 items.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">0 1 2 3 4 5 6</code></pre></div>
-
 <p><strong>Display the array length:</strong></p>
-
 <p>This will give you the sum of items in the array.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${#</span><span class="nv">val</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">7</code></pre></div>
-
 <p><strong>Display items by index position:</strong></p>
-
 <p>Here we reference items 3 and 4.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[3]</span><span class="si">}</span><span class="s2">&#34;</span>
 <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[4]</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">John Doe</code></pre></div>
-
 <p><strong>Capitalize the first letter in an item:</strong></p>
-
 <p>For this next example we&rsquo;re going to use the last item in the array at index 6. Notice the single caret &ldquo;^&rdquo; symbol. This capitalizes the first letter in the array.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[6]^</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Bash arrays</code></pre></div>
-
 <p><strong>Capitalize every letter in the array:</strong></p>
-
 <p>Notice the double caret &ldquo;^^&rdquo; symbol. This will capitalize every letter in the array.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[@]^^</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">HELLO WORLD! MY NAME IS JOHN DOE AND I&#39;M TESTING BASH ARRAYS.</code></pre></div>
-
 <p><strong>Make the first letter in an item lowercase:</strong></p>
-
 <p>We will now use item 3 for this example. Notice the comma &ldquo;,&rdquo;.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[3],</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">john</code></pre></div>
-
 <p><strong>Make every letter in the array lowercase:</strong></p>
-
 <p>Notice we are now using double commas &ldquo;,,&rdquo;.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[@],,</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">hello world! my name is john doe and i&#39;m testing bash arrays.</code></pre></div>
-
 <p><strong>Using a for loop to display all items in the array:</strong></p>
-
 <p>In this for loop we will iterate through every item using their index as we previously covered in this tutorial.</p>
-
 <p>Take notice how we use the &ldquo;$i&rdquo; variable.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in <span class="si">${</span><span class="p">!val[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
   <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span>
 <span class="k">done</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <p>Each item is displayed on its own line.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Hello
 World!
 My name is
@@ -301,9 +245,7 @@ John
 Doe
 and I&#39;m testing
 bash arrays.</code></pre></div>
-
 <p>Here&rsquo;s a complete script with a for loop to display our bash array.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="nv">val</span><span class="o">=(</span> <span class="s2">&#34;Hello&#34;</span> <span class="s2">&#34;World!&#34;</span> <span class="o">)</span>
@@ -316,9 +258,7 @@ bash arrays.</code></pre></div>
 <span class="k">for</span> i in <span class="si">${</span><span class="p">!val[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
   <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">val</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span>
 <span class="k">done</span></code></pre></div>
-
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>This concludes the tutorial. There&rsquo;s many useful ways to use arrays in bash. This was an introductory run through and only scratches the surface. Hope this gave you some ideas and new tricks for using bash arrays.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -495,7 +435,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

@@ -176,17 +176,11 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>Creating a menu in a bash script can be quite useful and at times necessary. A bash menu can allow you to provide options for user input. Upon user selection of an option in your menu, you can run a command or sequence of commands and display outputs.</p>
-
 <p>There are a few ways to create menus in a bash script. For this tutorial we will be creating a somewhat advanced menu that is quite flexible and easy to understand. We will be using bash functions, so it&rsquo;s a good idea to get familiar with functions. You can read about functions in one of my tutorials found <a href="https://techstop.github.io/bash-functions/">here</a>.</p>
-
 <h2 id="creating-a-bash-script-menu"><strong>Creating a Bash Script Menu</strong></h2>
-
 <p>You will need to place your menu at the bottom of your script since we will be calling functions from the menu and functions need to be placed at the top. Code that makes calls to functions needs to be below the functions.</p>
-
 <p>Taking a look at the following example script you can see that all code is in functions except the menu code.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 menu_option_one<span class="o">()</span> <span class="o">{</span>
@@ -225,42 +219,26 @@ incorrect_selection<span class="o">()</span> <span class="o">{</span>
     * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
   <span class="k">esac</span>
 <span class="k">done</span></code></pre></div>
-
 <p>Create a file called &ldquo;<strong>file.sh</strong>&rdquo; and copy the code above to it and give it execute permissions then run it in a terminal. Try all the menu options to give yourself a better understanding before you continue with this tutorial.</p>
-
 <p>Now lets break things down a bit to learn what&rsquo;s going on in this script.</p>
-
 <p>The menu is a loop that repeats itself until the selection is zero &ldquo;0&rdquo;. Since the menu is not in a function, it will load as soon as you run the script.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span></code></pre></div>
-
 <p>Looking at the following line, you&rsquo;ll notice an echo command prompting the user to enter a selection. The &ldquo;-n&rdquo; flag for this echo command keeps the cursor on the same line rather then on the next.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span></code></pre></div>
-
 <p>Once the user enters the selection, the read command passes the selection to the case statement.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">read</span> selection</code></pre></div>
-
 <p>Now if you look at the case statement, each option starts with the clear command. This clears the screen and removes the input line to make the script appear more like a GUI.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">case</span> <span class="nv">$selection</span> in
   <span class="m">1</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_one <span class="p">;</span> press_enter <span class="p">;;</span>
   <span class="m">2</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_two <span class="p">;</span> press_enter <span class="p">;;</span>
   <span class="m">0</span> <span class="o">)</span> clear <span class="p">;</span> <span class="nb">exit</span> <span class="p">;;</span>
   * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
 <span class="k">esac</span></code></pre></div>
-
 <p>Also notice how each command in the case statement is separated by semicolons &ldquo;;&rdquo;. The second command is a call to a function.</p>
-
 <p>The press_enter function prompts the user so they can continue when ready. This will give the user all the time they need to read any output.</p>
-
-<p>Now the final option in the case statement is just in case the user enters a selection that does not exist. Since it&rsquo;s the final option, it is defined by an asterisk &ldquo;*&ldquo;.</p>
-
+<p>Now the final option in the case statement is just in case the user enters a selection that does not exist. Since it&rsquo;s the final option, it is defined by an asterisk &ldquo;*&rdquo;.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>You have now created a bash script menu. This should expand the versatility and user experience of your scripts and add a little aesthetics for the user. You can also call a submenu from your main menu by placing your submenu in a function.</p>
-
 <p>That&rsquo;s all. Hope you enjoyed the tutorial. Feel free to comment below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -437,7 +415,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

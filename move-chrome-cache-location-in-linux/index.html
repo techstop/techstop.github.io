@@ -176,34 +176,23 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>Often times users may want to move the chrome cache location for whatever reason. If you’re like me and have a primary SSD for your operating system and a secondary HDD for storage, then you may want to move the chrome cache location to another drive to reduce writes to your SSD. Reducing heavy caching to your SSD can prolong its lifespan.</p>
-
 <p>It’s fairly straight forward to move the chrome cache location to another drive in linux.</p>
-
 <p>There are two methods for doing this. The first involves editing the launcher with a cache directory. The problem here is that you’ll have to repeat this method every time chrome updates.</p>
-
 <p>The second method and the one we will be using in this tutorial will be using a symlink. This is a “set it and forget it” method. Once you set your symlink, you will not have to worry about it again, not even after chrome updates.</p>
-
 <h2 id="move-chrome-cache-location"><strong>Move Chrome Cache Location</strong></h2>
-
 <p>The symlink command generally looks like this…</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">ln -s [new-location] [old-location]</code></pre></div>
-
 <p><strong>This has been tested on xubuntu and ubuntu.</strong></p>
-
 <ol>
 <li>Make sure to close chrome browser.</li>
-<li>Create a hidden folder in your new location called &ldquo;<strong>.google-chrome</strong>&ldquo;</li>
+<li>Create a hidden folder in your new location called &ldquo;<strong>.google-chrome</strong>&rdquo;</li>
 <li>Delete the old chrome location usually found at &ldquo;<strong>/home/USERNAME/.cache/google-chrome</strong>&rdquo;. You can use the following command for this.
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rm -rf ~/.cache/google-chrome</code></pre></div></li>
 <li>Now re-create the old chrome location you deleted as a symlink to the new location with this command.
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ln -s /new/location/path/.google-chrome ~/.cache/google-chrome</code></pre></div></li>
 </ol>
-
 <p>After opening chrome, if you&rsquo;d like to check, open your file manager and go to &ldquo;<strong>/home/USERNAME/.cache/google-chrome</strong>&rdquo;. Right click on the folder and select &ldquo;<strong>Properties</strong>&rdquo;. You should see that for &ldquo;<strong>Volume</strong>&rdquo; it should show the new cache location.</p>
-
 <p>That is all. You have now moved the chrome cache location in linux and don&rsquo;t need to worry about it anymore.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -382,7 +371,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

@@ -51,7 +51,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;If you need to unpack and repack boot.img, recovery.img, or loki images, then this is the tool for you. With mktool you don&amp;rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&amp;rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.&lt;/p&gt;</description>
     </item>
     

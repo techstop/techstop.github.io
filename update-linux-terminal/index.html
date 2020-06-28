@@ -176,31 +176,18 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>Keeping linux updated is a simple hassle free task, unlike that other OS. On linux you can use a GUI app or update in a terminal. Both methods achieve the same result, but users usually have a preference. For me that&rsquo;s the terminal.</p>
-
 <p>It&rsquo;s very important to keep your system up to date to keep it protected against vulnerabilities. Hackers are always trying new and different ways to obtain your valuable data. Updating will also install software improvements and new features when available.</p>
-
 <h2 id="update-with-a-gui"><strong>Update With a GUI</strong></h2>
-
 <p>Most linux distributions come with a GUI app to install updates. I&rsquo;m currently using Xubuntu which comes with &ldquo;Software Updater&rdquo;. It&rsquo;s a simple app that checks for updates and installs them for you.</p>
-
 <p>Now in my experience with the GUI app in both Ubuntu and Xubuntu, if an application repository changes name you do not get a prompt to confirm this. This is a problem because without your consent, that particular app is not updated and held back. This is why I prefer and recommend the terminal to update since it always gives you the prompt to confirm the repo name change.</p>
-
 <h2 id="update-in-terminal"><strong>Update In Terminal</strong></h2>
-
 <p>Updating linux software in the terminal is actually quite simple and only requires two commands.</p>
-
 <p>We will be going over updating Debian and Debian based distros like Ubuntu and all of its derivatives with APT. The Advanced Package Tool(APT) is the command line tool for managing software efficiently from your terminal.</p>
-
 <p><strong>Update software database:</strong></p>
-
 <p>First we need to update the local software database with the latest software as follows:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update</code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Get:34 http://mirror.umd.edu/ubuntu bionic-security/main amd64 Packages [531 kB]
 Get:35 http://mirror.umd.edu/ubuntu bionic-security/main i386 Packages [382 kB]
 Get:36 http://mirror.umd.edu/ubuntu bionic-security/main amd64 DEP-11 Metadata [38.5 kB]
@@ -212,15 +199,10 @@ Reading package lists... Done
 Building dependency tree
 Reading state information... Done
 7 packages can be upgraded. Run &#39;apt list --upgradable&#39; to see them.</code></pre></div>
-
 <p><strong>Perform the upgrade:</strong></p>
-
 <p>Once the software database updates, then you can update all the software on your system as follows:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt upgrade</code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -235,26 +217,16 @@ The following packages will be upgraded:
 Need to get 68.7 MB of archives.
 After this operation, 332 MB of additional disk space will be used.
 Do you want to continue? [Y/n]</code></pre></div>
-
 <p>You rarely ever need to reboot after an update unless you also receive a <strong>kernel update(linux-headers)</strong>. After running the second command above, if you see any kernel update mentioned in your terminal, then you should reboot your PC after the update process is done.</p>
-
 <p><strong>Update and upgrade in a one line command:</strong></p>
-
 <p>This one line command combines the previous two commands in a single one-liner. You&rsquo;ll notice it contains a &ldquo;-y&rdquo; switch at the end. This will automatically say &ldquo;yes&rdquo; to the prompt asking if you wish to update.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y</code></pre></div>
-
 <p><strong>Update a single package(application):</strong></p>
-
 <p>If you only wish to update a single package and not the entire system, you can run the following command:
 <em>Replace &ldquo;package_name&rdquo; with the package you wish to update</em></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt upgrade package_name</code></pre></div>
-
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>Updating linux in the terminal is easier than what some new linux users think. I really recommend going forward that you use this method as your preferred way of keeping your system up to date.</p>
-
 <p>Well that is all for this quick look at updating linux in a terminal.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -431,7 +403,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

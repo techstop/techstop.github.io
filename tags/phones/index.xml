@@ -187,7 +187,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The Freedom Kernel for the Zmax Pro Z981 has been a lot of fun to work on. I&amp;rsquo;d like to thank &lt;a href=&#34;https://androidforums.com/members/armandop_.1999347/&#34; target=&#34;_blank&#34;&gt;Armando&lt;/a&gt; from Android Forums for his great work on the LineageOS 14.1 rom for which I made the Freedom custom kernel for. I set out to add value not only to the Lineage rom, but also to the user experience and I can confidently say mission accomplished. So without further ado, please enjoy. Many Thanks.&lt;/p&gt;</description>
     </item>
     
@@ -299,7 +298,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The LG G Stylo Katana ROM is based on the 5.1.1 v10J firmware for the MetroPCS and T-Mobile LG G Stylo. Katana brings many UI and performance enhancements beyond the stock factory rom from LG, thus improving the user experience. The rom is lightweight and operates smoothly. Katana also comes with a nice theme that was tastefully done. Full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
     
@@ -342,7 +340,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;This guide is to help you install the LG G Stylo TWRP recovery so that you can make backups, flash roms, and kernels or any flashable zips for this device.  If you plan on experimenting with your device, than this is a must have.&lt;/p&gt;</description>
     </item>
@@ -387,7 +384,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;This LG Optimus F6 Freedom kernel is packed with tons of modifications. There&amp;rsquo;s many governors and schedulers to tune the performance just right. Installation is also a breeze with the Freedom installer app in the Play Store. The app also fully controls the kernel to make sure you can tweak it to your liking. Full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
     
@@ -430,7 +426,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;This is an LG G Stylo flashable v10J firmware for the Metro PCS and T-Mobile variants. ​The flashable firmware rom comes rooted, so you don&amp;rsquo;t need to root or re-install twrp recovery.&lt;/p&gt;</description>
     </item>
@@ -552,7 +547,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The LG Optimus F6 Xperion rom brings some nice additions. It&amp;rsquo;s beautifully themed with most if not all of LG&amp;rsquo;s light blue replaced with white like most aosp roms. While debloated, it does bring a good selection of apps with some being from cyanogenmod. The rom is lightweight with some performance tweaks as well. More details below&amp;hellip;&lt;/p&gt;</description>
     </item>
     
@@ -595,7 +589,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Want more control over your device? Consider installing the LG Optimus F3 Freedom kernel lite or overclocked. With these kernels you&amp;rsquo;ll have features like init-d or overclocking. There&amp;rsquo;s also a few governors to play with to help manage performance.&lt;/p&gt;</description>
     </item>
@@ -708,7 +701,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The LG Optimus F3 ROMs really enhance the user experience and make this device much more ejoyable. Aside from the usual deodex, debloating, and zipaligning, Xperion rom adds other elements that otherwise do not come in the factory rom. The Xperion theme that comes with the rom is quite a nice touch.&lt;/p&gt;</description>
     </item>
     
@@ -760,7 +752,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;The LG Lucid 2 Xperion rom improves upon the factory stock rom to deliver a better experience. With many mods and tweaks, I&amp;rsquo;m sure you&amp;rsquo;ll agree. Maybe you&amp;rsquo;re bored of your Lucid 2, well this rom can surely breathe some new life to your device. There&amp;rsquo;s also an unsercured kernel for further debloating the Lucid 2 should you have the need.&lt;/p&gt;</description>
     </item>
@@ -822,7 +813,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;The Huawei Ascend M860 Centurion rom is based on Froyo 2.2.2. This rom is for the MetroPCS variant. Centurion rom offers enhancements beyond the factory stock rom for a better user experience.&lt;/p&gt;</description>
     </item>

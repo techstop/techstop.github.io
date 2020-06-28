@@ -187,7 +187,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The Freedom Kernel for the Zmax Pro Z981 has been a lot of fun to work on. I&amp;rsquo;d like to thank &lt;a href=&#34;https://androidforums.com/members/armandop_.1999347/&#34; target=&#34;_blank&#34;&gt;Armando&lt;/a&gt; from Android Forums for his great work on the LineageOS 14.1 rom for which I made the Freedom custom kernel for. I set out to add value not only to the Lineage rom, but also to the user experience and I can confidently say mission accomplished. So without further ado, please enjoy. Many Thanks.&lt;/p&gt;</description>
     </item>
     
@@ -231,7 +230,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;This LG Optimus F6 Freedom kernel is packed with tons of modifications. There&amp;rsquo;s many governors and schedulers to tune the performance just right. Installation is also a breeze with the Freedom installer app in the Play Store. The app also fully controls the kernel to make sure you can tweak it to your liking. Full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
     
@@ -274,7 +272,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Want more control over your device? Consider installing the LG Optimus F3 Freedom kernel lite or overclocked. With these kernels you&amp;rsquo;ll have features like init-d or overclocking. There&amp;rsquo;s also a few governors to play with to help manage performance.&lt;/p&gt;</description>
     </item>

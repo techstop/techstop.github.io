@@ -176,51 +176,32 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-
 <p>Regardless of whether a bash command ends successfully or not, it returns and exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.</p>
-
 <p>The exit status of a bash command is always an integer (number). A successful command will have an exit status of zero (0), while a command that fails will have an exit status from 1 to 255.</p>
-
 <p>There is a special variable you can use to get the exit status of the previously executed command. You can easily print the exit status variable ($?) with the echo command.</p>
-
 <p><strong>Take a look at this example or try it yourself:</strong></p>
-
 <p>Here we run the date command and then print its exit status with the echo command.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 date
 <span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <p>As you can see the date was printed on the first line and the successful exit status of zero on the second line.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Tue Oct 15 20:27:27 AST 2019
 0</code></pre></div>
-
 <p><strong>Testing with a bad command:</strong></p>
-
 <p>Now we use the same example, but with a bad command (datefoo) that doesn&rsquo;t exist.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 datefoo
 <span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <p>This now gives us a command not found error followed by the exit status code (127).</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">./test.sh: line 3: datefoo: command not found
 127</code></pre></div>
-
 <p><strong>Save the exit status in a variable:</strong></p>
-
 <p>Saving the exit status for a command in a variable can be useful so that you can use the status later on in your bash script.</p>
-
 <p>In this example we run three commands and save the exit status for each in a variable. One of the commands is not a real command like one of our previous examples.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="c1"># Prints username</span>
@@ -239,9 +220,7 @@ date
 <span class="nb">echo</span> <span class="nv">$var0</span>
 <span class="nb">echo</span> <span class="nv">$var1</span>
 <span class="nb">echo</span> <span class="nv">$var2</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">gametheory
 ./test.sh: line 8: datefoo: command not found
 Wed Oct 16 12:29:09 AST 2019
@@ -249,40 +228,29 @@ These are the exit statuses for the commands above:
 0
 127
 0</code></pre></div>
-
 <p><strong>Set the exit status in your bash script:</strong></p>
-
 <p>Lets assume that we have a script called &ldquo;<strong>test.sh</strong>&rdquo; for this example.</p>
-
 <p>Here we have the cat command try to read a file that does not exist.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 cat foo.txt
 
-<span class="k">if</span> <span class="nb">test</span> <span class="nv">$?</span> -eq <span class="m">0</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">if</span> <span class="nb">test</span> <span class="nv">$?</span> -eq 0<span class="p">;</span> <span class="k">then</span>
   <span class="nb">echo</span> <span class="s2">&#34;The cat command succeeded because the file exists.&#34;</span>
   <span class="nb">exit</span> <span class="m">0</span>
 <span class="k">else</span>
   <span class="nb">echo</span> <span class="s2">&#34;The cat command failed because the file does not exist.&#34;</span>
   <span class="nb">exit</span> <span class="m">1</span>
 <span class="k">fi</span></code></pre></div>
-
 <p>To run the file and get the exit status, we execute the following 2 commands in our terminal:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">./test.sh
 <span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
-
 <p><strong>Output:</strong></p>
-
 <p>Since our script was designed to fail for this example, we get the error message and exit status 1 that we declared ourselves.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">cat: foo.txt: No such file or directory
 The cat command failed because the file does not exist.
 1</code></pre></div>
-
 <p><strong>Here are some standard linux status error codes that you can use in your scripts:</strong></p>
-
 <ul>
 <li>0 - Success</li>
 <li>1 - Catchall for general errors</li>
@@ -294,9 +262,7 @@ The cat command failed because the file does not exist.
 <li>130 - Script terminated by Control-C</li>
 <li>255* - Exit status out of range</li>
 </ul>
-
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-
 <p>This was a quick look at some bash exit status examples. Status exit codes can be quite useful. In large bash scripts it may be a good idea to set some exit status codes for easier troubleshooting of some parts of your code. They&rsquo;re also great to setup conditional statements.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -473,7 +439,7 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
   <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>

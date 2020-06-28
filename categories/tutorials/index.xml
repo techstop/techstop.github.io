@@ -51,7 +51,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;To get CPU and GPU temps in linux you need to install and configure lm-sensors. With lm-sensors you can monitor cpu and gpu temperatures and fan speeds as well as voltages for some systems. Lm-sensors reads the available sensors on your motherboard, cpu, and gpu and displays their output. Once configured, you can use the command line or a GUI to monitor your system&amp;rsquo;s sensors.&lt;/p&gt;</description>
     </item>
     
@@ -94,7 +93,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Xubuntu has always been one of my favorite distros, but it has always been plagued by the dreaded screen tearing because of the Xfce desktop environment. Screen tearing is when the GPU is out of sync with the display which causes artifacting and looks like tears between the top and bottom halves of your screen. This can be rather annoying, but luckily there&amp;rsquo;s easy ways to fix screen tearing in Xfce.&lt;/p&gt;</description>
     </item>
@@ -139,7 +137,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;If you ever used ubuntu when it still used the unity desktop, chances are you liked the unity global app menu and would like to have it on Xubuntu 18.04. Hate it or love it, ubuntu did some things really well when it used unity, like the HUD and the Global App Menu. Luckily, we don&amp;rsquo;t need unity to install a global app menu in Xubuntu 18.04.&lt;/p&gt;</description>
     </item>
     
@@ -182,7 +179,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Occasionally when updating your linux system from a terminal, you&amp;rsquo;ll notice a warning stating &amp;ldquo;The following packages have been kept back&amp;rdquo;. This means that when updating, those packages will not be upgraded. Today we&amp;rsquo;ll look at how to upgrade kept back packages in linux.&lt;/p&gt;</description>
     </item>
@@ -227,7 +223,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;There are a couple of tools to remove orphaned packages in linux. Packages in linux systems depend on other packages or libraries in order to work properly. In some cases you will already have some or all the dependencies installed from them being installed by other packages.&lt;/p&gt;</description>
     </item>
     
@@ -271,9 +266,7 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;If you&amp;rsquo;re not familiar with bash aliases I highly recommend you read on. Bash aliases are fantastic for saving time and not having to remember commands or groups of commands.&lt;/p&gt;
-
 &lt;p&gt;A bash alias is just a shortcut that you can set to be a word or even a single letter.&lt;/p&gt;</description>
     </item>
     
@@ -316,7 +309,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Whenever you&amp;rsquo;re using the terminal extensively you may find your terminal cluttered with commands and output. This can be rather annoying and even confusing at times with the bash prompt at the bottom of your terminal screen. The solution to this is to clear or reset terminal.&lt;/p&gt;</description>
     </item>
@@ -361,9 +353,7 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;There are a few ways to check your kernel and linux os version, but today we will cover some commands to do this in a terminal.&lt;/p&gt;
-
 &lt;p&gt;Knowing how to check your kernel and linux os version in a terminal can be useful if you ever need help in a forum where they might ask for this information. You can also use this info in a bash script to determine what actions to take in your script based on the kernel and linux os version. Whatever the case may be, it&amp;rsquo;s a good idea to get familiar with these commands.&lt;/p&gt;</description>
     </item>
     
@@ -406,7 +396,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Keeping linux updated is a simple hassle free task, unlike that other OS. On linux you can use a GUI app or update in a terminal. Both methods achieve the same result, but users usually have a preference. For me that&amp;rsquo;s the terminal.&lt;/p&gt;</description>
     </item>
@@ -451,7 +440,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;Getting familiar with timing commands in linux is a good idea. This is a good way to time long operations in a bash script or from the terminal. You can time most commands and any bash script. My favorite use case is for timing source code compilation from build scripts.&lt;/p&gt;</description>
     </item>
     
@@ -495,9 +483,7 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;On every linux system you can redirect and append to the end of a file.&lt;/p&gt;
-
 &lt;p&gt;Linux has &amp;ldquo;stdout&amp;rdquo; which stands for &amp;ldquo;standard output&amp;rdquo;. Whenever you run a command in your terminal, the result is displayed in the stdout. You can redirect and append stdout to the end of a file.&lt;/p&gt;</description>
     </item>
     
@@ -540,7 +526,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Regardless of whether a bash command ends successfully or not, it returns and exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.&lt;/p&gt;</description>
     </item>
@@ -585,9 +570,7 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;Lets take a look at how to rename files and folders in linux from the command line.&lt;/p&gt;
-
 &lt;p&gt;Sure you can use your GUI and be done with it, but learning to do it from the command line can be quite useful. There&amp;rsquo;s also the added benefit of being able to use these commands in bash scripts.&lt;/p&gt;</description>
     </item>
     
@@ -631,9 +614,7 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;A question often asked&amp;hellip; How do I remove old unused kernels from ubuntu 18.04?&lt;/p&gt;
-
 &lt;p&gt;Each time you receive a kernel update in your ubuntu 18.04 system updates, you end up with the old kernels remaining in your system. This can be useful in the event that the new kernel causes issues, you can always boot the old kernels. In time, old unused kernels can accumulate taking up unnecessary space on your drive.&lt;/p&gt;</description>
     </item>
     
@@ -676,7 +657,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Bash arrays are quite powerful and robust, but not often used in the command line. They are variables which contain multiple values often referred to as items or elements. Arrays do not have a maximum limit for items they can contain nor do the values need to be assigned or indexed contiguously.&lt;/p&gt;</description>
     </item>
@@ -721,7 +701,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;It&amp;rsquo;s useful to know how to check if a directory exists in linux from a bash script. A directory is a folder within a path in your linux system where all sorts of files and directories are stored. Your Music folder is a directory to store music files and your Downloads folder is a directory where all sorts files are downloaded from the web. You get the idea.&lt;/p&gt;</description>
     </item>
     
@@ -764,7 +743,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Using colors in bash scripts can be very useful. If you&amp;rsquo;ve written your bash script with menus and prompts, it&amp;rsquo;s a good idea to use ansi color codes to make your outputs more readable to the user. In this tutorial I&amp;rsquo;ll cover some ways that you can use colors in your bash scripts for a more GUI like experience.&lt;/p&gt;</description>
     </item>
@@ -809,7 +787,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;Creating a menu in a bash script can be quite useful and at times necessary. A bash menu can allow you to provide options for user input. Upon user selection of an option in your menu, you can run a command or sequence of commands and display outputs.&lt;/p&gt;</description>
     </item>
     
@@ -853,7 +830,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;Writing bash functions is a great way to make your scripts modular. If you find you&amp;rsquo;ll be needing to repeat sets of commands or code logic, it&amp;rsquo;s a good idea to use functions to avoid redundancy in your script. Bash functions also help keep your code neat and easier to maintain.&lt;/p&gt;</description>
     </item>
     
@@ -896,7 +872,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;It&amp;rsquo;s always a good idea to know how to get hardware info on your linux system. It can be very useful if you need to troubleshoot a hardware issue. There can be times when you need some specific hardware info to get the right drivers. Other times you&amp;rsquo;ll need specific info to perform a hardware upgrade. The command line offers quite a few ways to obtain this hardware info with some tried and true linux commands.&lt;/p&gt;</description>
     </item>
@@ -974,7 +949,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;If you&amp;rsquo;re noticing that your android device is suddenly draining battery quicker than normal, it can be due to an android wakelock. Once you know the quick battery drain is not due to a faulty battery, you&amp;rsquo;ll need to detect what&amp;rsquo;s causing the wakelock. This is likely a misbehaving app.&lt;/p&gt;</description>
     </item>
     
@@ -1017,7 +991,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;The sed linux utility is a powerful stream editor. Sed can manipulate text from standard input or from a file. It is much like a typical text editor. Where sed sets itself apart is in its ability to filter text in a pipeline to expand its capabilities.&lt;/p&gt;</description>
     </item>
@@ -1062,7 +1035,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;There may be times when you will need to create a &lt;strong&gt;.desktop&lt;/strong&gt; launcher file in linux. The desktop file is a shortcut to an application for launching it. This desktop file adds a launcher to your applications menu and can also be placed in docks or anywhere you&amp;rsquo;d like.&lt;/p&gt;</description>
     </item>
     
@@ -1106,7 +1078,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;If you&amp;rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&amp;rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&amp;rsquo;t work. For these rare occasions the dd linux command line utility never fails. This is my preferred method and the one I&amp;rsquo;ll cover in this tutorial.&lt;/p&gt;</description>
     </item>
     
@@ -1149,7 +1120,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Often times users may want to move the chrome cache location for whatever reason. If you’re like me and have a primary SSD for your operating system and a secondary HDD for storage, then you may want to move the chrome cache location to another drive to reduce writes to your SSD. Reducing heavy caching to your SSD can prolong its lifespan.&lt;/p&gt;</description>
     </item>
@@ -1260,7 +1230,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;Xfce is a lightweight and powerful desktop environment(DE) that&amp;rsquo;s been around for a long time. It&amp;rsquo;s considered one of the most stable and lightest DEs around. Xfce has a traditional layout well suited for users of all types, from the new user coming from Windows to the power user looking to get things done efficiently.&lt;/p&gt;</description>
     </item>
     
@@ -1303,7 +1272,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;There are many download managers out there that get the job done, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you have any large files to download or need to use the ftp protocol, wget is your best bet. I&amp;rsquo;ll show you a few neat ways to use wget.&lt;/p&gt;</description>
     </item>
@@ -1348,7 +1316,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;After over 4 years of development, Xfce 4.14 was released on Aug 12, 2019. There were some major changes and improvements to xfce, most notably the switch from GTK2 to GTK3. This was the main reason for the long development period.&lt;/p&gt;</description>
     </item>
     
@@ -1391,7 +1358,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;The ubuntu flavours finally get the highly anticipated linux kernel 5.0. This new kernel brings performance improvements, bug fixes, and more hardware support. You also get an updated X.org and graphics drivers. The 18.04.3 point release was released on Aug 8th 2019.&lt;/p&gt;</description>
     </item>
@@ -1470,7 +1436,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;In this Android Admob tutorial we will go over how to ad admob to your android app. With admob you can monetize your app and make some income for your efforts. There are a few types of admob ad units that you can ad to your app. For this admob tutorial we will be adding the smart banner which can display banner ads of different sizes eliminating the need to set a fixed size.&lt;/p&gt;</description>
     </item>
     
@@ -1548,7 +1513,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage permissions for our DownloadListener for android 6+.&lt;/p&gt;</description>
     </item>
     
@@ -1626,7 +1590,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;Often times users are looking to create an Android Toolbar so they can customize it to their liking. In this tutorial we&amp;rsquo;ll go over how to create an Android custom Toolbar and show you a few modifications you can do to the Toolbar for your app.&lt;/p&gt;</description>
     </item>
     
@@ -1669,7 +1632,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;Today we will be using an android BroadcastReceiver to run code on boot up. There can be many reasons to run code on boot up. One good use case would be to enable settings that a user has selected within your app to be set on every boot up.&lt;/p&gt;</description>
     </item>
@@ -1714,7 +1676,6 @@
 	}
 &lt;/script&gt;
 
-
 &lt;p&gt;How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&amp;rsquo;ll give your users a smooth experience throughout your apps&amp;rsquo; UI along with a smaller foot print.&lt;/p&gt;</description>
     </item>
     
@@ -1757,7 +1718,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;In this guide I will be showing you how to get the android mounts and partition images. There could be many reasons for needing the android mounts and partition images. A couple reasons that come to mind could be to make backups of your partitions in case you need to fix your phone from a bad flash later on. Or you might want to customize a boot.img or system.img to add in some custom features. Whatever your reason, just follow the guide and you&amp;rsquo;ll be pulling those partitions in no time.&lt;/p&gt;</description>
     </item>
@@ -1836,7 +1796,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;If you like the dark version of the Arc Theme for your desktop environment and would like the theme for your text editor, then look no further. Here I have the Arc Dark Theme for Gedit. The arc dark theme will work with gedit and pluma or most other text editors that support themes. The download link can be found below with simple installation instructions.&lt;/p&gt;</description>
     </item>
     
@@ -1914,7 +1873,6 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-
 &lt;p&gt;If you need to open file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open files or folders with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer included in the ubuntu family as of version 17.10 or any derivatives of ubuntu.&lt;/p&gt;</description>
     </item>
     
@@ -1957,7 +1915,6 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
-
 
 &lt;p&gt;If you’re looking to install adb on Linux, but don’t want to install Android Studio then this guide is for you. Android Studio is a development environment for creating android apps, but it’s a large download and installation if all you need is adb and fastboot. Below is a guide to install just adb and fastboot which will be a very small download and quick installation.&lt;/p&gt;</description>
     </item>
