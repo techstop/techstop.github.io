@@ -221,6 +221,16 @@ window.cookieconsent.initialise({
 
 <p>Now that we know the partition, this is what the full partition path would look like.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/dev/sdd</code></pre></div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <p>Assuming that the iso image for the linux distro you wish to burn to your usb stick is in your downloads directory, this is what the command looks like to create the bootable usb. When you run the command you will need to enter your login password. Once you&rsquo;ve entered the command, just wait a couple minutes for it to finish.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/home/USERNAME/Downloads/FILENAME.iso <span class="nv">of</span><span class="o">=</span>/dev/sdd <span class="nv">conv</span><span class="o">=</span>fdatasync</code></pre></div>
 <p>As you can see &ldquo;<strong>if=</strong>&rdquo; contains the path to our iso image file and &ldquo;<strong>of=</strong>&rdquo; contains the usb stick partition path.</p>

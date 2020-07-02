@@ -195,6 +195,16 @@ window.cookieconsent.initialise({
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">touch file<span class="o">{</span>1..4<span class="o">}</span>.bak</code></pre></div>
 <p>You should now have the following files in your folder:</p>
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <p>Now lets run the mv command in a for loop to rename the files and replace the &ldquo;<strong>.bak</strong>&rdquo; extension with &ldquo;<strong>.txt</strong>&quot;:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">%.bak</span><span class="si">}</span><span class="s2">.txt&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
 <p>The files should now be renamed as follows:</p>

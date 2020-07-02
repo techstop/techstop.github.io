@@ -194,6 +194,16 @@ window.cookieconsent.initialise({
 <p>In this first example we will replace the word &ldquo;<strong>learn</strong>&rdquo; with &ldquo;<strong>follow</strong>&rdquo;. We will first run a test with the [-e] option just to be sure before making the final edit.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -e <span class="s1">&#39;s/learn/follow/g&#39;</span> test</code></pre></div>
 <p>You should see the word learn replaced with follow in your terminal output. Now lets make the edit directly to the file with the [-i] option.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;s/learn/follow/g&#39;</span> test</code></pre></div>
 <p>If you open the test file you&rsquo;ll see the word learn replaced with follow. Now lets change it back to learn, only this time we will make a backup of the original file.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sed -i-bak <span class="s1">&#39;s/follow/learn/g&#39;</span> test</code></pre></div>
