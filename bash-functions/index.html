@@ -182,13 +182,13 @@ window.cookieconsent.initialise({
 <h2 id="writing-bash-functions"><strong>Writing Bash Functions</strong></h2>
 <p>Lets take a look at some bash function examples.</p>
 <p>This is what your typical bash function looks like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my_function<span class="o">()</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">my_function<span class="o">()</span> <span class="o">{</span>
   <span class="nb">echo</span> <span class="s1">&#39;This is a function.&#39;</span>
 <span class="o">}</span></code></pre></div>
 <p>To call the function above is as follows:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my_function</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">my_function</code></pre></div>
 <p>Here&rsquo;s what it would look like in a script:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 my_function<span class="o">()</span> <span class="o">{</span>
   <span class="nb">echo</span> <span class="s1">&#39;This is a function.&#39;</span>
@@ -196,13 +196,13 @@ my_function<span class="o">()</span> <span class="o">{</span>
 
 my_function</code></pre></div>
 <p>Now lets change our function so that we can pass an argument to it.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my_function<span class="o">()</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">my_function<span class="o">()</span> <span class="o">{</span>
   <span class="nb">echo</span> <span class="nv">$1</span>
 <span class="o">}</span></code></pre></div>
 <p>To use the function above, you can pass it an argument like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my_function <span class="s1">&#39;This is a function.&#39;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">my_function <span class="s1">&#39;This is a function.&#39;</span></code></pre></div>
 <p>This is what it would look like in a script:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 my_function<span class="o">()</span> <span class="o">{</span>
   <span class="nb">echo</span> <span class="nv">$1</span>
@@ -222,11 +222,11 @@ my_function <span class="s1">&#39;This is a function.&#39;</span></code></pre></
 <p>Now lets use a more advanced example. We will now load a function from one script to another.</p>
 <p>We need two script files for this example. The first script we name <strong>file1.sh</strong> and the second <strong>file2.sh</strong>.</p>
 <p><strong>file1.sh</strong>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="nb">source</span> /path/to/file2.sh <span class="s1">&#39;This is a function in another script.&#39;</span></code></pre></div>
 <p><strong>file2.sh</strong>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="nv">message</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
 
@@ -237,7 +237,7 @@ my_function<span class="o">()</span> <span class="o">{</span>
 my_function</code></pre></div>
 <p>The first script file is calling the second script and passing it a string argument to print with the echo command within the function. The string argument we pass is held in the $message variable.</p>
 <p>Now we would simply execute the <strong>file1.sh</strong> file and see the following output:</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">This is a function in another script.</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">This is a function in another script.</code></pre></div>
 <p>That will be all for this tutorial. I hope you enjoyed writing bash functions.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -414,10 +414,10 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2021 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
+  <script src="https://techstop.github.io/bundle.min.0a33cef77c409fbaa4b21fc8e6575f363c163b3804a5320d22b29ad3673acf43.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>

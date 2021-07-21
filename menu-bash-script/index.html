@@ -181,7 +181,7 @@ window.cookieconsent.initialise({
 <h2 id="creating-a-bash-script-menu"><strong>Creating a Bash Script Menu</strong></h2>
 <p>You will need to place your menu at the bottom of your script since we will be calling functions from the menu and functions need to be placed at the top. Code that makes calls to functions needs to be below the functions.</p>
 <p>Taking a look at the following example script you can see that all code is in functions except the menu code.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 menu_option_one<span class="o">()</span> <span class="o">{</span>
   <span class="nb">echo</span> <span class="s2">&#34;Hello John!!!&#34;</span>
@@ -232,13 +232,13 @@ incorrect_selection<span class="o">()</span> <span class="o">{</span>
 </script>
 <p>Now lets break things down a bit to learn what&rsquo;s going on in this script.</p>
 <p>The menu is a loop that repeats itself until the selection is zero &ldquo;0&rdquo;. Since the menu is not in a function, it will load as soon as you run the script.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span></code></pre></div>
 <p>Looking at the following line, you&rsquo;ll notice an echo command prompting the user to enter a selection. The &ldquo;-n&rdquo; flag for this echo command keeps the cursor on the same line rather then on the next.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span></code></pre></div>
 <p>Once the user enters the selection, the read command passes the selection to the case statement.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">read</span> selection</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">read</span> selection</code></pre></div>
 <p>Now if you look at the case statement, each option starts with the clear command. This clears the screen and removes the input line to make the script appear more like a GUI.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">case</span> <span class="nv">$selection</span> in
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">case</span> <span class="nv">$selection</span> in
   <span class="m">1</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_one <span class="p">;</span> press_enter <span class="p">;;</span>
   <span class="m">2</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_two <span class="p">;</span> press_enter <span class="p">;;</span>
   <span class="m">0</span> <span class="o">)</span> clear <span class="p">;</span> <span class="nb">exit</span> <span class="p">;;</span>
@@ -425,10 +425,10 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2021 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
+  <script src="https://techstop.github.io/bundle.min.0a33cef77c409fbaa4b21fc8e6575f363c163b3804a5320d22b29ad3673acf43.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>

@@ -182,7 +182,7 @@ window.cookieconsent.initialise({
 <h2 id="style-your-bash-script-with-ansi-colors"><strong>Style Your Bash Script With Ansi Colors</strong></h2>
 <p>Lets start off by creating a file called &ldquo;<strong>test.sh</strong>&rdquo;. Now copy the code below to the file and give it execute permissions and then run the file in your terminal.</p>
 <p><strong>test.sh:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="c1"># Ansi color code variables</span>
 <span class="nv">red</span><span class="o">=</span><span class="s2">&#34;\e[0;91m&#34;</span>
@@ -251,16 +251,16 @@ window.cookieconsent.initialise({
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <p>Notice how we always use the echo &ldquo;-e&rdquo; flag on lines with color codes. This tells echo to enable interpretation of escapes so that the color codes work. We also place the color code variables in curly brackets &ldquo;${}&rdquo; to separate it from normal text.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
 <p>For paragraphs or multi line outputs you do not need the echo &ldquo;-e&rdquo; for every line as displayed below.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}</span><span class="s2">This is a sentence across&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}</span><span class="s2">This is a sentence across&#34;</span>
 <span class="nb">echo</span> <span class="s2">&#34;three lines to show how an ansi color&#34;</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;works across multiple lines with echo.</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
 <p>We also use a &ldquo;<strong>reset</strong>&rdquo; variable containing &ldquo;<strong>\e[0m</strong>&rdquo;. This is to stop the ansi code in use, otherwise it will continue running into further output as you saw in the example above with the multi lines.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">reset</span><span class="o">=</span><span class="s2">&#34;\e[0m&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">reset</span><span class="o">=</span><span class="s2">&#34;\e[0m&#34;</span></code></pre></div>
 <h2 id="ansi-codes-list-for-bash"><strong>Ansi Codes List For Bash</strong></h2>
 <p>Here is a good list of Ansi color codes you can use in your bash scripts.</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># Regular Colors
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># Regular Colors
 </span><span class="gh"></span>
 | Value    | Color  |
 | -------- | ------ |
@@ -541,10 +541,10 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2021 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
+  <script src="https://techstop.github.io/bundle.min.0a33cef77c409fbaa4b21fc8e6575f363c163b3804a5320d22b29ad3673acf43.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>

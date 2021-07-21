@@ -176,14 +176,14 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&rsquo;ll give your users a smooth experience throughout your apps&rsquo; UI along with a smaller foot print.</p>
+<p>How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&rsquo;ll give your users a smooth experience throughout your apps' UI along with a smaller foot print.</p>
 <p>There are many ways to optimize your app. In this tutorial I will show you how to reduce apk size with three of the best and easiest methods. Let&rsquo;s get started&hellip;</p>
 <h2 id="shrink-your-code">Shrink Your Code</h2>
 <p>We will first start by shrinking your code with ProGuard. This removes unused classes, fields, methods, and attributes from your app as well as from code libraries you may have added in your project.</p>
-<p>Open your apps&rsquo; build.gradle file in Android Studio under &ldquo;buildTypes/release&rdquo; add the following line&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">minifyEnabled</span> <span class="kc">true</span></code></pre></div>
+<p>Open your apps' build.gradle file in Android Studio under &ldquo;buildTypes/release&rdquo; add the following line&hellip;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">minifyEnabled</span> <span class="kc">true</span></code></pre></div>
 <p>After enabling minifyEnabled your &ldquo;<strong>buildTypes/release</strong>&rdquo; should look like this&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
   <span class="n">release</span> <span class="o">{</span>
     <span class="n">minifyEnabled</span> <span class="kc">true</span>
     <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
@@ -193,7 +193,7 @@ window.cookieconsent.initialise({
 <h2 id="shrink-your-code-even-more">Shrink Your Code Even More</h2>
 <p>Next we will be shrinking our code at the bytecode level to further reduce apk size and help our app run faster&hellip;</p>
 <p>In the same build.gradle file under &ldquo;<strong>buildTypes/release</strong>&rdquo; replace &ldquo;<strong>proguard-android.txt</strong>&rdquo; with &ldquo;<strong>proguard-android-optimize.txt</strong>&rdquo;. Your &ldquo;<strong>buildTypes/release</strong>&rdquo; should now look like this&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
   <span class="n">release</span> <span class="o">{</span>
     <span class="n">minifyEnabled</span> <span class="kc">true</span>
     <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
@@ -213,9 +213,9 @@ window.cookieconsent.initialise({
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <p>So once again in your build.gradle file under &ldquo;<strong>buildTypes/release</strong>&rdquo; add the following line&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">shrinkResources</span> <span class="kc">true</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">shrinkResources</span> <span class="kc">true</span></code></pre></div>
 <p>Your &ldquo;<strong>buildTypes/release</strong>&rdquo; should now look like this&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
   <span class="n">release</span> <span class="o">{</span>
     <span class="n">minifyEnabled</span> <span class="kc">true</span>
     <span class="n">shrinkResources</span> <span class="kc">true</span>
@@ -226,8 +226,8 @@ window.cookieconsent.initialise({
 <h2 id="fix-errors-after-optimizing-apk">Fix Errors After Optimizing APK</h2>
 <p>If you have completed the tutorial up to this point, it&rsquo;s possible that you may be experiencing build errors. This is because the optimizations we have done to reduce apk size can be very aggressive and may have removed code or resources the app actually needs to run properly. In my experience this usually happens with &ldquo;<strong>adsense</strong>&rdquo; and &ldquo;<strong>ShareActionProvider</strong>&rdquo; code, but don&rsquo;t worry - we will add some proguard rules to fix this.</p>
 <p>Lets add some rules in your &ldquo;<strong>proguard-rules.pro</strong>&rdquo; file to make sure that any code or resources your app needs are not removed. I have been using these rules in my own apps with much success.</p>
-<p>In Android Studio open your apps&rsquo; proguard-rules.pro file and add the following rules after the last line&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">safeparcel</span><span class="o">.</span><span class="na">SafeParcelable</span> <span class="o">{</span>
+<p>In Android Studio open your apps' proguard-rules.pro file and add the following rules after the last line&hellip;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">safeparcel</span><span class="o">.</span><span class="na">SafeParcelable</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">***</span> <span class="n">NULL</span><span class="o">;</span>
 <span class="o">}</span>
 
@@ -442,10 +442,10 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2021 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
+  <script src="https://techstop.github.io/bundle.min.0a33cef77c409fbaa4b21fc8e6575f363c163b3804a5320d22b29ad3673acf43.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>

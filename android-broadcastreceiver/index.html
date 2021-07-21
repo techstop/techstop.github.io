@@ -182,7 +182,7 @@ window.cookieconsent.initialise({
 <h2 id="android-broadcastreceiver-example-tutorial">Android BroadcastReceiver Example Tutorial</h2>
 <p>Lets begin by creating a new project in Android Studio with an Empty Activity if you haven&rsquo;t already. We can call the project BroadcastReceiver.</p>
 <p>Create a new java class called BootUpService. The BootUpService class will extend JobIntentService. This Service will be responsible for running what we need on boot up. Here&rsquo;s what it should look like…</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
@@ -218,7 +218,7 @@ window.cookieconsent.initialise({
 
 <span class="o">}</span></code></pre></div>
 <p>Make sure to declare the BootUpService class in your AndroidManifest.xml like this…</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;service</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpService&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;service</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpService&#34;</span>
   <span class="na">android:permission=</span><span class="s">&#34;android.permission.BIND_JOB_SERVICE&#34;</span><span class="nt">/&gt;</span></code></pre></div>
 <p>Now lets create another java class called BootUpReceiver which will extend BroadcastReceiver. The BroadcastReceiver is going to check that boot up has completed and then run our BootUpService class. Here&rsquo;s what it looks like…</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -231,7 +231,7 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.content.BroadcastReceiver</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
@@ -249,7 +249,7 @@ window.cookieconsent.initialise({
 
 <span class="o">}</span></code></pre></div>
 <p>We now need to add permissions and declare the BroadcastReceiver in the AndroidManifest.xml as follows…</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!--For pre-android O to run JobIntentService, WAKE_LOCK is needed--&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!--For pre-android O to run JobIntentService, WAKE_LOCK is needed--&gt;</span>
 <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.WAKE_LOCK&#34;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.RECEIVE_BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
 
@@ -446,10 +446,10 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2021 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
+  <script src="https://techstop.github.io/bundle.min.0a33cef77c409fbaa4b21fc8e6575f363c163b3804a5320d22b29ad3673acf43.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>

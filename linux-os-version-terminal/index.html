@@ -180,28 +180,28 @@ window.cookieconsent.initialise({
 <p>Knowing how to check your kernel and linux os version in a terminal can be useful if you ever need help in a forum where they might ask for this information. You can also use this info in a bash script to determine what actions to take in your script based on the kernel and linux os version. Whatever the case may be, it&rsquo;s a good idea to get familiar with these commands.</p>
 <h2 id="linux-os-version"><strong>Linux OS Version</strong></h2>
 <p><strong>Get Linux Standard Base info:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsb_release -a</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsb_release -a</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">No LSB modules are available.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">No LSB modules are available.
 Distributor ID:	Ubuntu
 Description:	Ubuntu 18.04.3 LTS
 Release:	18.04
 Codename:	bionic</code></pre></div>
 <p><strong>Or:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/lsb-release</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat /etc/lsb-release</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">DISTRIB_ID=Ubuntu
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=18.04
 DISTRIB_CODENAME=bionic
 DISTRIB_DESCRIPTION=&#34;Ubuntu 18.04.3 LTS&#34;</code></pre></div>
 <p><strong>Get Linux Standard Base version only:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">lsb_release -r</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsb_release -r</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Release:	18.04</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Release:	18.04</code></pre></div>
 <p><strong>Get full Linux OS information:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/*release</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat /etc/*release</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">DISTRIB_ID=Ubuntu
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=18.04
 DISTRIB_CODENAME=bionic
 DISTRIB_DESCRIPTION=&#34;Ubuntu 18.04.3 LTS&#34;
@@ -218,9 +218,9 @@ PRIVACY_POLICY_URL=&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-
 VERSION_CODENAME=bionic
 UBUNTU_CODENAME=bionic</code></pre></div>
 <p><strong>Or:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /etc/os-release</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat /etc/os-release</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">NAME=&#34;Ubuntu&#34;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">NAME=&#34;Ubuntu&#34;
 VERSION=&#34;18.04.3 LTS (Bionic Beaver)&#34;
 ID=ubuntu
 ID_LIKE=debian
@@ -243,9 +243,9 @@ UBUNTU_CODENAME=bionic</code></pre></div>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <p><strong>A few more system details:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hostnamectl</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hostnamectl</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">   Static hostname: ubuntu
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">   Static hostname: ubuntu
          Icon name: computer-desktop
            Chassis: desktop
         Machine ID: 76b1059e1a6c4453b277aa20f39b4bca
@@ -255,25 +255,25 @@ UBUNTU_CODENAME=bionic</code></pre></div>
       Architecture: x86-64</code></pre></div>
 <h2 id="kernel-version"><strong>Kernel Version</strong></h2>
 <p><strong>Print the kernel version:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -r</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">uname -r</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">5.0.0-32-generic</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">5.0.0-32-generic</code></pre></div>
 <p><strong>Print the kernel version and instruction set:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -mrs</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">uname -mrs</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux 5.0.0-32-generic x86_64</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Linux 5.0.0-32-generic x86_64</code></pre></div>
 <p><strong>Print all kernel information:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">uname -a</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">uname -a</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux ubuntu 5.0.0-32-generic #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Linux ubuntu 5.0.0-32-generic #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux</code></pre></div>
 <p><strong>Additional kernel information:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /proc/version</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat /proc/version</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux version 5.0.0-32-generic (buildd@lgw01-amd64-015) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Linux version 5.0.0-32-generic (buildd@lgw01-amd64-015) (gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)) #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019</code></pre></div>
 <p><strong>OS type, kernel release number, and version:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat /proc/sys/kernel/<span class="o">{</span>ostype,osrelease,version<span class="o">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat /proc/sys/kernel/<span class="o">{</span>ostype,osrelease,version<span class="o">}</span></code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Linux
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Linux
 5.0.0-32-generic
 #34~18.04.2-Ubuntu SMP Thu Oct 10 10:36:02 UTC 2019</code></pre></div>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
@@ -453,10 +453,10 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2021 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
+  <script src="https://techstop.github.io/bundle.min.0a33cef77c409fbaa4b21fc8e6575f363c163b3804a5320d22b29ad3673acf43.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>

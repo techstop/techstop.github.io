@@ -181,9 +181,9 @@ window.cookieconsent.initialise({
 <p>Before we go any further, you need to know that there are two versions of the time command on your system. You&rsquo;ll have &ldquo;<strong>/usr/bin/time</strong>&rdquo; and the shell built-in time command. The shell built-in time has less options and not suitable for all use cases.</p>
 <p><strong>Timing the ping command:</strong></p>
 <p>Here we ping the Bing website just for demonstration.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">time</span> ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">time</span> ping bing.com</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">PING bing.com (204.79.197.200) 56(84) bytes of data.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">PING bing.com (204.79.197.200) 56(84) bytes of data.
 64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=1 ttl=115 time=70.5 ms
 64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=2 ttl=115 time=60.7 ms
 64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=3 ttl=115 time=57.1 ms
@@ -206,7 +206,7 @@ sys	0m0.002s</code></pre></div>
 </ul>
 <p>Let us now use the formatting switch &ldquo;-f&rdquo; and elapsed clock &ldquo;%E&rdquo; option to print the time in a normal clock output.</p>
 <p>To use the &ldquo;-f&rdquo; switch we need to use &ldquo;/usr/bin/time&rdquo; instead of the shell built-in time.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ping bing.com</code></pre></div>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -219,7 +219,7 @@ sys	0m0.002s</code></pre></div>
 </script>
 <p><strong>Output:</strong></p>
 <p>As you can see, we now only get a normal clock output showing the operation took 5 seconds.</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">PING bing.com (13.107.21.200) 56(84) bytes of data.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">PING bing.com (13.107.21.200) 56(84) bytes of data.
 64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=113 time=154 ms
 64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=113 time=147 ms
 64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=113 time=170 ms
@@ -232,9 +232,9 @@ rtt min/avg/max/mdev = 147.314/166.390/190.495/14.935 ms
 0:05.11</code></pre></div>
 <p><strong>Get a detailed output of the time command:</strong></p>
 <p>If you find that you need more detailed information for the time command output, you can use the &ldquo;-v&rdquo; switch as follows:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -v ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -v ping bing.com</code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">PING bing.com (13.107.21.200) 56(84) bytes of data.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">PING bing.com (13.107.21.200) 56(84) bytes of data.
 64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=113 time=195 ms
 64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=113 time=169 ms
 64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=113 time=193 ms
@@ -268,15 +268,15 @@ rtt min/avg/max/mdev = 169.307/198.564/235.162/23.584 ms
 	Exit status: 0</code></pre></div>
 <p><strong>Time a bash script:</strong></p>
 <p>If you&rsquo;re running a bash script with plenty of commands and long operations, you can simply time the script as follows:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ./script.sh</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ./script.sh</code></pre></div>
 <p><strong>Redirect the time output to a file:</strong></p>
 <p>If you ever have the need to log the time into a file, you can use the &ldquo;-o&rdquo; switch and point to the file as follows:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -o /path/to/file.txt ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -o /path/to/file.txt ping bing.com</code></pre></div>
 <p>To append the time log to an already existing file, you can use the &ldquo;-a&rdquo; switch as follows:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -a /path/to/file.txt ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -a /path/to/file.txt ping bing.com</code></pre></div>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>To time a command in linux is easy to use and quite useful. It&rsquo;s excellent for timing those long operations while you are away from your system. The time command has plenty more switches and options which you can view in your terminal by viewing the manual as follows&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">man time</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">man time</code></pre></div>
 <p>That will be all for this quick look at the time command.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -453,10 +453,10 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2021 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
+  <script src="https://techstop.github.io/bundle.min.0a33cef77c409fbaa4b21fc8e6575f363c163b3804a5320d22b29ad3673acf43.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>

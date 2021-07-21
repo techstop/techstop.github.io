@@ -6,11 +6,7 @@
     <description>Recent content in Linux on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Nov 2019 22:28:51 -0400</lastBuildDate>
-    
-	<atom:link href="https://techstop.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 13 Nov 2019 22:28:51 -0400</lastBuildDate><atom:link href="https://techstop.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Get CPU and GPU Temps in Linux</title>
       <link>https://techstop.github.io/get-cpu-gpu-temps-linux/</link>

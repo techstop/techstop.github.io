@@ -179,7 +179,7 @@ window.cookieconsent.initialise({
 <p>If you&rsquo;re not familiar with bash aliases I highly recommend you read on. Bash aliases are fantastic for saving time and not having to remember commands or groups of commands.</p>
 <p>A bash alias is just a shortcut that you can set to be a word or even a single letter.</p>
 <p>The syntax for an alias is as follows:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">shortcut</span><span class="o">=</span><span class="s1">&#39;value&#39;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">shortcut</span><span class="o">=</span><span class="s1">&#39;value&#39;</span></code></pre></div>
 <ul>
 <li><strong>alias</strong> = Command used to set an alias per session.</li>
 <li><strong>shortcut</strong> = The word or letters you choose to call your commands or groups of commands.</li>
@@ -190,11 +190,11 @@ window.cookieconsent.initialise({
 <h2 id="temporary-bash-aliases"><strong>Temporary Bash Aliases</strong></h2>
 <p>Setting up an alias for the current session is straightforward. This method is usually good for setting up an alias that you don&rsquo;t need permanently.</p>
 <p>In this example we set an alias for the <a href="https://techstop.github.io/clear-reset-terminal/">clear</a> command. Just enter this in your terminal:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">c</span><span class="o">=</span><span class="s1">&#39;clear&#39;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">c</span><span class="o">=</span><span class="s1">&#39;clear&#39;</span></code></pre></div>
 <p>Now we just need to type &ldquo;<strong>c</strong>&rdquo; in the terminal to clear any output.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">c</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">c</code></pre></div>
 <p>If you decide you want to remove the alias, you can run the following command:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">unalias</span> c</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">unalias</span> c</code></pre></div>
 <p>This removes the previous alias we set for the <a href="https://techstop.github.io/clear-reset-terminal/">clear</a> command.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -210,26 +210,26 @@ window.cookieconsent.initialise({
 <p>This is my preferred method to add a bash alias. I generally set aliases that I often use.</p>
 <p>To add an alias permanently, you would add it to your &ldquo;<strong>.bashrc</strong>&rdquo; file. You can do this by opening the file in your text editor and adding the aliases at the bottom of the file.</p>
 <p>To add the alias for the clear command, you can add the following to your bashrc:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># My aliases</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># My aliases</span>
 <span class="nb">alias</span> <span class="nv">c</span><span class="o">=</span><span class="s1">&#39;clear&#39;</span></code></pre></div>
 <p>Don&rsquo;t forget to restart your terminal to start using your new aliases.</p>
 <p><strong>Note:</strong> We added the &ldquo;My aliases&rdquo; comment just for future reference.</p>
 <p>You can also add the alias from terminal as follows:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;# My aliases&#34;</span> &gt;&gt; .bashrc
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;# My aliases&#34;</span> &gt;&gt; .bashrc
 <span class="nb">echo</span> <span class="s2">&#34;alias c=&#39;clear&#39;&#34;</span> &gt;&gt; .bashrc</code></pre></div>
 <p>To delete an alias, you can just delete it from the bashrc file.</p>
 <h2 id="view-bash-aliases"><strong>View Bash Aliases</strong></h2>
 <p>To view all aliases you can just run the alias command. This can be very useful if you ever forget an alias.</p>
 <p>Just run the following:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">alias</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">alias</code></pre></div>
 <h2 id="sample-bash-aliases"><strong>Sample Bash Aliases</strong></h2>
 <p>Here&rsquo;s some samples of aliases just to give you some ideas. You can really get creative with aliases and handle large tasks with as little as entering a single letter in your terminal.</p>
 <p><strong><a href="https://techstop.github.io/clear-reset-terminal/">Reset</a> your terminal:</strong>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">r</span><span class="o">=</span><span class="s1">&#39;tput reset&#39;</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">r</span><span class="o">=</span><span class="s1">&#39;tput reset&#39;</span></code></pre></div></p>
 <p><strong><a href="https://techstop.github.io/update-linux-terminal/">Update</a> your system:</strong>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">update</span><span class="o">=</span><span class="s1">&#39;sudo apt update &amp;&amp; sudo apt upgrade -y&#39;</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">update</span><span class="o">=</span><span class="s1">&#39;sudo apt update &amp;&amp; sudo apt upgrade -y&#39;</span></code></pre></div></p>
 <p><strong>Call a bash script:</strong>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">scpt</span><span class="o">=</span><span class="s1">&#39;/path/to/script.sh&#39;</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">scpt</span><span class="o">=</span><span class="s1">&#39;/path/to/script.sh&#39;</span></code></pre></div></p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>Bash aliases in linux are a must have. Aliases just makes using the terminal much quicker and efficient and I&rsquo;m all for that.</p>
 <p>That&rsquo;ll be all for this look at bash aliases. If you have any aliases you use regularly that you&rsquo;d like to share, please do so in the comments below.</p>
@@ -408,10 +408,10 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2020 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2021 &middot; <a href="https://techstop.github.io/">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.544e8745be7c88924af3c62198a3969cf339cd6fe694b02cf5e87dc3b923dcf3.js"></script>
+  <script src="https://techstop.github.io/bundle.min.0a33cef77c409fbaa4b21fc8e6575f363c163b3804a5320d22b29ad3673acf43.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
