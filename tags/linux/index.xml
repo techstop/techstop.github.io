@@ -1193,7 +1193,7 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;There are many download managers out there that get the job done, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you have any large files to download or need to use the ftp protocol, wget is your best bet. I&amp;rsquo;ll show you a few neat ways to use wget.&lt;/p&gt;</description>
+&lt;p&gt;There are many download managers out there that get the job done, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you have any large files to download or need to use the ftp protocol, wget is your best bet. You can also use wget to get the file download size without actually downloading the file. Let me show you a few neat ways to use wget.&lt;/p&gt;</description>
     </item>
     
     <item>
