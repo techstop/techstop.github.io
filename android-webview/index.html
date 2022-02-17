@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Android WebView - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="In this tutorial you will learn how to create an Android webview in your app. You can use the webview to render web pages and also interact with the pages.">
+  <meta name="description" content="In this tutorial you will learn how to create an Android webview in your app. You can use the webview to render web pages and also interact with the pages. This webview will also allow you to download from links across the web.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -140,7 +140,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/android-webview/" title="Android WebView">Android WebView</a></h1>
 
-<div class="post-info">Published: Feb 4, 2019 &middot; Updated: Sep 27, 2019</div>
+<div class="post-info">Published: Feb 4, 2019 &middot; Updated: Feb 16, 2022</div>
 
     <p><div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/android-webview/android-webview-0.png" alt="Android WebView" title="Android WebView"  width="100px">
@@ -210,12 +210,13 @@ window.cookieconsent.initialise({
 	}
 </script>
 </p>
-<p>The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage permissions for our DownloadListener for android 6+.</p>
+<p>The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage write permissions for our DownloadListener for android 6+.</p>
 <p>The code in this tutorial will be in the full project on github linked at the bottom of this page. Feel free to fork or download the project from github.</p>
 <p><strong>Summary:</strong></p>
 <ul>
 <li>We will create a new class with our webview that we can pass any web page URL to.</li>
 <li>In our MainActivity we create two buttons that will each pass a different web page URL to our webview.</li>
+<li>In our WebView class we will add a DowloadListener, ProgressBar, and request storage write permission.</li>
 </ul>
 <h2 id="android-webview-example">Android WebView Example</h2>
 <p>Begin by creating a new project in Android Studio with an Empty Activity if you haven’t already. We can call the project “WebView Example”.</p>
@@ -234,7 +235,6 @@ window.cookieconsent.initialise({
 <span class="kn">import</span> <span class="nn">android.os.Environment</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.webkit.CookieManager</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.webkit.DownloadListener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.webkit.URLUtil</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.webkit.WebView</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.webkit.WebViewClient</span><span class="o">;</span>
@@ -245,7 +245,6 @@ window.cookieconsent.initialise({
 <span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">androidx.core.app.ActivityCompat</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nn">java.util.Objects</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyWebView</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
   <span class="c1">// Declare our web view.
@@ -290,22 +289,20 @@ window.cookieconsent.initialise({
 
     <span class="c1">// Adds a DownloadListener to our web view. This allows us to click on
 </span><span class="c1"></span>    <span class="c1">// download links and have items download to our downloads directory.
-</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">setDownloadListener</span><span class="o">(</span><span class="k">new</span> <span class="n">DownloadListener</span><span class="o">()</span> <span class="o">{</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onDownloadStart</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">String</span> <span class="n">userAgent</span><span class="o">,</span> <span class="n">String</span> <span class="n">contentDisposition</span><span class="o">,</span> <span class="n">String</span> <span class="n">mimetype</span><span class="o">,</span> <span class="kt">long</span> <span class="n">contentLength</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="n">URLUtil</span><span class="o">.</span><span class="na">guessFileName</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">contentDisposition</span><span class="o">,</span> <span class="n">mimetype</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">cookie</span> <span class="o">=</span> <span class="n">CookieManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getCookie</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
-        <span class="n">DownloadManager</span> <span class="n">dm</span> <span class="o">=</span> <span class="o">(</span><span class="n">DownloadManager</span><span class="o">)</span> <span class="n">getSystemService</span><span class="o">(</span><span class="n">DOWNLOAD_SERVICE</span><span class="o">);</span>
-        <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">url</span><span class="o">));</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">setAllowedNetworkTypes</span><span class="o">(</span><span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">NETWORK_WIFI</span> <span class="o">|</span> <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">NETWORK_MOBILE</span><span class="o">);</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">setAllowedOverRoaming</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">allowScanningByMediaScanner</span><span class="o">();</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">setDestinationInExternalPublicDir</span><span class="o">(</span><span class="n">Environment</span><span class="o">.</span><span class="na">DIRECTORY_DOWNLOADS</span><span class="o">,</span> <span class="n">fileName</span><span class="o">);</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">addRequestHeader</span><span class="o">(</span><span class="s">&#34;Cookie&#34;</span><span class="o">,</span> <span class="n">cookie</span><span class="o">);</span>
-        <span class="n">request</span><span class="o">.</span><span class="na">setNotificationVisibility</span><span class="o">(</span><span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">VISIBILITY_VISIBLE_NOTIFY_COMPLETED</span><span class="o">);</span>
-        <span class="c1">// Check for storage write permission before attempting to download.
-</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="n">getPermission</span><span class="o">())</span> <span class="o">{</span>
-          <span class="n">Objects</span><span class="o">.</span><span class="na">requireNonNull</span><span class="o">(</span><span class="n">dm</span><span class="o">).</span><span class="na">enqueue</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
-        <span class="o">}</span>
+</span><span class="c1"></span>    <span class="n">webview</span><span class="o">.</span><span class="na">setDownloadListener</span><span class="o">((</span><span class="n">url</span><span class="o">,</span> <span class="n">userAgent</span><span class="o">,</span> <span class="n">contentDisposition</span><span class="o">,</span> <span class="n">mimetype</span><span class="o">,</span> <span class="n">contentLength</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="n">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="n">URLUtil</span><span class="o">.</span><span class="na">guessFileName</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">contentDisposition</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+      <span class="n">String</span> <span class="n">cookie</span> <span class="o">=</span> <span class="n">CookieManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getCookie</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+      <span class="n">DownloadManager</span> <span class="n">dm</span> <span class="o">=</span> <span class="o">(</span><span class="n">DownloadManager</span><span class="o">)</span> <span class="n">getSystemService</span><span class="o">(</span><span class="n">DOWNLOAD_SERVICE</span><span class="o">);</span>
+      <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">url</span><span class="o">));</span>
+      <span class="n">request</span><span class="o">.</span><span class="na">setAllowedNetworkTypes</span><span class="o">(</span><span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">NETWORK_WIFI</span> <span class="o">|</span> <span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">NETWORK_MOBILE</span><span class="o">);</span>
+      <span class="n">request</span><span class="o">.</span><span class="na">setAllowedOverRoaming</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+      <span class="n">request</span><span class="o">.</span><span class="na">allowScanningByMediaScanner</span><span class="o">();</span>
+      <span class="n">request</span><span class="o">.</span><span class="na">setDestinationInExternalPublicDir</span><span class="o">(</span><span class="n">Environment</span><span class="o">.</span><span class="na">DIRECTORY_DOWNLOADS</span><span class="o">,</span> <span class="n">fileName</span><span class="o">);</span>
+      <span class="n">request</span><span class="o">.</span><span class="na">addRequestHeader</span><span class="o">(</span><span class="s">&#34;Cookie&#34;</span><span class="o">,</span> <span class="n">cookie</span><span class="o">);</span>
+      <span class="n">request</span><span class="o">.</span><span class="na">setNotificationVisibility</span><span class="o">(</span><span class="n">DownloadManager</span><span class="o">.</span><span class="na">Request</span><span class="o">.</span><span class="na">VISIBILITY_VISIBLE_NOTIFY_COMPLETED</span><span class="o">);</span>
+      <span class="c1">// Check for storage write permission before attempting to download.
+</span><span class="c1"></span>      <span class="k">if</span> <span class="o">(</span><span class="n">getPermission</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">dm</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">dm</span><span class="o">.</span><span class="na">enqueue</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
       <span class="o">}</span>
     <span class="o">});</span>
 
@@ -332,11 +329,12 @@ window.cookieconsent.initialise({
 </span><span class="c1"></span>  <span class="c1">// run code for either situation. This method is optional, but useful.
 </span><span class="c1"></span>  <span class="nd">@Override</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionsResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="n">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onRequestPermissionsResult</span><span class="o">(</span><span class="n">requestCode</span><span class="o">,</span> <span class="n">permissions</span><span class="o">,</span> <span class="n">grantResults</span><span class="o">);</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">requestCode</span> <span class="o">==</span> <span class="n">WRITE_STORAGE</span><span class="o">)</span> <span class="o">{</span>
       <span class="k">if</span> <span class="o">(</span><span class="n">grantResults</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span> <span class="o">&amp;&amp;</span> <span class="n">grantResults</span><span class="o">[</span><span class="n">0</span><span class="o">]</span> <span class="o">==</span> <span class="n">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_GRANTED</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Permission Granted!&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+        <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Permission Granted. Try download again.&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
       <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-        <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Permission Denied!&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
+        <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Permission Denied! Cannot Download.&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
       <span class="o">}</span>
     <span class="o">}</span>
   <span class="o">}</span>
@@ -397,16 +395,17 @@ window.cookieconsent.initialise({
   <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span><span class="nt">&gt;</span>
 
   <span class="nt">&lt;WebView</span>
+    <span class="na">android:id=</span><span class="s">&#34;@+id/webView&#34;</span>
     <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
-    <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span>
-    <span class="na">android:id=</span><span class="s">&#34;@+id/webView&#34;</span> <span class="nt">/&gt;</span>
+    <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span> <span class="nt">/&gt;</span>
 
   <span class="nt">&lt;ProgressBar</span>
-    <span class="na">android:id=</span><span class="s">&#34;@+id/progressBar&#34;</span>
-    <span class="na">style=</span><span class="s">&#34;?android:attr/progressBarStyleHorizontal&#34;</span>
-    <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
-    <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-    <span class="na">android:indeterminateOnly=</span><span class="s">&#34;true&#34;</span> <span class="nt">/&gt;</span>
+      <span class="na">android:id=</span><span class="s">&#34;@+id/progressBar&#34;</span>
+      <span class="na">style=</span><span class="s">&#34;?android:attr/progressBarStyleHorizontal&#34;</span>
+      <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+      <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+      <span class="na">android:indeterminateTint=</span><span class="s">&#34;?attr/colorAccent&#34;</span>
+      <span class="na">android:indeterminate=</span><span class="s">&#34;true&#34;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/RelativeLayout&gt;</span></code></pre></div></p>
 <p>Now we setup our Buttons with the URLs in the MainActivity class…</p>
 <p><strong>MainActivity.java</strong>
@@ -416,27 +415,29 @@ window.cookieconsent.initialise({
 
 <span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Button</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
   <span class="nd">@Override</span>
   <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
     <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
     <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-  <span class="o">}</span>
 
-  <span class="c1">// This button will pass the Google website url to MyWebView.class
-</span><span class="c1"></span>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">googleButton</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">MyWebView</span><span class="o">.</span><span class="na">url</span> <span class="o">=</span> <span class="s">&#34;https://www.google.com/&#34;</span><span class="o">;</span>
-    <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">MyWebView</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-    <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
-  <span class="o">}</span>
+    <span class="c1">// This button will pass the Google website url to MyWebView.class
+</span><span class="c1"></span>    <span class="n">Button</span> <span class="n">gbtn</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">googleButton</span><span class="o">);</span>
+    <span class="n">gbtn</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">view</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="n">MyWebView</span><span class="o">.</span><span class="na">url</span> <span class="o">=</span> <span class="s">&#34;https://www.google.com/&#34;</span><span class="o">;</span>
+      <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">MyWebView</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+      <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+    <span class="o">});</span>
 
-  <span class="c1">// This button will pass the techStop website url to MyWebView.class
-</span><span class="c1"></span>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">itgButton</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">MyWebView</span><span class="o">.</span><span class="na">url</span> <span class="o">=</span> <span class="s">&#34;https://techstop.github.io/&#34;</span><span class="o">;</span>
-    <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">MyWebView</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-    <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+    <span class="c1">// This button will pass the techStop website url to MyWebView.class
+</span><span class="c1"></span>    <span class="n">Button</span> <span class="n">tsbtn</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">tsButton</span><span class="o">);</span>
+    <span class="n">tsbtn</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">view</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="n">MyWebView</span><span class="o">.</span><span class="na">url</span> <span class="o">=</span> <span class="s">&#34;https://techstop.github.io/&#34;</span><span class="o">;</span>
+      <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="n">MyWebView</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+      <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+    <span class="o">});</span>
   <span class="o">}</span>
 <span class="o">}</span></code></pre></div></p>
 <p>We now need to add the buttons to the MainActivity layout…</p>
@@ -444,23 +445,23 @@ window.cookieconsent.initialise({
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
   <span class="na">xmlns:tools=</span><span class="s">&#34;http://schemas.android.com/tools&#34;</span>
-  <span class="na">android:orientation=</span><span class="s">&#34;vertical&#34;</span>
-  <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
   <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
   <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span>
+  <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+  <span class="na">android:orientation=</span><span class="s">&#34;vertical&#34;</span>
   <span class="na">tools:context=</span><span class="s">&#34;.MainActivity&#34;</span><span class="nt">&gt;</span>
 
   <span class="nt">&lt;Button</span>
     <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
     <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-    <span class="na">android:onClick=</span><span class="s">&#34;googleButton&#34;</span>
-    <span class="na">android:text=</span><span class="s">&#34;@string/google&#34;</span><span class="nt">/&gt;</span>
+    <span class="na">android:id=</span><span class="s">&#34;@+id/googleButton&#34;</span>
+    <span class="na">android:text=</span><span class="s">&#34;@string/google&#34;</span> <span class="nt">/&gt;</span>
 
   <span class="nt">&lt;Button</span>
     <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
     <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
-    <span class="na">android:onClick=</span><span class="s">&#34;itgButton&#34;</span>
-    <span class="na">android:text=</span><span class="s">&#34;@string/in_tech_geek&#34;</span><span class="nt">/&gt;</span>
+    <span class="na">android:id=</span><span class="s">&#34;@+id/tsButton&#34;</span>
+    <span class="na">android:text=</span><span class="s">&#34;@string/tech_Stop&#34;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/LinearLayout&gt;</span></code></pre></div></p>
 <p>We&rsquo;re almost done! Lets add the strings we need…</p>
 <p><strong>strings.xml</strong>
@@ -473,30 +474,31 @@ window.cookieconsent.initialise({
 <p><strong>AndroidManifest.xml</strong>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
-  <span class="na">package=</span><span class="s">&#34;com.webviewexample&#34;</span><span class="nt">&gt;</span>
+    <span class="na">xmlns:tools=</span><span class="s">&#34;http://schemas.android.com/tools&#34;</span>
+    <span class="na">package=</span><span class="s">&#34;com.webviewexample&#34;</span><span class="nt">&gt;</span>
 
-  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.ACCESS_NETWORK_STATE&#34;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.ACCESS_WIFI_STATE&#34;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.WRITE_EXTERNAL_STORAGE&#34;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.ACCESS_DOWNLOAD_MANAGER&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.ACCESS_NETWORK_STATE&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.WRITE_EXTERNAL_STORAGE&#34;</span>
+        <span class="na">tools:ignore=</span><span class="s">&#34;ScopedStorage&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.ACCESS_DOWNLOAD_MANAGER&#34;</span> <span class="nt">/&gt;</span>
 
-  <span class="nt">&lt;application</span>
-    <span class="na">android:allowBackup=</span><span class="s">&#34;true&#34;</span>
-    <span class="na">android:icon=</span><span class="s">&#34;@mipmap/ic_launcher&#34;</span>
-    <span class="na">android:label=</span><span class="s">&#34;@string/app_name&#34;</span>
-    <span class="na">android:roundIcon=</span><span class="s">&#34;@mipmap/ic_launcher_round&#34;</span>
-    <span class="na">android:supportsRtl=</span><span class="s">&#34;true&#34;</span>
-    <span class="na">android:theme=</span><span class="s">&#34;@style/AppTheme&#34;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">&#34;.MainActivity&#34;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;intent-filter&gt;</span>
-        <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.MAIN&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;application</span>
+        <span class="na">android:allowBackup=</span><span class="s">&#34;true&#34;</span>
+        <span class="na">android:icon=</span><span class="s">&#34;@mipmap/ic_launcher&#34;</span>
+        <span class="na">android:label=</span><span class="s">&#34;@string/app_name&#34;</span>
+        <span class="na">android:roundIcon=</span><span class="s">&#34;@mipmap/ic_launcher_round&#34;</span>
+        <span class="na">android:theme=</span><span class="s">&#34;@style/AppTheme&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">&#34;.MainActivity&#34;</span>
+            <span class="na">android:exported=</span><span class="s">&#34;true&#34;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;intent-filter&gt;</span>
+                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.MAIN&#34;</span> <span class="nt">/&gt;</span>
 
-        <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.category.LAUNCHER&#34;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;/intent-filter&gt;</span>
-    <span class="nt">&lt;/activity&gt;</span>
-    <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">&#34;.MyWebView&#34;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/application&gt;</span>
+                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.category.LAUNCHER&#34;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/intent-filter&gt;</span>
+        <span class="nt">&lt;/activity&gt;</span>
+        <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">&#34;.MyWebView&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/application&gt;</span>
 <span class="nt">&lt;/manifest&gt;</span></code></pre></div></p>
 <p>This will conclude the Android WebView tutorial. The full project is on github. You can download or fork it from the link below and import it to your favorite IDE, though Android Studio is recommended.</p>
 <div>
