@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Bash Exit Status - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Learn how to get the bash exit status for bash commands. Follow this tutorial which will teach you how to get the exit status codes for any bash commands.">
+  <meta name="description" content="Learn how to get the exit status codes for bash commands. Follow this tutorial which will teach you how to get the exit status codes for any bash commands which you can also use in conditional statements in your scripts.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -140,7 +140,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/bash-exit-status/" title="Bash Exit Status">Bash Exit Status</a></h1>
 
-<div class="post-info">Published: Oct 15, 2019 &middot; Updated: Oct 16, 2019</div>
+<div class="post-info">Published: Oct 15, 2019 &middot; Updated: Feb 18, 2022</div>
 
     <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/stat.png" alt="Bash Exit Status" title="Bash Exit Status"  width="150px">
@@ -176,7 +176,7 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>Regardless of whether a bash command ends successfully or not, it returns and exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.</p>
+<p>Regardless of whether a bash command ends successfully or not, it returns an exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.</p>
 <p>The exit status of a bash command is always an integer (number). A successful command will have an exit status of zero (0), while a command that fails will have an exit status from 1 to 255.</p>
 <p>There is a special variable you can use to get the exit status of the previously executed command. You can easily print the exit status variable ($?) with the echo command.</p>
 <p><strong>Take a look at this example or try it yourself:</strong></p>
@@ -211,7 +211,7 @@ datefoo
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>In this example we run three commands and save the exit status for each in a variable. One of the commands is not a real command like one of our previous examples.</p>
+<p>In this example we run three commands and save the exit status for each in a variable. One of the commands is not a real command like in our previous example.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="c1"># Prints username</span>

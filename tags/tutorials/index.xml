@@ -523,7 +523,7 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;Regardless of whether a bash command ends successfully or not, it returns and exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.&lt;/p&gt;</description>
+&lt;p&gt;Regardless of whether a bash command ends successfully or not, it returns an exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.&lt;/p&gt;</description>
     </item>
     
     <item>
