@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Android BroadcastReceiver - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="The Android BroadcastReceiver class is very important and should get familiar with it. In this tutorial we will cover how to use the BroadcastReceiver with a JobIntentService to run some code upon boot up.">
+  <meta name="description" content="The Android BroadcastReceiver and WorkManager classes are very important and you should get familiar with them. In this tutorial we will cover how to use the BroadcastReceiver with a WorkManager to run some code on bootup.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -140,7 +140,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/android-broadcastreceiver/" title="Android BroadcastReceiver">Android BroadcastReceiver</a></h1>
 
-<div class="post-info">Published: Jan 19, 2019 &middot; Updated: Sep 11, 2019</div>
+<div class="post-info">Published: Jan 19, 2019 &middot; Updated: Feb 18, 2022</div>
 
     <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/broadcastreceiver/android-broadcastreceiver.png" alt="Android BroadcastReceiver" title="Android BroadcastReceiver"  width="100px">
@@ -176,51 +176,69 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>Today we will be using an android BroadcastReceiver to run code on boot up. There can be many reasons to run code on boot up. One good use case would be to enable settings that a user has selected within your app to be set on every boot up.</p>
-<p>We will place the code we need to run on boot up in a Service class that we will be initiating from our BroadcastReceiver class.</p>
-<p>The code in this tutorial will be in the full project which I have uploaded to github and linked near the bottom of this page. Feel free to fork or download the project from github. So lets get started.</p>
-<h2 id="android-broadcastreceiver-example-tutorial">Android BroadcastReceiver Example Tutorial</h2>
+<p>Today we will be using an android <strong>BroadcastReceiver</strong> and <strong>WorkManager</strong> to run code on bootup in Android. There can be many reasons to run code on bootup. One good use case would be to set settings that a user has selected within your app on every bootup.</p>
+<p>We will place the code we need to run on bootup in a Worker class provided by the WorkManager that we will be initiating from our BroadcastReceiver. Any task or code in our Worker class will run in a background thread. This is good practice to avoid holding up the UI thread. If you do need to run for example, a Toast message on the UI thread, then you can wrap it in a Handler, but that&rsquo;s outside the scope of this tutorial.</p>
+<p>The code in this tutorial will be in the full project which I have uploaded to github and linked near the bottom of this page. Feel free to fork or download the project from github. Lets get started.</p>
+<h2 id="android-broadcastreceiver--workmanager-tutorial"><strong>Android BroadcastReceiver &amp; WorkManager Tutorial</strong></h2>
 <p>Lets begin by creating a new project in Android Studio with an Empty Activity if you haven&rsquo;t already. We can call the project BroadcastReceiver.</p>
-<p>Create a new java class called BootUpService. The BootUpService class will extend JobIntentService. This Service will be responsible for running what we need on boot up. Here&rsquo;s what it should look like…</p>
+<p>To start things off we need to add a couple of dependencies in our app <strong>build.gradle</strong> file&hellip;</p>
+<p>This dependency is needed to use the WorkManager.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s1">&#39;androidx.work:work-runtime:2.7.1&#39;</span></code></pre></div>
+<p>This dependency is needed for the Notification message in this tutorial.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s1">&#39;androidx.core:core:1.7.0&#39;</span></code></pre></div>
+<p>Create a new java class called BootUpWork. The BootUpWork class will extend Worker. This class will be responsible for running our task or code in a background thread on bootup. Here&rsquo;s what it should look like…</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
 
+<span class="kn">import</span> <span class="nn">android.app.Notification</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.app.NotificationChannel</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.app.NotificationManager</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Handler</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Looper</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Build</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">androidx.annotation.NonNull</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">androidx.core.app.JobIntentService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.core.app.NotificationCompat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.work.Worker</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.work.WorkerParameters</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootUpService</span> <span class="kd">extends</span> <span class="n">JobIntentService</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootUpWork</span> <span class="kd">extends</span> <span class="n">Worker</span> <span class="o">{</span>
 
-  <span class="c1">// You can assign any number to your job id
-</span><span class="c1"></span>  <span class="kd">final</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">job_id</span> <span class="o">=</span> <span class="n">95</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">BootUpWork</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="n">WorkerParameters</span> <span class="n">workerParams</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">workerParams</span><span class="o">);</span>
+    <span class="o">}</span>
 
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">enqueueWork</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">enqueueWork</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">BootUpService</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">job_id</span><span class="o">,</span> <span class="n">intent</span><span class="o">);</span>
-  <span class="o">}</span>
+    <span class="nd">@NonNull</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Result</span> <span class="nf">doWork</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Any code/task you need to run on bootup can be placed here and will run on a background thread.
+</span><span class="c1"></span>        <span class="c1">// This is just a sample notification message to show our BroadcastReceiver and
+</span><span class="c1"></span>        <span class="c1">// WorkManager are working properly.
+</span><span class="c1"></span>        <span class="n">String</span> <span class="n">channelID</span> <span class="o">=</span> <span class="s">&#34;channel_0&#34;</span><span class="o">;</span>
+        <span class="n">NotificationManager</span> <span class="n">notificationManager</span> <span class="o">=</span> <span class="o">(</span><span class="n">NotificationManager</span><span class="o">)</span><span class="n">getApplicationContext</span><span class="o">().</span><span class="na">getSystemService</span><span class="o">(</span><span class="n">Context</span><span class="o">.</span><span class="na">NOTIFICATION_SERVICE</span><span class="o">);</span>
+        <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">Builder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="n">channelID</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span> <span class="o">&gt;=</span> <span class="n">26</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">NotificationChannel</span> <span class="n">channel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NotificationChannel</span><span class="o">(</span><span class="n">channelID</span><span class="o">,</span><span class="s">&#34;BroadcastReceiver&#34;</span><span class="o">,</span> <span class="n">NotificationManager</span><span class="o">.</span><span class="na">IMPORTANCE_DEFAULT</span><span class="o">);</span>
+            <span class="n">channel</span><span class="o">.</span><span class="na">enableLights</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="n">channel</span><span class="o">.</span><span class="na">setShowBadge</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="n">channel</span><span class="o">.</span><span class="na">setLockscreenVisibility</span><span class="o">(</span><span class="n">Notification</span><span class="o">.</span><span class="na">VISIBILITY_PUBLIC</span><span class="o">);</span>
+            <span class="n">notificationManager</span><span class="o">.</span><span class="na">createNotificationChannel</span><span class="o">(</span><span class="n">channel</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">setSmallIcon</span><span class="o">(</span><span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">stat_notify_more</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setContentTitle</span><span class="o">(</span><span class="s">&#34;Run Tasks on Bootup&#34;</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setContentText</span><span class="o">(</span><span class="s">&#34;BroadcastReceiver &amp; WorkManager&#34;</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setStyle</span><span class="o">(</span><span class="k">new</span> <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">BigTextStyle</span><span class="o">().</span><span class="na">bigText</span><span class="o">(</span>
+                        <span class="s">&#34;Our BroadcastReceiver and WorkManager are working properly &#34;</span> <span class="o">+</span>
+                                <span class="s">&#34;to run code/tasks on bootup.&#34;</span>
+                <span class="o">))</span>
+                <span class="o">.</span><span class="na">setDefaults</span><span class="o">(</span><span class="n">NotificationCompat</span><span class="o">.</span><span class="na">DEFAULT_SOUND</span> <span class="o">|</span> <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">DEFAULT_LIGHTS</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setPriority</span><span class="o">(</span><span class="n">NotificationCompat</span><span class="o">.</span><span class="na">PRIORITY_DEFAULT</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">NotificationCompat</span><span class="o">.</span><span class="na">VISIBILITY_PUBLIC</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setAutoCancel</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+        <span class="n">notificationManager</span><span class="o">.</span><span class="na">notify</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">builder</span><span class="o">.</span><span class="na">build</span><span class="o">());</span>
 
-  <span class="nd">@Override</span>
-  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onHandleWork</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// Any code you need to run on boot up can be placed here.
-</span><span class="c1"></span>    <span class="c1">// This is just a sample Toast message to show our BroadcastReceiver works.
-</span><span class="c1"></span>    <span class="c1">// We&#39;ll be using a Handler to run our Toast since it needs to run on the UI thread. Otherwise you don&#39;t need it.
-</span><span class="c1"></span>    <span class="n">Handler</span> <span class="n">handler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Handler</span><span class="o">(</span><span class="n">Looper</span><span class="o">.</span><span class="na">getMainLooper</span><span class="o">());</span>
-    <span class="n">handler</span><span class="o">.</span><span class="na">post</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
-      <span class="nd">@Override</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
-          <span class="n">Toast</span><span class="o">.</span><span class="na">makeText</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="s">&#34;Our BroadcastReceiver works! Fantastic!&#34;</span><span class="o">,</span> <span class="n">Toast</span><span class="o">.</span><span class="na">LENGTH_LONG</span><span class="o">).</span><span class="na">show</span><span class="o">();</span>
-      <span class="o">}</span>
-    <span class="o">});</span>
-  <span class="o">}</span>
-
+        <span class="k">return</span> <span class="n">Result</span><span class="o">.</span><span class="na">success</span><span class="o">();</span>
+    <span class="o">}</span>
 <span class="o">}</span></code></pre></div>
-<p>Make sure to declare the BootUpService class in your AndroidManifest.xml like this…</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;service</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpService&#34;</span>
-  <span class="na">android:permission=</span><span class="s">&#34;android.permission.BIND_JOB_SERVICE&#34;</span><span class="nt">/&gt;</span></code></pre></div>
-<p>Now lets create another java class called BootUpReceiver which will extend BroadcastReceiver. The BroadcastReceiver is going to check that boot up has completed and then run our BootUpService class. Here&rsquo;s what it looks like…</p>
+<p>Now lets create another java class called BootUpReceiver which will extend BroadcastReceiver. The BroadcastReceiver is going to check that bootup has completed and then run our BootUpWork class. Here&rsquo;s what it looks like…</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -237,28 +255,32 @@ window.cookieconsent.initialise({
 <span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
 
+<span class="kn">import</span> <span class="nn">androidx.work.OneTimeWorkRequest</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.work.WorkManager</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.work.WorkRequest</span><span class="o">;</span>
+
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootUpReceiver</span> <span class="kd">extends</span> <span class="n">BroadcastReceiver</span> <span class="o">{</span>
 
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceive</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// Start our BootUpService class once boot up has completed
-</span><span class="c1"></span>    <span class="k">if</span> <span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_BOOT_COMPLETED</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">intent</span><span class="o">.</span><span class="na">getAction</span><span class="o">()))</span> <span class="o">{</span>
-      <span class="n">BootUpService</span><span class="o">.</span><span class="na">enqueueWork</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">());</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceive</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Runs when bootup has completed.
+</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_BOOT_COMPLETED</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">intent</span><span class="o">.</span><span class="na">getAction</span><span class="o">()))</span> <span class="o">{</span>
+            <span class="c1">// Our WorkManager will now run our task in a background thread.
+</span><span class="c1"></span>            <span class="n">WorkRequest</span> <span class="n">uploadWorkRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OneTimeWorkRequest</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="n">BootUpWork</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+            <span class="n">WorkManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">context</span><span class="o">).</span><span class="na">enqueue</span><span class="o">(</span><span class="n">uploadWorkRequest</span><span class="o">);</span>
+        <span class="o">}</span>
     <span class="o">}</span>
-  <span class="o">}</span>
 
 <span class="o">}</span></code></pre></div>
 <p>We now need to add permissions and declare the BroadcastReceiver in the AndroidManifest.xml as follows…</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!--For pre-android O to run JobIntentService, WAKE_LOCK is needed--&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.WAKE_LOCK&#34;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.RECEIVE_BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.RECEIVE_BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
 
 <span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpReceiver&#34;</span> <span class="na">android:enabled=</span><span class="s">&#34;true&#34;</span> <span class="na">android:exported=</span><span class="s">&#34;false&#34;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;intent-filter&gt;</span>
     <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/intent-filter&gt;</span>
 <span class="nt">&lt;/receiver&gt;</span></code></pre></div>
-<p>There you have it. That is all you need to setup a BroadcastReceiver with a JobIntentService to run your code on every boot up. Do keep in mind that the user needs to open your app at least once after they have installed it for a BroadcastReceiver to work (This is a security feature in android).</p>
+<p>There you have it. That is all you need to setup a BroadcastReceiver with a WorkManager to run your code on every bootup. Do keep in mind that the user needs to open your app at least once after they have installed it for a BroadcastReceiver to work (This is a security feature in android).</p>
 <p>The full project is on github. You can download or fork it from the link below and import it to your favorite IDE, though Android Studio is recommended.</p>
 <div>
   <a title="Android BroadcastReceiver" href="https://github.com/GameTheory-/android-broadcastreceiver" target="_blank">

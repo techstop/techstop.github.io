@@ -1758,7 +1758,7 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;Today we will be using an android BroadcastReceiver to run code on boot up. There can be many reasons to run code on boot up. One good use case would be to enable settings that a user has selected within your app to be set on every boot up.&lt;/p&gt;</description>
+&lt;p&gt;Today we will be using an android &lt;strong&gt;BroadcastReceiver&lt;/strong&gt; and &lt;strong&gt;WorkManager&lt;/strong&gt; to run code on bootup in Android. There can be many reasons to run code on bootup. One good use case would be to set settings that a user has selected within your app on every bootup.&lt;/p&gt;</description>
     </item>
     
     <item>
