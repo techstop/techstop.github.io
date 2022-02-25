@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Backup and Debloat Android No Root - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Backup and debloat Android without the need to root your device. If you don&#39;t want to, or there&#39;s no root for your device, then just use this tool to backup and debloat without root.">
+  <meta name="description" content="Backup and debloat Android without the need to root your device. If you don&#39;t want to, or there&#39;s no root for your device, then just use this tool to backup and debloat android without root.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -140,7 +140,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/backup-and-debloat-android-no-root/" title="Backup and Debloat Android No Root">Backup and Debloat Android No Root</a></h1>
 
-<div class="post-info">Published: Apr 19, 2018 &middot; Updated: Oct 12, 2019</div>
+<div class="post-info">Published: Apr 19, 2018 &middot; Updated: Feb 24, 2022</div>
 
     <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/backupdebloat/Backup-and-Debloat-Android-No-Root.png" alt="Backup and Debloat Android No Root" title="Backup and Debloat Android No Root"  width="200px">
@@ -176,7 +176,7 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>If you&rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&rsquo;re here reading this, it&rsquo;s likely because there is no root for your device. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called <strong>Backup and Debloat Android No Root</strong> to give you some control back over your device.</p>
+<p>If you&rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&rsquo;re here reading this, it&rsquo;s likely because there is no root for your device or you simply don&rsquo;t wish to root it. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called <strong>Backup and Debloat Android No Root</strong> to give you some control back over your device.</p>
 <p>Backup and Debloat Android No Root uses adb to uninstall bloatware and to make backups. Now this is nothing new. Android users have known about the adb non root method for a long time. What my tool does is simply facilitate everything in an easy to use script gui.</p>
 <p>Let&rsquo;s go over the different options in <strong>Backup and Debloat Android No Root</strong>&hellip;</p>
 <ol>
@@ -191,11 +191,11 @@ window.cookieconsent.initialise({
 <p>The rest of the options are self explanatory.</p>
 <h2 id="limitations"><strong>Limitations</strong></h2>
 <p>Adb has its known limitations&hellip;</p>
-<p>Adb can only backup apps where the developer of the app allows the app to be backed up in the <strong>AndroidManifest.xml</strong> with a bit of code that looks like this <strong>android:allowBackup=&ldquo;false&rdquo;</strong>. In full backups those apps will be ignored (options 1 and 2). In individual app backups you will get an empty backup for those apps. For all other apps you&rsquo;ll have good reliable backups.</p>
+<p>Adb can only backup apps where the developer of the app allows the app to be backed up in the <strong>AndroidManifest.xml</strong> with a bit of code that looks like this <strong>android:allowBackup=&ldquo;true&rdquo;</strong>. If this option is set to false, full backups of those apps will be ignored (options 1 and 2). In individual app backups you will get an empty backup for those apps. For all other apps you&rsquo;ll have good reliable backups.</p>
 <p>When apps are uninstalled they will not consume any resources or be visible to the user (that&rsquo;s good!). However, apps are only uninstalled for the user and not root. This means the apps are uninstalled but remain on the device like if they are frozen (not a problem at all).</p>
 <h2 id="warnings"><strong>Warnings</strong></h2>
 <p>Do not uninstall system critical apps that may cause a boot loop. If you do, perform a factory reset to end the boot loop.</p>
-<p>If you uninstall apps that you later decide you want back, you can do a factory reset and the apps will reinstall. This is the only way to get the apps back.</p>
+<p>If you uninstall apps that you later decide you want back, you can do a factory reset and the apps will reinstall.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -208,7 +208,7 @@ window.cookieconsent.initialise({
 </script>
 <h2 id="backup--debloat"><strong>Backup &amp; Debloat</strong></h2>
 <p>For Android 4.0 and up</p>
-<p>Tested on ubuntu &amp; xubuntu</p>
+<p>Tested on ubuntu &amp; Manjaro</p>
 <p>Make sure the &ldquo;<strong>bda</strong>&rdquo; file has execute permissions.</p>
 <ol>
 <li>Enable usb debugging on your device in developer options and then plug it to your computer.</li>
