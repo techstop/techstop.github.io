@@ -141,6 +141,57 @@ window.cookieconsent.initialise({
   
       <article>
   
+  <h1><a href="https://techstop.github.io/pause-and-resume-wget-downloads/" title="Pause and Resume Wget Downloads">Pause and Resume Wget Downloads</a></h1>
+
+<div class="post-info">Published: Sep 9, 2019 &middot; Updated: Feb 15, 2022</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/wget.png" alt="wget" title="wget"  width="150px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+<p>There are many download managers out there that get the job done, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you have any large files to download or need to use the ftp protocol, wget is your best bet. You can also use wget to get the file download size without actually downloading the file. Let me show you a few neat ways to use wget.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>, 
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/pause-and-resume-wget-downloads/" title="Pause and Resume Wget Downloads">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+  
+      <article>
+  
   <h1><a href="https://techstop.github.io/xfce-4-14-on-xubuntu-18-04/" title="Install Xfce 4.14 on Xubuntu 18.04">Install Xfce 4.14 on Xubuntu 18.04</a></h1>
 
 <div class="post-info">Published: Aug 27, 2019</div>
@@ -504,63 +555,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/android-toolbar/" title="Android Toolbar">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-  
-      <article>
-  
-  <h1><a href="https://techstop.github.io/android-broadcastreceiver/" title="Android BroadcastReceiver">Android BroadcastReceiver</a></h1>
-
-<div class="post-info">Published: Jan 19, 2019 &middot; Updated: Feb 18, 2022</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/broadcastreceiver/android-broadcastreceiver.png" alt="Android BroadcastReceiver" title="Android BroadcastReceiver"  width="100px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-<p>Today we will be using an android <strong>BroadcastReceiver</strong> and <strong>WorkManager</strong> to run code on bootup in Android. There can be many reasons to run code on bootup. One good use case would be to set settings that a user has selected within your app on every bootup.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/android-studio">android studio</a>, 
-    
-      <a href="https://techstop.github.io/tags/app-development">app development</a>, 
-    
-      <a href="https://techstop.github.io/tags/java">java</a>, 
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/android">android</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/android-broadcastreceiver/" title="Android BroadcastReceiver">Read more &raquo;</a></p>
   <hr>
 </article>
 
