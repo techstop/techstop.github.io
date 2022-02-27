@@ -178,12 +178,6 @@ window.cookieconsent.initialise({
 
 <p>Keeping linux updated is a simple hassle free task, unlike that other OS. On linux you can use a GUI app or update in a terminal. Both methods achieve the same result, but users usually have a preference. For me that&rsquo;s the terminal.</p>
 <p>It&rsquo;s very important to keep your system up to date to keep it protected against vulnerabilities. Hackers are always trying new and different ways to obtain your valuable data. Updating will also install software improvements and new features when available.</p>
-<h2 id="update-with-a-gui"><strong>Update With a GUI</strong></h2>
-<p>Most linux distributions come with a GUI app to install updates. I&rsquo;m currently using Xubuntu which comes with &ldquo;Software Updater&rdquo;. It&rsquo;s a simple app that checks for updates and installs them for you.</p>
-<p>Now in my experience with the GUI app in both Ubuntu and Xubuntu, if an application repository changes name you do not get a prompt to confirm this. This is a problem because without your consent, that particular app is not updated and held back. This is why I prefer and recommend the terminal to update since it always gives you the prompt to confirm the repo name change.</p>
-<h2 id="update-in-terminal"><strong>Update In Terminal</strong></h2>
-<p>Updating linux software in the terminal is actually quite simple and only requires two commands.</p>
-<p>We will be going over updating Debian and Debian based distros like Ubuntu and all of its derivatives with APT. The Advanced Package Tool(APT) is the command line tool for managing software efficiently from your terminal.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -194,6 +188,12 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<h2 id="update-with-a-gui"><strong>Update With a GUI</strong></h2>
+<p>Most linux distributions come with a GUI app to install updates. I&rsquo;m currently using Xubuntu which comes with &ldquo;Software Updater&rdquo;. It&rsquo;s a simple app that checks for updates and installs them for you.</p>
+<p>Now in my experience with the GUI app in both Ubuntu and Xubuntu, if an application repository changes name you do not get a prompt to confirm this. This is a problem because without your consent, that particular app is not updated and held back. This is why I prefer and recommend the terminal to update since it always gives you the prompt to confirm the repo name change.</p>
+<h2 id="update-in-terminal"><strong>Update In Terminal</strong></h2>
+<p>Updating linux software in the terminal is actually quite simple and only requires two commands.</p>
+<p>We will be going over updating Debian and Debian based distros like Ubuntu and all of its derivatives with APT. The Advanced Package Tool(APT) is the command line tool for managing software efficiently from your terminal.</p>
 <p><strong>Update software database:</strong></p>
 <p>First we need to update the local software database with the latest software as follows:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt update</code></pre></div>
@@ -228,6 +228,16 @@ Need to get 68.7 MB of archives.
 After this operation, 332 MB of additional disk space will be used.
 Do you want to continue? [Y/n]</code></pre></div>
 <p>You rarely ever need to reboot after an update unless you also receive a <strong>kernel update(linux-headers)</strong>. After running the second command above, if you see any kernel update mentioned in your terminal, then you should reboot your PC after the update process is done.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <p><strong>Update and upgrade in a one line command:</strong></p>
 <p>This one line command combines the previous two commands in a single one-liner. You&rsquo;ll notice it contains a &ldquo;-y&rdquo; switch at the end. This will automatically say &ldquo;yes&rdquo; to the prompt asking if you wish to update.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y</code></pre></div>

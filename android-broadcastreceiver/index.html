@@ -178,6 +178,16 @@ window.cookieconsent.initialise({
 
 <p>Today we will be using an android <strong>BroadcastReceiver</strong> and <strong>WorkManager</strong> to run code on bootup in Android. There can be many reasons to run code on bootup. One good use case would be to set settings that a user has selected within your app on every bootup.</p>
 <p>We will place the code we need to run on bootup in a Worker class provided by the WorkManager that we will be initiating from our BroadcastReceiver. Any task or code in our Worker class will run in a background thread. This is good practice to avoid holding up the UI thread. If you do need to run for example, a Toast message on the UI thread, then you can wrap it in a Handler, but that&rsquo;s outside the scope of this tutorial.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <p>The code in this tutorial will be in the full project which I have uploaded to github and linked near the bottom of this page. Feel free to fork or download the project from github. Lets get started.</p>
 <h2 id="android-broadcastreceiver--workmanager-tutorial"><strong>Android BroadcastReceiver &amp; WorkManager Tutorial</strong></h2>
 <p>Lets begin by creating a new project in Android Studio with an Empty Activity if you haven&rsquo;t already. We can call the project BroadcastReceiver.</p>
@@ -239,16 +249,6 @@ window.cookieconsent.initialise({
     <span class="o">}</span>
 <span class="o">}</span></code></pre></div>
 <p>Now lets create another java class called BootUpReceiver which will extend BroadcastReceiver. The BroadcastReceiver is going to check that bootup has completed and then run our BootUpWork class. Here&rsquo;s what it looks like…</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.content.BroadcastReceiver</span><span class="o">;</span>

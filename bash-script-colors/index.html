@@ -178,6 +178,16 @@ window.cookieconsent.initialise({
 
 <p>Using colors in bash scripts can be very useful. If you&rsquo;ve written your bash script with menus and prompts, it&rsquo;s a good idea to use ansi color codes to make your outputs more readable to the user. In this tutorial I&rsquo;ll cover some ways that you can use colors in your bash scripts for a more GUI like experience.</p>
 <p>Ansi color codes always start with these characters &ldquo;<strong>\e[</strong>&rdquo; followed by the numbers that determine the color you want. There are color codes for the foreground(text) and background. There are also color codes for bold, underlines, and high intensity colors.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <p>Colors in bash scripts can be used to distinguish text. For example, you can make error outputs in red text while prompts with instructions in green text. Use bold and underlines to emphasize words and phrases. Background colors can be used for section separation. There&rsquo;s many ways to put color codes into good use in your bash scripts.</p>
 <h2 id="style-your-bash-script-with-ansi-colors"><strong>Style Your Bash Script With Ansi Colors</strong></h2>
 <p>Lets start off by creating a file called &ldquo;<strong>test.sh</strong>&rdquo;. Now copy the code below to the file and give it execute permissions and then run the file in your terminal.</p>
@@ -240,6 +250,15 @@ window.cookieconsent.initialise({
 <p>Lets break things down a bit&hellip;</p>
 <p>As you can see, we used a few colors and also applied underlines, bold text, and backgrounds.</p>
 <p>It&rsquo;s a good idea to place your color codes in global variables at the top of your script to keep your code neat.</p>
+<p>Notice how we always use the echo &ldquo;-e&rdquo; flag on lines with color codes. This tells echo to enable interpretation of escapes so that the color codes work. We also place the color code variables in curly brackets &ldquo;${}&rdquo; to separate it from normal text.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
+<p>For paragraphs or multi line outputs you do not need the echo &ldquo;-e&rdquo; for every line as displayed below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}</span><span class="s2">This is a sentence across&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;three lines to show how an ansi color&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;works across multiple lines with echo.</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
+<p>We also use a &ldquo;<strong>reset</strong>&rdquo; variable containing &ldquo;<strong>\e[0m</strong>&rdquo;. This is to stop the ansi code in use, otherwise it will continue running into further output as you saw in the example above with the multi lines.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">reset</span><span class="o">=</span><span class="s2">&#34;\e[0m&#34;</span></code></pre></div>
+<h2 id="ansi-codes-list-for-bash"><strong>Ansi Codes List For Bash</strong></h2>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -250,15 +269,6 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>Notice how we always use the echo &ldquo;-e&rdquo; flag on lines with color codes. This tells echo to enable interpretation of escapes so that the color codes work. We also place the color code variables in curly brackets &ldquo;${}&rdquo; to separate it from normal text.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">red</span><span class="si">}</span><span class="s2">Hello World!</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-<p>For paragraphs or multi line outputs you do not need the echo &ldquo;-e&rdquo; for every line as displayed below.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -e <span class="s2">&#34;</span><span class="si">${</span><span class="nv">green</span><span class="si">}</span><span class="s2">This is a sentence across&#34;</span>
-<span class="nb">echo</span> <span class="s2">&#34;three lines to show how an ansi color&#34;</span>
-<span class="nb">echo</span> -e <span class="s2">&#34;works across multiple lines with echo.</span><span class="si">${</span><span class="nv">reset</span><span class="si">}</span><span class="s2">&#34;</span></code></pre></div>
-<p>We also use a &ldquo;<strong>reset</strong>&rdquo; variable containing &ldquo;<strong>\e[0m</strong>&rdquo;. This is to stop the ansi code in use, otherwise it will continue running into further output as you saw in the example above with the multi lines.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">reset</span><span class="o">=</span><span class="s2">&#34;\e[0m&#34;</span></code></pre></div>
-<h2 id="ansi-codes-list-for-bash"><strong>Ansi Codes List For Bash</strong></h2>
 <p>Here is a good list of Ansi color codes you can use in your bash scripts.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># Regular Colors
 </span><span class="gh"></span>
