@@ -140,7 +140,7 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/pause-and-resume-wget-downloads/" title="Pause and Resume Wget Downloads">Pause and Resume Wget Downloads</a></h1>
 
-<div class="post-info">Published: Sep 9, 2019 &middot; Updated: Feb 15, 2022</div>
+<div class="post-info">Published: Sep 9, 2019 &middot; Updated: Feb 27, 2022</div>
 
     <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/wget.png" alt="wget" title="wget"  width="150px">
@@ -176,15 +176,7 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>There are many download managers out there that get the job done, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you have any large files to download or need to use the ftp protocol, wget is your best bet. You can also use wget to get the file download size without actually downloading the file. Let me show you a few neat ways to use wget.</p>
-<h2 id="wget-download"><strong>wget Download</strong></h2>
-<p>You can download any type of file like text based and archives or any other. The typical usage for wget looks as follows.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">wget [options] [url-to-file]</code></pre></div>
-<p>To download a file we run the basic wget download command as below. Make sure to open your terminal in the directory you wish to download to.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://example.com/filename.zip</code></pre></div>
-<p>That is all. You should now have the file downloaded to the directory you chose.</p>
-<h2 id="pause-wget-download"><strong>Pause wget Download</strong></h2>
-<p>If you find yourself in a situtation where you&rsquo;re downloading a large file and need to shutdown your computer during the download for whatever reason, no problem, you can pause the download.</p>
+<p>There are many download managers to choose from to manage your downloads, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you need to download any files of any size or need to use the ftp protocol, wget is an excellent choice. You can also use wget to get the file download size without actually downloading the file. This can come in handy to compare file sizes before downloading. Let me show you a few neat ways to use wget.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -195,36 +187,54 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<h2 id="wget-download"><strong>wget Download</strong></h2>
+<p>You can download any type of file like text based and archives or any other. The typical usage for wget looks as follows.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">wget [options] [url-to-file]</code></pre></div>
+<p>To download a file we run the basic wget download command as below. Make sure to open your terminal in the directory you wish to download to.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://example.com/filename.zip</code></pre></div>
+<p>That is all. You should now have the file downloaded to the directory you chose.</p>
+<h2 id="pause-wget-download"><strong>Pause wget Download</strong></h2>
+<p>If you find yourself in a situtation where you&rsquo;re downloading a large file and need to shutdown your computer during the download for whatever reason, no problem, you can pause the download.</p>
 <p>In the terminal window that is downloading your file just enter the following keyboard shortcut.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Ctrl + c</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Ctrl + c</code></pre></div>
 <p>This will stop the download and then you can shutdown your computer if you need. To resume the download, read on.</p>
 <h2 id="resume-wget-download"><strong>Resume wget Download</strong></h2>
-<p>To resume a wget download it&rsquo;s very straight forward. Open the terminal to the directory where you were downloading your file to and run wget with the -c flag to resume the download.</p>
+<p>To resume a wget download it&rsquo;s very straight forward. Open the terminal to the directory where you were downloading your file to and run wget with the <strong>-c</strong> flag to resume the download.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget -c https://example.com/filename.zip</code></pre></div>
 <h2 id="other-wget-uses"><strong>Other wget Uses</strong></h2>
+<p>Here&rsquo;s some other useful ways to get the most out of wget.</p>
 <ul>
 <li>Get the file download size without downloading the actual file.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget --spider https://example.com/filename.zip 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep Length</code></pre></div>
 <ul>
-<li>FTP downloads:</li>
+<li>Download using the File Transfer Protocol (FTP).</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget ftp://ftp.example.com/filename.zip</code></pre></div>
 <ul>
-<li>Read download URLs from a file:</li>
+<li>Read download URLs from a file. This can be useful in a shell script.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget -i filename</code></pre></div>
 <ul>
-<li>Specify the directory to download to:</li>
+<li>Specify the directory to download to.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://example.com/filename.zip -P /path/to/directory/</code></pre></div>
 <ul>
-<li>If you need a download to overwrite an existing file:</li>
+<li>Have your download file overwrite an existing file with the same name.</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://example.com/filename.zip -O /path/to/directory/filename.zip</code></pre></div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-<p>Wget is a powerful linux command line utility that can suit the needs of both novice and power users alike. What I&rsquo;ve covered in this tutorial should suffice for most use cases.</p>
-<p>There are many more options you can run with wget. Check out the wget manual for more.</p>
+<p>Wget is a powerful linux command line utility that can suit the needs of both novice and power users alike. What I&rsquo;ve covered in this tutorial should suffice for most use cases. There are many more options you can run with wget. Check out the wget manual for more.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">man wget</code></pre></div>
     <ul class="share-buttons">
     <li>Share this article:</li>
