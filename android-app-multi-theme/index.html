@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Android App Multi Theme - techStop</title>
+  <meta name="author" content="Antonio">
+  <meta name="description" content="In this tutorial we will cover how to add multi theme support to your android app. By adding multi theme support to your android app you can provide a better user experience and increase app installations.">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://techstop.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="techStop" />
+  <link href="https://techstop.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="techStop" />
+  <link rel="icon" href="https://techstop.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://techstop.github.io/img/apple-touch-icon.png" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114983197-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114983197-2');
+</script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8645513020646755",
+          enable_page_level_ads: true
+     });
+</script>
+<script data-ad-client="ca-pub-8645513020646755" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body>
+    <header class="site-header">
+  <style>
+    .site-header h2 .logo {
+    background: url(https://techstop.github.io/) no-repeat 0 0;
+    }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .site-header h2 .logo {
+        background-image: url(https://techstop.github.io/);
+    } }
+    .site-header {
+      background: #2a373d url(https://techstop.github.io/) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "var(--cookie-bg)",
+      "text": "var(--cookie-font)"
+    },
+    "button": {
+      "background": "var(--color-primary)",
+      "hover": "var(--color-secondary)"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "dismiss": "Close"
+  }
+})});
+</script>
+
+  
+  <button onclick="topFunction()" id="myBtn" title="Back to top">&#8682;</button>
+</header>
+<nav class="navbar">
+  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+    <i class="fa fa-bars"></i>
+  </label>
+    <a href="https://techstop.github.io/" class="logo">techStop</a>
+  <input type="checkbox" id="chkToggle"></input>
+  <ul class="main-nav" id="js-menu"><li>
+      <a href="https://techstop.github.io/" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/linux/" class="nav-links">Linux</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/android/" class="nav-links">Android</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/tutorials/" class="nav-links">Tutorials</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/blog-tags/" class="nav-links">Tags</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/search/" class="nav-links"><button type="submit" style="background: none; border: none; padding: 0;" title="Search"><i class="fa fa-search"></i></button></a>
+    </li>
+  </ul>
+</nav>
+<div style="float: right; margin-top: 10px; margin-right: 20px;">
+<a href="//github.com/GameTheory-" id="social-icon" class="icon-github" target="_blank" title="Github"></a>
+<a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+</div>
+<div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox" title="Dark Mode">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+      <label class="theme-switch-label">Dark Mode</label>
+    </div>
+    <br>
+    <div class="container clearfix">
+      <main>
+        <div class="content">
+  <article>
+    <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
+    
+  <h1><a href="https://techstop.github.io/android-app-multi-theme/" title="Android App Multi Theme">Android App Multi Theme</a></h1>
+
+<div class="post-info">Published: Feb 28, 2022</div>
+
+    <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/app-themes/app-themes-1.png" alt="App Themes" title="App Themes"  width="100px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/app-themes/app-themes-2.png" alt="App Themes" title="App Themes"  width="100px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/app-themes/app-themes-3.png" alt="App Themes" title="App Themes"  width="100px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+</p>
+<p>If you would like to add some flare to your android app by adding multi theme support, then you&rsquo;ve come to the right place. Adding multi theme support to your android app can be very beneficial. For starters, your users will never get bored of just having a single color and this also provides a better user experience and can increase app installations. This can be the difference between users installing your app or the competition&rsquo;s app.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>Lets get started with this tutorial to learn how to add multi theme support to your android app. I will be showing you how to change the app colors and background.</p>
+<p>The code in this tutorial will be in the full project on github linked at the bottom of this page. Feel free to fork or download the project from github.</p>
+<h2 id="android-app-multi-themes"><strong>Android App Multi Themes</strong></h2>
+<p>Begin by creating a new project in Android Studio with an Empty Activity if you haven’t already. We can call the project “<strong>App Themes</strong>”.</p>
+<p>First we will create our color themes in our <strong>values</strong> directory. If you&rsquo;re on an older version of Android Studio then place the following code into your <strong>styles.xml</strong> file. The newer Android Studio version uses a <strong>themes.xml</strong> file instead, so place the code in that file.</p>
+<p><strong>themes.xml</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources</span> <span class="na">xmlns:tools=</span><span class="s">&#34;http://schemas.android.com/tools&#34;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;BlueTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#1565C0<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#1256a4<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#40000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;RedTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#c11111<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#B10E0E<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#40000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;BlackTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>#434343<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#222222<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;YellowTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#edb200<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#dca400<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#40000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;OrangeTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#FF5722<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#E64A19<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#40000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;PinkTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#E91E63<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#D81B60<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#40000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;PurpleTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#9C27B0<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#8E24AA<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#40000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;GreenTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#4CAF50<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#43A047<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#40000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+
+    <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;GreyTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimary&#34;</span><span class="nt">&gt;</span>#9E9E9E<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorPrimaryDark&#34;</span><span class="nt">&gt;</span>#8b8b8b<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorAccent&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorButtonNormal&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;colorControlHighlight&#34;</span><span class="nt">&gt;</span>#40000000<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:statusBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&#34;android:navigationBarColor&#34;</span> <span class="na">tools:targetApi=</span><span class="s">&#34;21&#34;</span><span class="nt">&gt;</span>?attr/colorPrimary<span class="nt">&lt;/item&gt;</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/resources&gt;</span></code></pre></div></p>
+<p>Copy the following into your <strong>strings.xml</strong> file. We will need these strings for our layouts.</p>
+<p><strong>strings.xml</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;app_name&#34;</span><span class="nt">&gt;</span>App Themes<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;hello_world&#34;</span><span class="nt">&gt;</span>Hello World!<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;blue_theme&#34;</span><span class="nt">&gt;</span>BLUE<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;red_theme&#34;</span><span class="nt">&gt;</span>RED<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;my_themes&#34;</span><span class="nt">&gt;</span>Themes<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;action_my_themes&#34;</span><span class="nt">&gt;</span>THEMES<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;black_theme&#34;</span><span class="nt">&gt;</span>BLACK<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;yellow_theme&#34;</span><span class="nt">&gt;</span>YELLOW<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;orange_theme&#34;</span><span class="nt">&gt;</span>ORANGE<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;pink_theme&#34;</span><span class="nt">&gt;</span>PINK<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;purple_theme&#34;</span><span class="nt">&gt;</span>PURPLE<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;green_theme&#34;</span><span class="nt">&gt;</span>GREEN<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;grey_theme&#34;</span><span class="nt">&gt;</span>GREY<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;dark_bg&#34;</span><span class="nt">&gt;</span>DARK<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;choose_a_background&#34;</span><span class="nt">&gt;</span>BACKGROUNDS<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;choose_a_color&#34;</span><span class="nt">&gt;</span>COLORS<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&#34;white_bg&#34;</span><span class="nt">&gt;</span>WHITE<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/resources&gt;</span></code></pre></div></p>
+<p>We can now create our layout for the activity where we&rsquo;ll be selecting our themes. You can call it <strong>activity_themes.xml</strong>.</p>
+<p><strong>activity_themes.xml</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span class="nt">&lt;ScrollView</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span class="na">android:layout_margin=</span><span class="s">&#34;20dp&#34;</span>
+    <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+    <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span>
+    <span class="na">android:fillViewport=</span><span class="s">&#34;true&#34;</span>
+    <span class="na">android:scrollbars=</span><span class="s">&#34;none&#34;</span>
+    <span class="na">android:id=</span><span class="s">&#34;@+id/activityThemes&#34;</span> <span class="nt">&gt;</span>
+
+    <span class="nt">&lt;LinearLayout</span>
+        <span class="na">android:orientation=</span><span class="s">&#34;vertical&#34;</span>
+        <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+        <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+        <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/colorsTextView&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/choose_a_color&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;22sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;3dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?attr/colorButtonNormal&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/blue_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/blueTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/red_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/redTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/black_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/blackTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/yellow_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/yellowTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/orange_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/orangeTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/pink_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/pinkTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/purple_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/purpleTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/green_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/greenTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/grey_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/greyTheme&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/bgTextView&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/choose_a_background&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;22sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;3dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?attr/colorButtonNormal&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/dark_bg&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/darkBG&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/grey_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/greyBG&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/black_theme&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/blackBG&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_marginStart=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_marginEnd=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;1dp&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;#4a4a4a&#34;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;TextView</span>
+            <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+            <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+            <span class="na">android:paddingTop=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:paddingBottom=</span><span class="s">&#34;8dp&#34;</span>
+            <span class="na">android:gravity=</span><span class="s">&#34;center&#34;</span>
+            <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+            <span class="na">android:textStyle=</span><span class="s">&#34;bold&#34;</span>
+            <span class="na">android:text=</span><span class="s">&#34;@string/white_bg&#34;</span>
+            <span class="na">android:id=</span><span class="s">&#34;@+id/whiteBG&#34;</span>
+            <span class="na">android:background=</span><span class="s">&#34;?android:attr/selectableItemBackground&#34;</span>
+            <span class="na">android:textSize=</span><span class="s">&#34;16sp&#34;</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/LinearLayout&gt;</span>
+
+<span class="nt">&lt;/ScrollView&gt;</span></code></pre></div></p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>Now we need to make sure that our main layout has ids set for the constraint layout and textview and has text color set to white.</p>
+<p><strong>activity_main.xml</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span class="na">xmlns:app=</span><span class="s">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
+    <span class="na">xmlns:tools=</span><span class="s">&#34;http://schemas.android.com/tools&#34;</span>
+    <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+    <span class="na">android:layout_height=</span><span class="s">&#34;match_parent&#34;</span>
+    <span class="na">android:id=</span><span class="s">&#34;@+id/myView&#34;</span>
+    <span class="na">tools:context=</span><span class="s">&#34;.MainActivity&#34;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;TextView</span>
+        <span class="na">android:id=</span><span class="s">&#34;@+id/textView&#34;</span>
+        <span class="na">android:layout_width=</span><span class="s">&#34;wrap_content&#34;</span>
+        <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+        <span class="na">android:textSize=</span><span class="s">&#34;30sp&#34;</span>
+        <span class="na">android:text=</span><span class="s">&#34;@string/hello_world&#34;</span>
+        <span class="na">android:textColor=</span><span class="s">&#34;#FFFFFF&#34;</span>
+        <span class="na">app:layout_constraintBottom_toBottomOf=</span><span class="s">&#34;parent&#34;</span>
+        <span class="na">app:layout_constraintLeft_toLeftOf=</span><span class="s">&#34;parent&#34;</span>
+        <span class="na">app:layout_constraintRight_toRightOf=</span><span class="s">&#34;parent&#34;</span>
+        <span class="na">app:layout_constraintTop_toTopOf=</span><span class="s">&#34;parent&#34;</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span></code></pre></div></p>
+<p>Since we are going to be accessing our theme chooser layout from a menu item as shown in the screenshot at the top of this article, lets create our menu item. Create a new directory called <strong>menu</strong> within the <strong>res</strong> directory. Inside the <strong>menu</strong> directory create a new file called <strong>menu_main.xml</strong> and add the following code.</p>
+<p><strong>menu_main.xml</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;menu</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span class="na">xmlns:tools=</span><span class="s">&#34;http://schemas.android.com/tools&#34;</span>
+    <span class="na">xmlns:app=</span><span class="s">&#34;http://schemas.android.com/apk/res-auto&#34;</span>
+    <span class="na">tools:context=</span><span class="s">&#34;.MainActivity&#34;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;item</span>
+        <span class="na">android:id=</span><span class="s">&#34;@+id/myThemes&#34;</span>
+        <span class="na">android:title=</span><span class="s">&#34;@string/action_my_themes&#34;</span>
+        <span class="na">app:showAsAction=</span><span class="s">&#34;never&#34;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/menu&gt;</span></code></pre></div></p>
+<p>Now that we&rsquo;ve created all our xml files, we can now start with our java code.</p>
+<p>Create a new java class and call it <strong>Themes</strong>. The Themes class will hold all our themes and SharedPreferences so that we can select and save themes so they are applied automatically each time the app is opened. Since this is a utility class it will not have a layout and does not need to be declared in the AndroidManifest.</p>
+<p>Add the following code to the <strong>Themes</strong> class.</p>
+<p>Notice that the <strong>getTheme</strong> and <strong>getBG</strong> methods at the bottom of the class have the blue theme(1) and dark background(0) set as default. These would be the default colors the app opens to for the first time.</p>
+<p><strong>Themes.java</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.appthemes</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.SharedPreferences</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.graphics.Color</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Themes</span> <span class="kd">extends</span> <span class="n">MainActivity</span> <span class="o">{</span>
+
+    <span class="c1">// SelectTheme
+</span><span class="c1"></span>    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">redTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">blueTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">blackTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">yellowTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">orangeTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">pinkTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">5</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">purpleTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">6</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">greenTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">7</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">greyTheme</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">8</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Backgrounds
+</span><span class="c1"></span>    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">darkBG</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;BG&#34;</span><span class="o">,</span> <span class="n">0</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">greyBG</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;BG&#34;</span><span class="o">,</span> <span class="n">1</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">blackBG</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;BG&#34;</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">whiteBG</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setTheme</span><span class="o">(</span><span class="s">&#34;BG&#34;</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">Color</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">theme</span> <span class="o">=</span> <span class="n">getTheme</span><span class="o">(</span><span class="s">&#34;Color&#34;</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">theme</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="n">0</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">RedTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">1</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">BlueTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">2</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">BlackTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">3</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">YellowTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">4</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">OrangeTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">5</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">PinkTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">6</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">PurpleTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">7</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">GreenTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">8</span><span class="o">:</span>
+                <span class="n">context</span><span class="o">.</span><span class="na">setTheme</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">GreyTheme</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">textColor</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">TextView</span> <span class="n">tv</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">bg</span> <span class="o">=</span> <span class="n">getBG</span><span class="o">(</span><span class="s">&#34;BG&#34;</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">bg</span> <span class="o">==</span> <span class="n">3</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">tv</span><span class="o">.</span><span class="na">setTextColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">&#34;#000000&#34;</span><span class="o">));</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">BG</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">View</span> <span class="n">v</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">bg</span> <span class="o">=</span> <span class="n">getBG</span><span class="o">(</span><span class="s">&#34;BG&#34;</span><span class="o">,</span> <span class="n">context</span><span class="o">);</span>
+        <span class="n">View</span> <span class="n">view</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="na">getRootView</span><span class="o">();</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">bg</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="n">0</span><span class="o">:</span>
+                <span class="n">view</span><span class="o">.</span><span class="na">setBackgroundColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">&#34;#303030&#34;</span><span class="o">));</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">1</span><span class="o">:</span>
+                <span class="n">view</span><span class="o">.</span><span class="na">setBackgroundColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">&#34;#757575&#34;</span><span class="o">));</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">2</span><span class="o">:</span>
+                <span class="n">view</span><span class="o">.</span><span class="na">setBackgroundColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">&#34;#000000&#34;</span><span class="o">));</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">3</span><span class="o">:</span>
+                <span class="n">view</span><span class="o">.</span><span class="na">setBackgroundColor</span><span class="o">(</span><span class="n">Color</span><span class="o">.</span><span class="na">parseColor</span><span class="o">(</span><span class="s">&#34;#EEEEEE&#34;</span><span class="o">));</span>
+                <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setTheme</span><span class="o">(</span><span class="n">String</span> <span class="n">key</span><span class="o">,</span> <span class="kt">int</span> <span class="n">value</span><span class="o">,</span> <span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">SharedPreferences</span> <span class="n">preferences</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getSharedPreferences</span><span class="o">(</span><span class="s">&#34;preferences&#34;</span><span class="o">,</span> <span class="n">MODE_PRIVATE</span><span class="o">);</span>
+        <span class="n">SharedPreferences</span><span class="o">.</span><span class="na">Editor</span> <span class="n">editor</span> <span class="o">=</span> <span class="n">preferences</span><span class="o">.</span><span class="na">edit</span><span class="o">();</span>
+        <span class="n">editor</span><span class="o">.</span><span class="na">putInt</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+        <span class="n">editor</span><span class="o">.</span><span class="na">apply</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getTheme</span><span class="o">(</span><span class="n">String</span> <span class="n">key</span><span class="o">,</span> <span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">SharedPreferences</span> <span class="n">preferences</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getSharedPreferences</span><span class="o">(</span><span class="s">&#34;preferences&#34;</span><span class="o">,</span> <span class="n">MODE_PRIVATE</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">preferences</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getBG</span><span class="o">(</span><span class="n">String</span> <span class="n">key</span><span class="o">,</span> <span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">SharedPreferences</span> <span class="n">preferences</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getSharedPreferences</span><span class="o">(</span><span class="s">&#34;preferences&#34;</span><span class="o">,</span> <span class="n">MODE_PRIVATE</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">preferences</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre></div></p>
+<p>Next we&rsquo;ll create another class called <strong>SelectTheme</strong>. This is the class that will open when we click on the menu item to allow us to choose a theme and background. Our clickable textviews that select our themes will be in this class.</p>
+<p>Notice at the bottom of the class we have the <strong>recreateActivity</strong> method which will recreate our <strong>SelectTheme</strong> activity to apply the theme changes immediately.</p>
+<p><strong>SelectTheme.java</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.appthemes</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SelectTheme</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">Color</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_themes</span><span class="o">);</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">BG</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">activityThemes</span><span class="o">));</span>
+
+        <span class="c1">// TextView theme buttons
+</span><span class="c1"></span>        <span class="n">TextView</span> <span class="n">tv0</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">blueTheme</span><span class="o">);</span>
+        <span class="n">tv0</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">blueTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv0</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv1</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">redTheme</span><span class="o">);</span>
+        <span class="n">tv1</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">redTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv1</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv2</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">blackTheme</span><span class="o">);</span>
+        <span class="n">tv2</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">blackTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv2</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv3</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">yellowTheme</span><span class="o">);</span>
+        <span class="n">tv3</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">yellowTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv3</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv4</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">orangeTheme</span><span class="o">);</span>
+        <span class="n">tv4</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">orangeTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv4</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv5</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">pinkTheme</span><span class="o">);</span>
+        <span class="n">tv5</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">pinkTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv5</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv6</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">purpleTheme</span><span class="o">);</span>
+        <span class="n">tv6</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">purpleTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv6</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv7</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">greenTheme</span><span class="o">);</span>
+        <span class="n">tv7</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">greenTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv7</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv8</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">greyTheme</span><span class="o">);</span>
+        <span class="n">tv8</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">greyTheme</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv8</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv9</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">darkBG</span><span class="o">);</span>
+        <span class="n">tv9</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">darkBG</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv9</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv10</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">greyBG</span><span class="o">);</span>
+        <span class="n">tv10</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">greyBG</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv10</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv11</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">blackBG</span><span class="o">);</span>
+        <span class="n">tv11</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">blackBG</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv11</span><span class="o">);</span>
+
+        <span class="n">TextView</span> <span class="n">tv12</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">whiteBG</span><span class="o">);</span>
+        <span class="n">tv12</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="n">whiteBG</span><span class="o">());</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">tv12</span><span class="o">);</span>
+
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">colorsTextView</span><span class="o">));</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">bgTextView</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">redTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">redTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">blueTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">blueTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">blackTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">blackTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">yellowTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">yellowTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">orangeTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">orangeTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pinkTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">pinkTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">purpleTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">purpleTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">greenTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">greenTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">greyTheme</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">greyTheme</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">darkBG</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">darkBG</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">greyBG</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">greyBG</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">blackBG</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">blackBG</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">whiteBG</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">whiteBG</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">recreateActivity</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">recreateActivity</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="n">getIntent</span><span class="o">();</span>
+        <span class="n">finish</span><span class="o">();</span>
+        <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+        <span class="n">overridePendingTransition</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">0</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div></p>
+<p>Now we need to declare the <strong>SelectTheme.java</strong> class in our <strong>AndroidManifest.xml</strong>. While we&rsquo;re there we can also set the fallback theme to <strong>Theme.AppCompat</strong>.</p>
+<p><strong>AndroidManifest.xml</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span class="na">package=</span><span class="s">&#34;com.gt.appthemes&#34;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;application</span>
+        <span class="na">android:allowBackup=</span><span class="s">&#34;true&#34;</span>
+        <span class="na">android:icon=</span><span class="s">&#34;@mipmap/ic_launcher&#34;</span>
+        <span class="na">android:label=</span><span class="s">&#34;@string/app_name&#34;</span>
+        <span class="na">android:roundIcon=</span><span class="s">&#34;@mipmap/ic_launcher_round&#34;</span>
+        <span class="na">android:supportsRtl=</span><span class="s">&#34;true&#34;</span>
+        <span class="na">android:theme=</span><span class="s">&#34;@style/Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;activity</span>
+            <span class="na">android:name=</span><span class="s">&#34;.MainActivity&#34;</span>
+            <span class="na">android:exported=</span><span class="s">&#34;true&#34;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;intent-filter&gt;</span>
+                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.MAIN&#34;</span> <span class="nt">/&gt;</span>
+
+                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.category.LAUNCHER&#34;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/intent-filter&gt;</span>
+        <span class="nt">&lt;/activity&gt;</span>
+        <span class="nt">&lt;activity</span>
+            <span class="na">android:name=</span><span class="s">&#34;.SelectTheme&#34;</span>
+            <span class="na">android:label=</span><span class="s">&#34;@string/my_themes&#34;</span> <span class="nt">&gt;</span>
+        <span class="nt">&lt;/activity&gt;</span>
+    <span class="nt">&lt;/application&gt;</span>
+
+<span class="nt">&lt;/manifest&gt;</span></code></pre></div></p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>We can finally setup our <strong>MainActivity</strong> class. Here we&rsquo;ll add our menu to open our <strong>SelectTheme</strong> class and we&rsquo;ll also set the user selected colors for the app to open with each time.</p>
+<p>Notice at the bottom of the class we have the <strong>onRestart</strong> method which will recreate our MainActivity to apply the theme changes immediately.</p>
+<p><strong>MainActivity.java</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.appthemes</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">androidx.annotation.NonNull</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.Menu</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.MenuItem</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">Color</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">BG</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">myView</span><span class="o">));</span>
+        <span class="n">Themes</span><span class="o">.</span><span class="na">textColor</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">textView</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="n">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">getMenuInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">menu_main</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onOptionsItemSelected</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="n">MenuItem</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">itemId</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="na">getItemId</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">itemId</span> <span class="o">==</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">myThemes</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">SelectTheme</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+            <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">onOptionsItemSelected</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRestart</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onRestart</span><span class="o">();</span>
+        <span class="n">recreate</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></div></p>
+<p>This will conclude the Android Multi Theme App tutorial. The full project is on github. You can download or fork it from the link below and import it to your favorite IDE. Android Studio is recommended.</p>
+<div>
+  <a title="Android Admob" href="https://github.com/GameTheory-/android-app-themes" target="_blank">
+  <button id="cta-btn"><i class="fa fa-download"></i> Android Admob</button>
+  </a>
+</div>
+    <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fandroid-app-multi-theme%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Android%20App%20Multi%20Theme&amp;url=https%3a%2f%2ftechstop.github.io%2fandroid-app-multi-theme%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fandroid-app-multi-theme%2f&title=Android%20App%20Multi%20Theme" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+    
+      Tags:
+      
+        <a href="https://techstop.github.io/tags/android-studio">android studio</a>, 
+      
+        <a href="https://techstop.github.io/tags/app-development">app development</a>, 
+      
+        <a href="https://techstop.github.io/tags/java">java</a>, 
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      
+        <a href="https://techstop.github.io/tags/android">android</a>
+      
+    
+    <div style="margin-top: 18px; text-align: center;">
+      
+        <span>&middot; <strong>More Articles</strong> &middot;</span>
+      
+      
+      
+        <div><a href="https://techstop.github.io/play-store-data-safety/">Play Store Data Safety &raquo;</a></div>
+      
+    </div>
+  </article>
+  <hr>
+  
+    <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1F4AC;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
+
+  
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
+
+        </div>
+      </main>
+    </div>
+    <script>
+const myScript = document.getElementById('myScriptId');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    
+      document.location.reload(true)
+    
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('theme');
+    
+      document.location.reload(true)
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+  
+    myScript.setAttribute('theme', 'github-dark');
+  
+}
+</script>
+<style>
+  .font-row-one {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+  .font-row-two {
+    font-size: 12px;
+  }
+</style>
+<footer class="main-footer">
+  <div class="container clearfix">
+    <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+    <div class="font-row-one">&copy; 2019 &#8208; 2022 &middot; <a href="https://techstop.github.io/">techStop</a></div>
+    <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
+  </div>
+  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script src="https://techstop.github.io/js/plugins.js"></script>
+</footer>
+</body>
+</html>

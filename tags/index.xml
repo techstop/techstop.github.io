@@ -6,13 +6,49 @@
     <description>Recent content in Tags on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Feb 2022 20:10:11 -0400</lastBuildDate><atom:link href="https://techstop.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 21:17:47 -0400</lastBuildDate><atom:link href="https://techstop.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android</title>
       <link>https://techstop.github.io/tags/android/</link>
-      <pubDate>Fri, 25 Feb 2022 20:10:11 -0400</pubDate>
+      <pubDate>Mon, 28 Feb 2022 21:17:47 -0400</pubDate>
       
       <guid>https://techstop.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android studio</title>
+      <link>https://techstop.github.io/tags/android-studio/</link>
+      <pubDate>Mon, 28 Feb 2022 21:17:47 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/tags/android-studio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>app development</title>
+      <link>https://techstop.github.io/tags/app-development/</link>
+      <pubDate>Mon, 28 Feb 2022 21:17:47 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/tags/app-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://techstop.github.io/tags/java/</link>
+      <pubDate>Mon, 28 Feb 2022 21:17:47 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://techstop.github.io/tags/tutorials/</link>
+      <pubDate>Mon, 28 Feb 2022 21:17:47 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/tags/tutorials/</guid>
       <description></description>
     </item>
     
@@ -35,47 +71,11 @@
     </item>
     
     <item>
-      <title>Tutorials</title>
-      <link>https://techstop.github.io/tags/tutorials/</link>
-      <pubDate>Wed, 13 Nov 2019 22:28:51 -0400</pubDate>
-      
-      <guid>https://techstop.github.io/tags/tutorials/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>browser</title>
       <link>https://techstop.github.io/tags/browser/</link>
       <pubDate>Sat, 28 Sep 2019 18:21:04 -0400</pubDate>
       
       <guid>https://techstop.github.io/tags/browser/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>android studio</title>
-      <link>https://techstop.github.io/tags/android-studio/</link>
-      <pubDate>Thu, 07 Feb 2019 00:36:55 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/android-studio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>app development</title>
-      <link>https://techstop.github.io/tags/app-development/</link>
-      <pubDate>Thu, 07 Feb 2019 00:36:55 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/app-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>https://techstop.github.io/tags/java/</link>
-      <pubDate>Thu, 07 Feb 2019 00:36:55 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/tags/java/</guid>
       <description></description>
     </item>
     
