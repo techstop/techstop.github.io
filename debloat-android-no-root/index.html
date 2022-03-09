@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Backup and Debloat Android No Root - techStop</title>
+  <title>Debloat Android No Root - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Backup and debloat Android without the need to root your device. If you don&#39;t want to, or there&#39;s no root for your device, then just use this tool to backup and debloat android without root.">
+  <meta name="description" content="Debloat Android without the need to root your device. If you don&#39;t want to, or there&#39;s no root for your device, then just use this tool to debloat android without root.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -138,12 +138,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/backup-and-debloat-android-no-root/" title="Backup and Debloat Android No Root">Backup and Debloat Android No Root</a></h1>
+  <h1><a href="https://techstop.github.io/debloat-android-no-root/" title="Debloat Android No Root">Debloat Android No Root</a></h1>
 
-<div class="post-info">Published: Apr 19, 2018 &middot; Updated: Feb 24, 2022</div>
+<div class="post-info">Published: Apr 19, 2018 &middot; Updated: Mar 8, 2022</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/backupdebloat/Backup-and-Debloat-Android-No-Root.png" alt="Backup and Debloat Android No Root" title="Backup and Debloat Android No Root"  width="200px">
+<img class="myImg" src="https://techstop.github.io/images/backupdebloat/Debloat-Android-No-Root.png" alt="Debloat Android No Root" title="Debloat Android No Root"  width="200px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,8 +176,8 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>If you&rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&rsquo;re here reading this, it&rsquo;s likely because there is no root for your device or you simply don&rsquo;t wish to root it. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called <strong>Backup and Debloat Android No Root</strong> to give you some control back over your device.</p>
-<p>Backup and Debloat Android No Root uses adb to uninstall bloatware and to make backups. Now this is nothing new. Android users have known about the adb non root method for a long time. What my tool does is simply facilitate everything in an easy to use script gui.</p>
+<p>If you&rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&rsquo;re here reading this, it&rsquo;s likely because there is no root for your device or you simply don&rsquo;t wish to root it. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called <strong>Debloat Android No Root</strong> to give you some control back over your device.</p>
+<p>Debloat Android No Root uses adb to uninstall bloatware or disable the bloatware. Now this is nothing new. Android users have known about the adb non root method for a long time. What my tool does is simply facilitate everything in an easy to use script gui.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -188,24 +188,20 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>Let&rsquo;s go over the different options in <strong>Backup and Debloat Android No Root</strong>&hellip;</p>
+<p>Let&rsquo;s go over the different options in <strong>Debloat Android No Root</strong>&hellip;</p>
 <ol>
-<li>This is where you backup user installed apps as allowed by adb limitations (more on limitations later).</li>
-<li>This is a full backup of user and system apps as allowed by adb limitations.</li>
-<li>Here you can individually choose which apps to backup.</li>
-<li>Backup the internal storage. Also known as internal SD.</li>
-<li>Restore any of your backups made with this tool.</li>
-<li>Remove system or user apps (my favorite option).</li>
+<li>This allows you to disable apps without uninstalling them. Once disabled the apps will not run or be visible in your app drawer. This is like freezing an app.</li>
+<li>Here you will be able to re-enable apps that you disabled with option 1 above.</li>
+<li>This will uninstall the apps. You must use caution to not uninstall a system critical app.</li>
+<li>Here you can re-install the apps that you uninstalled with option 3 above.</li>
+<li>This option gives you a full list of device properties and information.</li>
 <li>If your android device is not recognized when plugged to your computer through usb then run this option to install android udev rules.</li>
 </ol>
 <p>The rest of the options are self explanatory.</p>
-<h2 id="limitations"><strong>Limitations</strong></h2>
-<p>Adb has its known limitations&hellip;</p>
-<p>Adb can only backup apps where the developer of the app allows the app to be backed up in the <strong>AndroidManifest.xml</strong> with a bit of code that looks like this <strong>android:allowBackup=&ldquo;true&rdquo;</strong>. If this option is set to false, full backups of those apps will be ignored (options 1 and 2). In individual app backups you will get an empty backup for those apps. For all other apps you&rsquo;ll have good reliable backups.</p>
-<p>When apps are uninstalled they will not consume any resources or be visible to the user (that&rsquo;s good!). However, apps are only uninstalled for the user and not root. This means the apps are uninstalled but remain on the device like if they are frozen (not a problem at all).</p>
+<h2 id="note"><strong>Note</strong></h2>
+<p>When apps are uninstalled they will not consume any system resources or be visible to the user. However, apps are only uninstalled for the user and not for root. This means the apps are uninstalled but remain on the device which is not a bad thing. Caution is still necessary to not uninstall a system critical app that the device needs to run properly.</p>
 <h2 id="warnings"><strong>Warnings</strong></h2>
-<p>Do not uninstall system critical apps that may cause a boot loop. If you do, perform a factory reset to end the boot loop.</p>
-<p>If you uninstall apps that you later decide you want back, you can do a factory reset and the apps will reinstall.</p>
+<p>If you uninstall system critical apps you may cause a boot loop. If you do, you can re-install them with option 4 if you still have access to adb or perform a factory reset which will end the boot loop.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -216,9 +212,9 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<h2 id="backup--debloat"><strong>Backup &amp; Debloat</strong></h2>
+<h2 id="usage"><strong>Usage</strong></h2>
 <p>For Android 4.0 and up</p>
-<p>Tested on ubuntu &amp; Manjaro</p>
+<p>Tested on ubuntu &amp; manjaro</p>
 <p>Make sure the &ldquo;<strong>bda</strong>&rdquo; file has execute permissions.</p>
 <ol>
 <li>Enable usb debugging on your device in developer options and then plug it to your computer.</li>
@@ -227,20 +223,20 @@ window.cookieconsent.initialise({
 <li>optional - Use the &ldquo;Add Desktop Shortcut&rdquo; option for quick access</li>
 </ol>
 <div>
-  <a title="Backup Debloat Android" href="https://github.com/GameTheory-/Backup-and-Debloat-Android-No-Root/releases" target="_blank">
-  <button id="cta-btn"><i class="fa fa-download"></i> Backup Debloat Android</button>
+  <a title="Debloat Android No Root" href="https://github.com/GameTheory-/Debloat-Android-No-Root/releases" target="_blank">
+  <button id="cta-btn"><i class="fa fa-download"></i> Debloat Android No Root</button>
   </a>
 </div>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fbackup-and-debloat-android-no-root%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fdebloat-android-no-root%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Backup%20and%20Debloat%20Android%20No%20Root&amp;url=https%3a%2f%2ftechstop.github.io%2fbackup-and-debloat-android-no-root%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Debloat%20Android%20No%20Root&amp;url=https%3a%2f%2ftechstop.github.io%2fdebloat-android-no-root%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fbackup-and-debloat-android-no-root%2f&title=Backup%20and%20Debloat%20Android%20No%20Root" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fdebloat-android-no-root%2f&title=Debloat%20Android%20No%20Root" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
