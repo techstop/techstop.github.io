@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>APK Utility - techStop</title>
+  <title>Apk Utility - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Apk Utility provides a simple and efficient way to compile and decompile apk and jar files. Using Apk Utility eliminates the need to use the command line with its simple options menu.">
+  <meta name="description" content="Apk Utility provides a simple and efficient way to decompile and compile android apk and jar files. Using Apk Utility eliminates the need to use the command line with its simple options menu.">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic" type="text/css">
   <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
   <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
@@ -138,12 +138,12 @@ window.cookieconsent.initialise({
   <article>
     <a class="btn home" href="https://techstop.github.io/" title="Back to home">&laquo; Back to home</a>
     
-  <h1><a href="https://techstop.github.io/apk-utility/" title="APK Utility">APK Utility</a></h1>
+  <h1><a href="https://techstop.github.io/apk-utility/" title="Apk Utility">Apk Utility</a></h1>
 
-<div class="post-info">Published: Jun 8, 2018</div>
+<div class="post-info">Published: Jun 8, 2018 &middot; Updated: Mar 10, 2022</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/apk-utility/apk-utility.png" alt="APK Utility" title="APK Utility"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/apk-utility/apk-utility.png" alt="Apk Utility" title="Apk Utility"  width="150px">
 </div>
 
 <div id="myModal" class="modal">
@@ -176,27 +176,8 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>If you&rsquo;ve been looking for an easy to use tool for decompiling and compiling apk and jar files then look no further. APK Utility is as easy to use as it gets. The utility also has the ability to tag frameworks. This feature is very useful when you need to install frameworks for multiple different devices without having to remove one for the other. If you&rsquo;re familiar with <a href="https://ibotpeaches.github.io/Apktool/documentation/" target="_blank">apktool</a> which this tool uses then you&rsquo;ll know what I&rsquo;m referring to.</p>
+<p>If you&rsquo;ve been looking for an easy to use tool for decompiling and compiling android apk and jar files then look no further. Apk Utility is as easy to use as it gets. The utility also has the ability to tag your framework files. This feature is very useful when you need to install framework files for multiple different devices without having to remove one for the other. Basically a tag is a label to distinguish between multiple devices' framework files. If you&rsquo;re familiar with <a href="https://ibotpeaches.github.io/Apktool/documentation/" target="_blank">apktool</a> which this tool uses then you&rsquo;ll know what I&rsquo;m referring to.</p>
 <h2 id="getting-started">Getting started</h2>
-<p>To get started with APK Utility make sure you have java installed. Place all your apk and jar files in the &ldquo;input&rdquo; folder. Then you&rsquo;ll want to install the framework for the device you&rsquo;re working on. You can do a normal framework install or a tagged framework install. Personally I always use tagged framework installs. This helps me work on multiple devices in an easy and organized way.</p>
-<h2 id="examples-of-tagging-frameworks">Examples of tagging frameworks</h2>
-<p>Lets say you want to have 3 frameworks from 3 different devices installed at once. Assuming those devices are an HTC, LG, and Samsung then you can tag the frameworks with the device models as such: M8, G6, S9. Now when you decompile an apk or jar file from any of those 3 devices you simply choose a tag from the list that matches the device.</p>
-<h2 id="options-available">Options Available</h2>
-<ol>
-<li>Usual decompile of apk or jar.</li>
-<li>Decompile without dex(smali). Used when only editing images and xml files.</li>
-<li>Decompile using device specific framework tag.</li>
-<li>Same as option 3, but without dex(smali).</li>
-<li>Usual compile of apk or jar files.</li>
-<li>Compile apk or jar file with original signature.</li>
-<li>Usual framework install used when only working on 1 device at any given time.</li>
-<li>Tagged framework install used for working on multiple different devices.</li>
-<li>A usual zipalign.</li>
-<li>Sign or change original signature to a generic signature. Good for preventing your modded app from updating from the playstore.</li>
-<li>Manage tags is for removing any tags you may not need anymore.</li>
-<li>Check for APK Utility updates</li>
-<li>Create a desktop shortcut in your app menu which you can place on your desktop or in any folder.</li>
-</ol>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -207,19 +188,49 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<h2 id="usage">Usage</h2>
-<p>Tested on xubuntu and ubuntu. For 64 bit systems only.</p>
+<p>To get started with APK Utility make sure you have java installed on your computer. Place all your apk and jar files in the &ldquo;input&rdquo; folder.</p>
+<p>Every Apk Utility release contains internally the most up to date AOSP framework at the time of the release. This allows you to decode and build most apks without a problem. However, manufacturers add their own framework files in addition to the regular AOSP ones. To use Apk Utility against these manufacturer apks you must first install the manufacturer framework files. You can do a normal framework install or a tagged framework install. Personally I always use tagged framework installs. This helps me work on multiple devices in an easy and organized way.</p>
+<h2 id="tagging-framework-files">Tagging Framework Files</h2>
+<p>Lets say you want to have 3 frameworks from 3 different devices installed at once. Assuming those devices are an HTC, LG, and Samsung then you can tag the framework files with the device models as such: M8, G6, S9. Now when you decompile an apk or jar file from any of those 3 devices you simply choose a tag from the list that matches the device.</p>
+<h2 id="menu-options">Menu Options</h2>
 <ol>
-<li>Make sure the &ldquo;apku&rdquo; file has execute permissions.</li>
-<li>Make sure to have java installed.</li>
+<li>Standard framework install used when only working on 1 device at any given time.</li>
+<li>Tagged framework install used for working on multiple different devices.</li>
+<li>Standard decompile of apk or jar.</li>
+<li>Decompile without dex. Used when only editing images and xml files.</li>
+<li>Decompile using device specific framework files tags.</li>
+<li>Same as option 3, but without dex.</li>
+<li>Standard compile of apk or jar files.</li>
+<li>Compile apk or jar file with original signature.</li>
+<li>A standard zipalign.</li>
+<li>Sign apk or jar with generic signature. Good for preventing your modded app from updating from the playstore.</li>
+<li>Manage tags is for removing any tags you may not need anymore.</li>
+<li>Check for APK Utility updates</li>
+<li>Create a desktop shortcut in your app menu for quick access to Apk Utility.</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>Tested on manjaro and ubuntu. For 64 bit systems only.</p>
+<ol>
+<li>Make sure the <strong>apku</strong> file is executable.</li>
+<li>Make sure to have java 8+ installed.</li>
 <li>Place all your apk and jar files in the input folder. If zipaligning only, place them in the zipalign folder.</li>
 <li>Execute the file as follows in a terminal:
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./apku</code></pre></div></li>
-<li>optional - Use the &ldquo;Add Desktop Shortcut&rdquo; option for quick access.</li>
+<li>Optional: Use the &ldquo;Add Desktop Shortcut&rdquo; option for quick access.</li>
 </ol>
 <div>
-  <a title="APK Utility" href="https://github.com/GameTheory-/apk-utility/releases" target="_blank">
-  <button id="cta-btn"><i class="fa fa-download"></i> APK Utility</button>
+  <a title="Apk Utility" href="https://github.com/GameTheory-/apk-utility/releases" target="_blank">
+  <button id="cta-btn"><i class="fa fa-download"></i> Apk Utility</button>
   </a>
 </div>
     <ul class="share-buttons">
@@ -228,10 +239,10 @@ window.cookieconsent.initialise({
         <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fapk-utility%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=APK%20Utility&amp;url=https%3a%2f%2ftechstop.github.io%2fapk-utility%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Apk%20Utility&amp;url=https%3a%2f%2ftechstop.github.io%2fapk-utility%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fapk-utility%2f&title=APK%20Utility" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fapk-utility%2f&title=Apk%20Utility" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 

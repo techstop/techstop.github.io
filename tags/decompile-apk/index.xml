@@ -8,13 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Jun 2018 01:35:25 +0000</lastBuildDate><atom:link href="https://techstop.github.io/tags/decompile-apk/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>APK Utility</title>
+      <title>Apk Utility</title>
       <link>https://techstop.github.io/apk-utility/</link>
       <pubDate>Fri, 08 Jun 2018 01:35:25 +0000</pubDate>
       
       <guid>https://techstop.github.io/apk-utility/</guid>
       <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/apk-utility/apk-utility.png&#34; alt=&#34;APK Utility&#34; title=&#34;APK Utility&#34;  width=&#34;150px&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/apk-utility/apk-utility.png&#34; alt=&#34;Apk Utility&#34; title=&#34;Apk Utility&#34;  width=&#34;150px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
@@ -47,7 +47,7 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;If you&amp;rsquo;ve been looking for an easy to use tool for decompiling and compiling apk and jar files then look no further. APK Utility is as easy to use as it gets. The utility also has the ability to tag frameworks. This feature is very useful when you need to install frameworks for multiple different devices without having to remove one for the other. If you&amp;rsquo;re familiar with &lt;a href=&#34;https://ibotpeaches.github.io/Apktool/documentation/&#34; target=&#34;_blank&#34;&gt;apktool&lt;/a&gt; which this tool uses then you&amp;rsquo;ll know what I&amp;rsquo;m referring to.&lt;/p&gt;</description>
+&lt;p&gt;If you&amp;rsquo;ve been looking for an easy to use tool for decompiling and compiling android apk and jar files then look no further. Apk Utility is as easy to use as it gets. The utility also has the ability to tag your framework files. This feature is very useful when you need to install framework files for multiple different devices without having to remove one for the other. Basically a tag is a label to distinguish between multiple devices&#39; framework files. If you&amp;rsquo;re familiar with &lt;a href=&#34;https://ibotpeaches.github.io/Apktool/documentation/&#34; target=&#34;_blank&#34;&gt;apktool&lt;/a&gt; which this tool uses then you&amp;rsquo;ll know what I&amp;rsquo;m referring to.&lt;/p&gt;</description>
     </item>
     
   </channel>
