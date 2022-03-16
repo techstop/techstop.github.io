@@ -123,7 +123,7 @@ window.cookieconsent.initialise({
         <input type="checkbox" id="checkbox" />
         <div class="slider round"></div>
       </label>
-      <label class="theme-switch-label">Dark Mode</label>
+      <label class="theme-switch-label">Light Mode</label>
     </div>
     <br>
     <div class="container clearfix">
@@ -499,22 +499,20 @@ const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"
 toggleSwitch.addEventListener('change', switchTheme, false);
 function switchTheme(e) {
   if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
     
   } else {
-    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.removeItem('theme');
     
   }
 }
 
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-if (currentTheme) {
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme !== null) {
   document.documentElement.setAttribute('data-theme', currentTheme);
-  if (currentTheme === 'dark') {
-    toggleSwitch.checked = true;
-  }
+  toggleSwitch.checked = true;
   
 }
 </script>
