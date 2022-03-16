@@ -50,7 +50,7 @@
   <script>
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("myBtn").style.display = "block";
       } else {
         document.getElementById("myBtn").style.display = "none";
@@ -329,8 +329,18 @@ window.cookieconsent.initialise({
     <script>
 const myScript = document.getElementById('myScriptId');
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'light') {
+      toggleSwitch.checked = true;
+      
+  }
+}
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('data-theme', 'light');
@@ -338,16 +348,9 @@ function switchTheme(e) {
     
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.removeItem('theme');
+    localStorage.setItem('theme', 'dark');
     
   }
-}
-
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme !== null) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  toggleSwitch.checked = true;
-  
 }
 </script>
 <style>
