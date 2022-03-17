@@ -55,23 +55,7 @@
       -o-background-size: cover;
       background-size: cover;
     }
-  </style>
-  <script>
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("myBtn").style.display = "block";
-      } else {
-        document.getElementById("myBtn").style.display = "none";
-      }
-    }
-    function topFunction() {
-      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
-      $(document.body).animate({ scrollTop: 0 }, 'slow');
-    }
-  </script>
-
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  </style><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 <script>
 window.addEventListener("load", function(){
@@ -94,8 +78,24 @@ window.cookieconsent.initialise({
 })});
 </script>
 
+
   
-  <button onclick="topFunction()" id="myBtn" title="Back to top">&#8682;</button>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("backToTopBtn").style.display = "block";
+      } else {
+        document.getElementById("backToTopBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+  
+  <button onclick="topFunction()" id="backToTopBtn" title="Back to top">&#8682;</button>
 </header>
 <nav class="navbar">
   <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
@@ -481,18 +481,8 @@ window.cookieconsent.initialise({
     <script>
 const myScript = document.getElementById('myScriptId');
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  if (currentTheme === 'light') {
-      toggleSwitch.checked = true;
-      
-  }
-}
 
 toggleSwitch.addEventListener('change', switchTheme, false);
-
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('data-theme', 'light');
@@ -500,7 +490,16 @@ function switchTheme(e) {
     
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
+    localStorage.removeItem('theme');
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'light') {
+    toggleSwitch.checked = true;
     
   }
 }
