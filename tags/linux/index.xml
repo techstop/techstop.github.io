@@ -1572,7 +1572,7 @@
       
       <guid>https://techstop.github.io/install-adb-on-linux/</guid>
       <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/adb-linux/install_adb_on_linux.png&#34; alt=&#34;Install ADB On Linux&#34; title=&#34;Install ADB On Linux&#34;  width=&#34;150px&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/adb-on-linux.png&#34; alt=&#34;ADB on Linux&#34; title=&#34;ADB on Linux&#34;  width=&#34;500px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
@@ -1605,7 +1605,8 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;If you’re looking to install adb on Linux, but don’t want to install Android Studio then this guide is for you. Android Studio is a development environment for creating android apps, but it’s a large download and installation if all you need is adb and fastboot. Below is a guide to install just adb and fastboot which will be a very small download and quick installation.&lt;/p&gt;</description>
+&lt;p&gt;In this tutorial we will be installing ADB (Android Debug Bridge) on your linux computer and making it accessible from any directory.&lt;/p&gt;
+&lt;p&gt;ADB provides a terminal interface on your linux computer to interact with your android device file system. This can be useful for many things like installing and uninstalling apps, disabling and enabling apps , logcat, and many other things.&lt;/p&gt;</description>
     </item>
     
     <item>

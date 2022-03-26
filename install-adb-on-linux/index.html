@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Install ADB On Linux - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Follow this guide to install ADB on Linux. ADB and fastboot are two important tools to interface with your android devices. This is especially useful to a developer.">
+  <meta name="description" content="In this tutorial we will be installing ADB (Android Debug Bridge) on your linux computer. ADB can be useful for many things like installing and uninstalling apps, disabling and enabling apps , logcat, and many other things.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
@@ -153,10 +153,10 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/install-adb-on-linux/" title="Install ADB On Linux">Install ADB On Linux</a></h1>
 
-<div class="post-info">Published: May 7, 2018</div>
+<div class="post-info">Published: May 7, 2018 &middot; Updated: Mar 26, 2022</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/adb-linux/install_adb_on_linux.png" alt="Install ADB On Linux" title="Install ADB On Linux"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/adb-on-linux.png" alt="ADB on Linux" title="ADB on Linux"  width="500px">
 </div>
 
 <div id="myModal" class="modal">
@@ -189,8 +189,8 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>If you’re looking to install adb on Linux, but don’t want to install Android Studio then this guide is for you. Android Studio is a development environment for creating android apps, but it’s a large download and installation if all you need is adb and fastboot. Below is a guide to install just adb and fastboot which will be a very small download and quick installation.</p>
-<p>This guide is intended for xubuntu and most distributions based on ubuntu, but should also work on most other linux distributions.</p>
+<p>In this tutorial we will be installing ADB (Android Debug Bridge) on your linux computer and making it accessible from any directory.</p>
+<p>ADB provides a terminal interface on your linux computer to interact with your android device file system. This can be useful for many things like installing and uninstalling apps, disabling and enabling apps , logcat, and many other things.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -201,21 +201,44 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<h2 id="instructions">Instructions</h2>
+<h2 id="install-adb">Install ADB</h2>
+<p>Begin by downloading the android <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">SDK Platform Tools</a> which contains adb and fastboot. It&rsquo;s a very small and quick download.</p>
 <ol>
-<li>Download <a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">SDK Platform Tools</a></li>
-<li>Place the downloaded zip file in your <strong>home</strong> folder and then extract it and you should get a folder named <strong>platform-tools</strong> (do not rename it).</li>
-<li>In terminal run this command. Change &ldquo;<strong>gedit</strong>&rdquo; for your default text editor.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">gedit admin://<span class="nv">$HOME</span>/.bashrc</code></pre></div></li>
-<li>When the file opens, go to the very bottom and copy/paste the following 2 lines&hellip;
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Android tools</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:~/platform-tools</code></pre></div></li>
-<li>Now logout then log back in or alternatively reboot your computer.</li>
-<li>Set your phone to usb debugging in developer options then plug it to your computer.</li>
-<li>Open a terminal on your computer and enter&hellip;.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb devices</code></pre></div></li>
+<li>Open your terminal by pressing (ctrl+alt+T) on your computer keyboard or by clicking its launcher icon.</li>
+<li>Create a directory named (adb) in your linux Home directory. You can run this command in terminal to create the directory:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir <span class="nv">$HOME</span>/adb</code></pre></div></li>
+<li>Extract the (platform-tools-latest-linux.zip) in the new adb directory we created above and you&rsquo;ll get a new directory named (platform-tools).</li>
+<li>Add the platform-tools directory to your linux environment path to make adb and fastboot accessible from any directory. To do this, go to your Home directory and show hidden files and open your (.bashrc) file then add the following 2 lines to the bottom of the file and save it.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"># Android platform-tools
+export PATH=${PATH}:~/adb/platform-tools</code></pre></div></li>
+<li>Now close your terminal and then open it again. Now run the following command to test adb:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb version</code></pre></div></li>
 </ol>
-<p>If all went well, you should see your phone’s serial number and you’ll be ready to use adb.</p>
+<p>If all went well you should get an output in your terminal with the adb version number. You have now installed adb on your linux computer.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 id="test-adb-with-android">Test ADB with Android</h2>
+<p>Now that you have adb installed on your linux computer you should test it with your android to make sure adb recognizes your android device.</p>
+<ol>
+<li>Make sure you have (USB debugging) enabled on your android device in the Settings (Developer options).</li>
+<li>Plug your android device to your computer with the usb cable.</li>
+<li>Now open a terminal on your computer and run the following command:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb devices</code></pre></div></li>
+<li>On your android device you will get a prompt asking you to allow USB debugging. Go ahead and allow it. After allowing it, you may need to run the above command again.</li>
+</ol>
+<p>You will now see a terminal output with your android device serial number which will look similar to the output below.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">List of devices attached
+c4fec245        device</code></pre></div></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>You should now have adb installed on your linux computer and ready to interact with your android devices. For more adb commands and options you can run (adb help) in your terminal.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
