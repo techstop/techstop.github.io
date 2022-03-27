@@ -1495,7 +1495,7 @@
       
       <guid>https://techstop.github.io/open-file-as-root/</guid>
       <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-0.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;150px&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-0.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;300px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
@@ -1529,7 +1529,7 @@
 &lt;/script&gt;
 
 &lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-1.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;150px&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-1.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;300px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
@@ -1562,7 +1562,7 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-&lt;p&gt;If you need to open file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open files or folders with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer included in the ubuntu family as of version 17.10 or any derivatives of ubuntu.&lt;/p&gt;</description>
+&lt;p&gt;If you need to open a file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open graphical applications with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer available for most linux distributions.&lt;/p&gt;</description>
     </item>
     
     <item>
