@@ -965,7 +965,7 @@
       
       <guid>https://techstop.github.io/create-desktop-launcher-linux/</guid>
       <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/desktop-launcher.png&#34; alt=&#34;Desktop Launcher File&#34; title=&#34;Desktop Launcher File&#34;  width=&#34;150px&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/desktop-launcher.png&#34; alt=&#34;Desktop Launcher File&#34; title=&#34;Desktop Launcher File&#34;  width=&#34;300px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
@@ -998,7 +998,7 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;There may be times when you will need to create a &lt;strong&gt;.desktop&lt;/strong&gt; launcher file in linux. The desktop file is a shortcut to an application for launching it. This desktop file adds a launcher to your applications menu and can also be placed in docks or anywhere you&amp;rsquo;d like.&lt;/p&gt;</description>
+&lt;p&gt;There may be times when you will need to create a desktop shortcut launcher file in linux. The desktop file is a shortcut to an application or script for launching it. This desktop file adds a launcher to your applications menu and can also be placed in docks or anywhere you&amp;rsquo;d like.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1008,7 +1008,7 @@
       
       <guid>https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/</guid>
       <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/dd0.png&#34; alt=&#34;dd&#34; title=&#34;dd&#34;  width=&#34;200px&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/bootable-usb.png&#34; alt=&#34;Bootable USB in Linux&#34; title=&#34;Bootable USB in Linux&#34;  width=&#34;400px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
@@ -1041,7 +1041,7 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;If you&amp;rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&amp;rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&amp;rsquo;t work. For these rare occasions the dd linux command line utility never fails. This is my preferred method and the one I&amp;rsquo;ll cover in this tutorial.&lt;/p&gt;</description>
+&lt;p&gt;If you&amp;rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&amp;rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&amp;rsquo;t work. For these rare occasions the dd linux command line utility can be an excellent substitute. This is my preferred method and the one I&amp;rsquo;ll cover in this tutorial.&lt;/p&gt;</description>
     </item>
     
     <item>

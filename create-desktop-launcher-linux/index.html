@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Create A Desktop Launcher In Linux - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="Create a .desktop launcher file in linux to open your applications and scripts. The .desktop launcher will be accessible from the applications menu and any dock or folder.">
+  <meta name="description" content="Create a desktop shortcut launcher file in linux to open your applications and scripts. The desktop shortcut launcher will be accessible from the applications menu and any dock or folder.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
@@ -153,10 +153,10 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/create-desktop-launcher-linux/" title="Create A Desktop Launcher In Linux">Create A Desktop Launcher In Linux</a></h1>
 
-<div class="post-info">Published: Sep 18, 2019</div>
+<div class="post-info">Published: Sep 18, 2019 &middot; Updated: Mar 26, 2022</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/desktop-launcher.png" alt="Desktop Launcher File" title="Desktop Launcher File"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/desktop-launcher.png" alt="Desktop Launcher File" title="Desktop Launcher File"  width="300px">
 </div>
 
 <div id="myModal" class="modal">
@@ -189,8 +189,8 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>There may be times when you will need to create a <strong>.desktop</strong> launcher file in linux. The desktop file is a shortcut to an application for launching it. This desktop file adds a launcher to your applications menu and can also be placed in docks or anywhere you&rsquo;d like.</p>
-<p>Most applications create their own .desktop launcher file when installed. However, there&rsquo;s the rare occasion when an application will not create one. A good example is the <strong>NetBeans IDE</strong> which doesn&rsquo;t create a desktop launcher.</p>
+<p>There may be times when you will need to create a desktop shortcut launcher file in linux. The desktop file is a shortcut to an application or script for launching it. This desktop file adds a launcher to your applications menu and can also be placed in docks or anywhere you&rsquo;d like.</p>
+<p>Most applications create their own desktop launcher file when installed. However, there&rsquo;s the rare occasion when an application will not create one. A good example is the <strong>NetBeans IDE</strong> which doesn&rsquo;t create a desktop launcher.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -202,21 +202,21 @@ window.cookieconsent.initialise({
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <p>In this tutorial I will show you how to create a desktop launcher file for any application and script that will be accessible from your applications menu and any dock or folder.</p>
-<h2 id="how-to-create-a-desktop-launcher"><strong>How To Create A Desktop Launcher</strong></h2>
-<p>The &ldquo;.desktop&rdquo; launcher file in linux is just a text file with a &ldquo;<strong>.desktop</strong>&rdquo; extension at the end. Here&rsquo;s an example of the contents for a desktop launcher I created for <a href="https://www.gimp.org/" target="_blank">GIMP</a>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>Desktop Entry<span class="o">]</span>
-<span class="nv">Type</span><span class="o">=</span>Application
-<span class="nv">Name</span><span class="o">=</span>GIMP
-<span class="nv">Comment</span><span class="o">=</span>GNU Image Manipulation Program
-<span class="nv">Icon</span><span class="o">=</span>/usr/share/icons/hicolor/48x48/apps/gimp.png
-<span class="nv">Exec</span><span class="o">=</span>/usr/bin/gimp
-<span class="nv">Categories</span><span class="o">=</span>Graphics<span class="p">;</span>
-<span class="nv">Terminal</span><span class="o">=</span>false</code></pre></div>
+<h2 id="how-to-create-a-desktop-shortcut-launcher">How To Create A Desktop Shortcut Launcher</h2>
+<p>The desktop shortcut launcher file in linux is just a text file with a (.desktop) extension at the end. Here&rsquo;s an example of the contents for a desktop launcher I created for <a href="https://www.gimp.org/" target="_blank">GIMP</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">[Desktop Entry]
+Type=Application
+Name=GIMP
+Comment=GNU Image Manipulation Program
+Icon=/usr/share/icons/hicolor/48x48/apps/gimp.png
+Exec=/usr/bin/gimp
+Categories=Graphics;
+Terminal=false</code></pre></div>
 <ul>
-<li><strong>[Desktop Entry]</strong> - This lets the system know it&rsquo;s a desktop launcher file.</li>
-<li><strong>Type</strong> - This will always be set to <strong>Application</strong>.</li>
-<li><strong>Name</strong> - You can add whatever name you wish to give the application.</li>
-<li><strong>Comment</strong> - This describes the application and shows in hint popups when you rest the mouse cursor on the launcher.</li>
+<li><strong>[Desktop Entry]</strong> - This lets the system know it&rsquo;s a desktop shortcut launcher file.</li>
+<li><strong>Type</strong> - This will always be set to Application.</li>
+<li><strong>Name</strong> - You can add whatever name you wish to give the application or script.</li>
+<li><strong>Comment</strong> - This describes the application and shows in tool-tip popups when you rest the mouse cursor on the launcher.</li>
 <li><strong>Icon</strong> - Set the path to any icon image of your liking. You can download one, create it yourself, or use a system icon.</li>
 <li><strong>Exec</strong> - This will be the path to the executable or script.</li>
 <li><strong>Categories</strong> - The launcher will be placed under this category in the applications menu. You can choose an appropriate category from your applications menu.</li>
@@ -232,9 +232,9 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>Once you&rsquo;ve added all the fields above to your desktop launcher file, save it with a &ldquo;<strong>.desktop</strong>&rdquo; extension. For this example I named mine &ldquo;<strong>gimp-app.desktop</strong>&rdquo;. Now move the desktop file you created to &ldquo;<strong>/home/USERNAME/.local/share/applications</strong>&rdquo;. Change &ldquo;<strong>USERNAME</strong>&rdquo; with your own user name. Finally you can check your applications menu for your new desktop launcher.</p>
-<h2 id="conclusion"><strong>Conclusion</strong></h2>
-<p>As you can see it is really simple to create a .desktop launcher file on linux for any application whether it&rsquo;s third party, one you created, or any script.</p>
+<p>Once you&rsquo;ve added all the fields above to your desktop launcher file, save it with a (.desktop) extension. For this example I named mine (gimp-app.desktop). Now move the desktop file you created to (/home/USERNAME/.local/share/applications). Change (USERNAME) with your own user name. Finally you can check your applications menu for your new desktop launcher.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>As you can see it is really simple to create a desktop shortcut launcher file on linux for any application or script whether it&rsquo;s third party or one you created.</p>
 <p>If you have any questions feel free to ask in the comments below.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>

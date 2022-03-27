@@ -153,10 +153,10 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/" title="Create Bootable Usb With Terminal in Linux">Create Bootable Usb With Terminal in Linux</a></h1>
 
-<div class="post-info">Published: Sep 15, 2019</div>
+<div class="post-info">Published: Sep 15, 2019 &middot; Updated: Mar 26, 2022</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/dd0.png" alt="dd" title="dd"  width="200px">
+<img class="myImg" src="https://techstop.github.io/images/linux/bootable-usb.png" alt="Bootable USB in Linux" title="Bootable USB in Linux"  width="400px">
 </div>
 
 <div id="myModal" class="modal">
@@ -189,9 +189,7 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>If you&rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&rsquo;t work. For these rare occasions the dd linux command line utility never fails. This is my preferred method and the one I&rsquo;ll cover in this tutorial.</p>
-<h2 id="create-a-bootable-usb"><strong>Create A Bootable USB</strong></h2>
-<p>Once you have downloaded the iso image for the linux distro you&rsquo;d like to test or install, you&rsquo;ll need to plug your usb stick to your computer to get its partition path. To do this we will use <strong>lsblk</strong> in the terminal to get the partition path for the usb stick.</p>
+<p>If you&rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&rsquo;t work. For these rare occasions the dd linux command line utility can be an excellent substitute. This is my preferred method and the one I&rsquo;ll cover in this tutorial.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -202,51 +200,27 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<h2 id="create-a-bootable-usb">Create A Bootable USB</h2>
+<p>Once you have downloaded the iso image for the linux distro you&rsquo;d like to test or install, you&rsquo;ll need to plug your usb stick to your computer to get its file system partition path. To do this we will use (lsblk) in the terminal to get the partition path for the usb stick.</p>
 <p>Open the terminal and run this command:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsblk</code></pre></div></p>
-<p><strong>Note:</strong> The root directory for all drives attached to your computer in linux is:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/dev</code></pre></div>
-<p>The name of my usb stick is <strong>Kingston</strong> which is also the brand. As you can see in the screenshot, its partition is:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sdd</code></pre></div>
-<div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/dd1.png" alt="lsblk" title="lsblk"  width="200px">
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-
-<p>Now that we know the partition, this is what the full partition path would look like.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/dev/sdd</code></pre></div>
-<p>Assuming that the iso image for the linux distro you wish to burn to your usb stick is in your downloads directory, this is what the command looks like to create the bootable usb. When you run the command you will need to enter your login password. Once you&rsquo;ve entered the command, just wait a couple minutes for it to finish.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/home/USERNAME/Downloads/FILENAME.iso <span class="nv">of</span><span class="o">=</span>/dev/sdd <span class="nv">conv</span><span class="o">=</span>fdatasync</code></pre></div>
-<p>As you can see &ldquo;<strong>if=</strong>&rdquo; contains the path to our iso image file and &ldquo;<strong>of=</strong>&rdquo; contains the usb stick partition path.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">df -h</code></pre></div></p>
+<p>This is what my output looks like after running the df command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Filesystem      Size  Used Avail Use% Mounted on
+dev             3.7G     0  3.7G   0% /dev
+run             3.7G  1.4M  3.7G   1% /run
+/dev/sda2       117G   34G   78G  30% /
+tmpfs           3.7G   54M  3.6G   2% /dev/shm
+tmpfs           3.7G   56M  3.6G   2% /tmp
+/dev/sda1       300M  288K  300M   1% /boot/efi
+tmpfs           742M   76K  742M   1% /run/user/1000
+/dev/sdb        3.8G  663M  3.2G  18% /run/media/gametheory/Sony</code></pre></div>
+<p>The name of my usb stick is (Sony) which is also the brand. As you can see in the output above, its file system partition is:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/dev/sdb</code></pre></div>
+<p><strong>Note:</strong> If your usb stick is not labeled, you can identify it by its size. Mine shows (3.8G).</p>
+<p>This is what the command looks like to create the bootable usb. When you run the command you will need to enter your login password. Once you&rsquo;ve entered the command, just wait a couple minutes for it to finish.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/path/to/file.iso <span class="nv">of</span><span class="o">=</span>/dev/sdb <span class="nv">conv</span><span class="o">=</span>fsync <span class="nv">oflag</span><span class="o">=</span>direct <span class="nv">status</span><span class="o">=</span>progress</code></pre></div>
+<p>As you can see (if=) contains the path to our iso image file and (of=) contains the usb stick file system partition path.</p>
+<p><strong>Note:</strong> Make sure to change (/path/to/file.iso) to the path where you have your iso file.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -257,7 +231,7 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<h2 id="boot-from-usb-stick"><strong>Boot From USB Stick</strong></h2>
+<h2 id="boot-from-usb-stick">Boot From USB Stick</h2>
 <p>Now that you&rsquo;ve created your bootable usb with the terminal in linux, it is time to boot from it. With the usb stick attached to your computer perform a reboot or shutdown. In the startup screen you&rsquo;ll see a key you need to press to get to the boot options (i.e. Esc, F2, F10). In the boot options select to boot from the usb stick.</p>
 <p>That is all! You will now boot linux from the usb.</p>
 <p>If you have any questions feel free to ask in the comments below.</p>
