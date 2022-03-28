@@ -77,7 +77,7 @@
 {
   "ref": "https://techstop.github.io/android-broadcastreceiver/","title": "Android BroadcastReceiver","cats": "Tutorials, Android","tags": "android studio, app development, java, Tutorials, android"},
 {
-  "ref": "https://techstop.github.io/freedom-kernel-for-the-zmax-pro/","title": "Freedom Kernel for the Zmax Pro","cats": "Android","tags": "android, zte, z981, kernels, phones"},
+  "ref": "https://techstop.github.io/freedom-kernel-for-the-zmax-pro/","title": "Freedom Kernel for the Zmax Pro","cats": "Android","tags": "android, z981"},
 {
   "ref": "https://techstop.github.io/reduce-apk-size/","title": "How To Reduce Apk Size","cats": "Tutorials, Android","tags": "android studio, app development, Tutorials, android"},
 {
@@ -101,28 +101,24 @@
 {
   "ref": "https://techstop.github.io/recovery-reboot/","title": "Recovery Reboot","cats": "Android","tags": "Android, Apps"},
 {
-  "ref": "https://techstop.github.io/lg-g-stylo-katana-rom/","title": "LG G Stylo Katana ROM","cats": "Android","tags": "LG, MS631, H631, Android, roms, phones"},
+  "ref": "https://techstop.github.io/lg-g-stylo-katana-rom/","title": "LG G Stylo Katana ROM","cats": "Android","tags": "MS631, H631, Android"},
 {
-  "ref": "https://techstop.github.io/lg-g-stylo-twrp-recovery/","title": "LG G Stylo TWRP Recovery","cats": "Android","tags": "LG, MS631, H631, Android, phones"},
+  "ref": "https://techstop.github.io/lg-g-stylo-twrp-recovery/","title": "LG G Stylo TWRP Recovery","cats": "Android","tags": "MS631, H631, Android"},
 {
-  "ref": "https://techstop.github.io/lg-optimus-f6-freedom-kernel/","title": "LG Optimus F6 Freedom Kernel","cats": "Android","tags": "LG, MS500, D500, Android, Kernels, phones"},
+  "ref": "https://techstop.github.io/lg-optimus-f6-freedom-kernel/","title": "LG Optimus F6 Freedom Kernel","cats": "Android","tags": "MS500, D500, Android"},
 {
-  "ref": "https://techstop.github.io/lg-g-stylo-flashable-v10j/","title": "LG G Stylo Flashable v10j","cats": "Android","tags": "LG, MS631, H631, Android, roms, phones"},
+  "ref": "https://techstop.github.io/lg-g-stylo-flashable-v10j/","title": "LG G Stylo Flashable v10j","cats": "Android","tags": "MS631, H631, Android"},
 {
-  "ref": "https://techstop.github.io/lg-g-stylo-unbrick-guide/","title": "LG G Stylo Unbrick Guide","cats": "Android","tags": "LG, MS631, H631, Android, phones"},
+  "ref": "https://techstop.github.io/lg-g-stylo-unbrick-guide/","title": "LG G Stylo Unbrick Guide","cats": "Android","tags": "MS631, H631, Android"},
 {
-  "ref": "https://techstop.github.io/lg-optimus-f6-xperion-rom/","title": "LG Optimus F6 Xperion ROM","cats": "Android","tags": "LG, MS500, D500, Android, roms, phones"},
+  "ref": "https://techstop.github.io/lg-optimus-f6-xperion-rom/","title": "LG Optimus F6 Xperion ROM","cats": "Android","tags": "MS500, D500, Android"},
 {
-  "ref": "https://techstop.github.io/lg-optimus-f3-freedom-kernel/","title": "LG Optimus F3 Freedom Kernel","cats": "Android","tags": "LG, MS659, P659, Android, Kernels, phones"},
+  "ref": "https://techstop.github.io/lg-optimus-f3-freedom-kernel/","title": "LG Optimus F3 Freedom Kernel","cats": "Android","tags": "MS659, P659, Android"},
 {
-  "ref": "https://techstop.github.io/lg-optimus-f3-roms/","title": "LG Optimus F3 ROMs","cats": "Android","tags": "LG, MS659, P659, Android, roms, phones"},
+  "ref": "https://techstop.github.io/lg-optimus-f3-roms/","title": "LG Optimus F3 ROMs","cats": "Android","tags": "MS659, P659, Android"},
 {
-  "ref": "https://techstop.github.io/lg-optimus-f7-kernel/","title": "LG Optimus F7 Kernel","cats": "Android","tags": "LG, LG870, Android, Kernels, phones"},
+  "ref": "https://techstop.github.io/lg-optimus-f7-kernel/","title": "LG Optimus F7 Kernel","cats": "Android","tags": "LG870, Android"},
 {
-  "ref": "https://techstop.github.io/lg-lucid-2-xperion-rom/","title": "LG Lucid 2 Xperion ROM","cats": "Android","tags": "LG, VS870, Android, roms, phones"},
+  "ref": "https://techstop.github.io/lg-lucid-2-xperion-rom/","title": "LG Lucid 2 Xperion ROM","cats": "Android","tags": "VS870, Android"},
 {
-  "ref": "https://techstop.github.io/lg-spirit-4g-roms/","title": "LG Spirit 4G ROMs","cats": "Android","tags": "LG, MS870, Android, roms, phones"},
-{
-  "ref": "https://techstop.github.io/lg-motion-4g-kernel/","title": "LG Motion 4G Kernel","cats": "Android","tags": "LG, MS770, Android, Kernels, phones"},
-{
-  "ref": "https://techstop.github.io/huawei-ascend-m860-centurion-rom/","title": "Huawei Ascend M860 Centurion ROM","cats": "Android","tags": "Huawei, M860, Android, roms, phones"}]
+  "ref": "https://techstop.github.io/lg-spirit-4g-roms/","title": "LG Spirit 4G ROMs","cats": "Android","tags": "MS870, Android"}]

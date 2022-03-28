@@ -730,7 +730,7 @@
 	}
 &lt;/script&gt;
 &lt;/p&gt;
-&lt;p&gt;The Freedom Kernel for the Zmax Pro Z981 has been a lot of fun to work on. I&amp;rsquo;d like to thank &lt;a href=&#34;https://androidforums.com/members/armandop_.1999347/&#34; target=&#34;_blank&#34;&gt;Armando&lt;/a&gt; from Android Forums for his great work on the LineageOS 14.1 rom for which I made the Freedom custom kernel for. I set out to add value not only to the Lineage rom, but also to the user experience and I can confidently say mission accomplished. So without further ado, please enjoy. Many Thanks.&lt;/p&gt;</description>
+&lt;p&gt;The Freedom Kernel for the Zmax Pro Z981 is a custom kernel with many enhancements. This kernel provides various custom tweaks and performance improvements over the stock offering to give you more control over your Android device’s performance.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1889,58 +1889,6 @@
       
       <guid>https://techstop.github.io/lg-spirit-4g-roms/</guid>
       <description>&lt;p&gt;The LG Spirit 4G ROMs really enhance the user experience and make this device much more ejoyable. These roms have really been customized to make you wonder why stick to the stock factory rom. The roms can also be further customized with themes and other customizations to suit your needs. The Samurai rom with the white theme happens to be my personal favorites!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>LG Motion 4G Kernel</title>
-      <link>https://techstop.github.io/lg-motion-4g-kernel/</link>
-      <pubDate>Thu, 18 Jan 2018 00:58:18 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/lg-motion-4g-kernel/</guid>
-      <description>&lt;p&gt;The LG Motion 4G Kernel further enhances the user experience by really putting the power in your hands. Whether you want to overclock to boost performance or underclock to save battery, the kernel can give you that ability. Freedom Kernel is for the LG Motion 4G MS770. See kernel details below&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Huawei Ascend M860 Centurion ROM</title>
-      <link>https://techstop.github.io/huawei-ascend-m860-centurion-rom/</link>
-      <pubDate>Wed, 17 Jan 2018 03:11:09 +0000</pubDate>
-      
-      <guid>https://techstop.github.io/huawei-ascend-m860-centurion-rom/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/m860/Huawei-Ascend-M860-Centurion-ROM.png&#34; alt=&#34;Huawei Ascend M860 Centurion ROM&#34; title=&#34;Huawei Ascend M860 Centurion ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;The Huawei Ascend M860 Centurion rom is based on Froyo 2.2.2. This rom is for the MetroPCS variant. Centurion rom offers enhancements beyond the factory stock rom for a better user experience.&lt;/p&gt;</description>
     </item>
     
   </channel>
