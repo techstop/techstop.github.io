@@ -1248,7 +1248,7 @@
       
       <guid>https://techstop.github.io/detect-android-wakelocks/</guid>
       <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wake-1.png&#34; alt=&#34;Android Wakelocks&#34; title=&#34;Android Wakelocks&#34;  width=&#34;150px&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wake-1.png&#34; alt=&#34;Android Wakelocks&#34; title=&#34;Android Wakelocks&#34;  width=&#34;400px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
@@ -1280,8 +1280,9 @@
 		modal.style.display = &#34;none&#34;;
 	}
 &lt;/script&gt;
- &lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wake-2.png&#34; alt=&#34;Android Wakelocks&#34; title=&#34;Android Wakelocks&#34;  width=&#34;150px&#34;&gt;
+
+&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wake-2.png&#34; alt=&#34;Android Wakelocks&#34; title=&#34;Android Wakelocks&#34;  width=&#34;400px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
