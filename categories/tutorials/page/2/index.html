@@ -146,6 +146,57 @@ window.cookieconsent.initialise({
     
         <article>
   
+  <h1><a href="https://techstop.github.io/upgrade-kept-back-packages/" title="Upgrade Kept Back Packages in Linux">Upgrade Kept Back Packages in Linux</a></h1>
+
+<div class="post-info">Published: Oct 29, 2019</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/kept.png" alt="Upgrade Kept Back Packages in Linux" title="Upgrade Kept Back Packages in Linux"  width="150px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+<p>Occasionally when updating your linux system from a terminal, you&rsquo;ll notice a warning stating &ldquo;The following packages have been kept back&rdquo;. This means that when updating, those packages will not be upgraded. Today we&rsquo;ll look at how to upgrade kept back packages in linux.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/upgrade-kept-back-packages/" title="Upgrade Kept Back Packages in Linux">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+    
+        <article>
+  
   <h1><a href="https://techstop.github.io/remove-orphaned-packages-linux/" title="Remove Orphaned Packages in Linux">Remove Orphaned Packages in Linux</a></h1>
 
 <div class="post-info">Published: Oct 27, 2019</div>
@@ -397,57 +448,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/update-linux-terminal/" title="Update Linux in a Terminal">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/time-command-linux/" title="Time a Command in Linux">Time a Command in Linux</a></h1>
-
-<div class="post-info">Published: Oct 19, 2019</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/time.png" alt="Time a Command in Linux" title="Time a Command in Linux"  width="150px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-<p>Getting familiar with timing commands in linux is a good idea. This is a good way to time long operations in a bash script or from the terminal. You can time most commands and any bash script. My favorite use case is for timing source code compilation from build scripts.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/time-command-linux/" title="Time a Command in Linux">Read more &raquo;</a></p>
   <hr>
 </article>
 

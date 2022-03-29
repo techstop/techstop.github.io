@@ -6,7 +6,50 @@
     <description>Recent content in Tutorials on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Mar 2022 20:19:29 -0400</lastBuildDate><atom:link href="https://techstop.github.io/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Mar 2022 21:44:35 -0400</lastBuildDate><atom:link href="https://techstop.github.io/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux tldr Pages Command</title>
+      <link>https://techstop.github.io/linux-tldr-pages-command/</link>
+      <pubDate>Mon, 28 Mar 2022 21:44:35 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/linux-tldr-pages-command/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/tldr-pages-0.png&#34; alt=&#34;tldr tar&#34; title=&#34;tldr tar&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;p&gt;Linux tldr pages command displays simplified &lt;a href=&#34;https://en.wikipedia.org/wiki/Man_page&#34; target=&#34;_blank&#34;&gt;man pages&lt;/a&gt; for linux command-line tools. Unlike the man pages, tldr pages is more like a cheat sheet that displays usage examples for linux commands.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux watch Command</title>
       <link>https://techstop.github.io/linux-watch-command/</link>
