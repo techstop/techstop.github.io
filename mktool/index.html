@@ -150,10 +150,10 @@ window.cookieconsent.initialise({
     
   <h1><a href="https://techstop.github.io/mktool/" title="mktool">mktool</a></h1>
 
-<div class="post-info">Published: Apr 27, 2018</div>
+<div class="post-info">Published: Apr 27, 2018 &middot; Updated: Mar 30, 2022</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/mktool/mktool.png" alt="mktool" title="mktool"  width="100px">
+<img class="myImg" src="https://techstop.github.io/images/mktool/mktool.png" alt="mktool" title="mktool"  width="320px">
 </div>
 
 <div id="myModal" class="modal">
@@ -186,14 +186,8 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>If you need to unpack and repack boot.img, recovery.img, or loki images, then this is the tool for you. With mktool you don&rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.</p>
+<p>Mktool is a utility to unpack and repack a boot.img and recovery.img file. Mktool provides a simple point and click GUI to make unpacking boot and recovery images easy. If you need to unpack and repack a boot.img, recovery.img, or loki image, then this is the tool for you. With mktool you don&rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.</p>
 <p>While this tool aims to be a universal tool for all androids, it is nearly impossible due to the vast amount of android devices on the market. I have not come across an incompatible device yet. Feel free to let me know in the comments if your device is incompatible.</p>
-<h2 id="overview">Overview</h2>
-<ul>
-<li>Unpack boot.img or boot.lok, recovery.img or recovery.lok</li>
-<li>Repack any .img or .lok that was unpacked with mktool</li>
-<li>loki patch boot.img or recovery.img files for loki compatible devices</li>
-</ul>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -204,13 +198,25 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>Unpack boot.img or recovery.img, boot.lok or recovery.lok</li>
+<li>Repack any .img or .lok that was unpacked with mktool</li>
+<li>loki patch boot.img or recovery.img files for loki compatible devices</li>
+</ul>
 <h2 id="usage">Usage</h2>
-<p>Tested on ubuntu and xubuntu. Must have java 8 or higher installed.</p>
+<p>Made for use on linux. You must have java 8 or higher installed. If you&rsquo;re not sure where to get java, you can get it from <a href="https://aws.amazon.com/corretto/" target="_blank">here</a>.</p>
 <ol>
-<li>Place your images in the input folder.</li>
-<li>Execute the mktool.jar file as follows in terminal:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">java -jar mktool.jar</code></pre></div></li>
-<li>optional - Go to &ldquo;File &gt; Add Launcher Shortcut&rdquo; for quick access.</li>
+<li>
+<p>Place your images in the input folder.</p>
+</li>
+<li>
+<p>Execute the (run.sh) file as follows in terminal:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./run.sh</code></pre></div></p>
+</li>
+<li>
+<p>Optional: Go to (File &gt; Add Launcher Shortcut) for quick access.</p>
+</li>
 </ol>
 <div>
   <a title="mktool" href="https://github.com/GameTheory-/mktool/releases" target="_blank">

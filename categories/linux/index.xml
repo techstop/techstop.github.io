@@ -1659,7 +1659,7 @@
       
       <guid>https://techstop.github.io/mktool/</guid>
       <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/mktool/mktool.png&#34; alt=&#34;mktool&#34; title=&#34;mktool&#34;  width=&#34;100px&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/mktool/mktool.png&#34; alt=&#34;mktool&#34; title=&#34;mktool&#34;  width=&#34;320px&#34;&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
@@ -1692,7 +1692,7 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;If you need to unpack and repack boot.img, recovery.img, or loki images, then this is the tool for you. With mktool you don&amp;rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&amp;rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.&lt;/p&gt;</description>
+&lt;p&gt;Mktool is a utility to unpack and repack a boot.img and recovery.img file. Mktool provides a simple point and click GUI to make unpacking boot and recovery images easy. If you need to unpack and repack a boot.img, recovery.img, or loki image, then this is the tool for you. With mktool you don&amp;rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&amp;rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.&lt;/p&gt;</description>
     </item>
     
     <item>
