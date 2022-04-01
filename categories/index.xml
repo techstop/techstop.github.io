@@ -6,13 +6,22 @@
     <description>Recent content in Categories on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Mar 2022 21:44:35 -0400</lastBuildDate><atom:link href="https://techstop.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Apr 2022 11:58:07 -0400</lastBuildDate><atom:link href="https://techstop.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
       <link>https://techstop.github.io/categories/linux/</link>
-      <pubDate>Mon, 28 Mar 2022 21:44:35 -0400</pubDate>
+      <pubDate>Fri, 01 Apr 2022 11:58:07 -0400</pubDate>
       
       <guid>https://techstop.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorials</title>
+      <link>https://techstop.github.io/categories/tutorials/</link>
+      <pubDate>Fri, 01 Apr 2022 11:58:07 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/categories/tutorials/</guid>
       <description></description>
     </item>
     

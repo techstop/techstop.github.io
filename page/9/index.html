@@ -137,6 +137,59 @@ window.cookieconsent.initialise({
   
       <article>
   
+  <h1><a href="https://techstop.github.io/mktool/" title="mktool">mktool</a></h1>
+
+<div class="post-info">Published: Apr 27, 2018 &middot; Updated: Mar 30, 2022</div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/mktool/mktool.png" alt="mktool" title="mktool"  width="320px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+<p>Mktool is a utility to unpack and repack a boot.img and recovery.img file. Mktool provides a simple point and click GUI to make unpacking boot and recovery images easy. If you need to unpack and repack a boot.img, recovery.img, or loki image, then this is the tool for you. With mktool you don&rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/android">android</a>, 
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>, 
+    
+      <a href="https://techstop.github.io/tags/unpack-boot.img">unpack boot.img</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/mktool/" title="mktool">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+  
+      <article>
+  
   <h1><a href="https://techstop.github.io/debloat-android-no-root/" title="Debloat Android No Root">Debloat Android No Root</a></h1>
 
 <div class="post-info">Published: Apr 19, 2018 &middot; Updated: Mar 8, 2022</div>
@@ -667,59 +720,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/lg-g-stylo-katana-rom/" title="LG G Stylo Katana ROM">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-  
-      <article>
-  
-  <h1><a href="https://techstop.github.io/lg-g-stylo-twrp-recovery/" title="LG G Stylo TWRP Recovery">LG G Stylo TWRP Recovery</a></h1>
-
-<div class="post-info">Published: Jan 23, 2018</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/stylo/LG-Stylo-TWRP-Recovery.png" alt="LG G Stylo TWRP Recovery" title="LG G Stylo TWRP Recovery"  width="100px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-<p>This guide is to help you install the LG G Stylo TWRP recovery so that you can make backups, flash roms, and kernels or any flashable zips for this device.  If you plan on experimenting with your device, than this is a must have.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/ms631">ms631</a>, 
-    
-      <a href="https://techstop.github.io/tags/h631">h631</a>, 
-    
-      <a href="https://techstop.github.io/tags/android">android</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/lg-g-stylo-twrp-recovery/" title="LG G Stylo TWRP Recovery">Read more &raquo;</a></p>
   <hr>
 </article>
 

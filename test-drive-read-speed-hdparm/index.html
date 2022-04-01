@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Linux - techStop</title>
+  <title>Test Drive Read Speed With hdparm - techStop</title>
   <meta name="author" content="Antonio">
-  <meta name="description" content="TechStop is a tech website with a focus on Linux and Android. Check out our tutorials and tech articles for the Linux and Android platforms and other technologies.">
+  <meta name="description" content="Test your SSD or HDD drive read speeds on linux with hdparm. hdparm can give you an accurate representation of the read speeds of your drives to see if they&#39;re performing as expected.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
@@ -118,8 +118,7 @@ window.cookieconsent.initialise({
     <div class="container clearfix">
       <main>
         <div class="content">
-  <article>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 
 <ins class="adsbygoogle"
@@ -131,22 +130,22 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+  <article>
     
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/mktool/" title="mktool">mktool</a></h1>
+  <h1><a href="https://techstop.github.io/test-drive-read-speed-hdparm/" title="Test Drive Read Speed With hdparm">Test Drive Read Speed With hdparm</a></h1>
 
-<div class="post-info">Published: Apr 27, 2018 &middot; Updated: Mar 30, 2022</div>
+<div class="post-info">Published: Apr 1, 2022</div>
 
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/mktool/mktool.png" alt="mktool" title="mktool"  width="320px">
+    <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/hdparm.png" alt="hdparm" title="hdparm"  width="400px">
 </div>
+
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
+
 <script>
 	
 	var modal = document.getElementById('myModal');
@@ -170,123 +169,83 @@ window.cookieconsent.initialise({
 		modal.style.display = "none";
 	}
 </script>
-<p>Mktool is a utility to unpack and repack a boot.img and recovery.img file. Mktool provides a simple point and click GUI to make unpacking boot and recovery images easy. If you need to unpack and repack a boot.img, recovery.img, or loki image, then this is the tool for you. With mktool you don&rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/android">android</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/unpack-boot.img">unpack boot.img</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/mktool/" title="mktool">Read more &raquo;</a></p>
-  <hr>
-</article>
 
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/debloat-android-no-root/" title="Debloat Android No Root">Debloat Android No Root</a></h1>
+<p>If you&rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your drive&rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your drives to see if they&rsquo;re performing as expected.</p>
+<h2 id="determine-disk-to-test">Determine Disk to Test</h2>
+<p>Whether you have one or more attached drives to your computer, you need to determine the disk path.</p>
+<p>The paths are listed as follows:</p>
+<ul>
+<li>(/dev/hd*) = IDE disks: hard Disk Drives(HDD)</li>
+<li>(/dev/sd*) = SATA disks: Solid State Drives(SSD)</li>
+<li>(/dev/nvme*) = Express pci disks: Non-Volatile Memory Express(NVMe)</li>
+</ul>
+<h2 id="get-disk-path">Get Disk Path</h2>
+<p>To get the disk path we will run the (fdisk) command in our terminal.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l</code></pre></div>
+<p>As you can see from the output below, my disk path is (/dev/sda).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Disk /dev/sda: 119.24 GiB, 128035676160 bytes, 250069680 sectors
+Disk model: SAMSUNG SSD 830 
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 0BB9721E-A0BC-734C-99A0-367A0D530AC2
 
-<div class="post-info">Published: Apr 19, 2018 &middot; Updated: Mar 8, 2022</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/backupdebloat/Debloat-Android-No-Root.png" alt="Debloat Android No Root" title="Debloat Android No Root"  width="200px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
+Device      Start       End   Sectors   Size Type
+/dev/sda1    4096    618495    614400   300M EFI System
+/dev/sda2  618496 250067789 249449294 118.9G Linux filesystem</code></pre></div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
 <script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>If you&rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&rsquo;re here reading this, it&rsquo;s likely because there is no root for your device or you simply don&rsquo;t wish to root it. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called <strong>Debloat Android No Root</strong> to give you some control back over your device.</p>
-  
-    Tags:
+<h2 id="test-disk-read-speed">Test Disk Read Speed</h2>
+<p>Now that we have determined our disk path, it is time to run our read speed test.</p>
+<p>To test the disk read speed we run the following (hdparm) command.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -t /dev/sda</code></pre></div>
+<p>If you look at my output below, you can see that I&rsquo;m getting &ldquo;450.51 MB/sec&rdquo; which is in line with what the manufacturer advertises. Not bad considering it&rsquo;s a ten year old SSD as of the date of this article.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">/dev/sda:
+ Timing buffered disk reads: 1352 MB in  3.00 seconds = 450.51 MB/sec</code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+<p>You should now be able to test read speeds for any attached drive to your computer. For more hdparm options you can run (man hdparm) or (<a href="https://techstop.github.io/linux-tldr-pages-command/">tldr</a> hdparm) in your terminal.</p>
+    <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2ftest-drive-read-speed-hdparm%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Test%20Drive%20Read%20Speed%20With%20hdparm&amp;url=https%3a%2f%2ftechstop.github.io%2ftest-drive-read-speed-hdparm%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ftest-drive-read-speed-hdparm%2f&title=Test%20Drive%20Read%20Speed%20With%20hdparm" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
     
-      <a href="https://techstop.github.io/tags/android">android</a>, 
+      Tags:
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      
+        <a href="https://techstop.github.io/tags/linux">linux</a>
+      
     
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/debloat-android-no-root/" title="Debloat Android No Root">Read more &raquo;</a></p>
+    <div style="margin-top: 18px; text-align: center;">
+      
+        <span>&middot; <strong>More Articles</strong> &middot;</span>
+      
+      
+      
+        <div><a href="https://techstop.github.io/linux-tldr-pages-command/">Linux tldr Pages Command &raquo;</a></div>
+      
+    </div>
+  </article>
   <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/mkv-to-mp4/" title="MKV to MP4">MKV to MP4</a></h1>
-
-<div class="post-info">Published: Mar 30, 2018 &middot; Updated: Mar 13, 2022</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/mkv2mp4/mkv-to-mp4.png" alt="MKV to MP4" title="MKV to MP4"  width="200px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-<p>I&rsquo;ve created a simple bash script to convert mkv to mp4 container quickly. The script will allow you to batch convert multiple mkv files or convert one at a time depending on your needs. You can also append a subtitle srt file to your mp4 files with this tool.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/mkv-to-mp4/" title="MKV to MP4">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 
 <ins class="adsbygoogle"
@@ -299,17 +258,100 @@ window.cookieconsent.initialise({
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-    <div class="pagination">
-
-  <a class="btn newer" href="/categories/linux/page/6/" title="Previous">&laquo; Previous</a>
-
-
-  <p class="counter">Page 7 of 7</p>
-
-
+  
+    <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1f5e8;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        label="comments"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
 </div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
 
-  </article>
+  
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
 
         </div>
       </main>
@@ -324,9 +366,13 @@ function switchTheme(e) {
     document.documentElement.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', 'light');
     
+      document.location.reload();
+    
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.removeItem('theme');
+    
+      document.location.reload();
     
   }
 }
@@ -336,6 +382,8 @@ if (currentTheme) {
   document.documentElement.setAttribute('data-theme', currentTheme);
   if (currentTheme === 'light') {
     toggleSwitch.checked = true;
+    
+        myScript.setAttribute('theme', 'github-light');
     
   }
 }
