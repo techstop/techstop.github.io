@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Oct 14, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/mv.png" alt="Rename Files &amp; Folders Linux Command Line" title="Rename Files &amp; Folders Linux Command Line"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/mv.png" alt="Rename Files &amp; Folders Linux Command Line" title="Rename Files &amp; Folders Linux Command Line"  width="550px">
 </div>
 
 <div id="myModal" class="modal">
@@ -173,16 +173,6 @@ window.cookieconsent.initialise({
 <p>Lets take a look at how to rename files and folders in linux from the command line.</p>
 <p>Sure you can use your GUI and be done with it, but learning to do it from the command line can be quite useful. There&rsquo;s also the added benefit of being able to use these commands in bash scripts.</p>
 <p>In a bash script you can loop through lots of files or folders to rename them quickly and efficiently. Knowing the right commands for the job is key.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>We will be going over three different methods to rename files and folders:</p>
 <ul>
 <li><strong>mv</strong> - For moving source to folder or renaming source.</li>
@@ -207,6 +197,16 @@ window.cookieconsent.initialise({
 <p>Now we shall use the rename command. If you don&rsquo;t have rename installed you can install it as follows:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install rename</code></pre></div>
 <p>If you&rsquo;ve been following this tutorial so far then you should have 4 &ldquo;<strong>.txt</strong>&rdquo; files in your folder which we will be working with.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <p>Lets run the following command to rename the files and replace the &ldquo;<strong>.txt</strong>&rdquo; extension with &ldquo;<strong>.bak</strong>&quot;:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/.txt/.bak/&#39;</span> *.txt</code></pre></div>
 <p>The files should now be renamed as follows:</p>
@@ -219,16 +219,6 @@ window.cookieconsent.initialise({
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">// /</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
 <p><strong>Renaming multiple folders with rename:</strong></p>
 <p>Renaming multiple folders is much easier and straightforward with the rename command. The mv command is not ideal for this scenario, so we will use the rename command.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>Lets create multiple folders in an empty directory.</p>
 <p>This command will create four empty folders:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir dir<span class="o">{</span>1..4<span class="o">}</span></code></pre></div>

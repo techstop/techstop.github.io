@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Sep 27, 2019 &middot; Updated: Jun 29, 2020</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/inxi.png" alt="Linux commands for hardware info" title="Linux commands for hardware info"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/inxi.png" alt="Linux commands for hardware info" title="Linux commands for hardware info"  width="500px">
 </div>
 
 <div id="myModal" class="modal">
@@ -172,6 +172,8 @@ window.cookieconsent.initialise({
 
 <p>It&rsquo;s always a good idea to know how to get hardware info on your linux system. It can be very useful if you need to troubleshoot a hardware issue. There can be times when you need some specific hardware info to get the right drivers. Other times you&rsquo;ll need specific info to perform a hardware upgrade. The command line offers quite a few ways to obtain this hardware info with some tried and true linux commands.</p>
 <p>Now there are a few GUI applications that you can install to get the hardware info, and in most cases this will suffice. My personal favorite GUI application for hardware details is <a href="https://help.ubuntu.com/community/HardInfo" target="_blank">HardInfo</a>. It&rsquo;s a fantastic piece of software. In fact, HardInfo even has some benchmarking tools to test your system&rsquo;s stability. This comes in handy after hardware upgrades or overclocking.</p>
+<p>You can install HardInfo as follows.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install hardinfo</code></pre></div>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -182,8 +184,6 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>You can install HardInfo as follows.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install hardinfo</code></pre></div>
 <h2 id="linux-commands-for-hardware-info"><strong>Linux Commands For Hardware Info</strong></h2>
 <p>Well now that we&rsquo;ve gone over a good GUI, it&rsquo;s time to dig in with what this article is really about. We will go over some Linux commands to get hardware info. Commands can allow for more specific and targeted hardware info. Probably the biggest advantage is the ability to use these commands in a shell script.</p>
 <p><strong>Lets get started, shall we&hellip;</strong></p>
@@ -212,6 +212,7 @@ window.cookieconsent.initialise({
 <p>Now here is a very useful command. Ever wanted an easy way to know the max amount of ram you can install in your PC? Well this command does just that.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t memory <span class="p">|</span> grep -i max</code></pre></div>
 <p>If you want to know if there are any empty ram slots available in your PC, you don&rsquo;t need to open it. You can find out with this command. If the command output is empty, that means all ram slots are full.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lshw -short -C memory <span class="p">|</span> grep -i empty</code></pre></div>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -222,7 +223,6 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lshw -short -C memory <span class="p">|</span> grep -i empty</code></pre></div>
 <p>This final command gives us our memory usage.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">free -m</code></pre></div>
 <ul>

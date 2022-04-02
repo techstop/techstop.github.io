@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Nov 9, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/scrt0.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/xfce/scrt0.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="500px">
 </div>
 
 <div id="myModal" class="modal">
@@ -173,16 +173,6 @@ window.cookieconsent.initialise({
 <p>Xubuntu has always been one of my favorite distros, but it has always been plagued by the dreaded screen tearing because of the Xfce desktop environment. Screen tearing is when the GPU is out of sync with the display which causes artifacting and looks like tears between the top and bottom halves of your screen. This can be rather annoying, but luckily there&rsquo;s easy ways to fix screen tearing in Xfce.</p>
 <h2 id="xfce-compositor"><strong>Xfce Compositor</strong></h2>
 <p>There are a few ways to fix screen tearing in Xfce, but lets start with the easiest method first.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>Note: These methods were tested on Xubuntu 18.04.</p>
 <p>Open your Settings Manager then Window Manager Tweaks and under the Compositor tab, enable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo;. In some cases this may fix the screen tearing.</p>
 <p>If this method does not work for you then read on.</p>
@@ -198,6 +188,16 @@ Graphics:  Card: Intel 3rd Gen Core processor Graphics Controller
            OpenGL: renderer: Mesa DRI Intel Ivybridge Mobile
            version: 4.2 Mesa 19.0.8</code></pre></div>
 <p>Now make sure to disable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo; in the Xfce compositor. Then go to &ldquo;<strong>/usr/share/X11/xorg.conf.d</strong>&rdquo; and add one of the files below for your graphics card.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <p>For Intel drivers edit or create a file called &ldquo;<strong>10-intel.conf</strong>&rdquo; and add the following then reboot your pc:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
   Identifier  &#34;Intel Graphics&#34;
@@ -222,22 +222,12 @@ sudo update-initramfs -u</code></pre></div>
 <p>There are other methods to fix screen tearing for Nvidia drivers, but this seems to be one of the more reliable methods, so it may be worth a shot.</p>
 <h2 id="compton-compositor"><strong>Compton Compositor</strong></h2>
 <p>Another solution to the screen tearing in Xfce is to disable the xfce compositor and install a lightweight compositor like Compton.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>Start by unchecking &ldquo;<strong>Enable display compositing</strong>&rdquo; to disable the xfce compositor in the Window Manager Tweaks.</p>
 <p>To install compton, run the following in terminal:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install compton compton-conf</code></pre></div>
 <p>Now we need to setup compton so that it starts on every boot-up. To do this, open &ldquo;<strong>Session and Startup</strong>&rdquo; in the Settings Manager and click on the Add button and enter what&rsquo;s in the screenshot below.</p>
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/scrt1.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/xfce/scrt1.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="450px">
 </div>
 
 <div id="myModal" class="modal">
@@ -272,7 +262,7 @@ sudo update-initramfs -u</code></pre></div>
 
 <p>You can now open the Compton GUI from your applications menu and adjust any settings you&rsquo;d like.</p>
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/xfce/scrt2.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/xfce/scrt2.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="450px">
 </div>
 
 <div id="myModal" class="modal">

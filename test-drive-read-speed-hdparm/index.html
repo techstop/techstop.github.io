@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Apr 1, 2022</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/hdparm.png" alt="hdparm" title="hdparm"  width="400px">
+<img class="myImg" src="https://techstop.github.io/images/linux/hdparm.png" alt="hdparm" title="hdparm"  width="500px">
 </div>
 
 <div id="myModal" class="modal">
@@ -171,7 +171,7 @@ window.cookieconsent.initialise({
 </script>
 
 <p>If you&rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your drive&rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your drives to see if they&rsquo;re performing as expected.</p>
-<h2 id="determine-disk-to-test">Determine Disk to Test</h2>
+<h2 id="determine-disk-to-test"><strong>Determine Disk to Test</strong></h2>
 <p>Whether you have one or more attached drives to your computer, you need to determine the disk path.</p>
 <p>The paths are listed as follows:</p>
 <ul>
@@ -179,7 +179,7 @@ window.cookieconsent.initialise({
 <li>(/dev/sd*) = SATA disks: Solid State Drives(SSD)</li>
 <li>(/dev/nvme*) = Express pci disks: Non-Volatile Memory Express(NVMe)</li>
 </ul>
-<h2 id="get-disk-path">Get Disk Path</h2>
+<h2 id="get-disk-path"><strong>Get Disk Path</strong></h2>
 <p>To get the disk path we will run the (fdisk) command in our terminal.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l</code></pre></div>
 <p>As you can see from the output below, my disk path is (/dev/sda).</p>
@@ -204,14 +204,14 @@ Device      Start       End   Sectors   Size Type
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<h2 id="test-disk-read-speed">Test Disk Read Speed</h2>
+<h2 id="test-disk-read-speed"><strong>Test Disk Read Speed</strong></h2>
 <p>Now that we have determined our disk path, it is time to run our read speed test.</p>
 <p>To test the disk read speed we run the following (hdparm) command.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -t /dev/sda</code></pre></div>
 <p>If you look at my output below, you can see that I&rsquo;m getting &ldquo;450.51 MB/sec&rdquo; which is in line with what the manufacturer advertises. Not bad considering it&rsquo;s a ten year old SSD as of the date of this article.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">/dev/sda:
  Timing buffered disk reads: 1352 MB in  3.00 seconds = 450.51 MB/sec</code></pre></div>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>You should now be able to test read speeds for any attached drive to your computer. For more hdparm options you can run (man hdparm) or (<a href="https://techstop.github.io/linux-tldr-pages-command/">tldr</a> hdparm) in your terminal.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>

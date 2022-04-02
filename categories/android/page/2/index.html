@@ -135,12 +135,12 @@ window.cookieconsent.initialise({
     
         <article>
   
-  <h1><a href="https://techstop.github.io/android-toolbar/" title="Android Toolbar">Android Toolbar</a></h1>
+  <h1><a href="https://techstop.github.io/android-webview/" title="Android WebView">Android WebView</a></h1>
 
-<div class="post-info">Published: Jan 21, 2019 &middot; Updated: Feb 20, 2022</div>
+<div class="post-info">Published: Feb 4, 2019 &middot; Updated: Feb 16, 2022</div>
 
   <p><p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/android-toolbar/android-toolbar-0.png" alt="Android Toolbar" title="Android Toolbar"  width="100px">
+<img class="myImg" src="https://techstop.github.io/images/android-webview/android-webview-0.png" alt="Android WebView" title="Android WebView"  width="200px">
 </div>
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -171,7 +171,96 @@ window.cookieconsent.initialise({
 	}
 </script>
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/android-toolbar/android-toolbar-1.png" alt="Android Toolbar" title="Android Toolbar"  width="100px">
+<img class="myImg" src="https://techstop.github.io/images/android-webview/android-webview-1.png" alt="Android WebView" title="Android WebView"  width="200px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+</p>
+<p>The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage write permissions for our DownloadListener for android 6+.</p></p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/android-studio">android studio</a>, 
+    
+      <a href="https://techstop.github.io/tags/app-development">app development</a>, 
+    
+      <a href="https://techstop.github.io/tags/java">java</a>, 
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/android">android</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/android-webview/" title="Android WebView">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+    
+        <article>
+  
+  <h1><a href="https://techstop.github.io/android-toolbar/" title="Android Toolbar">Android Toolbar</a></h1>
+
+<div class="post-info">Published: Jan 21, 2019 &middot; Updated: Feb 20, 2022</div>
+
+  <p><p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/android-toolbar/android-toolbar-0.png" alt="Android Toolbar" title="Android Toolbar"  width="200px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/android-toolbar/android-toolbar-1.png" alt="Android Toolbar" title="Android Toolbar"  width="200px">
 </div>
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -229,7 +318,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Jan 19, 2019 &middot; Updated: Feb 18, 2022</div>
 
   <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/broadcastreceiver/android-broadcastreceiver.png" alt="Android BroadcastReceiver" title="Android BroadcastReceiver"  width="100px">
+<img class="myImg" src="https://techstop.github.io/images/broadcastreceiver/android-broadcastreceiver.png" alt="Android BroadcastReceiver" title="Android BroadcastReceiver"  width="200px">
 </div>
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -462,7 +551,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Nov 25, 2018 &middot; Updated: Sep 11, 2019</div>
 
   <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/reduce-apk-size/How-To-Reduce-Apk-Size.png" alt="How To Reduce Apk Size" title="How To Reduce Apk Size"  width="500px">
+<img class="myImg" src="https://techstop.github.io/images/reduce-apk-size/How-To-Reduce-Apk-Size.png" alt="How To Reduce Apk Size" title="How To Reduce Apk Size"  width="600px">
 </div>
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -517,7 +606,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Nov 22, 2018</div>
 
   <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/android-mounts/android-mounts-and-partition-images.png" alt="How To Get Android Mounts and Partition Images" title="How To Get Android Mounts and Partition Images"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/android-mounts/android-mounts-and-partition-images.png" alt="How To Get Android Mounts and Partition Images" title="How To Get Android Mounts and Partition Images"  width="450px">
 </div>
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -559,61 +648,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/android-mounts-and-partition-images/" title="How To Get Android Mounts and Partition Images">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/apk-utility/" title="Apk Utility">Apk Utility</a></h1>
-
-<div class="post-info">Published: Jun 8, 2018 &middot; Updated: Mar 10, 2022</div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/apk-utility/apk-utility.png" alt="Apk Utility" title="Apk Utility"  width="150px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-<p>If you&rsquo;ve been looking for an easy to use tool for decompiling and compiling android apk and jar files then look no further. Apk Utility is as easy to use as it gets. The utility also has the ability to tag your framework files. This feature is very useful when you need to install framework files for multiple different devices without having to remove one for the other. Basically a tag is a label to distinguish between multiple devices' framework files. If you&rsquo;re familiar with <a href="https://ibotpeaches.github.io/Apktool/documentation/" target="_blank">apktool</a> which this tool uses then you&rsquo;ll know what I&rsquo;m referring to.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/android">android</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/decompile-apk">decompile apk</a>, 
-    
-      <a href="https://techstop.github.io/tags/apktool">apktool</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/apk-utility/" title="Apk Utility">Read more &raquo;</a></p>
   <hr>
 </article>
 

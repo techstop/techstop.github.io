@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Oct 18, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/redirect.png" alt="Redirect and Append to a File in Linux" title="Redirect and Append to a File in Linux"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/redirect.png" alt="Redirect and Append to a File in Linux" title="Redirect and Append to a File in Linux"  width="500px">
 </div>
 
 <div id="myModal" class="modal">
@@ -173,26 +173,12 @@ window.cookieconsent.initialise({
 <p>On every linux system you can redirect and append to the end of a file.</p>
 <p>Linux has &ldquo;stdout&rdquo; which stands for &ldquo;standard output&rdquo;. Whenever you run a command in your terminal, the result is displayed in the stdout. You can redirect and append stdout to the end of a file.</p>
 <p>There&rsquo;s two ways to approach this. You can use a single greater-than &ldquo;<strong>&gt;</strong>&rdquo; symbol which creates a new file each time and redirects stdout to it. You can also redirect stdout by appending the output with double greater-than &ldquo;<strong>&raquo;</strong>&rdquo; symbols which simply adds the output to the end of the file.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <h2 id="redirecting--appending-to-a-file"><strong>Redirecting &amp; Appending to a File</strong></h2>
 <p>To better understand this concept, lets take a look at some examples.</p>
 <p>The following two commands &ldquo;<strong>initially</strong>&rdquo; achieve the same. They both create a new file called &ldquo;<strong>file.txt</strong>&rdquo; and redirect the stdout of the echo command to the file. The real difference is if your redirecting stdout to a file that already exists (more on this later).</p>
 <p><strong>Redirect to a newly created file:</strong></p>
 <p>With the single &ldquo;&gt;&rdquo; symbol we will create &ldquo;file.txt&rdquo; every time we run the command, even if the file already exists. This means you cannot &ldquo;append&rdquo; to the end of a file with the single &ldquo;&gt;&rdquo; symbol.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;Hello World.&#34;</span> &gt; file.txt</code></pre></div>
-<p><strong>Redirect to a newly created file or an existing file:</strong></p>
-<p>With the double &ldquo;&raquo;&rdquo; symbol the file is created if it doesn&rsquo;t exist, but if it does exist then stdout is appended to the end of the file instead.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;Hello World.&#34;</span> &gt;&gt; file.txt</code></pre></div>
-<p>To test this for yourself, run the first example above twice. You&rsquo;ll notice that the second time you ran the command the file did not change. This is because the file is created new each time and then stdout is appended to it.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -203,6 +189,10 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<p><strong>Redirect to a newly created file or an existing file:</strong></p>
+<p>With the double &ldquo;&raquo;&rdquo; symbol the file is created if it doesn&rsquo;t exist, but if it does exist then stdout is appended to the end of the file instead.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;Hello World.&#34;</span> &gt;&gt; file.txt</code></pre></div>
+<p>To test this for yourself, run the first example above twice. You&rsquo;ll notice that the second time you ran the command the file did not change. This is because the file is created new each time and then stdout is appended to it.</p>
 <p>Now run the first example and then the second example and you will notice that &ldquo;Hello World&rdquo; is repeated twice in the file. This is because the second example appended stdout to the already existing file that was created by the first example.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>Keep in mind that you can redirect the stdout of most commands in linux. We used the echo command for simplicity.</p>

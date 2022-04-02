@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Oct 27, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/orph0.png" alt="Remove Orphaned Packages in Linux" title="Remove Orphaned Packages in Linux"  width="90px">
+<img class="myImg" src="https://techstop.github.io/images/linux/orph0.png" alt="Remove Orphaned Packages in Linux" title="Remove Orphaned Packages in Linux"  width="300px">
 </div>
 
 <div id="myModal" class="modal">
@@ -172,16 +172,6 @@ window.cookieconsent.initialise({
 
 <p>There are a couple of tools to remove orphaned packages in linux. Packages in linux systems depend on other packages or libraries in order to work properly. In some cases you will already have some or all the dependencies installed from them being installed by other packages.</p>
 <p>When you uninstall packages, often times there are orphaned packages leftover in your linux system. This usually happens when you manually install the dependencies which you may have done to fix a random issue or for another package. It should be said that orphaned packages are not really an issue and simply just take up space, but if you&rsquo;re like me, you probably want them off your system.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>We will go over two ways to remove orphaned packages in linux:</p>
 <ol>
 <li>GtkOrphan is a GUI front end for DebOrphan to remove orphaned packages in a graphical tool.</li>
@@ -192,7 +182,7 @@ window.cookieconsent.initialise({
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install gtkorphan</code></pre></div>
 <p>Now go to your applications menu and open gtkorphan.</p>
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/orph1.png" alt="Remove Orphaned Packages in Linux" title="Remove Orphaned Packages in Linux"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/orph1.png" alt="Remove Orphaned Packages in Linux" title="Remove Orphaned Packages in Linux"  width="222px">
 </div>
 
 <div id="myModal" class="modal">
@@ -226,6 +216,16 @@ window.cookieconsent.initialise({
 </script>
 
 <p>As soon as you open gtkorphan it will show you a list of orphaned packages if there are any. Right click on any package and choose &ldquo;<strong>Select All</strong>&rdquo; and then click <strong>OK</strong> to remove them all.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h2 id="deborphan"><strong>DebOrphan</strong></h2>
 <p>Now we will remove orphaned packages from the command line. If you installed <strong>GtkOrphan</strong> then you do not need to install <strong>DebOrphan</strong> since it&rsquo;s installed with <strong>GtkOrphan</strong>.</p>
 <p>To install <strong>DebOrphan</strong> just run the following command:</p>
@@ -246,16 +246,6 @@ libgnome-games-support-1-3:amd64
 libxfcegui4-4:amd64</code></pre></div>
 <p>To remove the orphaned packages you can enter the following command:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt remove --purge <span class="sb">`</span>deborphan<span class="sb">`</span></code></pre></div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p><strong>Output:</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">gametheory@ubuntu:~$ sudo apt remove --purge <span class="sb">`</span>deborphan<span class="sb">`</span>
 Reading package lists... Done

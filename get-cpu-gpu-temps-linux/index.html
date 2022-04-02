@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Nov 13, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/sensors1.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/sensors1.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="500px">
 </div>
 
 <div id="myModal" class="modal">
@@ -172,6 +172,11 @@ window.cookieconsent.initialise({
 
 <p>To get CPU and GPU temps in linux you need to install and configure lm-sensors. With lm-sensors you can monitor cpu and gpu temperatures and fan speeds as well as voltages for some systems. Lm-sensors reads the available sensors on your motherboard, cpu, and gpu and displays their output. Once configured, you can use the command line or a GUI to monitor your system&rsquo;s sensors.</p>
 <h2 id="setup-lm-sensors"><strong>Setup lm-sensors</strong></h2>
+<p>First install lm-sensors by running the following command in your terminal.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install lm-sensors</code></pre></div>
+<p>Once the installation completes you will need to setup lm-sensors. It&rsquo;s a straightforward process. Just run the following command in terminal and follow the instructions you see in the terminal.</p>
+<p>I always say yes to all the questions asked during the setup. You can always run this command again if you&rsquo;d like to change anything.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo sensors-detect</code></pre></div>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -182,11 +187,6 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>First install lm-sensors by running the following command in your terminal.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install lm-sensors</code></pre></div>
-<p>Once the installation completes you will need to setup lm-sensors. It&rsquo;s a straightforward process. Just run the following command in terminal and follow the instructions you see in the terminal.</p>
-<p>I always say yes to all the questions asked during the setup. You can always run this command again if you&rsquo;d like to change anything.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo sensors-detect</code></pre></div>
 <p>When the setup is complete you can run this next command to get your cpu and gpu temperatures and fan speeds along with data from any other sensors detected.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sensors</code></pre></div>
 <p>The output from this command will look similar to this:</p>
@@ -201,20 +201,10 @@ Package id 0:  +49.0°C  (high = +87.0°C, crit = +105.0°C)
 Core 0:        +49.0°C  (high = +87.0°C, crit = +105.0°C)
 Core 1:        +48.0°C  (high = +87.0°C, crit = +105.0°C)</code></pre></div>
 <p>If the command line is not your thing and you prefer a GUI to monitor your system&rsquo;s sensors, then you can install xsensors. Xsensors is a gui front-end for lm-sensors.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>To install xsensors just run the following command:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install xsensors</code></pre></div>
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/sensors0.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/sensors0.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="300px">
 </div>
 
 <div id="myModal" class="modal">
@@ -250,7 +240,7 @@ Core 1:        +48.0°C  (high = +87.0°C, crit = +105.0°C)</code></pre></div>
 <p>Another gui that I always install in linux is &ldquo;System Profiler and Benchmark&rdquo; which displays the data from your system&rsquo;s sensors and a wealth of other system info. To install it, run the following command.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install hardinfo</code></pre></div>
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/sensors2.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/sensors2.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="450px">
 </div>
 
 <div id="myModal" class="modal">

@@ -205,6 +205,9 @@ window.cookieconsent.initialise({
 </script>
 </p>
 <p>If you need to open a file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open graphical applications with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer available for most linux distributions.</p>
+<p>So what is the proper way now to open a file or directory as root in linux?</p>
+<p>Some linux distros have implemented their own way of handling root for graphical applications. For example, distros using the KDE desktop environment use (kdesu) to open graphical applications with root privileges.</p>
+<p>In this tutorial I&rsquo;ll be showing you a method that works across most linux distributions. It involves using the admin command which presents you with a graphical password prompt to grant root.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -215,29 +218,16 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>So what is the proper way now to open a file or directory as root in linux?</p>
-<p>Some linux distros have implemented their own way of handling root for graphical applications. For example, distros using the KDE desktop environment use (kdesu) to open graphical applications with root privileges.</p>
-<p>In this tutorial I&rsquo;ll be showing you a method that works across most linux distributions. It involves using the admin command which presents you with a graphical password prompt to grant root.</p>
-<h2 id="linux-admin-command">Linux admin:// Command</h2>
+<h2 id="linux-admin-command"><strong>Linux admin:// Command</strong></h2>
 <p>Here’s what the admin command looks like.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">admin://</code></pre></div>
 <p>If for example, you need to open a file in a text editor like gedit as root. Enter the following command in a terminal to open a file in gedit as root. Make sure to change (/path/to/file) to the actual absolute path to a file you wish to open as root.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">gedit admin:///path/to/file</code></pre></div>
 <p>You can use the admin command with your preferred text editor.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>To open a directory as root with your file manager, enter the following in a terminal. In this example we’ll be using thunar file manager, but you can use nautilus or whichever you have installed on your system. Again replace (/path/to/directory) to the actual absolute directory path you wish to open as root.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">thunar admin:///path/to/directory</code></pre></div>
 <p>You can use the admin command with your preferred file manager.</p>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>So there you have it, a proper way to open graphical applications as root. If this is at all confusing just leave a comment below and we’ll try to help.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>

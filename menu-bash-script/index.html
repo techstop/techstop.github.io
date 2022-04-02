@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Oct 2, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/menu.png" alt="Create a Menu in Bash Script" title="Create a Menu in Bash Script"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/menu.png" alt="Create a Menu in Bash Script" title="Create a Menu in Bash Script"  width="300px">
 </div>
 
 <div id="myModal" class="modal">
@@ -172,16 +172,6 @@ window.cookieconsent.initialise({
 
 <p>Creating a menu in a bash script can be quite useful and at times necessary. A bash menu can allow you to provide options for user input. Upon user selection of an option in your menu, you can run a command or sequence of commands and display outputs.</p>
 <p>There are a few ways to create menus in a bash script. For this tutorial we will be creating a somewhat advanced menu that is quite flexible and easy to understand. We will be using bash functions, so it&rsquo;s a good idea to get familiar with functions. You can read about functions in one of my tutorials found <a href="https://techstop.github.io/bash-functions/">here</a>.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <h2 id="creating-a-bash-script-menu"><strong>Creating a Bash Script Menu</strong></h2>
 <p>You will need to place your menu at the bottom of your script since we will be calling functions from the menu and functions need to be placed at the top. Code that makes calls to functions needs to be below the functions.</p>
 <p>Taking a look at the following example script you can see that all code is in functions except the menu code.</p>
@@ -224,6 +214,16 @@ incorrect_selection<span class="o">()</span> <span class="o">{</span>
   <span class="k">esac</span>
 <span class="k">done</span></code></pre></div>
 <p>Create a file called &ldquo;<strong>file.sh</strong>&rdquo; and copy the code above to it and give it execute permissions then run it in a terminal. Try all the menu options to give yourself a better understanding before you continue with this tutorial.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <p>Now lets break things down a bit to learn what&rsquo;s going on in this script.</p>
 <p>The menu is a loop that repeats itself until the selection is zero &ldquo;0&rdquo;. Since the menu is not in a function, it will load as soon as you run the script.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span></code></pre></div>
@@ -239,16 +239,6 @@ incorrect_selection<span class="o">()</span> <span class="o">{</span>
   * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
 <span class="k">esac</span></code></pre></div>
 <p>Also notice how each command in the case statement is separated by semicolons &ldquo;;&rdquo;. The second command is a call to a function.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>The press_enter function prompts the user so they can continue when ready. This will give the user all the time they need to read any output.</p>
 <p>Now the final option in the case statement is just in case the user enters a selection that does not exist. Since it&rsquo;s the final option, it is defined by an asterisk &ldquo;*&rdquo;.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>

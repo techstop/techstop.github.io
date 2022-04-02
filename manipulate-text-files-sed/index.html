@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Sep 22, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/sed.png" alt="Sed Text Stream Editor" title="Sed Text Stream Editor"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/sed.png" alt="Sed Text Stream Editor" title="Sed Text Stream Editor"  width="550px">
 </div>
 
 <div id="myModal" class="modal">
@@ -172,16 +172,6 @@ window.cookieconsent.initialise({
 
 <p>The sed linux utility is a powerful stream editor. Sed can manipulate text from standard input or from a file. It is much like a typical text editor. Where sed sets itself apart is in its ability to filter text in a pipeline to expand its capabilities.</p>
 <p>Sed can work wonders in a shell script. You can pipe other commands to sed or use variables. Use it to process files of all sizes. Find specific strings of text and patterns in your input and manipulate the text to your needs. With sed you can also edit a file directly or save to a new file. The possibilities with sed are near endless.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>In this tutorial I will show you some basic and common uses of sed to manipulate text.</p>
 <h2 id="manipulate-text-with-sed"><strong>Manipulate Text With Sed</strong></h2>
 <p>Basic sed syntax.</p>
@@ -204,6 +194,7 @@ window.cookieconsent.initialise({
 <p>As you can see a backup file called &ldquo;<strong>test-bak</strong>&rdquo; was created and then the original file was edited. Lets instead use sed to create a new file called &ldquo;<strong>my-file</strong>&rdquo; with our changes.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed <span class="s1">&#39;s/follow/learn/g&#39;</span> <span class="nb">test</span> &gt; my-file</code></pre></div>
 <p>You should now have the new file with the word follow replaced with learn while the original test file still shows the word follow.</p>
+<p>Now that you&rsquo;ve learned a few basic examples with sed we can move at a faster pace through the tutorial.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -214,7 +205,6 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>Now that you&rsquo;ve learned a few basic examples with sed we can move at a faster pace through the tutorial.</p>
 <h2 id="more-sed-examples"><strong>More Sed Examples</strong></h2>
 <p><strong>Delete all empty lines with sed.</strong></p>
 <p>If you have a file with multiple lines separated by empty lines you can remove the empty lines easily with sed.</p>

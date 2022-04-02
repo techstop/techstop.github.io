@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Oct 25, 2019</div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/alias.png" alt="Bash Aliases" title="Bash Aliases"  width="150px">
+<img class="myImg" src="https://techstop.github.io/images/linux/alias.png" alt="Bash Aliases" title="Bash Aliases"  width="500px">
 </div>
 
 <div id="myModal" class="modal">
@@ -180,16 +180,6 @@ window.cookieconsent.initialise({
 <li><strong>value</strong> = The commands you want to call.</li>
 </ul>
 <p>There&rsquo;s a few ways to use a bash alias. You can set the alias to call a script, command, or group of commands.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>An alias can be set per session, meaning that if you logout or reboot, the alias is removed. You can also set an alias permanently which is how I like to set mine.</p>
 <h2 id="temporary-bash-aliases"><strong>Temporary Bash Aliases</strong></h2>
 <p>Setting up an alias for the current session is straightforward. This method is usually good for setting up an alias that you don&rsquo;t need permanently.</p>
@@ -200,14 +190,6 @@ window.cookieconsent.initialise({
 <p>If you decide you want to remove the alias, you can run the following command:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">unalias</span> c</code></pre></div>
 <p>This removes the previous alias we set for the <a href="https://techstop.github.io/clear-reset-terminal/">clear</a> command.</p>
-<h2 id="permanent-bash-aliases"><strong>Permanent Bash Aliases</strong></h2>
-<p>This is my preferred method to add a bash alias. I generally set aliases that I often use.</p>
-<p>To add an alias permanently, you would add it to your &ldquo;<strong>.bashrc</strong>&rdquo; file. You can do this by opening the file in your text editor and adding the aliases at the bottom of the file.</p>
-<p>To add the alias for the clear command, you can add the following to your bashrc:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># My aliases</span>
-<span class="nb">alias</span> <span class="nv">c</span><span class="o">=</span><span class="s1">&#39;clear&#39;</span></code></pre></div>
-<p>Don&rsquo;t forget to restart your terminal to start using your new aliases.</p>
-<p><strong>Note:</strong> We added the &ldquo;My aliases&rdquo; comment just for future reference.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -218,6 +200,14 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<h2 id="permanent-bash-aliases"><strong>Permanent Bash Aliases</strong></h2>
+<p>This is my preferred method to add a bash alias. I generally set aliases that I often use.</p>
+<p>To add an alias permanently, you would add it to your &ldquo;<strong>.bashrc</strong>&rdquo; file. You can do this by opening the file in your text editor and adding the aliases at the bottom of the file.</p>
+<p>To add the alias for the clear command, you can add the following to your bashrc:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># My aliases</span>
+<span class="nb">alias</span> <span class="nv">c</span><span class="o">=</span><span class="s1">&#39;clear&#39;</span></code></pre></div>
+<p>Don&rsquo;t forget to restart your terminal to start using your new aliases.</p>
+<p><strong>Note:</strong> We added the &ldquo;My aliases&rdquo; comment just for future reference.</p>
 <p>You can also add the alias from terminal as follows:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;# My aliases&#34;</span> &gt;&gt; .bashrc
 <span class="nb">echo</span> <span class="s2">&#34;alias c=&#39;clear&#39;&#34;</span> &gt;&gt; .bashrc</code></pre></div>

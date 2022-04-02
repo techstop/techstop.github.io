@@ -137,7 +137,7 @@ window.cookieconsent.initialise({
 <div class="post-info">Published: Feb 7, 2019 &middot; Updated: Feb 17, 2022</div>
 
     <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/admob-tutorial/admob-tutorial-0.png" alt="Admob Tutorial" title="Admob Tutorial"  width="100px">
+<img class="myImg" src="https://techstop.github.io/images/admob-tutorial/admob-tutorial-0.png" alt="Admob Tutorial" title="Admob Tutorial"  width="200px">
 </div>
 
 <div id="myModal" class="modal">
@@ -171,7 +171,7 @@ window.cookieconsent.initialise({
 </script>
 
 <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/admob-tutorial/admob-tutorial-1.png" alt="Admob Tutorial" title="Admob Tutorial"  width="100px">
+<img class="myImg" src="https://techstop.github.io/images/admob-tutorial/admob-tutorial-1.png" alt="Admob Tutorial" title="Admob Tutorial"  width="200px">
 </div>
 
 <div id="myModal" class="modal">
@@ -206,6 +206,11 @@ window.cookieconsent.initialise({
 </p>
 <p>In this Android Admob tutorial we will go over how to add admob to your android app. With admob you can monetize your app and make some income for your efforts. There are a few types of admob ad units that you can add to your app. For this admob tutorial we will be adding the Anchored Adaptive Banner which can display high performance adaptive banner ads for all devices and screen sizes.</p>
 <p>The code in this tutorial will be in the full project on github linked at the bottom of this page. Feel free to fork or download the project from github.</p>
+<h2 id="android-admob-example"><strong>Android Admob Example</strong></h2>
+<p>Begin by creating a new project in Android Studio with an Empty Activity if you haven’t already. We can call the project “<strong>Admob Tutorial</strong>”.</p>
+<p>You will first need to add the ads play services dependency to your <strong>build.gradle</strong> file…</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s1">&#39;com.google.android.gms:play-services-ads:20.5.0&#39;</span></code></pre></div>
+<p>Now add a FrameLayout for your AdView to your <strong>activity_main.xml</strong>.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -216,11 +221,6 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<h2 id="android-admob-example">Android Admob Example</h2>
-<p>Begin by creating a new project in Android Studio with an Empty Activity if you haven’t already. We can call the project “<strong>Admob Tutorial</strong>”.</p>
-<p>You will first need to add the ads play services dependency to your <strong>build.gradle</strong> file…</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s1">&#39;com.google.android.gms:play-services-ads:20.5.0&#39;</span></code></pre></div>
-<p>Now add a FrameLayout for your AdView to your <strong>activity_main.xml</strong>.</p>
 <p><strong>activity_main.xml</strong>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
@@ -343,16 +343,6 @@ window.cookieconsent.initialise({
 
 <span class="o">}</span></code></pre></div></p>
 <p>The <strong>Ad Unit ID</strong> is a test sample provided by google for testing apps with admob. To get your real id you will need to sign into your admob account.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <p>Finally we add the admob <strong>Application ID</strong> meta-data to the <strong>AndroidManifest.xml</strong>. Without this step the app will not run…</p>
 <p><strong>AndroidManifest.xml</strong>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
