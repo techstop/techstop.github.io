@@ -244,7 +244,8 @@ window.cookieconsent.initialise({
 <h2 id="android-app-multi-themes"><strong>Android App Multi Themes</strong></h2>
 <p>Begin by creating a new project in Android Studio with an Empty Activity if you haven’t already. We can call the project “<strong>App Themes</strong>”.</p>
 <p>First we will create our color themes in our <strong>values</strong> directory. If you&rsquo;re on an older version of Android Studio then place the following code into your <strong>styles.xml</strong> file. The newer Android Studio version uses a <strong>themes.xml</strong> file instead, so place the code in that file.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -254,6 +255,7 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 <p><strong>themes.xml</strong>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resources</span> <span class="na">xmlns:tools=</span><span class="s">&#34;http://schemas.android.com/tools&#34;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&#34;BlueTheme&#34;</span> <span class="na">parent=</span><span class="s">&#34;Theme.AppCompat&#34;</span><span class="nt">&gt;</span>
@@ -716,7 +718,8 @@ window.cookieconsent.initialise({
 <span class="nt">&lt;/menu&gt;</span></code></pre></div></p>
 <p>Now that we&rsquo;ve created all our xml files, we can now start with our java code.</p>
 <p>Create a new java class and call it <strong>Themes</strong>. The Themes class will hold all our themes and SharedPreferences so that we can select and save themes so they are applied automatically each time the app is opened. Since this is a utility class it will not have a layout and does not need to be declared in the AndroidManifest.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -726,6 +729,7 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 <p>Add the following code to the <strong>Themes</strong> class.</p>
 <p>Notice that the <strong>getTheme</strong> and <strong>getBG</strong> methods at the bottom of the class have the blue theme(1) and dark background(0) set as default. These would be the default colors the app opens to for the first time.</p>
 <p><strong>Themes.java</strong>

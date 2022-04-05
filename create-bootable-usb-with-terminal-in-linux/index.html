@@ -188,7 +188,8 @@ tmpfs           742M   76K  742M   1% /run/user/1000
 <p>The name of my usb stick is (Sony) which is also the brand. As you can see in the output above, its file system partition is:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/dev/sdb</code></pre></div>
 <p><strong>Note:</strong> If your usb stick is not labeled, you can identify it by its size. Mine shows (3.8G).</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -198,6 +199,7 @@ tmpfs           742M   76K  742M   1% /run/user/1000
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 <p>This is what the command looks like to create the bootable usb. When you run the command you will need to enter your login password. Once you&rsquo;ve entered the command, just wait a couple minutes for it to finish.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/path/to/file.iso <span class="nv">of</span><span class="o">=</span>/dev/sdb <span class="nv">conv</span><span class="o">=</span>fsync <span class="nv">oflag</span><span class="o">=</span>direct <span class="nv">status</span><span class="o">=</span>progress</code></pre></div>
 <p>As you can see (if=) contains the path to our iso image file and (of=) contains the usb stick file system partition path.</p>

@@ -181,7 +181,8 @@ window.cookieconsent.initialise({
 <p>Now open a terminal on your PC and enter the following command&hellip;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb devices</code></pre></div>
 <p>If all went well you should see your phones' serial number listed in the terminal.</p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -191,6 +192,7 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 <p>Next enter the following command&hellip;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb shell</code></pre></div>
 <p>The next command is to gain root access which we will need. Make sure your phone&rsquo;s screen is on and unlocked before entering the next command. Once you enter the command you will get a prompt on your phone asking for root permission. Make sure to allow it&hellip;</p>
@@ -215,7 +217,8 @@ lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> 2013-12
 <h2 id="pulling-partition-images"><strong>Pulling Partition Images</strong></h2>
 <p>Now that we know our boot partition path we can use it in the next command to copy the boot.img to our internal SD on our android phone&hellip;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dd <span class="k">if</span><span class="o">=</span>/dev/block/mmcblk0p17 <span class="nv">of</span><span class="o">=</span>/sdcard/boot.img</code></pre></div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -225,6 +228,7 @@ lrwxrwxrwx <span class="m">1</span> root root  <span class="m">21</span> 2013-12
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 <p>With the above command we have now copied the boot.img to our internal SD. You can now drag and drop the boot.img from your phone&rsquo;s internal SD to your PC. Alternatively you can use the following command to pull the boot.img from the internal SD to your PC&rsquo;s desktop.</p>
 <p>If you are still in the adb root shell then enter the following 2 commands in terminal to exit root shell and adb. If you have already exited you can skip this step&hellip;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>

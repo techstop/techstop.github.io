@@ -176,7 +176,8 @@ window.cookieconsent.initialise({
 <p>We will first start by shrinking your code with ProGuard. This removes unused classes, fields, methods, and attributes from your app as well as from code libraries you may have added in your project.</p>
 <p>Open your apps' build.gradle file in Android Studio under &ldquo;buildTypes/release&rdquo; add the following line&hellip;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">minifyEnabled</span> <span class="kc">true</span></code></pre></div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -186,6 +187,7 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 <p>After enabling minifyEnabled your &ldquo;<strong>buildTypes/release</strong>&rdquo; should look like this&hellip;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
   <span class="n">release</span> <span class="o">{</span>
@@ -218,7 +220,8 @@ window.cookieconsent.initialise({
 <span class="o">}</span></code></pre></div>
 <p>Now build your app and test it. If your app builds and runs without issues, then you do not need to continue with this tutorial. However if you&rsquo;re getting build errors then continue reading.</p>
 <h2 id="fix-errors-after-optimizing-apk"><strong>Fix Errors After Optimizing APK</strong></h2>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -228,6 +231,7 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 <p>If you have completed the tutorial up to this point, it&rsquo;s possible that you may be experiencing build errors. This is because the optimizations we have done to reduce apk size can be very aggressive and may have removed code or resources the app actually needs to run properly. In my experience this usually happens with &ldquo;<strong>adsense</strong>&rdquo; and &ldquo;<strong>ShareActionProvider</strong>&rdquo; code, but don&rsquo;t worry - we will add some proguard rules to fix this.</p>
 <p>Lets add some rules in your &ldquo;<strong>proguard-rules.pro</strong>&rdquo; file to make sure that any code or resources your app needs are not removed. I have been using these rules in my own apps with much success.</p>
 <p>In Android Studio open your apps' proguard-rules.pro file and add the following rules after the last line&hellip;</p>
