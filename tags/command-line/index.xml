@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>command line on techStop</title>
+    <link>https://techstop.github.io/tags/command-line/</link>
+    <description>Recent content in command line on techStop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Apr 2022 22:48:26 -0400</lastBuildDate><atom:link href="https://techstop.github.io/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Delete Lines or Strings Between Two Patterns With Sed</title>
+      <link>https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/</link>
+      <pubDate>Thu, 07 Apr 2022 22:48:26 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sed-1.png&#34; alt=&#34;sed&#34; title=&#34;sed&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;p&gt;In this tutorial we will go through various ways to delete lines or strings between two patterns with the linux sed command stream editor.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Test Drive Read Speed With hdparm</title>
+      <link>https://techstop.github.io/test-drive-read-speed-hdparm/</link>
+      <pubDate>Fri, 01 Apr 2022 11:58:07 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/test-drive-read-speed-hdparm/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/hdparm.png&#34; alt=&#34;hdparm&#34; title=&#34;hdparm&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;p&gt;If you&amp;rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your drive&amp;rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your drives to see if they&amp;rsquo;re performing as expected.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux tldr Pages Command</title>
+      <link>https://techstop.github.io/linux-tldr-pages-command/</link>
+      <pubDate>Mon, 28 Mar 2022 21:44:35 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/linux-tldr-pages-command/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/tldr-pages-0.png&#34; alt=&#34;tldr tar&#34; title=&#34;tldr tar&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;p&gt;Linux tldr pages command displays simplified &lt;a href=&#34;https://en.wikipedia.org/wiki/Man_page&#34; target=&#34;_blank&#34;&gt;man pages&lt;/a&gt; for linux command-line tools. Unlike the man pages, tldr pages is more like a cheat sheet that displays usage examples for linux commands.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux watch Command</title>
+      <link>https://techstop.github.io/linux-watch-command/</link>
+      <pubDate>Wed, 23 Mar 2022 20:19:29 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/linux-watch-command/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/linux-watch-command.png&#34; alt=&#34;linux watch command&#34; title=&#34;linux watch command&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;p&gt;In this tutorial we will be looking at the linux &lt;strong&gt;watch&lt;/strong&gt; command. watch comes pre-installed on most linux distributions. The watch command is an excellent tool if you need to run any commands repeatedly at set intervals.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Manipulate Text in Files With Sed</title>
+      <link>https://techstop.github.io/manipulate-text-files-sed/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/manipulate-text-files-sed/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sed.png&#34; alt=&#34;Sed Text Stream Editor&#34; title=&#34;Sed Text Stream Editor&#34;  width=&#34;550px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;p&gt;The sed linux utility is a powerful stream editor. Sed can manipulate text from standard input or from a file. It is much like a typical text editor. Where sed sets itself apart is in its ability to filter text in a pipeline to expand its capabilities.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

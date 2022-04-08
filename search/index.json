@@ -1,9 +1,11 @@
 [{
-  "ref": "https://techstop.github.io/test-drive-read-speed-hdparm/","title": "Test Drive Read Speed With hdparm","cats": "linux","tags": "tutorials, linux"},
+  "ref": "https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/","title": "Delete Lines or Strings Between Two Patterns With Sed","cats": "linux","tags": "tutorials, linux, command line"},
 {
-  "ref": "https://techstop.github.io/linux-tldr-pages-command/","title": "Linux tldr Pages Command","cats": "linux","tags": "tutorials, linux"},
+  "ref": "https://techstop.github.io/test-drive-read-speed-hdparm/","title": "Test Drive Read Speed With hdparm","cats": "linux","tags": "tutorials, linux, command line"},
 {
-  "ref": "https://techstop.github.io/linux-watch-command/","title": "Linux watch Command","cats": "linux","tags": "tutorials, linux"},
+  "ref": "https://techstop.github.io/linux-tldr-pages-command/","title": "Linux tldr Pages Command","cats": "linux","tags": "tutorials, linux, command line"},
+{
+  "ref": "https://techstop.github.io/linux-watch-command/","title": "Linux watch Command","cats": "linux","tags": "tutorials, linux, command line"},
 {
   "ref": "https://techstop.github.io/android-app-multi-theme/","title": "Android App Multi Theme","cats": "Android","tags": "android studio, app development, java, Tutorials, Android"},
 {
@@ -57,7 +59,7 @@
 {
   "ref": "https://techstop.github.io/detect-android-wakelocks/","title": "Detect Android Wakelocks","cats": "android","tags": "android, tutorials"},
 {
-  "ref": "https://techstop.github.io/manipulate-text-files-sed/","title": "Manipulate Text in Files With Sed","cats": "Linux","tags": "linux, tutorials"},
+  "ref": "https://techstop.github.io/manipulate-text-files-sed/","title": "Manipulate Text in Files With Sed","cats": "Linux","tags": "linux, tutorials, command line"},
 {
   "ref": "https://techstop.github.io/create-desktop-launcher-linux/","title": "Create A Desktop Launcher In Linux","cats": "Linux","tags": "linux, tutorials"},
 {

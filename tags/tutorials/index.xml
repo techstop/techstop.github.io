@@ -6,7 +6,50 @@
     <description>Recent content in Tutorials on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Apr 2022 11:58:07 -0400</lastBuildDate><atom:link href="https://techstop.github.io/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Apr 2022 22:48:26 -0400</lastBuildDate><atom:link href="https://techstop.github.io/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Delete Lines or Strings Between Two Patterns With Sed</title>
+      <link>https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/</link>
+      <pubDate>Thu, 07 Apr 2022 22:48:26 -0400</pubDate>
+      
+      <guid>https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sed-1.png&#34; alt=&#34;sed&#34; title=&#34;sed&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;p&gt;In this tutorial we will go through various ways to delete lines or strings between two patterns with the linux sed command stream editor.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Test Drive Read Speed With hdparm</title>
       <link>https://techstop.github.io/test-drive-read-speed-hdparm/</link>

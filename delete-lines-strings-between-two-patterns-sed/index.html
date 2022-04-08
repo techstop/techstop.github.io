@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Delete Lines or Strings Between Two Patterns With Sed - techStop</title>
+  <meta name="author" content="Antonio T.">
+  <meta name="description" content="Follow this tutorial to learn various ways to delete lines or strings between two patterns with the linux sed command stream editor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://techstop.github.io/css/styles.css">
+  <link rel="stylesheet" href="https://techstop.github.io/css/syntax.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://techstop.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="techStop" />
+  <link href="https://techstop.github.io/post/index.xml" rel="feed" type="application/rss+xml" title="techStop" />
+  <link rel="icon" href="https://techstop.github.io/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://techstop.github.io/img/apple-touch-icon.png" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114983197-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114983197-2');
+</script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8645513020646755",
+          enable_page_level_ads: true
+     });
+</script>
+
+  
+</head>
+<body>
+    <header class="site-header"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "var(--cookie-bg)",
+      "text": "var(--cookie-font)"
+    },
+    "button": {
+      "background": "var(--color-primary)",
+      "hover": "var(--color-secondary)"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "link": "Learn more",
+    "href": "https:\/\/techstop.github.io\/privacy-policy/",
+    "dismiss": "Close"
+  }
+})});
+</script>
+
+
+  
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("backToTopBtn").style.display = "block";
+      } else {
+        document.getElementById("backToTopBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      $(document.documentElement).animate({ scrollTop: 0 }, 'slow');
+      $(document.body).animate({ scrollTop: 0 }, 'slow');
+    }
+  </script>
+  
+  <button onclick="topFunction()" id="backToTopBtn" title="Back to top">&#8682;</button>
+</header>
+<nav class="navbar">
+  <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+    <i class="fa fa-bars"></i>
+  </label>
+    <a href="https://techstop.github.io/" class="logo">techStop</a>
+  <input type="checkbox" id="chkToggle"></input>
+  <ul class="main-nav" id="js-menu"><li>
+      <a href="https://techstop.github.io/" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/linux/" class="nav-links">Linux</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/categories/android/" class="nav-links">Android</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/blog-tags/" class="nav-links">Tags</a>
+    </li>
+    <li>
+      <a href="https://techstop.github.io/search/" class="nav-links"><button type="submit" style="background: none; border: none; padding: 0;" title="Search"><i class="fa fa-search"></i></button></a>
+    </li>
+  </ul>
+</nav>
+<div style="float: right; margin-top: 10px; margin-right: 20px;">
+<a href="//github.com/GameTheory-" id="social-icon" class="icon-github" target="_blank" title="Github"></a>
+<a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+</div>
+<div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox" title="Light Mode">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+      <label class="theme-switch-label">Light Mode</label>
+    </div>
+    <br>
+    <div class="container clearfix">
+      <main>
+        <div class="content">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="9596113831"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  <article>
+    
+  <h1><a href="https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/" title="Delete Lines or Strings Between Two Patterns With Sed">Delete Lines or Strings Between Two Patterns With Sed</a></h1>
+
+<div class="post-info">Published: Apr 7, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
+
+    <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/sed-1.png" alt="sed" title="sed"  width="500px">
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+<p>In this tutorial we will go through various ways to delete lines or strings between two patterns with the linux sed command stream editor.</p>
+<p>For this tutorial we will use a plain text file named (<strong>file.txt</strong>) with the following contents:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">PATTERN-1
+- One
+- one
+- Two
+- two
+PATTERN-2
+- one
+- two
+- One
+- Two
+PATTERN-3
+- three</code></pre></div>
+<p>Notice that each word is repeated in both lower and uppercase.</p>
+<h2 id="delete-a-line-containing-a-specific-string-between-two-patterns"><strong>Delete a Line Containing a Specific String Between Two Patterns</strong></h2>
+<p>Delete the line containing the lowercase (one) between PATTERN-1 and PATTERN-2:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/one/d}&#39;</span> file.txt</code></pre></div>
+<p>Delete the line containing the uppercase (One) between PATTERN-1 and PATTERN-2:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/One/d}&#39;</span> file.txt</code></pre></div>
+<p>Delete the lines containing both lower and uppercase (O/one) between PATTERN-1 and PATTERN-2:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/[oO]ne/d}&#39;</span> file.txt</code></pre></div>
+<h2 id="delete-line-number-ranges"><strong>Delete Line Number Ranges</strong></h2>
+<p>If you know the line numbers you can delete them by range(from a line number to another).</p>
+<p>Delete lines 4 to 9:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;4,9d&#39;</span> file.txt</code></pre></div>
+<h2 id="delete-all-lines-between-two-patterns"><strong>Delete All Lines Between Two Patterns</strong></h2>
+<p>Delete all the lines between PATTERN-2 and PATTERN-3:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-2/,/PATTERN-3/{//!d}&#39;</span> file.txt</code></pre></div>
+<p>Delete all the lines between PATTERN-2 and PATTERN-3 including the patterns:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-2/,/PATTERN-3/d&#39;</span> file.txt</code></pre></div>
+<h2 id="delete-all-lines-from-a-pattern"><strong>Delete All Lines From a Pattern</strong></h2>
+<p>Delete all lines from PATTERN-3 and on including the pattern:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-3/,$d&#39;</span> file.txt</code></pre></div>
+<p>Delete all lines from PATTERN-3 not including the pattern:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-3/,//{//!d}&#39;</span> file.txt</code></pre></div>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>You should now be able to delete lines or strings between two patterns with sed. sed is a very powerful tool in the linux arsenal that you should be familiar and comfortable with.</p>
+<p>For more sed commands, check out my other <a href="https://techstop.github.io/manipulate-text-files-sed/">sed tutorial</a>.</p>
+    <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fdelete-lines-strings-between-two-patterns-sed%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Delete%20Lines%20or%20Strings%20Between%20Two%20Patterns%20With%20Sed&amp;url=https%3a%2f%2ftechstop.github.io%2fdelete-lines-strings-between-two-patterns-sed%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fdelete-lines-strings-between-two-patterns-sed%2f&title=Delete%20Lines%20or%20Strings%20Between%20Two%20Patterns%20With%20Sed" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+    
+      Tags:
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      
+        <a href="https://techstop.github.io/tags/linux">linux</a>, 
+      
+        <a href="https://techstop.github.io/tags/command-line">command line</a>
+      
+    
+    <div style="margin-top: 18px; text-align: center;">
+      
+        <span>&middot; <strong>More Articles</strong> &middot;</span>
+      
+      
+      
+        <div><a href="https://techstop.github.io/test-drive-read-speed-hdparm/">Test Drive Read Speed With hdparm &raquo;</a></div>
+      
+    </div>
+  </article>
+  <hr>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="4092505717"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  
+    <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1f5e8;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        label="comments"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
+
+  
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
+
+        </div>
+      </main>
+    </div>
+    <script>
+const myScript = document.getElementById('myScriptId');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+    
+      document.location.reload();
+    
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.removeItem('theme');
+    
+      document.location.reload();
+    
+  }
+}
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'light') {
+    toggleSwitch.checked = true;
+    
+        myScript.setAttribute('theme', 'github-light');
+    
+  }
+}
+</script>
+<style>
+  .font-row-one {
+    font-size: 16px;
+    padding-top: 2px;
+  }
+  .font-row-two {
+    font-size: 12px;
+  }
+</style>
+<footer class="main-footer">
+  <div class="container clearfix">
+    <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
+    <div class="font-row-one">&copy; 2019 &#8208; 2022 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
+  </div>
+  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script src="https://techstop.github.io/js/plugins.js"></script>
+</footer>
+</body>
+</html>
