@@ -177,18 +177,6 @@ window.cookieconsent.initialise({
 <p>Now there are a few GUI applications that you can install to get the hardware info, and in most cases this will suffice. My personal favorite GUI application for hardware details is <a href="https://help.ubuntu.com/community/HardInfo" target="_blank">HardInfo</a>. It&rsquo;s a fantastic piece of software. In fact, HardInfo even has some benchmarking tools to test your system&rsquo;s stability. This comes in handy after hardware upgrades or overclocking.</p>
 <p>You can install HardInfo as follows.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install hardinfo</code></pre></div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 <h2 id="linux-commands-for-hardware-info"><strong>Linux Commands For Hardware Info</strong></h2>
 <p>Well now that we&rsquo;ve gone over a good GUI, it&rsquo;s time to dig in with what this article is really about. We will go over some Linux commands to get hardware info. Commands can allow for more specific and targeted hardware info. Probably the biggest advantage is the ability to use these commands in a shell script.</p>
 <p><strong>Lets get started, shall we&hellip;</strong></p>
@@ -218,6 +206,13 @@ window.cookieconsent.initialise({
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t memory <span class="p">|</span> grep -i max</code></pre></div>
 <p>If you want to know if there are any empty ram slots available in your PC, you don&rsquo;t need to open it. You can find out with this command. If the command output is empty, that means all ram slots are full.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lshw -short -C memory <span class="p">|</span> grep -i empty</code></pre></div>
+<p>This final command gives us our memory usage.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">free -m</code></pre></div>
+<ul>
+<li><strong>Here are some commands to get disks, devices, and file systems.</strong></li>
+</ul>
+<p>I like this next command. It displays the device path for any mounted HDD, SSD, and USB drives.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo lshw -short -C disk</code></pre></div>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
@@ -230,13 +225,6 @@ window.cookieconsent.initialise({
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-<p>This final command gives us our memory usage.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">free -m</code></pre></div>
-<ul>
-<li><strong>Here are some commands to get disks, devices, and file systems.</strong></li>
-</ul>
-<p>I like this next command. It displays the device path for any mounted HDD, SSD, and USB drives.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo lshw -short -C disk</code></pre></div>
 <p>The next command is more targeted at a specific drive by using the device path you get from the previous command above.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -I /dev/sda</code></pre></div>
 <p>If you&rsquo;d like to get an idea of how fast your HDD or SSD read speeds are, you can run a test as follows. You just need the device path as the previous command.</p>
@@ -287,7 +275,9 @@ window.cookieconsent.initialise({
       
         <a href="https://techstop.github.io/tags/linux">linux</a>, 
       
-        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      
+        <a href="https://techstop.github.io/tags/command-line">command line</a>
       
     
     <div style="margin-top: 18px; text-align: center;">

@@ -51,7 +51,7 @@
     </item>
     
     <item>
-      <title>Test Drive Read Speed With hdparm</title>
+      <title>Test Disk Drive Read Speed With hdparm</title>
       <link>https://techstop.github.io/test-drive-read-speed-hdparm/</link>
       <pubDate>Fri, 01 Apr 2022 11:58:07 -0400</pubDate>
       
@@ -90,7 +90,7 @@
 	}
 &lt;/script&gt;
 
-&lt;p&gt;If you&amp;rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your drive&amp;rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your drives to see if they&amp;rsquo;re performing as expected.&lt;/p&gt;</description>
+&lt;p&gt;If you&amp;rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your disk drive&amp;rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your disk drives to see if they&amp;rsquo;re performing as expected.&lt;/p&gt;</description>
     </item>
     
     <item>

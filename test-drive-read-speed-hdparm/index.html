@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Test Drive Read Speed With hdparm - techStop</title>
+  <title>Test Disk Drive Read Speed With hdparm - techStop</title>
   <meta name="author" content="Antonio T.">
-  <meta name="description" content="Test your SSD or HDD drive read speeds on linux with hdparm. hdparm can give you an accurate representation of the read speeds of your drives to see if they&#39;re performing as expected.">
+  <meta name="description" content="Test your SSD or HDD drive read speeds on linux with hdparm. hdparm can give you an accurate representation of the read speeds of your disk drives to see if they&#39;re performing as expected.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
@@ -135,7 +135,7 @@ window.cookieconsent.initialise({
 </script>
   <article>
     
-  <h1><a href="https://techstop.github.io/test-drive-read-speed-hdparm/" title="Test Drive Read Speed With hdparm">Test Drive Read Speed With hdparm</a></h1>
+  <h1><a href="https://techstop.github.io/test-drive-read-speed-hdparm/" title="Test Disk Drive Read Speed With hdparm">Test Disk Drive Read Speed With hdparm</a></h1>
 
 <div class="post-info">Published: Apr 1, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
 
@@ -173,9 +173,9 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>If you&rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your drive&rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your drives to see if they&rsquo;re performing as expected.</p>
+<p>If you&rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your disk drive&rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your disk drives to see if they&rsquo;re performing as expected.</p>
 <h2 id="determine-disk-to-test"><strong>Determine Disk to Test</strong></h2>
-<p>Whether you have one or more attached drives to your computer, you need to determine the disk path.</p>
+<p>Whether you have one or more attached disk drives to your computer, you need to determine the disk path.</p>
 <p>The paths are listed as follows:</p>
 <ul>
 <li>(/dev/hd*) = IDE disks: hard Disk Drives(HDD)</li>
@@ -197,37 +197,25 @@ Disk identifier: 0BB9721E-A0BC-734C-99A0-367A0D530AC2
 Device      Start       End   Sectors   Size Type
 /dev/sda1    4096    618495    614400   300M EFI System
 /dev/sda2  618496 250067789 249449294 118.9G Linux filesystem</code></pre></div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8645513020646755"
-     data-ad-slot="8847978337"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 <h2 id="test-disk-read-speed"><strong>Test Disk Read Speed</strong></h2>
 <p>Now that we have determined our disk path, it is time to run our read speed test.</p>
-<p>To test the disk read speed we run the following (hdparm) command.</p>
+<p>To test the disk drive read speed we run the following (hdparm) command.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -t /dev/sda</code></pre></div>
 <p>If you look at my output below, you can see that I&rsquo;m getting &ldquo;450.51 MB/sec&rdquo; which is in line with what the manufacturer advertises. Not bad considering it&rsquo;s a ten year old SSD as of the date of this article.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">/dev/sda:
  Timing buffered disk reads: 1352 MB in  3.00 seconds = 450.51 MB/sec</code></pre></div>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-<p>You should now be able to test read speeds for any attached drive to your computer. For more hdparm options you can run (man hdparm) or (<a href="https://techstop.github.io/linux-tldr-pages-command/">tldr</a> hdparm) in your terminal.</p>
+<p>You should now be able to test read speeds for any attached disk drive to your computer. For more hdparm options you can run (man hdparm) or (<a href="https://techstop.github.io/linux-tldr-pages-command/">tldr</a> hdparm) in your terminal.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
         <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2ftest-drive-read-speed-hdparm%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Test%20Drive%20Read%20Speed%20With%20hdparm&amp;url=https%3a%2f%2ftechstop.github.io%2ftest-drive-read-speed-hdparm%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Test%20Disk%20Drive%20Read%20Speed%20With%20hdparm&amp;url=https%3a%2f%2ftechstop.github.io%2ftest-drive-read-speed-hdparm%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ftest-drive-read-speed-hdparm%2f&title=Test%20Drive%20Read%20Speed%20With%20hdparm" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ftest-drive-read-speed-hdparm%2f&title=Test%20Disk%20Drive%20Read%20Speed%20With%20hdparm" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
