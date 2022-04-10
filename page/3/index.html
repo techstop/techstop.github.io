@@ -140,6 +140,60 @@ window.cookieconsent.initialise({
   
       <article>
   
+  <h1><a href="https://techstop.github.io/bash-aliases/" title="Bash Aliases">Bash Aliases</a></h1>
+
+<div class="post-info">Published: Oct 25, 2019 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/alias.png" alt="Bash Aliases" title="Bash Aliases"  width="500px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+<p>If you&rsquo;re not familiar with bash aliases I highly recommend you read on. Bash aliases are fantastic for saving time and not having to remember commands or groups of commands.</p>
+<p>A bash alias is just a shortcut that you can set to be a word or even a single letter.</p></p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>, 
+    
+      <a href="https://techstop.github.io/tags/command-line">command line</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/bash-aliases/" title="Bash Aliases">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+  
+      <article>
+  
   <h1><a href="https://techstop.github.io/clear-reset-terminal/" title="Clear or Reset Terminal">Clear or Reset Terminal</a></h1>
 
 <div class="post-info">Published: Oct 22, 2019 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
@@ -401,59 +455,6 @@ window.cookieconsent.initialise({
     
   
   <p><a class="read-more" href="https://techstop.github.io/redirect-append-to-file/" title="Redirect and Append to a File in Linux">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-  
-      <article>
-  
-  <h1><a href="https://techstop.github.io/bash-exit-status/" title="Bash Exit Status">Bash Exit Status</a></h1>
-
-<div class="post-info">Published: Oct 15, 2019 &middot; Updated: Feb 18, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/stat.png" alt="Bash Exit Status" title="Bash Exit Status"  width="480px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-<p>Regardless of whether a bash command ends successfully or not, it returns an exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/command-line">command line</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/bash-exit-status/" title="Bash Exit Status">Read more &raquo;</a></p>
   <hr>
 </article>
 
