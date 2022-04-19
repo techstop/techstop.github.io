@@ -175,7 +175,7 @@ window.cookieconsent.initialise({
 
 <p>If you&rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&rsquo;t work. For these rare occasions the dd linux command line utility can be an excellent substitute. This is my preferred method and the one I&rsquo;ll cover in this tutorial.</p>
 <h2 id="create-a-bootable-usb"><strong>Create A Bootable USB</strong></h2>
-<p>Once you have downloaded the iso image for the linux distro you&rsquo;d like to test or install, you&rsquo;ll need to plug your usb stick to your computer to get its file system partition path. To do this we will use (lsblk) in the terminal to get the partition path for the usb stick.</p>
+<p>Once you have downloaded the iso image for the linux distro you&rsquo;d like to test or install, you&rsquo;ll need to plug your usb stick to your computer to get its file system partition path. To do this we will use the (df) command in terminal to get the partition path for the usb stick.</p>
 <p>Open the terminal and run this command:
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">df -h</code></pre></div></p>
 <p>This is what my output looks like after running the df command:</p>
@@ -190,7 +190,7 @@ tmpfs           742M   76K  742M   1% /run/user/1000
 /dev/sdb        3.8G  663M  3.2G  18% /run/media/gametheory/Sony</code></pre></div>
 <p>The name of my usb stick is (Sony) which is also the brand. As you can see in the output above, its file system partition is:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/dev/sdb</code></pre></div>
-<p><strong>Note:</strong> If your usb stick is not labeled, you can identify it by its size. Mine shows (3.8G).</p>
+<p><mark>If your usb stick is not labeled, you can identify it by its size. Mine shows (3.8G).</mark></p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
