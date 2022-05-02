@@ -138,6 +138,59 @@ window.cookieconsent.initialise({
     
         <article>
   
+  <h1><a href="https://techstop.github.io/get-cpu-gpu-temps-linux/" title="Get CPU and GPU Temps in Linux">Get CPU and GPU Temps in Linux</a></h1>
+
+<div class="post-info">Published: Nov 13, 2019 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
+
+  <p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/sensors1.png" alt="Get CPU and GPU Temps in Linux" title="Get CPU and GPU Temps in Linux"  width="500px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+<p>To get CPU and GPU temps in linux you need to install and configure lm-sensors. With lm-sensors you can monitor cpu and gpu temperatures and fan speeds as well as voltages for some systems. Lm-sensors reads the available sensors on your motherboard, cpu, and gpu and displays their output. Once configured, you can use the command line or a GUI to monitor your system&rsquo;s sensors.</p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>, 
+    
+      <a href="https://techstop.github.io/tags/command-line">command line</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/get-cpu-gpu-temps-linux/" title="Get CPU and GPU Temps in Linux">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+    
+        <article>
+  
   <h1><a href="https://techstop.github.io/fix-screen-tearing-xfce/" title="Fix Screen Tearing in Xfce">Fix Screen Tearing in Xfce</a></h1>
 
 <div class="post-info">Published: Nov 9, 2019 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
@@ -398,59 +451,6 @@ window.cookieconsent.initialise({
 </article>
 
     
-        <article>
-  
-  <h1><a href="https://techstop.github.io/clear-reset-terminal/" title="Clear or Reset Terminal">Clear or Reset Terminal</a></h1>
-
-<div class="post-info">Published: Oct 22, 2019 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/crt.png" alt="Clear or Reset Terminal" title="Clear or Reset Terminal"  width="500px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-<p>Whenever you&rsquo;re using the terminal extensively you may find your terminal cluttered with commands and output. This can be rather annoying and even confusing at times with the bash prompt at the bottom of your terminal screen. The solution to this is to clear or reset terminal.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/command-line">command line</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/clear-reset-terminal/" title="Clear or Reset Terminal">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 
@@ -469,7 +469,7 @@ window.cookieconsent.initialise({
   <a class="btn newer" href="/categories/linux/" title="Previous">&laquo; Previous</a>
 
 
-  <p class="counter">Page 2 of 7</p>
+  <p class="counter">Page 2 of 8</p>
 
 
   <a class="btn older" href="/categories/linux/page/3/" title="Next">Next &raquo;</a>

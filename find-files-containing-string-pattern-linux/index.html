@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Find Files or Directories in Linux Command Line - techStop</title>
+  <title>Find Files Containing a String Pattern in Linux - techStop</title>
   <meta name="author" content="Antonio T.">
-  <meta name="description" content="Follow this tutorial to learn various ways to find files and directories in the linux command line. The find command is extremely versatile providing many options for granular control over your search query.">
+  <meta name="description" content="Grep is a powerful command line utility to search for files containing text string patterns in linux. In this tutorial we&#39;ll be using grep with some common options to refine our file searches for better results.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
@@ -135,12 +135,12 @@ window.cookieconsent.initialise({
 </script>
   <article>
     
-  <h1><a href="https://techstop.github.io/find-files-directories-linux-command-line/" title="Find Files or Directories in Linux Command Line">Find Files or Directories in Linux Command Line</a></h1>
+  <h1><a href="https://techstop.github.io/find-files-containing-string-pattern-linux/" title="Find Files Containing a String Pattern in Linux">Find Files Containing a String Pattern in Linux</a></h1>
 
-<div class="post-info">Published: Apr 10, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
+<div class="post-info">Published: May 1, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
 
     <div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/find.png" alt="find" title="find"  width="500px">
+<img class="myImg" src="https://techstop.github.io/images/linux/grep.png" alt="Grep" title="Grep"  width="500px">
 </div>
 
 <div id="myModal" class="modal">
@@ -173,41 +173,33 @@ window.cookieconsent.initialise({
 	}
 </script>
 
-<p>The linux find command is one of the best ways to find files and directories in the command line. The find command is extremely versatile providing many options for granular control over your search query. If it exists, the find command will find it.</p>
-<p>The find command can also execute commands on the files or directories found. This allows you to do a multitude of things, like deleting and modifying the files and directories found with a one-liner command.</p>
-<p>The syntax for the find command is as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find path options expression</code></pre></div>
+<p>Grep is a powerful command line utility to search for files containing text string patterns in linux. In this tutorial we&rsquo;ll be using grep with some common options to refine our file searches for better results.</p>
+<p>The syntax for the grep command is as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep <span class="o">[</span>options<span class="o">]</span> <span class="s2">&#34;pattern&#34;</span> /files<span class="p">|</span>directories/to/search</code></pre></div>
+<p>These are some useful and common options for the grep command:</p>
 <ul>
-<li>path = By default the current directory is used unless given a path to search in.</li>
-<li>options = Control over your search(ie. files or directories, case, symbolic links, and much more).</li>
-<li>expression = What you&rsquo;re searching for.</li>
+<li>(-w) Only show matches containing whole words.</li>
+<li>(-i) Ignores upper/lower case distinction.</li>
+<li>(-l) Show the file names of files containing the matching string.</li>
+<li>(-s) Suppress error messages about nonexistent or unreadable files.</li>
+<li>(-o) Print only the matched part of a matching line.</li>
+<li>(-n) Print the line number containing the match.</li>
+<li>(-r) Read all files under a directory and its subdirectories recursively.</li>
+<li>(-R) Same as the (-r) option, but also follows symbolic links.</li>
+<li>(-h) Do not display the file name.</li>
 </ul>
-<h2 id="find-files-by-extension"><strong>Find Files by Extension</strong></h2>
-<p>In this example we search for all files with the png extension in the current directory.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -name <span class="s1">&#39;*.png&#39;</span></code></pre></div>
-<ul>
-<li>The dot(.) indicates the current directory. You can also provide a path to search such as (/home/username/directory).</li>
-<li>(-name) indicates the case sensitive file name.</li>
-</ul>
-<p>Here we search for png files in a specific directory.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find /home/username/Pictures -name <span class="s1">&#39;*.png&#39;</span></code></pre></div>
-<h2 id="find-a-file-by-name"><strong>Find a File by Name</strong></h2>
-<p>Here we search for a file named (file.txt) case <strong>sensitive</strong>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -name <span class="s1">&#39;file.txt&#39;</span></code></pre></div>
-<p>Here we search for a file named (file.txt) case <strong>insensitive</strong>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -iname <span class="s1">&#39;file.txt&#39;</span></code></pre></div>
-<ul>
-<li>(-name) case sensitive</li>
-<li>(-iname) case insensitive</li>
-</ul>
-<h2 id="find-empty-files"><strong>Find Empty Files</strong></h2>
-<p>Here we search a directory for empty(0 bytes) files.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -type f -empty</code></pre></div>
-<ul>
-<li>(-type f) = Searches for files only.</li>
-</ul>
-<p>To delete all empty(0 bytes) files.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -type f -empty -delete</code></pre></div>
+<p>You can use one or more options to refine your search with grep.</p>
+<p>Lets take a look at a few examples to find files containing a string pattern with grep.</p>
+<h2 id="find-files-containing-a-string-pattern"><strong>Find Files Containing A String Pattern</strong></h2>
+<p>To find a string (linux is awesome) within all text (.txt) files in a given directory you can use the following command in terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep <span class="s2">&#34;linux is awesome&#34;</span> /home/user/*.txt</code></pre></div>
+<p>To search in subdirectories you can use the (-r) option:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep -r <span class="s2">&#34;linux is awesome&#34;</span> /home/user/*.txt</code></pre></div>
+<p>You can change the file extension to any type of text file you wish to search (.html, .md, .sh, or any other type).</p>
+<h2 id="find-files-with-case-insensitive-strings"><strong>Find Files With Case Insensitive Strings</strong></h2>
+<p>Use the (-i) option to find case insensitive strings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep -i <span class="s2">&#34;LINUX is awesome&#34;</span> /home/user/*.txt</code></pre></div>
+<p>If you don&rsquo;t know if the string you&rsquo;re searching for is upper or lower case, then you will need to use this option.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
@@ -220,43 +212,32 @@ window.cookieconsent.initialise({
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-<h2 id="find-files-by-modification-time-frame"><strong>Find Files by Modification Time Frame</strong></h2>
-<p>Find files modified in the last 7 days.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -daystart -mtime -7</code></pre></div>
-<h2 id="run-a-command-on-each-file-found"><strong>Run a Command On Each File Found</strong></h2>
-<p>Find all png files in directory and display each png file size.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -name <span class="s1">&#39;*.png&#39;</span> -exec wc -c <span class="o">{}</span> <span class="se">\;</span></code></pre></div>
-<ul>
-<li>(-exec) Executes a command.</li>
-<li>(wc -c) Command to display file size.</li>
-<li>({}) All the files found to be processed by (wc -c) command.</li>
-<li>(;) Ends the command executed by (-exec).</li>
-<li>(\) Escapes the semicolon(;) so that it&rsquo;s not treated as its own special character and instead is passed to the find command.</li>
-</ul>
-<h2 id="find-files-within-a-size-range"><strong>Find Files Within a Size Range</strong></h2>
-<p>Find files within 5 and 10 megabytes.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -size +5M -size -10M</code></pre></div>
-<h2 id="find-directories"><strong>Find Directories</strong></h2>
-<p>Find a directory named (music).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -type d -iname <span class="s1">&#39;music&#39;</span></code></pre></div>
-<ul>
-<li>(-type d) Search for directories only.</li>
-</ul>
-<p>If you only know part of the directory name, you can use wildcards to search for directory names containing the word (music).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">find . -type d -iname <span class="s1">&#39;*music*&#39;</span></code></pre></div>
+<h2 id="find-files-with-specific-strings"><strong>Find Files With Specific Strings</strong></h2>
+<p>To find files containing a specific string use the (-rnw) options:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep -rnw <span class="s2">&#34;linux&#34;</span> /home/user/*.txt</code></pre></div>
+<h2 id="use-grep-in-a-shell-script"><strong>Use grep In A Shell Script</strong></h2>
+<p>grep is an excellent tool to use in shell scripts to automate complex searches.</p>
+<p>In this example we&rsquo;ll search for a string pattern and check if it repeats more than once in each file. If it repeats more than once, we&rsquo;ll print the file names.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">DIR</span><span class="o">=</span>/home/user
+
+<span class="k">for</span> i in <span class="s2">&#34;</span><span class="nv">$DIR</span><span class="s2">&#34;</span>/*.txt<span class="p">;</span> <span class="k">do</span>
+  <span class="k">if</span> <span class="o">[</span> <span class="k">$(</span>grep -ho <span class="s1">&#39;my-search-pattern&#39;</span> <span class="nv">$i</span> <span class="p">|</span> wc -l<span class="k">)</span> -gt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="k">$(</span>basename <span class="nv">$i</span><span class="k">)</span>
+  <span class="k">fi</span>
+<span class="k">done</span></code></pre></div>
+<p>As you can see we are piping the grep command to wc which counts how many times the pattern repeats. Then we use the echo command to print the file names of the files that have the pattern repeat more than once.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-<p>We have step through a few ways to find files and directories efficiently in the linux command line with the find command. For more find command options, view the man page in your terminal:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">man find</code></pre></div>
+<p>That was our brief look at the grep command to find files containing a text string pattern. You should now have a good understanding of how to use grep with some useful and common options.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2ffind-files-directories-linux-command-line%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2ffind-files-containing-string-pattern-linux%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Find%20Files%20or%20Directories%20in%20Linux%20Command%20Line&amp;url=https%3a%2f%2ftechstop.github.io%2ffind-files-directories-linux-command-line%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Find%20Files%20Containing%20a%20String%20Pattern%20in%20Linux&amp;url=https%3a%2f%2ftechstop.github.io%2ffind-files-containing-string-pattern-linux%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ffind-files-directories-linux-command-line%2f&title=Find%20Files%20or%20Directories%20in%20Linux%20Command%20Line" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ffind-files-containing-string-pattern-linux%2f&title=Find%20Files%20Containing%20a%20String%20Pattern%20in%20Linux" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
@@ -275,10 +256,8 @@ window.cookieconsent.initialise({
         <span>&middot; <strong>More Articles</strong> &middot;</span>
       
       
-        <div><a href="https://techstop.github.io/find-files-containing-string-pattern-linux/">&laquo; Find Files Containing a String Pattern in Linux</a></div>
       
-      
-        <div><a href="https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/">Delete Lines or Strings Between Two Patterns With Sed &raquo;</a></div>
+        <div><a href="https://techstop.github.io/find-files-directories-linux-command-line/">Find Files or Directories in Linux Command Line &raquo;</a></div>
       
     </div>
   </article>
