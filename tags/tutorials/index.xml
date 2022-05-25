@@ -6,7 +6,50 @@
     <description>Recent content in Tutorials on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://techstop.github.io/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://techstop.github.io/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Window Tiling in KDE Plasma</title>
+      <link>https://techstop.github.io/window-tiling-kde-plasma/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://techstop.github.io/window-tiling-kde-plasma/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
+&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/kde-window-tiling.png&#34; alt=&#34;Window Tiling in KDE Plasma&#34; title=&#34;Window Tiling in KDE Plasma&#34;  width=&#34;500px&#34;&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	
+	var modal = document.getElementById(&#39;myModal&#39;);
+	var i;
+	
+	var img = document.getElementsByClassName(&#39;myImg&#39;);
+	var modalImg = document.getElementById(&#34;img01&#34;);
+	var captionText = document.getElementById(&#34;caption&#34;);
+	for(i = 0; i &lt; img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = &#34;block&#34;;
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = &#34;none&#34;;
+	}
+&lt;/script&gt;
+
+&lt;p&gt;Many users are not aware that KDE Plasma has built in window tiling functionality. Window tiling in KDE Plasma actually works quite well, though it&amp;rsquo;s not meant to compete with window managers that are exclusively for window tiling. Nevertheless, you&amp;rsquo;d be surprised at how well it works.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Find Files Containing a String Pattern in Linux</title>
       <link>https://techstop.github.io/find-files-containing-string-pattern-linux/</link>
