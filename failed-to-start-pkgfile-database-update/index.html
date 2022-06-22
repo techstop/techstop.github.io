@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="generator" content="Hugo 0.92.2" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>techStop</title>
+  <title>Failed to Start pkgfile Database Update - techStop</title>
   <meta name="author" content="Antonio T.">
-  <meta name="description" content="TechStop is a tech website with a focus on Linux and Android. Check out our tutorials and tech articles for the Linux and Android platforms and other technologies.">
+  <meta name="description" content="Follow this tutorial to learn how to fix the &#39;failed to start pkgfile database update&#39; warning in Manjaro Linux during bootup.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
@@ -39,8 +38,7 @@
   
 </head>
 <body>
-    <header class="site-header">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <header class="site-header"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 <script>
 window.addEventListener("load", function(){
@@ -123,7 +121,6 @@ window.cookieconsent.initialise({
     <div class="container clearfix">
       <main>
         <div class="content">
-  <article>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 
@@ -136,42 +133,22 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-  
-  
-      <article>
-  
-  <h1><a href="https://techstop.github.io/lg-optimus-f7-kernel/" title="LG Optimus F7 Kernel">LG Optimus F7 Kernel</a></h1>
-
-<div class="post-info">Published: Jan 21, 2018 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p>The LG Optimus F7 kernel brings some extra freedom for the device. The kernel comes with a few extra governors for more control over performance. It also allows extensive debloating without setting the device into a bootloop. Init-d is also a nice touch if you like running custom scripts. Check full details below&hellip;</p>
-  
-    Tags:
+  <article>
     
-      <a href="https://techstop.github.io/tags/lg870">lg870</a>, 
-    
-      <a href="https://techstop.github.io/tags/android">android</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/lg-optimus-f7-kernel/" title="LG Optimus F7 Kernel">Read more &raquo;</a></p>
-  <hr>
-</article>
+  <h1><a href="https://techstop.github.io/failed-to-start-pkgfile-database-update/" title="Failed to Start pkgfile Database Update">Failed to Start pkgfile Database Update</a></h1>
 
-  
-      <article>
-  
-  <h1><a href="https://techstop.github.io/lg-lucid-2-xperion-rom/" title="LG Lucid 2 Xperion ROM">LG Lucid 2 Xperion ROM</a></h1>
+<div class="post-info">Published: Jun 21, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
 
-<div class="post-info">Published: Jan 21, 2018 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/vs870/LG-Lucid-2-ROM.png" alt="LG Lucid 2 Xperion ROM" title="LG Lucid 2 Xperion ROM"  width="100px">
+    <div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/failed-to-start-pkgfile-database-update.png" alt="Failed To Start pkgfile Database Update" title="Failed To Start pkgfile Database Update"  width="500px">
 </div>
+
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
+
 <script>
 	
 	var modal = document.getElementById('myModal');
@@ -195,40 +172,75 @@ window.cookieconsent.initialise({
 		modal.style.display = "none";
 	}
 </script>
-<p>The LG Lucid 2 Xperion rom improves upon the factory stock rom to deliver a better experience. With many mods and tweaks, I&rsquo;m sure you&rsquo;ll agree. Maybe you&rsquo;re bored of your Lucid 2, well this rom can surely breathe some new life to your device. There&rsquo;s also an unsercured kernel for further debloating the Lucid 2 should you have the need.</p>
-  
-    Tags:
+
+<p>If you&rsquo;re a Manjaro user, chances are you&rsquo;ve seen the &ldquo;failed to start pkgfile database update&rdquo; warning when booting Manjaro Linux. Though it&rsquo;s just a harmless warning, it can be quite annoying to see.</p>
+<p>According to the <a href="https://wiki.archlinux.org/title/Pkgfile" target="_blank">Arch wiki</a>, pkgfile is a tool for searching files from packages in the official repositories. However, in Manjaro this tool is used by &ldquo;manjaro-zsh-config&rdquo;. Zsh is the default shell in Manjaro which is utilizing the pkgfile tool.</p>
+<h2 id="cause-for-warning"><strong>Cause For Warning</strong></h2>
+<p>The reason for the &ldquo;failed to start pkgfile database update&rdquo; warning is the pkgfile tool is trying to obtain network access during bootup to run its update task. As you may know, the network is not accessible during bootup till you login causing the pkgfile update to fail and trigger the warning.</p>
+<h2 id="solution"><strong>Solution</strong></h2>
+<p>Luckily there&rsquo;s an easy fix for this warning. All we need to do is delay the pkgfile update task by 5 minutes. This is more than enough time to login. To do this, follow these steps:</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>In your file manager navigate to <strong>&quot;/usr/lib/systemd/system&quot;</strong> and open the file named <strong>&ldquo;pkgfile-update.timer&rdquo;</strong>.</p>
+<p>Now add the following line at the bottom of the &ldquo;[Timer]&rdquo; section.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">RandomizedDelaySec=300</code></pre></div>
+<p><mark>Note: 300 seconds is equivalent to 5 minutes.</mark></p>
+<p>Your &ldquo;pkgfile-update.timer&rdquo; file should look something like this after adding the line with the 5 minute delay.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>Unit<span class="o">]</span>
+<span class="nv">Description</span><span class="o">=</span>pkgfile database update timer
+
+<span class="o">[</span>Timer<span class="o">]</span>
+<span class="nv">OnCalendar</span><span class="o">=</span>daily
+<span class="nv">AccuracySec</span><span class="o">=</span>6h
+<span class="nv">Persistent</span><span class="o">=</span>yes
+<span class="nv">RandomizedDelaySec</span><span class="o">=</span><span class="m">300</span>
+
+<span class="o">[</span>Install<span class="o">]</span>
+<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target</code></pre></div>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>You should now have the &ldquo;failed to start pkgfile database update&rdquo; warning fixed. You can now reboot and never see that warning again.</p>
+    <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2ffailed-to-start-pkgfile-database-update%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Failed%20to%20Start%20pkgfile%20Database%20Update&amp;url=https%3a%2f%2ftechstop.github.io%2ffailed-to-start-pkgfile-database-update%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2ffailed-to-start-pkgfile-database-update%2f&title=Failed%20to%20Start%20pkgfile%20Database%20Update" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
     
-      <a href="https://techstop.github.io/tags/vs870">vs870</a>, 
+      Tags:
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      
+        <a href="https://techstop.github.io/tags/linux">linux</a>
+      
     
-      <a href="https://techstop.github.io/tags/android">android</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/lg-lucid-2-xperion-rom/" title="LG Lucid 2 Xperion ROM">Read more &raquo;</a></p>
+    <div style="margin-top: 18px; text-align: center;">
+      
+        <span>&middot; <strong>More Articles</strong> &middot;</span>
+      
+      
+      
+        <div><a href="https://techstop.github.io/window-tiling-kde-plasma/">Window Tiling in KDE Plasma &raquo;</a></div>
+      
+    </div>
+  </article>
   <hr>
-</article>
-
-  
-      <article>
-  
-  <h1><a href="https://techstop.github.io/lg-spirit-4g-roms/" title="LG Spirit 4G ROMs">LG Spirit 4G ROMs</a></h1>
-
-<div class="post-info">Published: Jan 20, 2018 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p>The LG Spirit 4G ROMs really enhance the user experience and make this device much more ejoyable. These roms have really been customized to make you wonder why stick to the stock factory rom. The roms can also be further customized with themes and other customizations to suit your needs. The Samurai rom with the white theme happens to be my personal favorites!</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/ms870">ms870</a>, 
-    
-      <a href="https://techstop.github.io/tags/android">android</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/lg-spirit-4g-roms/" title="LG Spirit 4G ROMs">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-  
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 
@@ -242,17 +254,99 @@ window.cookieconsent.initialise({
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-  <div class="pagination">
-
-  <a class="btn newer" href="/page/11/" title="Previous">&laquo; Previous</a>
-
-
-  <p class="counter">Page 12 of 12</p>
-
-
+  
+    <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1f5e8;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        label="comments"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
 </div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
 
-</article>
+  
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
 
 
         </div>
@@ -268,9 +362,13 @@ function switchTheme(e) {
     document.documentElement.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', 'light');
     
+      document.location.reload();
+    
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.removeItem('theme');
+    
+      document.location.reload();
     
   }
 }
@@ -280,6 +378,8 @@ if (currentTheme) {
   document.documentElement.setAttribute('data-theme', currentTheme);
   if (currentTheme === 'light') {
     toggleSwitch.checked = true;
+    
+        myScript.setAttribute('theme', 'github-light');
     
   }
 }
