@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Posts - techStop</title>
+  <title>Backup and Restore Linux With Timeshift - techStop</title>
   <meta name="author" content="Antonio T.">
-  <meta name="description" content="TechStop is a tech website with a focus on Linux and Android. Check out our tutorials and tech articles for the Linux and Android platforms and other technologies.">
+  <meta name="description" content="Follow this tutorial to learn how to use Timeshift on Linux. Timeshift is a backup utility for linux that allows you to create system snapshots to restore your system to a previously working state.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
@@ -121,8 +121,7 @@ window.cookieconsent.initialise({
     <div class="container clearfix">
       <main>
         <div class="content">
-  <article>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 
 <ins class="adsbygoogle"
@@ -134,22 +133,22 @@ window.cookieconsent.initialise({
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+  <article>
     
-    
-        <article>
-  
   <h1><a href="https://techstop.github.io/backup-restore-linux-timeshift/" title="Backup and Restore Linux With Timeshift">Backup and Restore Linux With Timeshift</a></h1>
 
 <div class="post-info">Published: Sep 24, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
 
-  <p><div class="myImgContainer">
+    <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/timeshift005.png" alt="Timeshift" title="Timeshift"  width="500px">
 </div>
+
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
+
 <script>
 	
 	var modal = document.getElementById('myModal');
@@ -173,34 +172,47 @@ window.cookieconsent.initialise({
 		modal.style.display = "none";
 	}
 </script>
+
 <p>Timeshift is a backup utility for linux that allows you to create system snapshots to restore your system to a previously working state. It functions similar to <strong>System Restore</strong> in Windows and the <strong>Time Machine</strong> tool in Mac OS.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/backup-restore-linux-timeshift/" title="Backup and Restore Linux With Timeshift">Read more &raquo;</a></p>
-  <hr>
-</article>
+<p>If you&rsquo;re someone that likes to tinker with your system or you run a rolling release linux distribution like <a href="https://archlinux.org/" target="_blank">Arch Linux</a>, then Timeshift is a must have backup application. When used properly, timeshift will ensure that you can restore your system from a user misconfiguration or a faulty system update.</p>
+<h2 id="installing-timeshift"><strong>Installing Timeshift</strong></h2>
+<p>Timeshift is available for most linux distributions from their default graphical package manager. You can also install it from the command-line with the following commands.</p>
+<p><strong>For Ubuntu 20.04 and up:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install timeshift</code></pre></div>
+<p><strong>For Ubuntu 18.04 you need to also add the ppa:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt-add-repository -y ppa:teejee2008/ppa
+sudo apt update
+sudo apt install timeshift</code></pre></div>
+<p><strong>For Fedora, CentOS, and RHEL:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dnf install timeshift</code></pre></div>
+<p><strong>For Arch and derivatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yay -S timeshift</code></pre></div>
+<p><strong>For Manjaro it&rsquo;s available in official repositories:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S timeshift</code></pre></div>
+<h2 id="configure-timeshift"><strong>Configure Timeshift</strong></h2>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/failed-to-start-pkgfile-database-update/" title="Failed to Start pkgfile Database Update">Failed to Start pkgfile Database Update</a></h1>
-
-<div class="post-info">Published: Jun 21, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/failed-to-start-pkgfile-database-update.png" alt="Failed To Start pkgfile Database Update" title="Failed To Start pkgfile Database Update"  width="500px">
+<p>Timeshift is simple to configure since it comes with a setup wizard that walks you through the setup. In most cases you&rsquo;ll be using rsync which only backs-up changed files. It does this using a hard-link method. This makes timeshift very space efficient. Btrfs will only be used on linux distributions that use the btrfs file system.</p>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/timeshift001.png" alt="Timeshift" title="Timeshift"  width="500px">
 </div>
+
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
+
 <script>
 	
 	var modal = document.getElementById('myModal');
@@ -224,34 +236,19 @@ window.cookieconsent.initialise({
 		modal.style.display = "none";
 	}
 </script>
-<p>If you&rsquo;re a Manjaro user, chances are you&rsquo;ve seen the &ldquo;failed to start pkgfile database update&rdquo; warning when booting Manjaro Linux. Though it&rsquo;s just a harmless warning, it can be quite annoying to see.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/failed-to-start-pkgfile-database-update/" title="Failed to Start pkgfile Database Update">Read more &raquo;</a></p>
-  <hr>
-</article>
 
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/window-tiling-kde-plasma/" title="Window Tiling in KDE Plasma">Window Tiling in KDE Plasma</a></h1>
-
-<div class="post-info">Published: May 24, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/kde-window-tiling.png" alt="Window Tiling in KDE Plasma" title="Window Tiling in KDE Plasma"  width="500px">
+<p>Now you will choose where to create the snapshot. It is recommended to use an external non-system partition for a full proof snapshot. This way if your system partition becomes corrupt you can still restore it from a live cd. Personally, I keep my snapshots on my system partition since I don&rsquo;t tinker much with my system anymore.</p>
+<p>You can always go back and change settings by running the wizard again or by going into the settings menu.</p>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/timeshift002.png" alt="Timeshift" title="Timeshift"  width="500px">
 </div>
+
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
+
 <script>
 	
 	var modal = document.getElementById('myModal');
@@ -275,34 +272,19 @@ window.cookieconsent.initialise({
 		modal.style.display = "none";
 	}
 </script>
-<p>Many users are not aware that KDE Plasma has built in window tiling functionality. Window tiling in KDE Plasma actually works quite well, though it&rsquo;s not meant to compete with window managers that are exclusively for window tiling. Nevertheless, you&rsquo;d be surprised at how well it works.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/window-tiling-kde-plasma/" title="Window Tiling in KDE Plasma">Read more &raquo;</a></p>
-  <hr>
-</article>
 
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/find-files-containing-string-pattern-linux/" title="Find Files Containing a String Pattern in Linux">Find Files Containing a String Pattern in Linux</a></h1>
-
-<div class="post-info">Published: May 1, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/grep.png" alt="Grep" title="Grep"  width="500px">
+<p>Next you can choose a schedule for your snapshots or no schedule at all. I opted to disable scheduled snapshots since I prefer to do manual snapshots right before a system update or any customization I may do.</p>
+<p>If you choose to do scheduled snapshots, generally for most users a monthly snapshot while keeping 2 previous snapshots should be adequate.</p>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/timeshift003.png" alt="Timeshift" title="Timeshift"  width="500px">
 </div>
+
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
+
 <script>
 	
 	var modal = document.getElementById('myModal');
@@ -326,36 +308,30 @@ window.cookieconsent.initialise({
 		modal.style.display = "none";
 	}
 </script>
-<p>Grep is a powerful command line utility to search for files containing text string patterns in linux. In this tutorial we&rsquo;ll be using grep with some common options to refine our file searches for better results.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/command-line">command line</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/find-files-containing-string-pattern-linux/" title="Find Files Containing a String Pattern in Linux">Read more &raquo;</a></p>
-  <hr>
-</article>
 
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/find-files-directories-linux-command-line/" title="Find Files or Directories in Linux Command Line">Find Files or Directories in Linux Command Line</a></h1>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8645513020646755"
+     data-ad-slot="8847978337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
-<div class="post-info">Published: Apr 10, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/find.png" alt="find" title="find"  width="500px">
+<p>Finally you will choose which files to backup. By default, the home directory where user data resides is not included and not recommended. This way if you restore a previous snapshot it will not overwrite any of your personal files and user settings.</p>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/linux/timeshift004.png" alt="Timeshift" title="Timeshift"  width="500px">
 </div>
+
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
   <div id="caption"></div>
 </div>
+
 <script>
 	
 	var modal = document.getElementById('myModal');
@@ -379,76 +355,51 @@ window.cookieconsent.initialise({
 		modal.style.display = "none";
 	}
 </script>
-<p>The linux find command is one of the best ways to find files and directories in the command line. The find command is extremely versatile providing many options for granular control over your search query. If it exists, the find command will find it.</p>
-  
-    Tags:
+
+<h2 id="timeshift-snapshots"><strong>Timeshift Snapshots</strong></h2>
+<p>Once you&rsquo;ve configured Timeshift you can start creating snapshots. On the main screen you simply click on the &ldquo;Create&rdquo; button and a manual snapshot will be created.</p>
+<p>To restore a snapshot from within linux, just open Timeshift and select the snapshot you wish to restore and click the &ldquo;Restore&rdquo; button and timeshift will do the rest.</p>
+<p>To restore a snapshot from a system that does not boot, run a live usb and install timeshift in the live environment to restore your snapshot.</p>
+<p>Note: You can also delete snapshots you no longer need at any time by selecting the snapshot and clicking the &ldquo;Delete&rdquo; button.</p>
+<h2 id="bonus"><strong>Bonus</strong></h2>
+<p>If you would like to see the size of each individual timeshift snapshot including the total size of all timeshift snapshots combined, run the following command in a terminal.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo du -sch /timeshift/snapshots/*</code></pre></div>
+<p>Adjust the command to reflect the path of your timeshift installation. By default timeshift creates its snapshots in the root directory &ldquo;<strong>/timeshift</strong>&rdquo; unless you chose a different partition during the setup.</p>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>A system backup and restore utility is a must have on any operating system. This will allow you to customize and tinker with your system without much worry. It will also save your system from a faulty update.</p>
+    <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftechstop.github.io%2fbackup-restore-linux-timeshift%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Backup%20and%20Restore%20Linux%20With%20Timeshift&amp;url=https%3a%2f%2ftechstop.github.io%2fbackup-restore-linux-timeshift%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2ftechstop.github.io%2fbackup-restore-linux-timeshift%2f&title=Backup%20and%20Restore%20Linux%20With%20Timeshift" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
     
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      Tags:
+      
+        <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+      
+        <a href="https://techstop.github.io/tags/linux">linux</a>
+      
     
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/command-line">command line</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/find-files-directories-linux-command-line/" title="Find Files or Directories in Linux Command Line">Read more &raquo;</a></p>
+    <div style="margin-top: 18px; text-align: center;">
+      
+        <span>&middot; <strong>More Articles</strong> &middot;</span>
+      
+      
+      
+        <div><a href="https://techstop.github.io/failed-to-start-pkgfile-database-update/">Failed to Start pkgfile Database Update &raquo;</a></div>
+      
+    </div>
+  </article>
   <hr>
-</article>
-
-    
-        <article>
-  
-  <h1><a href="https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/" title="Delete Lines or Strings Between Two Patterns With Sed">Delete Lines or Strings Between Two Patterns With Sed</a></h1>
-
-<div class="post-info">Published: Apr 7, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
-
-  <p><div class="myImgContainer">
-<img class="myImg" src="https://techstop.github.io/images/linux/sed-1.png" alt="sed" title="sed"  width="500px">
-</div>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-<script>
-	
-	var modal = document.getElementById('myModal');
-	var i;
-	
-	var img = document.getElementsByClassName('myImg');
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
-	for(i = 0; i < img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = "block";
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName("close")[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = "none";
-	}
-</script>
-<p>In this tutorial we will go through various ways to delete lines or strings between two patterns with the linux sed command stream editor.</p>
-  
-    Tags:
-    
-      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
-    
-      <a href="https://techstop.github.io/tags/linux">linux</a>, 
-    
-      <a href="https://techstop.github.io/tags/command-line">command line</a>
-    
-  
-  <p><a class="read-more" href="https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/" title="Delete Lines or Strings Between Two Patterns With Sed">Read more &raquo;</a></p>
-  <hr>
-</article>
-
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 
 <ins class="adsbygoogle"
@@ -461,17 +412,100 @@ window.cookieconsent.initialise({
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-    <div class="pagination">
-
-
-  <p class="counter">Page 1 of 12</p>
-
-
-  <a class="btn older" href="/post/page/2/" title="Next">Next &raquo;</a>
-
+  
+    <h3><a style="cursor: pointer;" onclick="loadComm()">Show Comments &#x1f5e8;</a></h3>
+<div id="comment_form_wrapper" style="display: none;">
+<script id="myScriptId" src="https://utteranc.es/client.js"
+        repo="techstop/techstop"
+        issue-term="title"
+        label="comments"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
 </div>
+<script>
+  function loadComm() {
+    $('#comment_form_wrapper').toggle();
+  }
+</script>
 
-  </article>
+  
+  <style>
+.highlight {
+  position: relative;
+}
+.highlight-copy-btn {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  border-radius: 4px;
+  border: none;
+  font-size: 9px;
+  line-height: 14px;
+  color: #ffffff;
+  background-color: #111111;
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #444444;
+}
+.highlight-copy-btn:focus {
+  outline: 0;
+}
+</style>
+<script>
+(function() {
+  'use strict';
+
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
+
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    setTimeout(function() {
+      el.textContent = "Copy";
+    }, 2000);
+  }
+
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
+  }
+
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
+
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
+
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed!')
+      }
+    });
+
+    containerEl.appendChild(copyBtn);
+  }
+
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
+})();
+</script>
+
 
         </div>
       </main>
