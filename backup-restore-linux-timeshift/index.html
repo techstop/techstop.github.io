@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Backup and Restore Linux With Timeshift - techStop</title>
   <meta name="author" content="Antonio T.">
-  <meta name="description" content="Follow this tutorial to learn how to use Timeshift on Linux. Timeshift is a backup utility for linux that allows you to create system snapshots to restore your system to a previously working state.">
+  <meta name="description" content="Follow this tutorial to learn how to backup and restore linux with Timeshift. Timeshift is a backup utility for linux that allows you to create system snapshots to restore your system to a previously working state.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
@@ -189,6 +189,7 @@ sudo apt install timeshift</code></pre></div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yay -S timeshift</code></pre></div>
 <p><strong>For Manjaro it&rsquo;s available in official repositories:</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S timeshift</code></pre></div>
+<p>Now that you have Timeshift installed, let&rsquo;s take a look at how to backup and restore linux with Timeshift.</p>
 <h2 id="configure-timeshift"><strong>Configure Timeshift</strong></h2>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -366,7 +367,7 @@ sudo apt install timeshift</code></pre></div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo du -sch /timeshift/snapshots/*</code></pre></div>
 <p>Adjust the command to reflect the path of your timeshift installation. By default timeshift creates its snapshots in the root directory &ldquo;<strong>/timeshift</strong>&rdquo; unless you chose a different partition during the setup.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-<p>A system backup and restore utility is a must have on any operating system. This will allow you to customize and tinker with your system without much worry. It will also save your system from a faulty update.</p>
+<p>A system backup and restore utility like Timeshift is a must have on any operating system. This will allow you to customize and tinker with your system without much worry. It will also save your system from a faulty update. You can learn more about <a href="https://github.com/teejee2008/timeshift" target="_blank">Timeshift</a> from their official repo page.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
