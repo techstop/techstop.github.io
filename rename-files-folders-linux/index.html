@@ -160,26 +160,26 @@
 <li>
 <p><strong>Renaming a single file with mv:</strong></p>
 <p>This will rename &ldquo;<strong>file01.bak</strong>&rdquo; to &ldquo;<strong>file02.txt</strong>&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mv file01.bak file02.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv file01.bak file02.txt</span></span></code></pre></div>
 </li>
 <li>
 <p><strong>Renaming multiple files with mv:</strong></p>
 <p>First lets create some files for testing in an empty folder.</p>
 <p>This command will create four empty files:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">touch file<span class="o">{</span>1..4<span class="o">}</span>.bak</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch file<span class="o">{</span>1..4<span class="o">}</span>.bak</span></span></code></pre></div>
 <p>You should now have the following files in your folder:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">file1.bak  file2.bak  file3.bak  file4.bak</span></span></code></pre></div>
 </li>
 <li>
-<p>Now lets run the mv command in a for loop to rename the files and replace the &ldquo;<strong>.bak</strong>&rdquo; extension with &ldquo;<strong>.txt</strong>&quot;:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">%.bak</span><span class="si">}</span><span class="s2">.txt&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
+<p>Now lets run the mv command in a for loop to rename the files and replace the &ldquo;<strong>.bak</strong>&rdquo; extension with &ldquo;<strong>.txt</strong>&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">%.bak</span><span class="si">}</span><span class="s2">.txt&#34;</span><span class="p">;</span> <span class="k">done</span></span></span></code></pre></div>
 <p>The files should now be renamed as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">file1.txt  file2.txt  file3.txt  file4.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">file1.txt  file2.txt  file3.txt  file4.txt</span></span></code></pre></div>
 </li>
 </ul>
 <p><strong>Renaming multiple files with rename:</strong></p>
 <p>Now we shall use the rename command. If you don&rsquo;t have rename installed you can install it as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install rename</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install rename</span></span></code></pre></div>
 <p>If you&rsquo;ve been following this tutorial so far then you should have 4 &ldquo;<strong>.txt</strong>&rdquo; files in your folder which we will be working with.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -195,23 +195,23 @@
 
 <ul>
 <li>
-<p>Lets run the following command to rename the files and replace the &ldquo;<strong>.txt</strong>&rdquo; extension with &ldquo;<strong>.bak</strong>&quot;:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/.txt/.bak/&#39;</span> *.txt</code></pre></div>
+<p>Lets run the following command to rename the files and replace the &ldquo;<strong>.txt</strong>&rdquo; extension with &ldquo;<strong>.bak</strong>&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rename <span class="s1">&#39;s/.txt/.bak/&#39;</span> *.txt</span></span></code></pre></div>
 <p>The files should now be renamed as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">file1.bak  file2.bak  file3.bak  file4.bak</span></span></code></pre></div>
 </li>
 <li>
 <p><strong>Change filenames to uppercase:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;y/a-z/A-Z/&#39;</span> *.bak <span class="o">&amp;&amp;</span> rename <span class="s1">&#39;s/.BAK/.bak/&#39;</span> *.BAK</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rename <span class="s1">&#39;y/a-z/A-Z/&#39;</span> *.bak <span class="o">&amp;&amp;</span> rename <span class="s1">&#39;s/.BAK/.bak/&#39;</span> *.BAK</span></span></code></pre></div>
 <p>The files should now be uppercase as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">FILE1.bak  FILE2.bak  FILE3.bak  FILE4.bak</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FILE1.bak  FILE2.bak  FILE3.bak  FILE4.bak</span></span></code></pre></div>
 <p>Notice that we ran the rename command twice with different parameters. This is because rename changes the case of the file extension as well. So the second command is to change the extension to lowercase.</p>
 </li>
 <li>
 <p><strong>Change filenames back to lowercase:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;y/A-Z/a-z/&#39;</span> *.bak</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rename <span class="s1">&#39;y/A-Z/a-z/&#39;</span> *.bak</span></span></code></pre></div>
 <p>The files should now be back to lowercase as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">file1.bak  file2.bak  file3.bak  file4.bak</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">file1.bak  file2.bak  file3.bak  file4.bak</span></span></code></pre></div>
 </li>
 </ul>
 <h2 id="renaming-folders"><strong>Renaming Folders</strong></h2>
@@ -219,24 +219,24 @@
 <li>
 <p><strong>Renaming a single folder with mv:</strong></p>
 <p>This will rename &ldquo;<strong>dir1</strong>&rdquo; to &ldquo;<strong>dir2</strong>&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mv dir1 dir2</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv dir1 dir2</span></span></code></pre></div>
 </li>
 <li>
 <p><strong>Removing spaces from multiple folder names with mv:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">// /</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> i in *<span class="p">;</span> <span class="k">do</span> mv <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">i</span><span class="p">// /</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span></span></span></code></pre></div>
 </li>
 <li>
 <p><strong>Renaming multiple folders with rename:</strong></p>
 <p>Renaming multiple folders is much easier and straightforward with the rename command. The mv command is not ideal for this scenario, so we will use the rename command.</p>
 <p>Lets create multiple folders in an empty directory.</p>
 <p>This command will create four empty folders:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir dir<span class="o">{</span>1..4<span class="o">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir dir<span class="o">{</span>1..4<span class="o">}</span></span></span></code></pre></div>
 <p>You should now have the following folders in your directory:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">dir1 dir2 dir3 dir4</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">dir1 dir2 dir3 dir4</span></span></code></pre></div>
 <p>Now lets rename the folders to replace the single digit numbers with triple digits.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rename <span class="s1">&#39;s/dir/dir00/&#39;</span> dir*/</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rename <span class="s1">&#39;s/dir/dir00/&#39;</span> dir*/</span></span></code></pre></div>
 <p>This should be your result:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">dir001 dir002 dir003 dir004</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">dir001 dir002 dir003 dir004</span></span></code></pre></div>
 </li>
 </ul>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
@@ -432,15 +432,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

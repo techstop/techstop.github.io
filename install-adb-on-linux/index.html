@@ -153,13 +153,13 @@
 <ol>
 <li>Open your terminal by pressing (ctrl+alt+T) on your computer keyboard or by clicking its launcher icon.</li>
 <li>Create a directory named (adb) in your linux Home directory. You can run this command in terminal to create the directory:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir <span class="nv">$HOME</span>/adb</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="nv">$HOME</span>/adb</span></span></code></pre></div></li>
 <li>Extract the (platform-tools-latest-linux.zip) in the new adb directory we created above and you&rsquo;ll get a new directory named (platform-tools).</li>
 <li>Add the platform-tools directory to your linux environment path to make adb and fastboot accessible from any directory. To do this, go to your Home directory and show hidden files and open your (.bashrc) file then add the following 2 lines to the bottom of the file and save it.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"># Android platform-tools
-export PATH=${PATH}:~/adb/platform-tools</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Android platform-tools
+</span></span><span class="line"><span class="cl">export PATH=${PATH}:~/adb/platform-tools</span></span></code></pre></div></li>
 <li>Now close your terminal and then open it again. Now run the following command to test adb:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb version</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb version</span></span></code></pre></div></li>
 </ol>
 <p>If all went well you should get an output in your terminal with the adb version number. You have now installed adb on your linux computer.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
@@ -180,12 +180,12 @@ export PATH=${PATH}:~/adb/platform-tools</code></pre></div></li>
 <li>Make sure you have (USB debugging) enabled on your android device in the Settings (Developer options).</li>
 <li>Plug your android device to your computer with the usb cable.</li>
 <li>Now open a terminal on your computer and run the following command:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">adb devices</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb devices</span></span></code></pre></div></li>
 <li>On your android device you will get a prompt asking you to allow USB debugging. Go ahead and allow it. After allowing it, you may need to run the above command again.</li>
 </ol>
 <p>You will now see a terminal output with your android device serial number which will look similar to the output below.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">List of devices attached
-c4fec245        device</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">List of devices attached
+</span></span><span class="line"><span class="cl">c4fec245        device</span></span></code></pre></div></p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>You should now have adb installed on your linux computer and ready to interact with your android devices. For more adb commands and options you can run (adb help) in your terminal.</p>
     <ul class="share-buttons">
@@ -379,15 +379,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

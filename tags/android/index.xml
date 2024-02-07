@@ -6,1891 +6,203 @@
     <description>Recent content in Android on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Feb 2022 21:17:47 -0400</lastBuildDate><atom:link href="https://techstop.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 21:17:47 -0400</lastBuildDate>
+    <atom:link href="https://techstop.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android App Multi Theme</title>
       <link>https://techstop.github.io/android-app-multi-theme/</link>
       <pubDate>Mon, 28 Feb 2022 21:17:47 -0400</pubDate>
-      
       <guid>https://techstop.github.io/android-app-multi-theme/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/app-themes/app-themes-1.png&#34; alt=&#34;App Themes&#34; title=&#34;App Themes&#34;  width=&#34;150px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/app-themes/app-themes-2.png&#34; alt=&#34;App Themes&#34; title=&#34;App Themes&#34;  width=&#34;150px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/app-themes/app-themes-3.png&#34; alt=&#34;App Themes&#34; title=&#34;App Themes&#34;  width=&#34;150px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;If you would like to add some flare to your android app by adding multi theme support, then you&amp;rsquo;ve come to the right place. Adding multi theme support to your android app can be very beneficial. For starters, your users will never get bored of just having a single color and this also provides a better user experience and can increase app installations. This can be the difference between users installing your app or the competition&amp;rsquo;s app.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/app-themes/app-themes-1.png&#34; alt=&#34;App Themes&#34; title=&#34;App Themes&#34;  width=&#34;150px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/app-themes/app-themes-2.png&#34; alt=&#34;App Themes&#34; title=&#34;App Themes&#34;  width=&#34;150px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/app-themes/app-themes-3.png&#34; alt=&#34;App Themes&#34; title=&#34;App Themes&#34;  width=&#34;150px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;If you would like to add some flare to your android app by adding multi theme support, then you&amp;rsquo;ve come to the right place. Adding multi theme support to your android app can be very beneficial. For starters, your users will never get bored of just having a single color and this also provides a better user experience and can increase app installations. This can be the difference between users installing your app or the competition&amp;rsquo;s app.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Play Store Data Safety</title>
       <link>https://techstop.github.io/play-store-data-safety/</link>
       <pubDate>Fri, 25 Feb 2022 20:10:11 -0400</pubDate>
-      
       <guid>https://techstop.github.io/play-store-data-safety/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/data-safety-form/app-content.png&#34; alt=&#34;Data Safety Form&#34; title=&#34;Data Safety Form&#34;  width=&#34;300px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Back in May Google announced the new Play Store Data Safety section. This new section is to give users more insight into how apps collect, share, and protect user data. Google detailed what information developers would have to disclose in the data safety section and included a new form in the Google Play Console for developers to disclose the required information. Originally, it was required to have the form filled out by April 2022, but Google has changed the date to July 2022 to allow developers more time to comply with the new data safety changes.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/data-safety-form/app-content.png&#34; alt=&#34;Data Safety Form&#34; title=&#34;Data Safety Form&#34;  width=&#34;300px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Back in May Google announced the new Play Store Data Safety section. This new section is to give users more insight into how apps collect, share, and protect user data. Google detailed what information developers would have to disclose in the data safety section and included a new form in the Google Play Console for developers to disclose the required information. Originally, it was required to have the form filled out by April 2022, but Google has changed the date to July 2022 to allow developers more time to comply with the new data safety changes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Listen To Podcasts With The Google App</title>
       <link>https://techstop.github.io/google-app-podcasts/</link>
       <pubDate>Fri, 11 Oct 2019 21:21:05 -0400</pubDate>
-      
       <guid>https://techstop.github.io/google-app-podcasts/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android/g00.png&#34; alt=&#34;Podcasts With The Google App&#34; title=&#34;Podcasts With The Google App&#34;  width=&#34;200px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;There are many podcast apps in the Google Play Store, but you already have a really good app for podcasts pre-installed on your android device that&amp;rsquo;s free. The Google app is excellent for finding and listening to podcasts and has an integrated assistant with voice commands.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android/g00.png&#34; alt=&#34;Podcasts With The Google App&#34; title=&#34;Podcasts With The Google App&#34;  width=&#34;200px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;There are many podcast apps in the Google Play Store, but you already have a really good app for podcasts pre-installed on your android device that&amp;rsquo;s free. The Google app is excellent for finding and listening to podcasts and has an integrated assistant with voice commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Detect Android Wakelocks</title>
       <link>https://techstop.github.io/detect-android-wakelocks/</link>
       <pubDate>Mon, 23 Sep 2019 19:45:09 -0400</pubDate>
-      
       <guid>https://techstop.github.io/detect-android-wakelocks/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wake-1.png&#34; alt=&#34;Android Wakelocks&#34; title=&#34;Android Wakelocks&#34;  width=&#34;400px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wake-2.png&#34; alt=&#34;Android Wakelocks&#34; title=&#34;Android Wakelocks&#34;  width=&#34;400px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re noticing that your android device is suddenly draining battery quicker than normal, it can be due to an android wakelock. Once you know the quick battery drain is not due to a faulty battery, you&amp;rsquo;ll need to detect what&amp;rsquo;s causing the wakelock. This is likely a misbehaving app.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wake-1.png&#34; alt=&#34;Android Wakelocks&#34; title=&#34;Android Wakelocks&#34;  width=&#34;400px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wake-2.png&#34; alt=&#34;Android Wakelocks&#34; title=&#34;Android Wakelocks&#34;  width=&#34;400px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re noticing that your android device is suddenly draining battery quicker than normal, it can be due to an android wakelock. Once you know the quick battery drain is not due to a faulty battery, you&amp;rsquo;ll need to detect what&amp;rsquo;s causing the wakelock. This is likely a misbehaving app.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Admob Tutorial</title>
       <link>https://techstop.github.io/admob-tutorial/</link>
       <pubDate>Thu, 07 Feb 2019 00:36:55 +0000</pubDate>
-      
       <guid>https://techstop.github.io/admob-tutorial/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/admob-tutorial/admob-tutorial-0.png&#34; alt=&#34;Admob Tutorial&#34; title=&#34;Admob Tutorial&#34;  width=&#34;200px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/admob-tutorial/admob-tutorial-1.png&#34; alt=&#34;Admob Tutorial&#34; title=&#34;Admob Tutorial&#34;  width=&#34;200px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;In this Android Admob tutorial we will go over how to add admob to your android app. With admob you can monetize your app and make some income for your efforts. There are a few types of admob ad units that you can add to your app. For this admob tutorial we will be adding the Anchored Adaptive Banner which can display high performance adaptive banner ads for all devices and screen sizes.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/admob-tutorial/admob-tutorial-0.png&#34; alt=&#34;Admob Tutorial&#34; title=&#34;Admob Tutorial&#34;  width=&#34;200px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/admob-tutorial/admob-tutorial-1.png&#34; alt=&#34;Admob Tutorial&#34; title=&#34;Admob Tutorial&#34;  width=&#34;200px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;In this Android Admob tutorial we will go over how to add admob to your android app. With admob you can monetize your app and make some income for your efforts. There are a few types of admob ad units that you can add to your app. For this admob tutorial we will be adding the Anchored Adaptive Banner which can display high performance adaptive banner ads for all devices and screen sizes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Android WebView</title>
       <link>https://techstop.github.io/android-webview/</link>
       <pubDate>Mon, 04 Feb 2019 22:27:34 +0000</pubDate>
-      
       <guid>https://techstop.github.io/android-webview/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-webview/android-webview-0.png&#34; alt=&#34;Android WebView&#34; title=&#34;Android WebView&#34;  width=&#34;200px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-webview/android-webview-1.png&#34; alt=&#34;Android WebView&#34; title=&#34;Android WebView&#34;  width=&#34;200px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage write permissions for our DownloadListener for android 6+.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-webview/android-webview-0.png&#34; alt=&#34;Android WebView&#34; title=&#34;Android WebView&#34;  width=&#34;200px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-webview/android-webview-1.png&#34; alt=&#34;Android WebView&#34; title=&#34;Android WebView&#34;  width=&#34;200px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The Android WebView allows your app to open web pages within your app. For this Android WebView example we will create an android webview app that loads a couple web pages. We will be adding some attributes like JavaScript to interact with page elements and a DownloadListener for downloading items from download links on web pages as well as a ProgressBar to show page loading progress. We will also request runtime storage write permissions for our DownloadListener for android 6+.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Android Toolbar</title>
       <link>https://techstop.github.io/android-toolbar/</link>
       <pubDate>Mon, 21 Jan 2019 16:36:29 +0000</pubDate>
-      
       <guid>https://techstop.github.io/android-toolbar/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-toolbar/android-toolbar-0.png&#34; alt=&#34;Android Toolbar&#34; title=&#34;Android Toolbar&#34;  width=&#34;200px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-toolbar/android-toolbar-1.png&#34; alt=&#34;Android Toolbar&#34; title=&#34;Android Toolbar&#34;  width=&#34;200px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;Often times users are looking to create an Android Toolbar so they can customize it to their liking. In this tutorial we&amp;rsquo;ll go over how to create an Android custom Toolbar and show you a few modifications you can do to the Toolbar for your app.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-toolbar/android-toolbar-0.png&#34; alt=&#34;Android Toolbar&#34; title=&#34;Android Toolbar&#34;  width=&#34;200px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-toolbar/android-toolbar-1.png&#34; alt=&#34;Android Toolbar&#34; title=&#34;Android Toolbar&#34;  width=&#34;200px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Often times users are looking to create an Android Toolbar so they can customize it to their liking. In this tutorial we&amp;rsquo;ll go over how to create an Android custom Toolbar and show you a few modifications you can do to the Toolbar for your app.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Android BroadcastReceiver</title>
       <link>https://techstop.github.io/android-broadcastreceiver/</link>
       <pubDate>Sat, 19 Jan 2019 00:50:48 +0000</pubDate>
-      
       <guid>https://techstop.github.io/android-broadcastreceiver/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/broadcastreceiver/android-broadcastreceiver.png&#34; alt=&#34;Android BroadcastReceiver&#34; title=&#34;Android BroadcastReceiver&#34;  width=&#34;200px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Today we will be using an android &lt;strong&gt;BroadcastReceiver&lt;/strong&gt; and &lt;strong&gt;WorkManager&lt;/strong&gt; to run code on bootup in Android. There can be many reasons to run code on bootup. One good use case would be to set settings that a user has selected within your app on every bootup.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/broadcastreceiver/android-broadcastreceiver.png&#34; alt=&#34;Android BroadcastReceiver&#34; title=&#34;Android BroadcastReceiver&#34;  width=&#34;200px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Today we will be using an android &lt;strong&gt;BroadcastReceiver&lt;/strong&gt; and &lt;strong&gt;WorkManager&lt;/strong&gt; to run code on bootup in Android. There can be many reasons to run code on bootup. One good use case would be to set settings that a user has selected within your app on every bootup.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Freedom Kernel for the Zmax Pro</title>
       <link>https://techstop.github.io/freedom-kernel-for-the-zmax-pro/</link>
       <pubDate>Mon, 10 Dec 2018 16:36:18 +0000</pubDate>
-      
       <guid>https://techstop.github.io/freedom-kernel-for-the-zmax-pro/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-0.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-1.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-2.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-3.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-4.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;The Freedom Kernel for the Zmax Pro Z981 is a custom kernel with many enhancements. This kernel provides various custom tweaks and performance improvements over the stock offering to give you more control over your Android device’s performance.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-0.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-1.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-2.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-3.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/z981/freedom-kernel-for-the-zmax-pro-4.png&#34; alt=&#34;Freedom Kernel for the Zmax Pro&#34; title=&#34;Freedom Kernel for the Zmax Pro&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The Freedom Kernel for the Zmax Pro Z981 is a custom kernel with many enhancements. This kernel provides various custom tweaks and performance improvements over the stock offering to give you more control over your Android device’s performance.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How To Reduce Apk Size</title>
       <link>https://techstop.github.io/reduce-apk-size/</link>
       <pubDate>Sun, 25 Nov 2018 00:34:06 +0000</pubDate>
-      
       <guid>https://techstop.github.io/reduce-apk-size/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reduce-apk-size/How-To-Reduce-Apk-Size.png&#34; alt=&#34;How To Reduce Apk Size&#34; title=&#34;How To Reduce Apk Size&#34;  width=&#34;600px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&amp;rsquo;ll give your users a smooth experience throughout your apps&#39; UI along with a smaller foot print.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reduce-apk-size/How-To-Reduce-Apk-Size.png&#34; alt=&#34;How To Reduce Apk Size&#34; title=&#34;How To Reduce Apk Size&#34;  width=&#34;600px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&amp;rsquo;ll give your users a smooth experience throughout your apps&amp;rsquo; UI along with a smaller foot print.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How To Get Android Mounts and Partition Images</title>
       <link>https://techstop.github.io/android-mounts-and-partition-images/</link>
       <pubDate>Thu, 22 Nov 2018 00:50:19 +0000</pubDate>
-      
       <guid>https://techstop.github.io/android-mounts-and-partition-images/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-mounts/android-mounts-and-partition-images.png&#34; alt=&#34;How To Get Android Mounts and Partition Images&#34; title=&#34;How To Get Android Mounts and Partition Images&#34;  width=&#34;450px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;In this guide I will be showing you how to get the android mounts and partition images. There could be many reasons for needing the android mounts and partition images. A couple reasons that come to mind could be to make backups of your partitions in case you need to fix your phone from a bad flash later on. Or you might want to customize a boot.img or system.img to add in some custom features. Whatever your reason, just follow the guide and you&amp;rsquo;ll be pulling those partitions in no time.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/android-mounts/android-mounts-and-partition-images.png&#34; alt=&#34;How To Get Android Mounts and Partition Images&#34; title=&#34;How To Get Android Mounts and Partition Images&#34;  width=&#34;450px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;In this guide I will be showing you how to get the android mounts and partition images. There could be many reasons for needing the android mounts and partition images. A couple reasons that come to mind could be to make backups of your partitions in case you need to fix your phone from a bad flash later on. Or you might want to customize a boot.img or system.img to add in some custom features. Whatever your reason, just follow the guide and you&amp;rsquo;ll be pulling those partitions in no time.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Apk Utility</title>
       <link>https://techstop.github.io/apk-utility/</link>
       <pubDate>Fri, 08 Jun 2018 01:35:25 +0000</pubDate>
-      
       <guid>https://techstop.github.io/apk-utility/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/apk-utility/apk-utility.png&#34; alt=&#34;Apk Utility&#34; title=&#34;Apk Utility&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;If you&amp;rsquo;ve been looking for an easy to use tool for decompiling and compiling android apk and jar files then look no further. Apk Utility is as easy to use as it gets. The utility also has the ability to tag your framework files. This feature is very useful when you need to install framework files for multiple different devices without having to remove one for the other. Basically a tag is a label to distinguish between multiple devices&#39; framework files. If you&amp;rsquo;re familiar with &lt;a href=&#34;https://ibotpeaches.github.io/Apktool/documentation/&#34; target=&#34;_blank&#34;&gt;apktool&lt;/a&gt; which this tool uses then you&amp;rsquo;ll know what I&amp;rsquo;m referring to.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/apk-utility/apk-utility.png&#34; alt=&#34;Apk Utility&#34; title=&#34;Apk Utility&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;If you&amp;rsquo;ve been looking for an easy to use tool for decompiling and compiling android apk and jar files then look no further. Apk Utility is as easy to use as it gets. The utility also has the ability to tag your framework files. This feature is very useful when you need to install framework files for multiple different devices without having to remove one for the other. Basically a tag is a label to distinguish between multiple devices&amp;rsquo; framework files. If you&amp;rsquo;re familiar with &lt;a href=&#34;https://ibotpeaches.github.io/Apktool/documentation/&#34; target=&#34;_blank&#34;&gt;apktool&lt;/a&gt; which this tool uses then you&amp;rsquo;ll know what I&amp;rsquo;m referring to.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Install ADB On Linux</title>
       <link>https://techstop.github.io/install-adb-on-linux/</link>
       <pubDate>Mon, 07 May 2018 21:16:16 +0000</pubDate>
-      
       <guid>https://techstop.github.io/install-adb-on-linux/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/adb-on-linux.png&#34; alt=&#34;ADB on Linux&#34; title=&#34;ADB on Linux&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;In this tutorial we will be installing ADB (Android Debug Bridge) on your linux computer and making it accessible from any directory.&lt;/p&gt;
-&lt;p&gt;ADB provides a terminal interface on your linux computer to interact with your android device file system. This can be useful for many things like installing and uninstalling apps, disabling and enabling apps , logcat, and many other things.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/adb-on-linux.png&#34; alt=&#34;ADB on Linux&#34; title=&#34;ADB on Linux&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;In this tutorial we will be installing ADB (Android Debug Bridge) on your linux computer and making it accessible from any directory.&lt;/p&gt;&#xA;&lt;p&gt;ADB provides a terminal interface on your linux computer to interact with your android device file system. This can be useful for many things like installing and uninstalling apps, disabling and enabling apps , logcat, and many other things.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>mktool</title>
       <link>https://techstop.github.io/mktool/</link>
       <pubDate>Fri, 27 Apr 2018 19:57:23 +0000</pubDate>
-      
       <guid>https://techstop.github.io/mktool/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/mktool/mktool.png&#34; alt=&#34;mktool&#34; title=&#34;mktool&#34;  width=&#34;400px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Mktool is a utility to unpack and repack a boot.img and recovery.img file. Mktool provides a simple point and click GUI to make unpacking boot and recovery images easy. If you need to unpack and repack a boot.img, recovery.img, or loki image, then this is the tool for you. With mktool you don&amp;rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&amp;rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/mktool/mktool.png&#34; alt=&#34;mktool&#34; title=&#34;mktool&#34;  width=&#34;400px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Mktool is a utility to unpack and repack a boot.img and recovery.img file. Mktool provides a simple point and click GUI to make unpacking boot and recovery images easy. If you need to unpack and repack a boot.img, recovery.img, or loki image, then this is the tool for you. With mktool you don&amp;rsquo;t need to enter any commands. You simply place your image files in the input folder and choose from the menu options. It&amp;rsquo;s the perfect tool for modifying images quickly and easily. Mktool is very simple to use and can accommodate both beginners and advanced users.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Debloat Android No Root</title>
       <link>https://techstop.github.io/debloat-android-no-root/</link>
       <pubDate>Thu, 19 Apr 2018 23:49:56 +0000</pubDate>
-      
       <guid>https://techstop.github.io/debloat-android-no-root/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/backupdebloat/Debloat-Android-No-Root.png&#34; alt=&#34;Debloat Android No Root&#34; title=&#34;Debloat Android No Root&#34;  width=&#34;450px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;If you&amp;rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&amp;rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&amp;rsquo;re here reading this, it&amp;rsquo;s likely because there is no root for your device or you simply don&amp;rsquo;t wish to root it. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called &lt;strong&gt;Debloat Android No Root&lt;/strong&gt; to give you some control back over your device.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/backupdebloat/Debloat-Android-No-Root.png&#34; alt=&#34;Debloat Android No Root&#34; title=&#34;Debloat Android No Root&#34;  width=&#34;450px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;If you&amp;rsquo;ve ever had a rooted android device you know the added benefit. You gain total control over you&amp;rsquo;re device. The freedom to remove carrier bloatware or make a number of modifications to your hearts content. Unfortunately if you&amp;rsquo;re here reading this, it&amp;rsquo;s likely because there is no root for your device or you simply don&amp;rsquo;t wish to root it. We all know that for non rooted devices your options are very limited. So we will be taking a look at a tool I made called &lt;strong&gt;Debloat Android No Root&lt;/strong&gt; to give you some control back over your device.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Reboot Utility</title>
       <link>https://techstop.github.io/reboot-utility/</link>
       <pubDate>Mon, 19 Mar 2018 19:52:17 +0000</pubDate>
-      
       <guid>https://techstop.github.io/reboot-utility/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-0.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-1.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-2.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-3.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-4.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-5.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-6.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-7.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;Reboot Utility is a powerful app to manage all your rebooting options. It is also a great looking app with 9 themes and 4 backgrounds to choose from.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-0.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-1.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-2.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-3.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-4.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-5.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-6.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/reboot-utility/Reboot-Utility-7.png&#34; alt=&#34;Reboot Utility&#34; title=&#34;Reboot Utility&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Reboot Utility is a powerful app to manage all your rebooting options. It is also a great looking app with 9 themes and 4 backgrounds to choose from.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Recovery Reboot</title>
       <link>https://techstop.github.io/recovery-reboot/</link>
       <pubDate>Sat, 03 Mar 2018 22:58:20 +0000</pubDate>
-      
       <guid>https://techstop.github.io/recovery-reboot/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/recovery-reboot/Recovery-Reboot.png&#34; alt=&#34;Recovery Reboot&#34; title=&#34;Recovery Reboot&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Recovery Reboot is a very small and simple app to reboot into a custom recovery like TWRP or ClockworkMod. It&amp;rsquo;s a very lightweight app and small in size for those with limited storage and resources.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/recovery-reboot/Recovery-Reboot.png&#34; alt=&#34;Recovery Reboot&#34; title=&#34;Recovery Reboot&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Recovery Reboot is a very small and simple app to reboot into a custom recovery like TWRP or ClockworkMod. It&amp;rsquo;s a very lightweight app and small in size for those with limited storage and resources.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG G Stylo Katana ROM</title>
       <link>https://techstop.github.io/lg-g-stylo-katana-rom/</link>
       <pubDate>Tue, 23 Jan 2018 23:52:15 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-g-stylo-katana-rom/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-0.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-1.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-2.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;The LG G Stylo Katana ROM is based on the 5.1.1 v10J firmware for the MetroPCS and T-Mobile LG G Stylo. Katana brings many UI and performance enhancements beyond the stock factory rom from LG, thus improving the user experience. The rom is lightweight and operates smoothly. Katana also comes with a nice theme that was tastefully done. Full details below&amp;hellip;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-0.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-1.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG%20G%20Stylo%20Katana%20ROM-2.png&#34; alt=&#34;LG G Stylo Katana ROM&#34; title=&#34;LG G Stylo Katana ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The LG G Stylo Katana ROM is based on the 5.1.1 v10J firmware for the MetroPCS and T-Mobile LG G Stylo. Katana brings many UI and performance enhancements beyond the stock factory rom from LG, thus improving the user experience. The rom is lightweight and operates smoothly. Katana also comes with a nice theme that was tastefully done. Full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG G Stylo TWRP Recovery</title>
       <link>https://techstop.github.io/lg-g-stylo-twrp-recovery/</link>
       <pubDate>Tue, 23 Jan 2018 23:28:58 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-g-stylo-twrp-recovery/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG-Stylo-TWRP-Recovery.png&#34; alt=&#34;LG G Stylo TWRP Recovery&#34; title=&#34;LG G Stylo TWRP Recovery&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;This guide is to help you install the LG G Stylo TWRP recovery so that you can make backups, flash roms, and kernels or any flashable zips for this device.  If you plan on experimenting with your device, than this is a must have.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/LG-Stylo-TWRP-Recovery.png&#34; alt=&#34;LG G Stylo TWRP Recovery&#34; title=&#34;LG G Stylo TWRP Recovery&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;This guide is to help you install the LG G Stylo TWRP recovery so that you can make backups, flash roms, and kernels or any flashable zips for this device.  If you plan on experimenting with your device, than this is a must have.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG Optimus F6 Freedom Kernel</title>
       <link>https://techstop.github.io/lg-optimus-f6-freedom-kernel/</link>
       <pubDate>Tue, 23 Jan 2018 01:28:24 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-optimus-f6-freedom-kernel/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-kernel.png&#34; alt=&#34;LG Optimus F6 Freedom Kernel&#34; title=&#34;LG Optimus F6 Freedom Kernel&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;This LG Optimus F6 Freedom kernel is packed with tons of modifications. There&amp;rsquo;s many governors and schedulers to tune the performance just right. Installation is also a breeze with the Freedom installer app in the Play Store. The app also fully controls the kernel to make sure you can tweak it to your liking. Full details below&amp;hellip;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-kernel.png&#34; alt=&#34;LG Optimus F6 Freedom Kernel&#34; title=&#34;LG Optimus F6 Freedom Kernel&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;This LG Optimus F6 Freedom kernel is packed with tons of modifications. There&amp;rsquo;s many governors and schedulers to tune the performance just right. Installation is also a breeze with the Freedom installer app in the Play Store. The app also fully controls the kernel to make sure you can tweak it to your liking. Full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG G Stylo Flashable v10j</title>
       <link>https://techstop.github.io/lg-g-stylo-flashable-v10j/</link>
       <pubDate>Mon, 22 Jan 2018 23:56:44 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-g-stylo-flashable-v10j/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/flashable-v10J-firmware.png&#34; alt=&#34;LG G Stylo Flashable v10j&#34; title=&#34;LG G Stylo Flashable v10j&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;This is an LG G Stylo flashable v10J firmware for the Metro PCS and T-Mobile variants. ​The flashable firmware rom comes rooted, so you don&amp;rsquo;t need to root or re-install twrp recovery.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/stylo/flashable-v10J-firmware.png&#34; alt=&#34;LG G Stylo Flashable v10j&#34; title=&#34;LG G Stylo Flashable v10j&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;This is an LG G Stylo flashable v10J firmware for the Metro PCS and T-Mobile variants. ​The flashable firmware rom comes rooted, so you don&amp;rsquo;t need to root or re-install twrp recovery.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG G Stylo Unbrick Guide</title>
       <link>https://techstop.github.io/lg-g-stylo-unbrick-guide/</link>
       <pubDate>Mon, 22 Jan 2018 23:55:23 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-g-stylo-unbrick-guide/</guid>
       <description>&lt;p&gt;The LG G Stylo unbrick guide is to assist you in recovering your device in the event of a bootloop or soft brick. You can also use this guide to update to the latest firmware.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG Optimus F6 Xperion ROM</title>
       <link>https://techstop.github.io/lg-optimus-f6-xperion-rom/</link>
       <pubDate>Mon, 22 Jan 2018 20:23:39 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-optimus-f6-xperion-rom/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-0.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-1.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-2.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;The LG Optimus F6 Xperion rom brings some nice additions. It&amp;rsquo;s beautifully themed with most if not all of LG&amp;rsquo;s light blue replaced with white like most aosp roms. While debloated, it does bring a good selection of apps with some being from cyanogenmod. The rom is lightweight with some performance tweaks as well. More details below&amp;hellip;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-0.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-1.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-2.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The LG Optimus F6 Xperion rom brings some nice additions. It&amp;rsquo;s beautifully themed with most if not all of LG&amp;rsquo;s light blue replaced with white like most aosp roms. While debloated, it does bring a good selection of apps with some being from cyanogenmod. The rom is lightweight with some performance tweaks as well. More details below&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG Optimus F3 Freedom Kernel</title>
       <link>https://techstop.github.io/lg-optimus-f3-freedom-kernel/</link>
       <pubDate>Mon, 22 Jan 2018 01:27:40 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-optimus-f3-freedom-kernel/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/lg-optimus-f3-kernels-300x234.jpg&#34; alt=&#34;LG Optimus F3 Freedom Kernel&#34; title=&#34;LG Optimus F3 Freedom Kernel&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Want more control over your device? Consider installing the LG Optimus F3 Freedom kernel lite or overclocked. With these kernels you&amp;rsquo;ll have features like init-d or overclocking. There&amp;rsquo;s also a few governors to play with to help manage performance.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/lg-optimus-f3-kernels-300x234.jpg&#34; alt=&#34;LG Optimus F3 Freedom Kernel&#34; title=&#34;LG Optimus F3 Freedom Kernel&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Want more control over your device? Consider installing the LG Optimus F3 Freedom kernel lite or overclocked. With these kernels you&amp;rsquo;ll have features like init-d or overclocking. There&amp;rsquo;s also a few governors to play with to help manage performance.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG Optimus F3 ROMs</title>
       <link>https://techstop.github.io/lg-optimus-f3-roms/</link>
       <pubDate>Sun, 21 Jan 2018 22:42:23 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-optimus-f3-roms/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-0.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-1.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-2.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;The LG Optimus F3 ROMs really enhance the user experience and make this device much more ejoyable. Aside from the usual deodex, debloating, and zipaligning, Xperion rom adds other elements that otherwise do not come in the factory rom. The Xperion theme that comes with the rom is quite a nice touch.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-0.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-1.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f3/LG-Optimus-F3-ROM-2.png&#34; alt=&#34;LG Optimus F3 ROMs&#34; title=&#34;LG Optimus F3 ROMs&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The LG Optimus F3 ROMs really enhance the user experience and make this device much more ejoyable. Aside from the usual deodex, debloating, and zipaligning, Xperion rom adds other elements that otherwise do not come in the factory rom. The Xperion theme that comes with the rom is quite a nice touch.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG Optimus F7 Kernel</title>
       <link>https://techstop.github.io/lg-optimus-f7-kernel/</link>
       <pubDate>Sun, 21 Jan 2018 19:51:44 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-optimus-f7-kernel/</guid>
       <description>&lt;p&gt;The LG Optimus F7 kernel brings some extra freedom for the device. The kernel comes with a few extra governors for more control over performance. It also allows extensive debloating without setting the device into a bootloop. Init-d is also a nice touch if you like running custom scripts. Check full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG Lucid 2 Xperion ROM</title>
       <link>https://techstop.github.io/lg-lucid-2-xperion-rom/</link>
       <pubDate>Sun, 21 Jan 2018 00:02:26 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-lucid-2-xperion-rom/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/vs870/LG-Lucid-2-ROM.png&#34; alt=&#34;LG Lucid 2 Xperion ROM&#34; title=&#34;LG Lucid 2 Xperion ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;The LG Lucid 2 Xperion rom improves upon the factory stock rom to deliver a better experience. With many mods and tweaks, I&amp;rsquo;m sure you&amp;rsquo;ll agree. Maybe you&amp;rsquo;re bored of your Lucid 2, well this rom can surely breathe some new life to your device. There&amp;rsquo;s also an unsercured kernel for further debloating the Lucid 2 should you have the need.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/vs870/LG-Lucid-2-ROM.png&#34; alt=&#34;LG Lucid 2 Xperion ROM&#34; title=&#34;LG Lucid 2 Xperion ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;The LG Lucid 2 Xperion rom improves upon the factory stock rom to deliver a better experience. With many mods and tweaks, I&amp;rsquo;m sure you&amp;rsquo;ll agree. Maybe you&amp;rsquo;re bored of your Lucid 2, well this rom can surely breathe some new life to your device. There&amp;rsquo;s also an unsercured kernel for further debloating the Lucid 2 should you have the need.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG Spirit 4G ROMs</title>
       <link>https://techstop.github.io/lg-spirit-4g-roms/</link>
       <pubDate>Sat, 20 Jan 2018 00:04:30 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-spirit-4g-roms/</guid>
       <description>&lt;p&gt;The LG Spirit 4G ROMs really enhance the user experience and make this device much more ejoyable. These roms have really been customized to make you wonder why stick to the stock factory rom. The roms can also be further customized with themes and other customizations to suit your needs. The Samurai rom with the white theme happens to be my personal favorites!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

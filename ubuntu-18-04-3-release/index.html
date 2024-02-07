@@ -153,12 +153,12 @@
 <p>If you installed the iso for 18.04 or 18.04.1 you will not get the new 5.0 kernel. If you installed 18.04.2 or 18.04.3 then you&rsquo;ll get the new kernel because these point releases have “hardware enablement” (HWE) enabled.</p>
 <h2 id="how-to-install-the-50-kernel-for-1804--18041"><strong>How To Install The 5.0 Kernel For 18.04 &amp; 18.04.1</strong></h2>
 <p>Open your terminal and run the following command&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04</span></span></code></pre></div>
 <p>Upon completion you must reboot.</p>
 <p>After rebooting open the terminal and confirm the 5.0 kernel is installed with the following command&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">uname -r</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">uname -r</span></span></code></pre></div>
 <p>Once you have tested linux kernel 5.0 and are satisfied with it, you will need to remove the old kernel so that it doesn&rsquo;t update and revert back to the old kernel. To remove the old kernel run the following command&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt remove linux-generic linux-headers-generic linux-image-generic</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt remove linux-generic linux-headers-generic linux-image-generic</span></span></code></pre></div>
 <p>Enjoy kernel 5.0 and new X.org!</p>
 <p>Many thanks to <a href="https://www.omgubuntu.co.uk/" target="_blank">OMG! Ubuntu!</a> for the tips and early coverage. You guys rock! ;)</p>
     <ul class="share-buttons">
@@ -350,15 +350,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

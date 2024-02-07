@@ -150,15 +150,15 @@
 <h2 id="if-directory-exists"><strong>If Directory Exists</strong></h2>
 <p>Lets start off with a simple example. You can copy all examples in this tutorial to a file and run the file yourself in a terminal to test for yourself.</p>
 <p><strong>Check if a directory exists:</strong>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
-
-<span class="k">if</span> <span class="o">[</span> -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> exists&#34;</span>
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> does not exist&#34;</span>
-<span class="k">fi</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> exists&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> does not exist&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span></span></span></code></pre></div></p>
 <p><strong>Lets break down the sample above:</strong></p>
 <ul>
 <li>The &ldquo;$dload_dir&rdquo; variable value is the default Downloads directory in the system.</li>
@@ -169,15 +169,15 @@
 <p>When you run the code above it will output the directory &ldquo;exists&rdquo; and &ldquo;does not exist&rdquo; if it doesn&rsquo;t.</p>
 <p>We will now do the opposite and check if the directory does not exist.</p>
 <p><strong>Check if a directory does not exists:</strong>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
-
-<span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> does not exist&#34;</span>
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> exists&#34;</span>
-<span class="k">fi</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> does not exist&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> exists&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span></span></span></code></pre></div></p>
 <p>The sample above is nearly the same, but we add a &ldquo;!&rdquo; symbol and swap the two echo commands. The &ldquo;!&rdquo; symbol tells the test command to instead check if the directory does not exist.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -193,42 +193,42 @@
 
 <p>Now that we&rsquo;ve covered the basics to checking for a directory, lets get a little more advanced.</p>
 <p><strong>Check if a directory exists and if not, then create it:</strong>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads/myfolder
-
-<span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-  mkdir <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> was created.&#34;</span>
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> already exists&#34;</span>
-<span class="k">fi</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads/myfolder
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  mkdir <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> was created.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> already exists&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span></span></span></code></pre></div></p>
 <p>In the code above we use the &ldquo;mkdir&rdquo; command to create a new directory.</p>
 <p>If you run the code above it will create a directory named &ldquo;myfolder&rdquo; in the Downloads directory and let you know it was created. If you run the code a second time, it will say that it already exists.</p>
 <p><strong>Check if a directory is empty:</strong>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
-
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ls -A <span class="nv">$dload_dir</span><span class="k">)</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> is not empty.&#34;</span>
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> is empty&#34;</span>
-<span class="k">fi</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">dload_dir</span><span class="o">=</span><span class="nv">$HOME</span>/Downloads
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ls -A <span class="nv">$dload_dir</span><span class="k">)</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> is not empty.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$dload_dir</span><span class="s2"> is empty&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span></span></span></code></pre></div></p>
 <p>In the sample above we use the list &ldquo;ls&rdquo; command with the &ldquo;-A&rdquo; flag which tells ls to list all files and directories including the hidden ones in the Downloads directory. If files or directories are found, it lets you know the directory is not empty.</p>
 <p><strong>Pass any directory to a bash script:</strong>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nv">my_dir</span><span class="o">=</span><span class="nv">$1</span>
-
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ls -A <span class="nv">$my_dir</span><span class="k">)</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$my_dir</span><span class="s2"> is not empty.&#34;</span>
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$my_dir</span><span class="s2"> is empty&#34;</span>
-<span class="k">fi</span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">my_dir</span><span class="o">=</span><span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ls -A <span class="nv">$my_dir</span><span class="k">)</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$my_dir</span><span class="s2"> is not empty.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$my_dir</span><span class="s2"> is empty&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span></span></span></code></pre></div></p>
 <p>Copy the code above to a file and name the file &ldquo;<strong>file.sh</strong>&rdquo; then give the file execute permissions.</p>
 <p>Now to use the script you just created, you pass it the directory you wish to check. Like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./file.sh <span class="nv">$HOME</span>/Downloads</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./file.sh <span class="nv">$HOME</span>/Downloads</span></span></code></pre></div>
 <p>If you noticed, the variable has changed to &ldquo;<strong>$1</strong>&rdquo;. This allows the script to take one argument which would be the directory you pass to it.</p>
 <p>You can use this script to check if any directory is empty by simply passing the directory to the script as demonstrated.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
@@ -424,15 +424,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

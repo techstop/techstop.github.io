@@ -149,43 +149,43 @@
 <p>It&rsquo;s always a good idea to know how to get hardware info on your linux system. It can be very useful if you need to troubleshoot a hardware issue. There can be times when you need some specific hardware info to get the right drivers. Other times you&rsquo;ll need specific info to perform a hardware upgrade. The command line offers quite a few ways to obtain this hardware info with some tried and true linux commands.</p>
 <p>Now there are a few GUI applications that you can install to get the hardware info, and in most cases this will suffice. My personal favorite GUI application for hardware details is <a href="https://help.ubuntu.com/community/HardInfo" target="_blank">HardInfo</a>. It&rsquo;s a fantastic piece of software. In fact, HardInfo even has some benchmarking tools to test your system&rsquo;s stability. This comes in handy after hardware upgrades or overclocking.</p>
 <p>You can install HardInfo as follows.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install hardinfo</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install hardinfo</span></span></code></pre></div>
 <h2 id="linux-commands-for-hardware-info"><strong>Linux Commands For Hardware Info</strong></h2>
 <p>Well now that we&rsquo;ve gone over a good GUI, it&rsquo;s time to dig in with what this article is really about. We will go over some Linux commands to get hardware info. Commands can allow for more specific and targeted hardware info. Probably the biggest advantage is the ability to use these commands in a shell script.</p>
 <p><strong>Lets get started, shall we&hellip;</strong></p>
 <p>If you do not have any of the linux utilities in this tutorial, you can install them in your terminal as follows.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install &lt;name-of-utility&gt;</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install &lt;name-of-utility&gt;</span></span></code></pre></div>
 <ul>
 <li><strong>These next few commands are great for getting an overview of your hardware info.</strong></li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hwinfo -short</code></pre></div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lshw -short</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hwinfo -short</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lshw -short</span></span></code></pre></div>
 <p>For hardware overview information, this next command is my favorite. I like the neat easy to read output that is arranged by category.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">inxi -Fxz</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">inxi -Fxz</span></span></code></pre></div>
 <ul>
 <li><strong>We will now target just your CPU info.</strong></li>
 </ul>
 <p>You may not need so much information like the previous commands, but just for your cpu.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lscpu</code></pre></div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lshw -C cpu</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lscpu</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lshw -C cpu</span></span></code></pre></div>
 <ul>
 <li><strong>Lets focus on your PC memory now.</strong></li>
 </ul>
 <p>This command will show the memory size for each RAM stick you have installed in your PC. You do need to run this command with sudo.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t memory <span class="p">|</span> grep -i size</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dmidecode -t memory <span class="p">|</span> grep -i size</span></span></code></pre></div>
 <p>This command also gives you the RAM speed.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo lshw -short -C memory</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lshw -short -C memory</span></span></code></pre></div>
 <p>Now here is a very useful command. Ever wanted an easy way to know the max amount of ram you can install in your PC? Well this command does just that.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t memory <span class="p">|</span> grep -i max</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dmidecode -t memory <span class="p">|</span> grep -i max</span></span></code></pre></div>
 <p>If you want to know if there are any empty ram slots available in your PC, you don&rsquo;t need to open it. You can find out with this command. If the command output is empty, that means all ram slots are full.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lshw -short -C memory <span class="p">|</span> grep -i empty</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lshw -short -C memory <span class="p">|</span> grep -i empty</span></span></code></pre></div>
 <p>This final command gives us our memory usage.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">free -m</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">free -m</span></span></code></pre></div>
 <ul>
 <li><strong>Here are some commands to get disks, devices, and file systems.</strong></li>
 </ul>
 <p>I like this next command. It displays the device path for any mounted HDD, SSD, and USB drives.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo lshw -short -C disk</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lshw -short -C disk</span></span></code></pre></div>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
@@ -199,34 +199,34 @@
 </script>
 
 <p>The next command is more targeted at a specific drive by using the device path you get from the previous command above.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -I /dev/sda</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo hdparm -I /dev/sda</span></span></code></pre></div>
 <p>If you&rsquo;d like to get an idea of how fast your HDD or SSD read speeds are, you can run a test as follows. You just need the device path as the previous command.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -Tt /dev/sda</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo hdparm -Tt /dev/sda</span></span></code></pre></div>
 <p>This following command is quite common. You can use it to list all disks with their partitions, mount points, and sizes.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsblk</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk</span></span></code></pre></div>
 <p>This is yet another to list sector count, file system, type, and ID.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo fdisk -l</span></span></code></pre></div>
 <p>Along with file systems and mount points, this next command also lists space used and available in your partitions.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">df -h</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">df -h</span></span></code></pre></div>
 <p>These next two list USB and PCI devices.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsusb</code></pre></div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lspci</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsusb</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lspci</span></span></code></pre></div>
 <ul>
 <li><strong>Some commands for network hardware info.</strong></li>
 </ul>
 <p>List hardware information for your network card.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lshw -C network</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lshw -C network</span></span></code></pre></div>
 <p>List network interfaces.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ifconfig -a</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ifconfig -a</span></span></code></pre></div>
 <ul>
 <li><strong>Wrapping things up with installed software information.</strong></li>
 </ul>
 <p>Details about your current OS installation.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat /etc/os-release</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /etc/os-release</span></span></code></pre></div>
 <p>Kernel details.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">uname -a</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">uname -a</span></span></code></pre></div>
 <p>Finally we get some details about the BIOS.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dmidecode -t bios</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dmidecode -t bios</span></span></code></pre></div>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>We have stepped through quite a few Linux commands to get hardware info. There&rsquo;s many more commands you can learn in time. With the one&rsquo;s we&rsquo;ve covered in this tutorial you should be covered for most situations.</p>
 <p>If there&rsquo;s any more linux commands to get hardware info that you think should be included in this tutorial, feel free to share them in the comments below with some details.</p>
@@ -421,15 +421,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

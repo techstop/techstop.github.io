@@ -157,26 +157,26 @@
 </ul>
 <h2 id="get-disk-path"><strong>Get Disk Path</strong></h2>
 <p>To get the disk path we will run the (fdisk) command in our terminal.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo fdisk -l</span></span></code></pre></div>
 <p>As you can see from the output below, my disk path is (/dev/sda).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Disk /dev/sda: 119.24 GiB, 128035676160 bytes, 250069680 sectors
-Disk model: SAMSUNG SSD 830 
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disklabel type: gpt
-Disk identifier: 0BB9721E-A0BC-734C-99A0-367A0D530AC2
-
-Device      Start       End   Sectors   Size Type
-/dev/sda1    4096    618495    614400   300M EFI System
-/dev/sda2  618496 250067789 249449294 118.9G Linux filesystem</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Disk /dev/sda: 119.24 GiB, 128035676160 bytes, 250069680 sectors
+</span></span><span class="line"><span class="cl">Disk model: SAMSUNG SSD 830 
+</span></span><span class="line"><span class="cl">Units: sectors of 1 * 512 = 512 bytes
+</span></span><span class="line"><span class="cl">Sector size (logical/physical): 512 bytes / 512 bytes
+</span></span><span class="line"><span class="cl">I/O size (minimum/optimal): 512 bytes / 512 bytes
+</span></span><span class="line"><span class="cl">Disklabel type: gpt
+</span></span><span class="line"><span class="cl">Disk identifier: 0BB9721E-A0BC-734C-99A0-367A0D530AC2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Device      Start       End   Sectors   Size Type
+</span></span><span class="line"><span class="cl">/dev/sda1    4096    618495    614400   300M EFI System
+</span></span><span class="line"><span class="cl">/dev/sda2  618496 250067789 249449294 118.9G Linux filesystem</span></span></code></pre></div>
 <h2 id="test-disk-read-speed"><strong>Test Disk Read Speed</strong></h2>
 <p>Now that we have determined our disk path, it is time to run our read speed test.</p>
 <p>To test the disk drive read speed we run the following (hdparm) command.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo hdparm -t /dev/sda</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo hdparm -t /dev/sda</span></span></code></pre></div>
 <p>If you look at my output below, you can see that I&rsquo;m getting &ldquo;450.51 MB/sec&rdquo; which is in line with what the manufacturer advertises. Not bad considering it&rsquo;s a ten year old SSD as of the date of this article.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">/dev/sda:
- Timing buffered disk reads: 1352 MB in  3.00 seconds = 450.51 MB/sec</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/dev/sda:
+</span></span><span class="line"><span class="cl"> Timing buffered disk reads: 1352 MB in  3.00 seconds = 450.51 MB/sec</span></span></code></pre></div>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>You should now be able to test read speeds for any attached disk drive to your computer. For more hdparm options you can run (man hdparm) or (<a href="https://techstop.github.io/linux-tldr-pages-command/">tldr</a> hdparm) in your terminal.</p>
     <ul class="share-buttons">
@@ -370,15 +370,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

@@ -6,1249 +6,203 @@
     <description>Recent content in command line on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://techstop.github.io/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://techstop.github.io/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Find Files Containing a String Pattern in Linux</title>
       <link>https://techstop.github.io/find-files-containing-string-pattern-linux/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://techstop.github.io/find-files-containing-string-pattern-linux/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/grep.png&#34; alt=&#34;Grep&#34; title=&#34;Grep&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Grep is a powerful command line utility to search for files containing text string patterns in linux. In this tutorial we&amp;rsquo;ll be using grep with some common options to refine our file searches for better results.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/grep.png&#34; alt=&#34;Grep&#34; title=&#34;Grep&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Grep is a powerful command line utility to search for files containing text string patterns in linux. In this tutorial we&amp;rsquo;ll be using grep with some common options to refine our file searches for better results.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Find Files or Directories in Linux Command Line</title>
       <link>https://techstop.github.io/find-files-directories-linux-command-line/</link>
       <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://techstop.github.io/find-files-directories-linux-command-line/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/find.png&#34; alt=&#34;find&#34; title=&#34;find&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;The linux find command is one of the best ways to find files and directories in the command line. The find command is extremely versatile providing many options for granular control over your search query. If it exists, the find command will find it.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/find.png&#34; alt=&#34;find&#34; title=&#34;find&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;The linux find command is one of the best ways to find files and directories in the command line. The find command is extremely versatile providing many options for granular control over your search query. If it exists, the find command will find it.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Delete Lines or Strings Between Two Patterns With Sed</title>
       <link>https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/</link>
       <pubDate>Thu, 07 Apr 2022 22:48:26 -0400</pubDate>
-      
       <guid>https://techstop.github.io/delete-lines-strings-between-two-patterns-sed/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sed-1.png&#34; alt=&#34;sed&#34; title=&#34;sed&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;In this tutorial we will go through various ways to delete lines or strings between two patterns with the linux sed command stream editor.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sed-1.png&#34; alt=&#34;sed&#34; title=&#34;sed&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;In this tutorial we will go through various ways to delete lines or strings between two patterns with the linux sed command stream editor.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Test Disk Drive Read Speed With hdparm</title>
       <link>https://techstop.github.io/test-drive-read-speed-hdparm/</link>
       <pubDate>Fri, 01 Apr 2022 11:58:07 -0400</pubDate>
-      
       <guid>https://techstop.github.io/test-drive-read-speed-hdparm/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/hdparm.png&#34; alt=&#34;hdparm&#34; title=&#34;hdparm&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;If you&amp;rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your disk drive&amp;rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your disk drives to see if they&amp;rsquo;re performing as expected.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/hdparm.png&#34; alt=&#34;hdparm&#34; title=&#34;hdparm&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;If you&amp;rsquo;d like to test the read speed of your hard disk drive(HDD) or solid state drive(SSD) or any type of drive, you can use hdparm on linux. hdparm is an excellent command-line tool to test your disk drive&amp;rsquo;s read speeds. hdparm can give you an accurate representation of the read speeds of your disk drives to see if they&amp;rsquo;re performing as expected.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Linux tldr Pages Command</title>
       <link>https://techstop.github.io/linux-tldr-pages-command/</link>
       <pubDate>Mon, 28 Mar 2022 21:44:35 -0400</pubDate>
-      
       <guid>https://techstop.github.io/linux-tldr-pages-command/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/tldr-pages-0.png&#34; alt=&#34;tldr tar&#34; title=&#34;tldr tar&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Linux tldr pages command displays simplified &lt;a href=&#34;https://en.wikipedia.org/wiki/Man_page&#34; target=&#34;_blank&#34;&gt;man pages&lt;/a&gt; for linux command-line tools. Unlike the man pages, tldr pages is more like a cheat sheet that displays usage examples for linux commands.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/tldr-pages-0.png&#34; alt=&#34;tldr tar&#34; title=&#34;tldr tar&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Linux tldr pages command displays simplified &lt;a href=&#34;https://en.wikipedia.org/wiki/Man_page&#34; target=&#34;_blank&#34;&gt;man pages&lt;/a&gt; for linux command-line tools. Unlike the man pages, tldr pages is more like a cheat sheet that displays usage examples for linux commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Linux watch Command</title>
       <link>https://techstop.github.io/linux-watch-command/</link>
       <pubDate>Wed, 23 Mar 2022 20:19:29 -0400</pubDate>
-      
       <guid>https://techstop.github.io/linux-watch-command/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/linux-watch-command.png&#34; alt=&#34;linux watch command&#34; title=&#34;linux watch command&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;In this tutorial we will be looking at the linux &lt;strong&gt;watch&lt;/strong&gt; command. watch comes pre-installed on most linux distributions. The watch command is an excellent tool if you need to run any commands repeatedly at set intervals.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/linux-watch-command.png&#34; alt=&#34;linux watch command&#34; title=&#34;linux watch command&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;In this tutorial we will be looking at the linux &lt;strong&gt;watch&lt;/strong&gt; command. watch comes pre-installed on most linux distributions. The watch command is an excellent tool if you need to run any commands repeatedly at set intervals.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Get CPU and GPU Temps in Linux</title>
       <link>https://techstop.github.io/get-cpu-gpu-temps-linux/</link>
       <pubDate>Wed, 13 Nov 2019 22:28:51 -0400</pubDate>
-      
       <guid>https://techstop.github.io/get-cpu-gpu-temps-linux/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sensors1.png&#34; alt=&#34;Get CPU and GPU Temps in Linux&#34; title=&#34;Get CPU and GPU Temps in Linux&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;To get CPU and GPU temps in linux you need to install and configure lm-sensors. With lm-sensors you can monitor cpu and gpu temperatures and fan speeds as well as voltages for some systems. Lm-sensors reads the available sensors on your motherboard, cpu, and gpu and displays their output. Once configured, you can use the command line or a GUI to monitor your system&amp;rsquo;s sensors.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sensors1.png&#34; alt=&#34;Get CPU and GPU Temps in Linux&#34; title=&#34;Get CPU and GPU Temps in Linux&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;To get CPU and GPU temps in linux you need to install and configure lm-sensors. With lm-sensors you can monitor cpu and gpu temperatures and fan speeds as well as voltages for some systems. Lm-sensors reads the available sensors on your motherboard, cpu, and gpu and displays their output. Once configured, you can use the command line or a GUI to monitor your system&amp;rsquo;s sensors.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Upgrade Kept Back Packages in Linux</title>
       <link>https://techstop.github.io/upgrade-kept-back-packages/</link>
       <pubDate>Tue, 29 Oct 2019 20:53:17 -0400</pubDate>
-      
       <guid>https://techstop.github.io/upgrade-kept-back-packages/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/kept.png&#34; alt=&#34;Upgrade Kept Back Packages in Linux&#34; title=&#34;Upgrade Kept Back Packages in Linux&#34;  width=&#34;550px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Occasionally when updating your linux system from a terminal, you&amp;rsquo;ll notice a warning stating &amp;ldquo;The following packages have been kept back&amp;rdquo;. This means that when updating, those packages will not be upgraded. Today we&amp;rsquo;ll look at how to upgrade kept back packages in linux.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/kept.png&#34; alt=&#34;Upgrade Kept Back Packages in Linux&#34; title=&#34;Upgrade Kept Back Packages in Linux&#34;  width=&#34;550px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Occasionally when updating your linux system from a terminal, you&amp;rsquo;ll notice a warning stating &amp;ldquo;The following packages have been kept back&amp;rdquo;. This means that when updating, those packages will not be upgraded. Today we&amp;rsquo;ll look at how to upgrade kept back packages in linux.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Remove Orphaned Packages in Linux</title>
       <link>https://techstop.github.io/remove-orphaned-packages-linux/</link>
       <pubDate>Sun, 27 Oct 2019 23:13:47 -0400</pubDate>
-      
       <guid>https://techstop.github.io/remove-orphaned-packages-linux/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/orph0.png&#34; alt=&#34;Remove Orphaned Packages in Linux&#34; title=&#34;Remove Orphaned Packages in Linux&#34;  width=&#34;300px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;There are a couple of tools to remove orphaned packages in linux. Packages in linux systems depend on other packages or libraries in order to work properly. In some cases you will already have some or all the dependencies installed from them being installed by other packages.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/orph0.png&#34; alt=&#34;Remove Orphaned Packages in Linux&#34; title=&#34;Remove Orphaned Packages in Linux&#34;  width=&#34;300px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;There are a couple of tools to remove orphaned packages in linux. Packages in linux systems depend on other packages or libraries in order to work properly. In some cases you will already have some or all the dependencies installed from them being installed by other packages.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Bash Aliases</title>
       <link>https://techstop.github.io/bash-aliases/</link>
       <pubDate>Fri, 25 Oct 2019 05:14:48 -0400</pubDate>
-      
       <guid>https://techstop.github.io/bash-aliases/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/alias.png&#34; alt=&#34;Bash Aliases&#34; title=&#34;Bash Aliases&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;If you&amp;rsquo;re not familiar with bash aliases I highly recommend you read on. Bash aliases are fantastic for saving time and not having to remember commands or groups of commands.&lt;/p&gt;
-&lt;p&gt;A bash alias is just a shortcut that you can set to be a word or even a single letter.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/alias.png&#34; alt=&#34;Bash Aliases&#34; title=&#34;Bash Aliases&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;If you&amp;rsquo;re not familiar with bash aliases I highly recommend you read on. Bash aliases are fantastic for saving time and not having to remember commands or groups of commands.&lt;/p&gt;&#xA;&lt;p&gt;A bash alias is just a shortcut that you can set to be a word or even a single letter.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Clear or Reset Terminal</title>
       <link>https://techstop.github.io/clear-reset-terminal/</link>
       <pubDate>Tue, 22 Oct 2019 23:01:23 -0400</pubDate>
-      
       <guid>https://techstop.github.io/clear-reset-terminal/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/crt.png&#34; alt=&#34;Clear or Reset Terminal&#34; title=&#34;Clear or Reset Terminal&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Whenever you&amp;rsquo;re using the terminal extensively you may find your terminal cluttered with commands and output. This can be rather annoying and even confusing at times with the bash prompt at the bottom of your terminal screen. The solution to this is to clear or reset terminal.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/crt.png&#34; alt=&#34;Clear or Reset Terminal&#34; title=&#34;Clear or Reset Terminal&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Whenever you&amp;rsquo;re using the terminal extensively you may find your terminal cluttered with commands and output. This can be rather annoying and even confusing at times with the bash prompt at the bottom of your terminal screen. The solution to this is to clear or reset terminal.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Check Linux OS Version in Terminal</title>
       <link>https://techstop.github.io/linux-os-version-terminal/</link>
       <pubDate>Mon, 21 Oct 2019 20:29:00 -0400</pubDate>
-      
       <guid>https://techstop.github.io/linux-os-version-terminal/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/osv.png&#34; alt=&#34;Check Linux OS Version in Terminal&#34; title=&#34;Check Linux OS Version in Terminal&#34;  width=&#34;550px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;There are a few ways to check your kernel and linux os version, but today we will cover some commands to do this in a terminal.&lt;/p&gt;
-&lt;p&gt;Knowing how to check your kernel and linux os version in a terminal can be useful if you ever need help in a forum where they might ask for this information. You can also use this info in a bash script to determine what actions to take in your script based on the kernel and linux os version. Whatever the case may be, it&amp;rsquo;s a good idea to get familiar with these commands.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/osv.png&#34; alt=&#34;Check Linux OS Version in Terminal&#34; title=&#34;Check Linux OS Version in Terminal&#34;  width=&#34;550px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;There are a few ways to check your kernel and linux os version, but today we will cover some commands to do this in a terminal.&lt;/p&gt;&#xA;&lt;p&gt;Knowing how to check your kernel and linux os version in a terminal can be useful if you ever need help in a forum where they might ask for this information. You can also use this info in a bash script to determine what actions to take in your script based on the kernel and linux os version. Whatever the case may be, it&amp;rsquo;s a good idea to get familiar with these commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Update Linux in a Terminal</title>
       <link>https://techstop.github.io/update-linux-terminal/</link>
       <pubDate>Sun, 20 Oct 2019 22:44:45 -0400</pubDate>
-      
       <guid>https://techstop.github.io/update-linux-terminal/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/apt.png&#34; alt=&#34;Update Linux in a Terminal&#34; title=&#34;Update Linux in a Terminal&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Keeping linux updated is a simple hassle free task, unlike that other OS. On linux you can use a GUI app or update in a terminal. Both methods achieve the same result, but users usually have a preference. For me that&amp;rsquo;s the terminal.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/apt.png&#34; alt=&#34;Update Linux in a Terminal&#34; title=&#34;Update Linux in a Terminal&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Keeping linux updated is a simple hassle free task, unlike that other OS. On linux you can use a GUI app or update in a terminal. Both methods achieve the same result, but users usually have a preference. For me that&amp;rsquo;s the terminal.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Time a Command in Linux</title>
       <link>https://techstop.github.io/time-command-linux/</link>
       <pubDate>Sat, 19 Oct 2019 22:19:55 -0400</pubDate>
-      
       <guid>https://techstop.github.io/time-command-linux/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/time.png&#34; alt=&#34;Time a Command in Linux&#34; title=&#34;Time a Command in Linux&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Getting familiar with timing commands in linux is a good idea. This is a good way to time long operations in a bash script or from the terminal. You can time most commands and any bash script. My favorite use case is for timing source code compilation from build scripts.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/time.png&#34; alt=&#34;Time a Command in Linux&#34; title=&#34;Time a Command in Linux&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Getting familiar with timing commands in linux is a good idea. This is a good way to time long operations in a bash script or from the terminal. You can time most commands and any bash script. My favorite use case is for timing source code compilation from build scripts.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Redirect and Append to a File in Linux</title>
       <link>https://techstop.github.io/redirect-append-to-file/</link>
       <pubDate>Fri, 18 Oct 2019 21:30:46 -0400</pubDate>
-      
       <guid>https://techstop.github.io/redirect-append-to-file/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/redirect.png&#34; alt=&#34;Redirect and Append to a File in Linux&#34; title=&#34;Redirect and Append to a File in Linux&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;On every linux system you can redirect and append to the end of a file.&lt;/p&gt;
-&lt;p&gt;Linux has &amp;ldquo;stdout&amp;rdquo; which stands for &amp;ldquo;standard output&amp;rdquo;. Whenever you run a command in your terminal, the result is displayed in the stdout. You can redirect and append stdout to the end of a file.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/redirect.png&#34; alt=&#34;Redirect and Append to a File in Linux&#34; title=&#34;Redirect and Append to a File in Linux&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;On every linux system you can redirect and append to the end of a file.&lt;/p&gt;&#xA;&lt;p&gt;Linux has &amp;ldquo;stdout&amp;rdquo; which stands for &amp;ldquo;standard output&amp;rdquo;. Whenever you run a command in your terminal, the result is displayed in the stdout. You can redirect and append stdout to the end of a file.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Bash Exit Status</title>
       <link>https://techstop.github.io/bash-exit-status/</link>
       <pubDate>Tue, 15 Oct 2019 22:13:36 -0400</pubDate>
-      
       <guid>https://techstop.github.io/bash-exit-status/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/stat.png&#34; alt=&#34;Bash Exit Status&#34; title=&#34;Bash Exit Status&#34;  width=&#34;480px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Regardless of whether a bash command ends successfully or not, it returns an exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/stat.png&#34; alt=&#34;Bash Exit Status&#34; title=&#34;Bash Exit Status&#34;  width=&#34;480px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Regardless of whether a bash command ends successfully or not, it returns an exit status. Aside from letting you know that the command succeeded or failed, you can use the exit status code in bash scripts to determine what action to take with a conditional statement.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Rename Files &amp; Folders Linux Command Line</title>
       <link>https://techstop.github.io/rename-files-folders-linux/</link>
       <pubDate>Mon, 14 Oct 2019 20:00:29 -0400</pubDate>
-      
       <guid>https://techstop.github.io/rename-files-folders-linux/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/mv.png&#34; alt=&#34;Rename Files &amp;amp; Folders Linux Command Line&#34; title=&#34;Rename Files &amp;amp; Folders Linux Command Line&#34;  width=&#34;550px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Lets take a look at how to rename files and folders in linux from the command line.&lt;/p&gt;
-&lt;p&gt;Sure you can use your GUI and be done with it, but learning to do it from the command line can be quite useful. There&amp;rsquo;s also the added benefit of being able to use these commands in bash scripts.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/mv.png&#34; alt=&#34;Rename Files &amp;amp; Folders Linux Command Line&#34; title=&#34;Rename Files &amp;amp; Folders Linux Command Line&#34;  width=&#34;550px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Lets take a look at how to rename files and folders in linux from the command line.&lt;/p&gt;&#xA;&lt;p&gt;Sure you can use your GUI and be done with it, but learning to do it from the command line can be quite useful. There&amp;rsquo;s also the added benefit of being able to use these commands in bash scripts.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Remove Unused Kernels Ubuntu 18.04</title>
       <link>https://techstop.github.io/ubuntu-unused-kernels/</link>
       <pubDate>Sat, 12 Oct 2019 22:01:52 -0400</pubDate>
-      
       <guid>https://techstop.github.io/ubuntu-unused-kernels/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/lh2.png&#34; alt=&#34;Remove Unused Kernels Ubuntu 18.04&#34; title=&#34;Remove Unused Kernels Ubuntu 18.04&#34;  width=&#34;550px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;A question often asked&amp;hellip; How do I remove old unused kernels from ubuntu 18.04?&lt;/p&gt;
-&lt;p&gt;Each time you receive a kernel update in your ubuntu 18.04 system updates, you end up with the old kernels remaining in your system. This can be useful in the event that the new kernel causes issues, you can always boot the old kernels. In time, old unused kernels can accumulate taking up unnecessary space on your drive.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/lh2.png&#34; alt=&#34;Remove Unused Kernels Ubuntu 18.04&#34; title=&#34;Remove Unused Kernels Ubuntu 18.04&#34;  width=&#34;550px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;A question often asked&amp;hellip; How do I remove old unused kernels from ubuntu 18.04?&lt;/p&gt;&#xA;&lt;p&gt;Each time you receive a kernel update in your ubuntu 18.04 system updates, you end up with the old kernels remaining in your system. This can be useful in the event that the new kernel causes issues, you can always boot the old kernels. In time, old unused kernels can accumulate taking up unnecessary space on your drive.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Bash Arrays</title>
       <link>https://techstop.github.io/bash-arrays/</link>
       <pubDate>Tue, 08 Oct 2019 20:09:14 -0400</pubDate>
-      
       <guid>https://techstop.github.io/bash-arrays/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/array.png&#34; alt=&#34;Bash Arrays&#34; title=&#34;Bash Arrays&#34;  width=&#34;350px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Bash arrays are quite powerful and robust, but not often used in the command line. They are variables which contain multiple values often referred to as items or elements. Arrays do not have a maximum limit for items they can contain nor do the values need to be assigned or indexed contiguously.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/array.png&#34; alt=&#34;Bash Arrays&#34; title=&#34;Bash Arrays&#34;  width=&#34;350px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Bash arrays are quite powerful and robust, but not often used in the command line. They are variables which contain multiple values often referred to as items or elements. Arrays do not have a maximum limit for items they can contain nor do the values need to be assigned or indexed contiguously.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Check If Directory Exists In Linux With Bash</title>
       <link>https://techstop.github.io/directory-exists-bash/</link>
       <pubDate>Sat, 05 Oct 2019 03:30:20 -0400</pubDate>
-      
       <guid>https://techstop.github.io/directory-exists-bash/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/dir.png&#34; alt=&#34;Check If Directory Exists In Linux With Bash&#34; title=&#34;Check If Directory Exists In Linux With Bash&#34;  width=&#34;287px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;It&amp;rsquo;s useful to know how to check if a directory exists in linux from a bash script. A directory is a folder within a path in your linux system where all sorts of files and directories are stored. Your Music folder is a directory to store music files and your Downloads folder is a directory where all sorts files are downloaded from the web. You get the idea.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/dir.png&#34; alt=&#34;Check If Directory Exists In Linux With Bash&#34; title=&#34;Check If Directory Exists In Linux With Bash&#34;  width=&#34;287px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;It&amp;rsquo;s useful to know how to check if a directory exists in linux from a bash script. A directory is a folder within a path in your linux system where all sorts of files and directories are stored. Your Music folder is a directory to store music files and your Downloads folder is a directory where all sorts files are downloaded from the web. You get the idea.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Colors In Bash Scripts</title>
       <link>https://techstop.github.io/bash-script-colors/</link>
       <pubDate>Thu, 03 Oct 2019 22:17:26 -0400</pubDate>
-      
       <guid>https://techstop.github.io/bash-script-colors/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/ansi.png&#34; alt=&#34;Colors In Bash Scripts&#34; title=&#34;Colors In Bash Scripts&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Using colors in bash scripts can be very useful. If you&amp;rsquo;ve written your bash script with menus and prompts, it&amp;rsquo;s a good idea to use ansi color codes to make your outputs more readable to the user. In this tutorial I&amp;rsquo;ll cover some ways that you can use colors in your bash scripts for a more GUI like experience.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/ansi.png&#34; alt=&#34;Colors In Bash Scripts&#34; title=&#34;Colors In Bash Scripts&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Using colors in bash scripts can be very useful. If you&amp;rsquo;ve written your bash script with menus and prompts, it&amp;rsquo;s a good idea to use ansi color codes to make your outputs more readable to the user. In this tutorial I&amp;rsquo;ll cover some ways that you can use colors in your bash scripts for a more GUI like experience.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create a Menu in a Bash Script</title>
       <link>https://techstop.github.io/menu-bash-script/</link>
       <pubDate>Wed, 02 Oct 2019 20:46:44 -0400</pubDate>
-      
       <guid>https://techstop.github.io/menu-bash-script/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/menu.png&#34; alt=&#34;Create a Menu in Bash Script&#34; title=&#34;Create a Menu in Bash Script&#34;  width=&#34;300px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Creating a menu in a bash script can be quite useful and at times necessary. A bash menu can allow you to provide options for user input. Upon user selection of an option in your menu, you can run a command or sequence of commands and display outputs.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/menu.png&#34; alt=&#34;Create a Menu in Bash Script&#34; title=&#34;Create a Menu in Bash Script&#34;  width=&#34;300px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Creating a menu in a bash script can be quite useful and at times necessary. A bash menu can allow you to provide options for user input. Upon user selection of an option in your menu, you can run a command or sequence of commands and display outputs.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Write Bash Functions</title>
       <link>https://techstop.github.io/bash-functions/</link>
       <pubDate>Mon, 30 Sep 2019 21:38:41 -0400</pubDate>
-      
       <guid>https://techstop.github.io/bash-functions/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/func.png&#34; alt=&#34;Writing Bash Functions&#34; title=&#34;Writing Bash Functions&#34;  width=&#34;161px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;Writing bash functions is a great way to make your scripts modular. If you find you&amp;rsquo;ll be needing to repeat sets of commands or code logic, it&amp;rsquo;s a good idea to use functions to avoid redundancy in your script. Bash functions also help keep your code neat and easier to maintain.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/func.png&#34; alt=&#34;Writing Bash Functions&#34; title=&#34;Writing Bash Functions&#34;  width=&#34;161px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;Writing bash functions is a great way to make your scripts modular. If you find you&amp;rsquo;ll be needing to repeat sets of commands or code logic, it&amp;rsquo;s a good idea to use functions to avoid redundancy in your script. Bash functions also help keep your code neat and easier to maintain.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Linux Commands To Get Hardware Info</title>
       <link>https://techstop.github.io/linux-commands-hardware-info/</link>
       <pubDate>Fri, 27 Sep 2019 23:29:38 -0400</pubDate>
-      
       <guid>https://techstop.github.io/linux-commands-hardware-info/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/inxi.png&#34; alt=&#34;Linux commands for hardware info&#34; title=&#34;Linux commands for hardware info&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;It&amp;rsquo;s always a good idea to know how to get hardware info on your linux system. It can be very useful if you need to troubleshoot a hardware issue. There can be times when you need some specific hardware info to get the right drivers. Other times you&amp;rsquo;ll need specific info to perform a hardware upgrade. The command line offers quite a few ways to obtain this hardware info with some tried and true linux commands.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/inxi.png&#34; alt=&#34;Linux commands for hardware info&#34; title=&#34;Linux commands for hardware info&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;It&amp;rsquo;s always a good idea to know how to get hardware info on your linux system. It can be very useful if you need to troubleshoot a hardware issue. There can be times when you need some specific hardware info to get the right drivers. Other times you&amp;rsquo;ll need specific info to perform a hardware upgrade. The command line offers quite a few ways to obtain this hardware info with some tried and true linux commands.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Manipulate Text in Files With Sed</title>
       <link>https://techstop.github.io/manipulate-text-files-sed/</link>
       <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://techstop.github.io/manipulate-text-files-sed/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sed.png&#34; alt=&#34;Sed Text Stream Editor&#34; title=&#34;Sed Text Stream Editor&#34;  width=&#34;550px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;The sed linux utility is a powerful stream editor. Sed can manipulate text from standard input or from a file. It is much like a typical text editor. Where sed sets itself apart is in its ability to filter text in a pipeline to expand its capabilities.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/sed.png&#34; alt=&#34;Sed Text Stream Editor&#34; title=&#34;Sed Text Stream Editor&#34;  width=&#34;550px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;The sed linux utility is a powerful stream editor. Sed can manipulate text from standard input or from a file. It is much like a typical text editor. Where sed sets itself apart is in its ability to filter text in a pipeline to expand its capabilities.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create Bootable Usb With Terminal in Linux</title>
       <link>https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/</link>
       <pubDate>Sun, 15 Sep 2019 19:19:16 -0400</pubDate>
-      
       <guid>https://techstop.github.io/create-bootable-usb-with-terminal-in-linux/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/bootable-usb.png&#34; alt=&#34;Bootable USB in Linux&#34; title=&#34;Bootable USB in Linux&#34;  width=&#34;500px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;If you&amp;rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&amp;rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&amp;rsquo;t work. For these rare occasions the dd linux command line utility can be an excellent substitute. This is my preferred method and the one I&amp;rsquo;ll cover in this tutorial.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/bootable-usb.png&#34; alt=&#34;Bootable USB in Linux&#34; title=&#34;Bootable USB in Linux&#34;  width=&#34;500px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;If you&amp;rsquo;re installing linux, like to distro hop, or simply test different linux distros, you&amp;rsquo;ll often be creating a live bootable usb. There are a few ways to create a bootable usb in linux. Many distros have Startup Disk Creator(usb-creator-gtk) pre-installed which usually gets the job done. There is the rare occasion when using a GUI app just doesn&amp;rsquo;t work. For these rare occasions the dd linux command line utility can be an excellent substitute. This is my preferred method and the one I&amp;rsquo;ll cover in this tutorial.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pause and Resume Wget Downloads</title>
       <link>https://techstop.github.io/pause-and-resume-wget-downloads/</link>
       <pubDate>Mon, 09 Sep 2019 20:20:55 -0400</pubDate>
-      
       <guid>https://techstop.github.io/pause-and-resume-wget-downloads/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wget.png&#34; alt=&#34;wget&#34; title=&#34;wget&#34;  width=&#34;550px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;There are many download managers to choose from to manage your downloads, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you need to download any files of any size or need to use the ftp protocol, wget is an excellent choice. You can pause and resume wget downloads at any time to your convenience. You can also use wget to get the file download size without actually downloading the file. This can come in handy to compare file sizes before downloading.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/wget.png&#34; alt=&#34;wget&#34; title=&#34;wget&#34;  width=&#34;550px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;There are many download managers to choose from to manage your downloads, but wget is arguably the best one. Wget is a linux command line utility to manage all types of downloads. Whenever you need to download any files of any size or need to use the ftp protocol, wget is an excellent choice. You can pause and resume wget downloads at any time to your convenience. You can also use wget to get the file download size without actually downloading the file. This can come in handy to compare file sizes before downloading.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Open File as Root</title>
       <link>https://techstop.github.io/open-file-as-root/</link>
       <pubDate>Tue, 08 May 2018 22:33:30 +0000</pubDate>
-      
       <guid>https://techstop.github.io/open-file-as-root/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-0.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;300px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-1.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;300px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;If you need to open a file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open graphical applications with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer available for most linux distributions.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-0.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;300px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/open-as-root/open-file-as-root-1.png&#34; alt=&#34;Open File as Root&#34; title=&#34;Open File as Root&#34;  width=&#34;300px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;If you need to open a file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open graphical applications with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer available for most linux distributions.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

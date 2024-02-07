@@ -150,14 +150,14 @@
 <p>Let me show you a few neat ways to use wget.</p>
 <h2 id="wget-download"><strong>wget Download</strong></h2>
 <p>You can download any type of file like text based and archives or any other. The typical usage for wget looks as follows.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">wget [options] [url-to-file]</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">wget [options] [url-to-file]</span></span></code></pre></div>
 <p>To download a file we run the basic wget download command as below. Make sure to open your terminal in the directory you wish to download to.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://example.com/filename.zip</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://example.com/filename.zip</span></span></code></pre></div>
 <p>That is all. You should now have the file downloaded to the directory you chose.</p>
 <h2 id="pause-wget-download"><strong>Pause wget Download</strong></h2>
 <p>If you find yourself in a situtation where you&rsquo;re downloading a large file and need to shutdown your computer during the download for whatever reason, no problem, you can pause the download.</p>
 <p>In the terminal window that is downloading your file just enter the following keyboard shortcut.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Ctrl + c</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Ctrl + c</span></span></code></pre></div>
 <p>This will stop the download and then you can shutdown your computer if you need. To resume the download, read on.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -173,34 +173,34 @@
 
 <h2 id="resume-wget-download"><strong>Resume wget Download</strong></h2>
 <p>To resume a wget download it&rsquo;s very straight forward. Open the terminal to the directory where you were downloading your file to and run wget with the <strong>-c</strong> flag to resume the download.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget -c https://example.com/filename.zip</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget -c https://example.com/filename.zip</span></span></code></pre></div>
 <h2 id="other-wget-uses"><strong>Other wget Uses</strong></h2>
 <p>Here&rsquo;s some other useful ways to get the most out of wget.</p>
 <ul>
 <li>
 <p>Wget the file download size without downloading the actual file.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget --spider https://example.com/filename.zip 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep Length</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget --spider https://example.com/filename.zip 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep Length</span></span></code></pre></div></p>
 </li>
 <li>
 <p>Download using the File Transfer Protocol (FTP).
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget ftp://ftp.example.com/filename.zip</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget ftp://ftp.example.com/filename.zip</span></span></code></pre></div></p>
 </li>
 <li>
 <p>Read download URLs from a file. This can be useful in a shell script.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget -i filename</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget -i filename</span></span></code></pre></div></p>
 </li>
 <li>
 <p>Specify the directory to download to.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://example.com/filename.zip -P /path/to/directory/</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://example.com/filename.zip -P /path/to/directory/</span></span></code></pre></div></p>
 </li>
 <li>
 <p>Have your download file overwrite an existing file with the same name.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">wget https://example.com/filename.zip -O /path/to/directory/filename.zip</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://example.com/filename.zip -O /path/to/directory/filename.zip</span></span></code></pre></div></p>
 </li>
 </ul>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>Wget is a powerful linux command line utility for managing downloads that can suit the needs of both novice and power users alike. What I&rsquo;ve covered in this tutorial should suffice for most use cases. There are many more options you can run with wget. Check out the wget manual for more.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">man wget</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man wget</span></span></code></pre></div>
     <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
@@ -392,15 +392,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

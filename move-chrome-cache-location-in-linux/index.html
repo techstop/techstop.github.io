@@ -152,15 +152,15 @@
 <p>The second method and the one we will be using in this tutorial will be using a symlink. This is a “set it and forget it” method. Once you set your symlink, you will not have to worry about it again, not even after chrome updates.</p>
 <h2 id="move-chrome-cache-location"><strong>Move Chrome Cache Location</strong></h2>
 <p>The symlink command generally looks like this…</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">ln -s [new-location] [old-location]</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ln -s [new-location] [old-location]</span></span></code></pre></div>
 <p><strong>This has been tested on xubuntu and ubuntu.</strong></p>
 <ol>
 <li>Make sure to close chrome browser.</li>
 <li>Create a hidden folder in your new location called &ldquo;<strong>.google-chrome</strong>&rdquo;</li>
 <li>Delete the old chrome location usually found at &ldquo;<strong>/home/USERNAME/.cache/google-chrome</strong>&rdquo;. You can use the following command for this.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rm -rf ~/.cache/google-chrome</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -rf ~/.cache/google-chrome</span></span></code></pre></div></li>
 <li>Now re-create the old chrome location you deleted as a symlink to the new location with this command.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ln -s /new/location/path/.google-chrome ~/.cache/google-chrome</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /new/location/path/.google-chrome ~/.cache/google-chrome</span></span></code></pre></div></li>
 </ol>
 <p>After opening chrome, if you&rsquo;d like to check, open your file manager and go to &ldquo;<strong>/home/USERNAME/.cache/google-chrome</strong>&rdquo;. Right click on the folder and select &ldquo;<strong>Properties</strong>&rdquo;. You should see that for &ldquo;<strong>Volume</strong>&rdquo; it should show the new cache location.</p>
 <p>That is all. You have now moved the chrome cache location in linux and don&rsquo;t need to worry about it anymore.</p>
@@ -355,15 +355,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

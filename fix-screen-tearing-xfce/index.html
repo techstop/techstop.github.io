@@ -155,14 +155,14 @@
 <h2 id="xorg-configuration"><strong>Xorg Configuration</strong></h2>
 <p>This is the method that I always use to fix screen tearing in Xfce which has always worked for me.</p>
 <p>First find out which graphics driver you&rsquo;re using by running the following command in terminal:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">inxi -G</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">inxi -G</span></span></code></pre></div>
 <p>Your output from the above command should look similar to this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">gametheory@ubuntu:~$ inxi -G
-Graphics:  Card: Intel 3rd Gen Core processor Graphics Controller
-           Display Server: x11 (X.Org 1.20.4 ) driver: intel
-           Resolution: 1920x1080@60.00hz
-           OpenGL: renderer: Mesa DRI Intel Ivybridge Mobile
-           version: 4.2 Mesa 19.0.8</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gametheory@ubuntu:~$ inxi -G
+</span></span><span class="line"><span class="cl">Graphics:  Card: Intel 3rd Gen Core processor Graphics Controller
+</span></span><span class="line"><span class="cl">           Display Server: x11 (X.Org 1.20.4 ) driver: intel
+</span></span><span class="line"><span class="cl">           Resolution: 1920x1080@60.00hz
+</span></span><span class="line"><span class="cl">           OpenGL: renderer: Mesa DRI Intel Ivybridge Mobile
+</span></span><span class="line"><span class="cl">           version: 4.2 Mesa 19.0.8</span></span></code></pre></div>
 <p>Now make sure to disable &ldquo;<strong>Synchronize drawing to the vertical blank</strong>&rdquo; in the Xfce compositor. Then go to &ldquo;<strong>/usr/share/X11/xorg.conf.d</strong>&rdquo; and add one of the files below for your graphics card.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -177,32 +177,32 @@ Graphics:  Card: Intel 3rd Gen Core processor Graphics Controller
 </script>
 
 <p>For Intel drivers edit or create a file called &ldquo;<strong>10-intel.conf</strong>&rdquo; and add the following then reboot your pc:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
-  Identifier  &#34;Intel Graphics&#34;
-  Driver      &#34;intel&#34;
-  Option &#34;TearFree&#34; &#34;true&#34;
-EndSection</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Section &#34;Device&#34;
+</span></span><span class="line"><span class="cl">  Identifier  &#34;Intel Graphics&#34;
+</span></span><span class="line"><span class="cl">  Driver      &#34;intel&#34;
+</span></span><span class="line"><span class="cl">  Option &#34;TearFree&#34; &#34;true&#34;
+</span></span><span class="line"><span class="cl">EndSection</span></span></code></pre></div>
 <p>For Radeon drivers edit or create a file called &ldquo;<strong>10-radeon.conf</strong>&rdquo; and add the following then reboot your pc:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
-  Identifier &#34;Radeon&#34;
-  Driver &#34;radeon&#34;
-  Option &#34;TearFree&#34; &#34;on&#34;
-EndSection</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Section &#34;Device&#34;
+</span></span><span class="line"><span class="cl">  Identifier &#34;Radeon&#34;
+</span></span><span class="line"><span class="cl">  Driver &#34;radeon&#34;
+</span></span><span class="line"><span class="cl">  Option &#34;TearFree&#34; &#34;on&#34;
+</span></span><span class="line"><span class="cl">EndSection</span></span></code></pre></div>
 <p>For AMD drivers edit or create a file called &ldquo;<strong>10-amdgpu.conf</strong>&rdquo; and add the following then reboot your pc:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Section &#34;Device&#34;
-  Identifier &#34;AMDgpu&#34;
-  Driver &#34;amdgpu&#34;
-  Option &#34;TearFree&#34; &#34;on&#34;
-EndSection</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Section &#34;Device&#34;
+</span></span><span class="line"><span class="cl">  Identifier &#34;AMDgpu&#34;
+</span></span><span class="line"><span class="cl">  Driver &#34;amdgpu&#34;
+</span></span><span class="line"><span class="cl">  Option &#34;TearFree&#34; &#34;on&#34;
+</span></span><span class="line"><span class="cl">EndSection</span></span></code></pre></div>
 <p>For Nvidia drivers you&rsquo;ll need to enable &ldquo;modsetting&rdquo;. Run the following two commands to create a file called &ldquo;<strong>nvidia-nomodset.conf</strong>&rdquo; and update the kernel’s initramfs then reboot:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo <span class="nb">echo</span> <span class="s2">&#34;options nvidia-drm modset=1&#34;</span> &gt; /etc/modprobe.d/nvidia-nomodset.conf
-sudo update-initramfs -u</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo <span class="nb">echo</span> <span class="s2">&#34;options nvidia-drm modset=1&#34;</span> &gt; /etc/modprobe.d/nvidia-nomodset.conf
+</span></span><span class="line"><span class="cl">sudo update-initramfs -u</span></span></code></pre></div>
 <p>There are other methods to fix screen tearing for Nvidia drivers, but this seems to be one of the more reliable methods, so it may be worth a shot.</p>
 <h2 id="compton-compositor"><strong>Compton Compositor</strong></h2>
 <p>Another solution to the screen tearing in Xfce is to disable the xfce compositor and install a lightweight compositor like Compton.</p>
 <p>Start by unchecking &ldquo;<strong>Enable display compositing</strong>&rdquo; to disable the xfce compositor in the Window Manager Tweaks.</p>
 <p>To install compton, run the following in terminal:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install compton compton-conf</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install compton compton-conf</span></span></code></pre></div>
 <p>Now we need to setup compton so that it starts on every boot-up. To do this, open &ldquo;<strong>Session and Startup</strong>&rdquo; in the Settings Manager and click on the Add button and enter what&rsquo;s in the screenshot below.</p>
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/xfce/scrt1.png" alt="Fix Screen Tearing in Xfce" title="Fix Screen Tearing in Xfce"  width="450px">
@@ -465,15 +465,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

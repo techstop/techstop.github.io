@@ -163,53 +163,53 @@
 
 <p><strong>Take a look at this example or try it yourself:</strong></p>
 <p>Here we run the date command and then print its exit status with the echo command.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-date
-<span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">date
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$?</span></span></span></code></pre></div>
 <p><strong>Output:</strong></p>
 <p>As you can see the date was printed on the first line and the successful exit status of zero on the second line.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Tue Oct 15 20:27:27 AST 2019
-0</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Tue Oct 15 20:27:27 AST 2019
+</span></span><span class="line"><span class="cl">0</span></span></code></pre></div>
 <p><strong>Testing with a bad command:</strong></p>
 <p>Now we use the same example, but with a bad command (datefoo) that doesn&rsquo;t exist.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-datefoo
-<span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">datefoo
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$?</span></span></span></code></pre></div>
 <p><strong>Output:</strong></p>
 <p>This now gives us a command not found error followed by the exit status code (127).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">./test.sh: line 3: datefoo: command not found
-127</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">./test.sh: line 3: datefoo: command not found
+</span></span><span class="line"><span class="cl">127</span></span></code></pre></div>
 <p><strong>Save the exit status in a variable:</strong></p>
 <p>Saving the exit status for a command in a variable can be useful so that you can use the status later on in your bash script.</p>
 <p>In this example we run three commands and save the exit status for each in a variable. One of the commands is not a real command like in our previous example.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="c1"># Prints username</span>
-<span class="nb">echo</span> <span class="k">$(</span>whoami<span class="k">)</span>
-<span class="nv">var0</span><span class="o">=</span><span class="nv">$?</span>
-
-<span class="c1"># Bad command</span>
-datefoo
-<span class="nv">var1</span><span class="o">=</span><span class="nv">$?</span>
-
-<span class="c1"># Prints the time and date</span>
-date
-<span class="nv">var2</span><span class="o">=</span><span class="nv">$?</span>
-
-<span class="nb">echo</span> <span class="s2">&#34;These are the exit statuses for the commands above:&#34;</span>
-<span class="nb">echo</span> <span class="nv">$var0</span>
-<span class="nb">echo</span> <span class="nv">$var1</span>
-<span class="nb">echo</span> <span class="nv">$var2</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Prints username</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="k">$(</span>whoami<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">var0</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Bad command</span>
+</span></span><span class="line"><span class="cl">datefoo
+</span></span><span class="line"><span class="cl"><span class="nv">var1</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Prints the time and date</span>
+</span></span><span class="line"><span class="cl">date
+</span></span><span class="line"><span class="cl"><span class="nv">var2</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;These are the exit statuses for the commands above:&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$var0</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$var1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$var2</span></span></span></code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">gametheory
-./test.sh: line 8: datefoo: command not found
-Wed Oct 16 12:29:09 AST 2019
-These are the exit statuses for the commands above:
-0
-127
-0</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gametheory
+</span></span><span class="line"><span class="cl">./test.sh: line 8: datefoo: command not found
+</span></span><span class="line"><span class="cl">Wed Oct 16 12:29:09 AST 2019
+</span></span><span class="line"><span class="cl">These are the exit statuses for the commands above:
+</span></span><span class="line"><span class="cl">0
+</span></span><span class="line"><span class="cl">127
+</span></span><span class="line"><span class="cl">0</span></span></code></pre></div>
 <p><strong>Set the exit status in your bash script:</strong></p>
 <p>Lets assume that we have a script called &ldquo;<strong>test.sh</strong>&rdquo; for this example.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
@@ -225,25 +225,25 @@ These are the exit statuses for the commands above:
 </script>
 
 <p>Here we have the cat command try to read a file that does not exist.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-cat foo.txt
-
-<span class="k">if</span> <span class="nb">test</span> <span class="nv">$?</span> -eq 0<span class="p">;</span> <span class="k">then</span>
-  <span class="nb">echo</span> <span class="s2">&#34;The cat command succeeded because the file exists.&#34;</span>
-  <span class="nb">exit</span> <span class="m">0</span>
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&#34;The cat command failed because the file does not exist.&#34;</span>
-  <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">cat foo.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nb">test</span> <span class="nv">$?</span> -eq 0<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;The cat command succeeded because the file exists.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;The cat command failed because the file does not exist.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span></span></span></code></pre></div>
 <p>To run the file and get the exit status, we execute the following 2 commands in our terminal:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">./test.sh
-<span class="nb">echo</span> <span class="nv">$?</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./test.sh
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$?</span></span></span></code></pre></div>
 <p><strong>Output:</strong></p>
 <p>Since our script was designed to fail for this example, we get the error message and exit status 1 that we declared ourselves.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">cat: foo.txt: No such file or directory
-The cat command failed because the file does not exist.
-1</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">cat: foo.txt: No such file or directory
+</span></span><span class="line"><span class="cl">The cat command failed because the file does not exist.
+</span></span><span class="line"><span class="cl">1</span></span></code></pre></div>
 <p><strong>Here are some standard linux status error codes that you can use in your scripts:</strong></p>
 <ul>
 <li>0 - Success</li>
@@ -449,15 +449,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

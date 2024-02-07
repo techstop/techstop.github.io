@@ -165,93 +165,93 @@
 </script>
 
 <p>This dependency is needed to use the WorkManager.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s1">&#39;androidx.work:work-runtime:2.7.1&#39;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s1">&#39;androidx.work:work-runtime:2.7.1&#39;</span></span></span></code></pre></div>
 <p>This dependency is needed for the Notification message in this tutorial.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">implementation</span> <span class="s1">&#39;androidx.core:core:1.7.0&#39;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">implementation</span> <span class="s1">&#39;androidx.core:core:1.7.0&#39;</span></span></span></code></pre></div>
 <p>Create a new java class called BootUpWork. The BootUpWork class will extend Worker. This class will be responsible for running our task or code in a background thread on bootup. Here&rsquo;s what it should look like…</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">android.app.Notification</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.app.NotificationChannel</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.app.NotificationManager</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Build</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">androidx.annotation.NonNull</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">androidx.core.app.NotificationCompat</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">androidx.work.Worker</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">androidx.work.WorkerParameters</span><span class="o">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootUpWork</span> <span class="kd">extends</span> <span class="n">Worker</span> <span class="o">{</span>
-
-    <span class="kd">public</span> <span class="nf">BootUpWork</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="nd">@NonNull</span> <span class="n">WorkerParameters</span> <span class="n">workerParams</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">workerParams</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="nd">@NonNull</span>
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="n">Result</span> <span class="nf">doWork</span><span class="o">()</span> <span class="o">{</span>
-        <span class="c1">// Any code/task you need to run on bootup can be placed here and will run on a background thread.
-</span><span class="c1"></span>        <span class="c1">// This is just a sample notification message to show our BroadcastReceiver and
-</span><span class="c1"></span>        <span class="c1">// WorkManager are working properly.
-</span><span class="c1"></span>        <span class="n">String</span> <span class="n">channelID</span> <span class="o">=</span> <span class="s">&#34;channel_0&#34;</span><span class="o">;</span>
-        <span class="n">NotificationManager</span> <span class="n">notificationManager</span> <span class="o">=</span> <span class="o">(</span><span class="n">NotificationManager</span><span class="o">)</span><span class="n">getApplicationContext</span><span class="o">().</span><span class="na">getSystemService</span><span class="o">(</span><span class="n">Context</span><span class="o">.</span><span class="na">NOTIFICATION_SERVICE</span><span class="o">);</span>
-        <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">Builder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="n">channelID</span><span class="o">);</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">Build</span><span class="o">.</span><span class="na">VERSION</span><span class="o">.</span><span class="na">SDK_INT</span> <span class="o">&gt;=</span> <span class="n">26</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">NotificationChannel</span> <span class="n">channel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NotificationChannel</span><span class="o">(</span><span class="n">channelID</span><span class="o">,</span><span class="s">&#34;BroadcastReceiver&#34;</span><span class="o">,</span> <span class="n">NotificationManager</span><span class="o">.</span><span class="na">IMPORTANCE_DEFAULT</span><span class="o">);</span>
-            <span class="n">channel</span><span class="o">.</span><span class="na">enableLights</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-            <span class="n">channel</span><span class="o">.</span><span class="na">setShowBadge</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-            <span class="n">channel</span><span class="o">.</span><span class="na">setLockscreenVisibility</span><span class="o">(</span><span class="n">Notification</span><span class="o">.</span><span class="na">VISIBILITY_PUBLIC</span><span class="o">);</span>
-            <span class="n">notificationManager</span><span class="o">.</span><span class="na">createNotificationChannel</span><span class="o">(</span><span class="n">channel</span><span class="o">);</span>
-        <span class="o">}</span>
-        <span class="n">builder</span><span class="o">.</span><span class="na">setSmallIcon</span><span class="o">(</span><span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">stat_notify_more</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">setContentTitle</span><span class="o">(</span><span class="s">&#34;Run Tasks on Bootup&#34;</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">setContentText</span><span class="o">(</span><span class="s">&#34;BroadcastReceiver &amp; WorkManager&#34;</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">setStyle</span><span class="o">(</span><span class="k">new</span> <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">BigTextStyle</span><span class="o">().</span><span class="na">bigText</span><span class="o">(</span>
-                        <span class="s">&#34;Our BroadcastReceiver and WorkManager are working properly &#34;</span> <span class="o">+</span>
-                                <span class="s">&#34;to run code/tasks on bootup.&#34;</span>
-                <span class="o">))</span>
-                <span class="o">.</span><span class="na">setDefaults</span><span class="o">(</span><span class="n">NotificationCompat</span><span class="o">.</span><span class="na">DEFAULT_SOUND</span> <span class="o">|</span> <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">DEFAULT_LIGHTS</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">setPriority</span><span class="o">(</span><span class="n">NotificationCompat</span><span class="o">.</span><span class="na">PRIORITY_DEFAULT</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">NotificationCompat</span><span class="o">.</span><span class="na">VISIBILITY_PUBLIC</span><span class="o">)</span>
-                <span class="o">.</span><span class="na">setAutoCancel</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-        <span class="n">notificationManager</span><span class="o">.</span><span class="na">notify</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">builder</span><span class="o">.</span><span class="na">build</span><span class="o">());</span>
-
-        <span class="k">return</span> <span class="n">Result</span><span class="o">.</span><span class="na">success</span><span class="o">();</span>
-    <span class="o">}</span>
-<span class="o">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.gt.broadcastreceiver</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.app.Notification</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.app.NotificationChannel</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.app.NotificationManager</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.content.Context</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Build</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">androidx.annotation.NonNull</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">androidx.core.app.NotificationCompat</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">androidx.work.Worker</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">androidx.work.WorkerParameters</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BootUpWork</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Worker</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">BootUpWork</span><span class="p">(</span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="nd">@NonNull</span><span class="w"> </span><span class="n">WorkerParameters</span><span class="w"> </span><span class="n">workerParams</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">workerParams</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@NonNull</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="nf">doWork</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Any code/task you need to run on bootup can be placed here and will run on a background thread.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// This is just a sample notification message to show our BroadcastReceiver and</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// WorkManager are working properly.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">channelID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;channel_0&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">NotificationManager</span><span class="w"> </span><span class="n">notificationManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">NotificationManager</span><span class="p">)</span><span class="n">getApplicationContext</span><span class="p">().</span><span class="na">getSystemService</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="na">NOTIFICATION_SERVICE</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">NotificationCompat</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NotificationCompat</span><span class="p">.</span><span class="na">Builder</span><span class="p">(</span><span class="n">getApplicationContext</span><span class="p">(),</span><span class="w"> </span><span class="n">channelID</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Build</span><span class="p">.</span><span class="na">VERSION</span><span class="p">.</span><span class="na">SDK_INT</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">26</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">NotificationChannel</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NotificationChannel</span><span class="p">(</span><span class="n">channelID</span><span class="p">,</span><span class="s">&#34;BroadcastReceiver&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">NotificationManager</span><span class="p">.</span><span class="na">IMPORTANCE_DEFAULT</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">channel</span><span class="p">.</span><span class="na">enableLights</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">channel</span><span class="p">.</span><span class="na">setShowBadge</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">channel</span><span class="p">.</span><span class="na">setLockscreenVisibility</span><span class="p">(</span><span class="n">Notification</span><span class="p">.</span><span class="na">VISIBILITY_PUBLIC</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">notificationManager</span><span class="p">.</span><span class="na">createNotificationChannel</span><span class="p">(</span><span class="n">channel</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="na">setSmallIcon</span><span class="p">(</span><span class="n">android</span><span class="p">.</span><span class="na">R</span><span class="p">.</span><span class="na">drawable</span><span class="p">.</span><span class="na">stat_notify_more</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">setContentTitle</span><span class="p">(</span><span class="s">&#34;Run Tasks on Bootup&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">setContentText</span><span class="p">(</span><span class="s">&#34;BroadcastReceiver &amp; WorkManager&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">setStyle</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">NotificationCompat</span><span class="p">.</span><span class="na">BigTextStyle</span><span class="p">().</span><span class="na">bigText</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="s">&#34;Our BroadcastReceiver and WorkManager are working properly &#34;</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                                </span><span class="s">&#34;to run code/tasks on bootup.&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">setDefaults</span><span class="p">(</span><span class="n">NotificationCompat</span><span class="p">.</span><span class="na">DEFAULT_SOUND</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">NotificationCompat</span><span class="p">.</span><span class="na">DEFAULT_LIGHTS</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">setPriority</span><span class="p">(</span><span class="n">NotificationCompat</span><span class="p">.</span><span class="na">PRIORITY_DEFAULT</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">setVisibility</span><span class="p">(</span><span class="n">NotificationCompat</span><span class="p">.</span><span class="na">VISIBILITY_PUBLIC</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">.</span><span class="na">setAutoCancel</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">notificationManager</span><span class="p">.</span><span class="na">notify</span><span class="p">(</span><span class="n">0</span><span class="p">,</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">build</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Result</span><span class="p">.</span><span class="na">success</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
 <p>Now lets create another java class called BootUpReceiver which will extend BroadcastReceiver. The BroadcastReceiver is going to check that bootup has completed and then run our BootUpWork class. Here&rsquo;s what it looks like…</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.gt.broadcastreceiver</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">android.content.BroadcastReceiver</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">androidx.work.OneTimeWorkRequest</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">androidx.work.WorkManager</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">androidx.work.WorkRequest</span><span class="o">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BootUpReceiver</span> <span class="kd">extends</span> <span class="n">BroadcastReceiver</span> <span class="o">{</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceive</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// Runs when bootup has completed.
-</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_BOOT_COMPLETED</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">intent</span><span class="o">.</span><span class="na">getAction</span><span class="o">()))</span> <span class="o">{</span>
-            <span class="c1">// Our WorkManager will now run our task in a background thread.
-</span><span class="c1"></span>            <span class="n">WorkRequest</span> <span class="n">uploadWorkRequest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OneTimeWorkRequest</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="n">BootUpWork</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
-            <span class="n">WorkManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">context</span><span class="o">).</span><span class="na">enqueue</span><span class="o">(</span><span class="n">uploadWorkRequest</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-<span class="o">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.gt.broadcastreceiver</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.content.BroadcastReceiver</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.content.Context</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.content.Intent</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">androidx.work.OneTimeWorkRequest</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">androidx.work.WorkManager</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">androidx.work.WorkRequest</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BootUpReceiver</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BroadcastReceiver</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onReceive</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">Intent</span><span class="w"> </span><span class="n">intent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Runs when bootup has completed.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="na">ACTION_BOOT_COMPLETED</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">intent</span><span class="p">.</span><span class="na">getAction</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// Our WorkManager will now run our task in a background thread.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">WorkRequest</span><span class="w"> </span><span class="n">uploadWorkRequest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OneTimeWorkRequest</span><span class="p">.</span><span class="na">Builder</span><span class="p">(</span><span class="n">BootUpWork</span><span class="p">.</span><span class="na">class</span><span class="p">).</span><span class="na">build</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">WorkManager</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="na">enqueue</span><span class="p">(</span><span class="n">uploadWorkRequest</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
 <p>We now need to add permissions and declare the BroadcastReceiver in the AndroidManifest.xml as follows…</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.RECEIVE_BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
-
-<span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpReceiver&#34;</span> <span class="na">android:enabled=</span><span class="s">&#34;true&#34;</span> <span class="na">android:exported=</span><span class="s">&#34;false&#34;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;intent-filter&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/intent-filter&gt;</span>
-<span class="nt">&lt;/receiver&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.RECEIVE_BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&#34;.BootUpReceiver&#34;</span> <span class="na">android:enabled=</span><span class="s">&#34;true&#34;</span> <span class="na">android:exported=</span><span class="s">&#34;false&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;intent-filter&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&#34;android.intent.action.BOOT_COMPLETED&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/intent-filter&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/receiver&gt;</span></span></span></code></pre></div>
 <p>There you have it. That is all you need to setup a BroadcastReceiver with a WorkManager to run your code on every bootup. Do keep in mind that the user needs to open your app at least once after they have installed it for a BroadcastReceiver to work (This is a security feature in android).</p>
 <p>The full project is on github. You can download or fork it from the link below and import it to your favorite IDE, though Android Studio is recommended.</p>
 <div>
@@ -454,15 +454,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

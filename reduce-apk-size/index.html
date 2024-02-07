@@ -146,12 +146,12 @@
 	}
 </script>
 
-<p>How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&rsquo;ll give your users a smooth experience throughout your apps' UI along with a smaller foot print.</p>
+<p>How to reduce apk size? A question often asked by new app developers when trying to figure out how to best optimize their app. As an app developer you should always optimize your app wherever you can to give your user base the best possible experience with your app. By well optimizing your app you&rsquo;ll give your users a smooth experience throughout your apps&rsquo; UI along with a smaller foot print.</p>
 <p>There are many ways to optimize your app. In this tutorial I will show you how to reduce apk size with three of the best and easiest methods. Let&rsquo;s get started&hellip;</p>
 <h2 id="shrink-your-code"><strong>Shrink Your Code</strong></h2>
 <p>We will first start by shrinking your code with ProGuard. This removes unused classes, fields, methods, and attributes from your app as well as from code libraries you may have added in your project.</p>
-<p>Open your apps' build.gradle file in Android Studio under &ldquo;buildTypes/release&rdquo; add the following line&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">minifyEnabled</span> <span class="kc">true</span></code></pre></div>
+<p>Open your apps&rsquo; build.gradle file in Android Studio under &ldquo;buildTypes/release&rdquo; add the following line&hellip;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">minifyEnabled</span> <span class="kc">true</span></span></span></code></pre></div>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
@@ -165,35 +165,35 @@
 </script>
 
 <p>After enabling minifyEnabled your &ldquo;<strong>buildTypes/release</strong>&rdquo; should look like this&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
-  <span class="n">release</span> <span class="o">{</span>
-    <span class="n">minifyEnabled</span> <span class="kc">true</span>
-    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">buildTypes</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">release</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">minifyEnabled</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span></span></span></code></pre></div>
 <p>You should now build your app and test it to make sure it&rsquo;s working fine. If for some reason you get any build errors after enabling minifyEnabled do not worry, just keep following the tutorial.</p>
 <h2 id="shrink-your-code-even-more"><strong>Shrink Your Code Even More</strong></h2>
 <p>Next we will be shrinking our code at the bytecode level to further reduce apk size and help our app run faster&hellip;</p>
 <p>In the same build.gradle file under &ldquo;<strong>buildTypes/release</strong>&rdquo; replace &ldquo;<strong>proguard-android.txt</strong>&rdquo; with &ldquo;<strong>proguard-android-optimize.txt</strong>&rdquo;. Your &ldquo;<strong>buildTypes/release</strong>&rdquo; should now look like this&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
-  <span class="n">release</span> <span class="o">{</span>
-    <span class="n">minifyEnabled</span> <span class="kc">true</span>
-    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">buildTypes</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">release</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">minifyEnabled</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span></span></span></code></pre></div>
 <p>Again build your app and test it to make sure it&rsquo;s working fine. If for some reason you get any build errors after changing the ProGuard do not worry, just keep following the tutorial.</p>
 <h2 id="shrink-your-resources"><strong>Shrink Your Resources</strong></h2>
 <p>In this part of the tutorial we will be shrinking our resources alongside the code shrinking we already did to further reduce apk size. This will remove any unused resources that were a result from the code shrinking we did in the previous parts of this tutorial.</p>
 <p>So once again in your build.gradle file under &ldquo;<strong>buildTypes/release</strong>&rdquo; add the following line&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">shrinkResources</span> <span class="kc">true</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">shrinkResources</span> <span class="kc">true</span></span></span></code></pre></div>
 <p>Your &ldquo;<strong>buildTypes/release</strong>&rdquo; should now look like this&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">buildTypes</span> <span class="o">{</span>
-  <span class="n">release</span> <span class="o">{</span>
-    <span class="n">minifyEnabled</span> <span class="kc">true</span>
-    <span class="n">shrinkResources</span> <span class="kc">true</span>
-    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
-  <span class="o">}</span>
-<span class="o">}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="n">buildTypes</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">release</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">minifyEnabled</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">shrinkResources</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span></span></span></code></pre></div>
 <p>Now build your app and test it. If your app builds and runs without issues, then you do not need to continue with this tutorial. However if you&rsquo;re getting build errors then continue reading.</p>
 <h2 id="fix-errors-after-optimizing-apk"><strong>Fix Errors After Optimizing APK</strong></h2>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
@@ -210,40 +210,40 @@
 
 <p>If you have completed the tutorial up to this point, it&rsquo;s possible that you may be experiencing build errors. This is because the optimizations we have done to reduce apk size can be very aggressive and may have removed code or resources the app actually needs to run properly. In my experience this usually happens with &ldquo;<strong>adsense</strong>&rdquo; and &ldquo;<strong>ShareActionProvider</strong>&rdquo; code, but don&rsquo;t worry - we will add some proguard rules to fix this.</p>
 <p>Lets add some rules in your &ldquo;<strong>proguard-rules.pro</strong>&rdquo; file to make sure that any code or resources your app needs are not removed. I have been using these rules in my own apps with much success.</p>
-<p>In Android Studio open your apps' proguard-rules.pro file and add the following rules after the last line&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">safeparcel</span><span class="o">.</span><span class="na">SafeParcelable</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">***</span> <span class="n">NULL</span><span class="o">;</span>
-<span class="o">}</span>
-
-<span class="o">-</span><span class="n">keepnames</span> <span class="kd">class</span> <span class="err">* </span><span class="nc">implements</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">Parcelable</span>
-<span class="o">-</span><span class="n">keepclassmembers</span> <span class="kd">class</span> <span class="err">* </span><span class="nc">implements</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">Parcelable</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">***</span> <span class="n">CREATOR</span><span class="o">;</span>
-<span class="o">}</span>
-
-<span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span>
-<span class="o">-</span><span class="n">keep</span> <span class="nd">@android.support.annotation.Keep</span> <span class="kd">class</span> <span class="err">*</span>
-<span class="o">-</span><span class="n">keepclasseswithmembers</span> <span class="kd">class</span> <span class="err">* {</span>
-  <span class="nd">@android.support.annotation.Keep</span> <span class="o">&lt;</span><span class="n">fields</span><span class="o">&gt;;</span>
-<span class="o">}</span>
-<span class="o">-</span><span class="n">keepclasseswithmembers</span> <span class="kd">class</span> <span class="err">* {</span>
-  <span class="nd">@android.support.annotation.Keep</span> <span class="o">&lt;</span><span class="n">methods</span><span class="o">&gt;;</span>
-<span class="o">}</span>
-
-<span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">KeepName</span>
-<span class="o">-</span><span class="n">keepnames</span> <span class="nd">@com.google.android.gms.common.annotation.KeepName</span> <span class="kd">class</span> <span class="err">*</span>
-<span class="o">-</span><span class="n">keepclassmembernames</span> <span class="kd">class</span> <span class="err">* {</span>
-  <span class="nd">@com.google.android.gms.common.annotation.KeepName</span> <span class="o">*;</span>
-<span class="o">}</span>
-
-<span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">DynamiteApi</span>
-<span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="nd">@com.google.android.gms.common.util.DynamiteApi</span> <span class="kd">class</span> <span class="err">* {</span>
-  <span class="kd">public</span> <span class="o">&lt;</span><span class="n">fields</span><span class="o">&gt;;</span>
-  <span class="kd">public</span> <span class="o">&lt;</span><span class="n">methods</span><span class="o">&gt;;</span>
-<span class="o">}</span>
-
-<span class="o">-</span><span class="n">keep</span> <span class="kd">class</span> <span class="nc">androidx</span><span class="o">.</span><span class="na">appcompat</span><span class="o">.</span><span class="na">widget</span><span class="o">.</span><span class="na">ShareActionProvider</span> <span class="o">{</span> <span class="o">*;</span> <span class="o">}</span>
-
-<span class="o">-</span><span class="n">dontwarn</span> <span class="n">android</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">NetworkSecurityPolicy</span></code></pre></div>
+<p>In Android Studio open your apps&rsquo; proguard-rules.pro file and add the following rules after the last line&hellip;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">internal</span><span class="o">.</span><span class="na">safeparcel</span><span class="o">.</span><span class="na">SafeParcelable</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">***</span> <span class="n">NULL</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keepnames</span> <span class="kd">class</span> <span class="err">* </span><span class="nc">implements</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">Parcelable</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keepclassmembers</span> <span class="kd">class</span> <span class="err">* </span><span class="nc">implements</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">Parcelable</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="o">***</span> <span class="n">CREATOR</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">android</span><span class="o">.</span><span class="na">support</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">Keep</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keep</span> <span class="nd">@android.support.annotation.Keep</span> <span class="kd">class</span> <span class="err">*</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keepclasseswithmembers</span> <span class="kd">class</span> <span class="err">* {</span>
+</span></span><span class="line"><span class="cl">  <span class="nd">@android.support.annotation.Keep</span> <span class="o">&lt;</span><span class="n">fields</span><span class="o">&gt;;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keepclasseswithmembers</span> <span class="kd">class</span> <span class="err">* {</span>
+</span></span><span class="line"><span class="cl">  <span class="nd">@android.support.annotation.Keep</span> <span class="o">&lt;</span><span class="n">methods</span><span class="o">&gt;;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">annotation</span><span class="o">.</span><span class="na">KeepName</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keepnames</span> <span class="nd">@com.google.android.gms.common.annotation.KeepName</span> <span class="kd">class</span> <span class="err">*</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keepclassmembernames</span> <span class="kd">class</span> <span class="err">* {</span>
+</span></span><span class="line"><span class="cl">  <span class="nd">@com.google.android.gms.common.annotation.KeepName</span> <span class="o">*;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keep</span> <span class="nd">@interface</span> <span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">DynamiteApi</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="nd">@com.google.android.gms.common.util.DynamiteApi</span> <span class="kd">class</span> <span class="err">* {</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="o">&lt;</span><span class="n">fields</span><span class="o">&gt;;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="o">&lt;</span><span class="n">methods</span><span class="o">&gt;;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">keep</span> <span class="kd">class</span> <span class="nc">androidx</span><span class="o">.</span><span class="na">appcompat</span><span class="o">.</span><span class="na">widget</span><span class="o">.</span><span class="na">ShareActionProvider</span> <span class="o">{</span> <span class="o">*;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">dontwarn</span> <span class="n">android</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">NetworkSecurityPolicy</span></span></span></code></pre></div>
 <p>You can now build your app and test it. After adding the above rules your app should now be building and running fine.</p>
 <p>This will conclude the tutorial. You should now be able to reduce your apk size and have a more optimized app to give your app users a better experience with your app.</p>
 <p>For more info visit the android developers <a href="https://developer.android.com/studio/build/shrink-code" target="_blank">website</a>.</p>
@@ -440,15 +440,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

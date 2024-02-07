@@ -6,160 +6,21 @@
     <description>Recent content in MS500 on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jan 2018 01:28:24 +0000</lastBuildDate><atom:link href="https://techstop.github.io/tags/ms500/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jan 2018 01:28:24 +0000</lastBuildDate>
+    <atom:link href="https://techstop.github.io/tags/ms500/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LG Optimus F6 Freedom Kernel</title>
       <link>https://techstop.github.io/lg-optimus-f6-freedom-kernel/</link>
       <pubDate>Tue, 23 Jan 2018 01:28:24 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-optimus-f6-freedom-kernel/</guid>
-      <description>&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-kernel.png&#34; alt=&#34;LG Optimus F6 Freedom Kernel&#34; title=&#34;LG Optimus F6 Freedom Kernel&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;p&gt;This LG Optimus F6 Freedom kernel is packed with tons of modifications. There&amp;rsquo;s many governors and schedulers to tune the performance just right. Installation is also a breeze with the Freedom installer app in the Play Store. The app also fully controls the kernel to make sure you can tweak it to your liking. Full details below&amp;hellip;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-kernel.png&#34; alt=&#34;LG Optimus F6 Freedom Kernel&#34; title=&#34;LG Optimus F6 Freedom Kernel&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;This LG Optimus F6 Freedom kernel is packed with tons of modifications. There&amp;rsquo;s many governors and schedulers to tune the performance just right. Installation is also a breeze with the Freedom installer app in the Play Store. The app also fully controls the kernel to make sure you can tweak it to your liking. Full details below&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LG Optimus F6 Xperion ROM</title>
       <link>https://techstop.github.io/lg-optimus-f6-xperion-rom/</link>
       <pubDate>Mon, 22 Jan 2018 20:23:39 +0000</pubDate>
-      
       <guid>https://techstop.github.io/lg-optimus-f6-xperion-rom/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-0.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-1.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-
-&lt;div class=&#34;myImgContainer&#34;&gt;
-&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-2.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
-  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
-  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
-  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-	
-	var modal = document.getElementById(&#39;myModal&#39;);
-	var i;
-	
-	var img = document.getElementsByClassName(&#39;myImg&#39;);
-	var modalImg = document.getElementById(&#34;img01&#34;);
-	var captionText = document.getElementById(&#34;caption&#34;);
-	for(i = 0; i &lt; img.length; i++) {
-		img[i].onclick = function() {
-			modal.style.display = &#34;block&#34;;
-			modalImg.src = this.src;
-			captionText.innerHTML = this.alt;
-		}
-	}
-	
-	var span = document.getElementsByClassName(&#34;close&#34;)[0];
-
-	
-	span.onclick = function() { 
-		modal.style.display = &#34;none&#34;;
-	}
-&lt;/script&gt;
-&lt;/p&gt;
-&lt;p&gt;The LG Optimus F6 Xperion rom brings some nice additions. It&amp;rsquo;s beautifully themed with most if not all of LG&amp;rsquo;s light blue replaced with white like most aosp roms. While debloated, it does bring a good selection of apps with some being from cyanogenmod. The rom is lightweight with some performance tweaks as well. More details below&amp;hellip;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-0.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-1.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/f6/lg-optimus-f6-rom-2.png&#34; alt=&#34;LG Optimus F6 Xperion ROM&#34; title=&#34;LG Optimus F6 Xperion ROM&#34;  width=&#34;100px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The LG Optimus F6 Xperion rom brings some nice additions. It&amp;rsquo;s beautifully themed with most if not all of LG&amp;rsquo;s light blue replaced with white like most aosp roms. While debloated, it does bring a good selection of apps with some being from cyanogenmod. The rom is lightweight with some performance tweaks as well. More details below&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

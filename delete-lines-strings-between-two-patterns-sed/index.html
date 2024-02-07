@@ -148,40 +148,40 @@
 
 <p>In this tutorial we will go through various ways to delete lines or strings between two patterns with the linux sed command stream editor.</p>
 <p>For this tutorial we will use a plain text file named (<strong>file.txt</strong>) with the following contents:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">PATTERN-1
-- One
-- one
-- Two
-- two
-PATTERN-2
-- one
-- two
-- One
-- Two
-PATTERN-3
-- three</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PATTERN-1
+</span></span><span class="line"><span class="cl">- One
+</span></span><span class="line"><span class="cl">- one
+</span></span><span class="line"><span class="cl">- Two
+</span></span><span class="line"><span class="cl">- two
+</span></span><span class="line"><span class="cl">PATTERN-2
+</span></span><span class="line"><span class="cl">- one
+</span></span><span class="line"><span class="cl">- two
+</span></span><span class="line"><span class="cl">- One
+</span></span><span class="line"><span class="cl">- Two
+</span></span><span class="line"><span class="cl">PATTERN-3
+</span></span><span class="line"><span class="cl">- three</span></span></code></pre></div>
 <p>Notice that each word is repeated in both lower and uppercase.</p>
 <h2 id="delete-a-line-containing-a-specific-string-between-two-patterns"><strong>Delete a Line Containing a Specific String Between Two Patterns</strong></h2>
 <p>Delete the line containing the lowercase (one) between PATTERN-1 and PATTERN-2:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/one/d}&#39;</span> file.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/one/d}&#39;</span> file.txt</span></span></code></pre></div>
 <p>Delete the line containing the uppercase (One) between PATTERN-1 and PATTERN-2:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/One/d}&#39;</span> file.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/One/d}&#39;</span> file.txt</span></span></code></pre></div>
 <p>Delete the lines containing both lower and uppercase (O/one) between PATTERN-1 and PATTERN-2:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/[oO]ne/d}&#39;</span> file.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;/PATTERN-1/,/PATTERN-2/{/[oO]ne/d}&#39;</span> file.txt</span></span></code></pre></div>
 <h2 id="delete-line-number-ranges"><strong>Delete Line Number Ranges</strong></h2>
 <p>If you know the line numbers you can delete them by range(from a line number to another).</p>
 <p>Delete lines 4 to 9:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;4,9d&#39;</span> file.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;4,9d&#39;</span> file.txt</span></span></code></pre></div>
 <h2 id="delete-all-lines-between-two-patterns"><strong>Delete All Lines Between Two Patterns</strong></h2>
 <p>Delete all the lines between PATTERN-2 and PATTERN-3:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-2/,/PATTERN-3/{//!d}&#39;</span> file.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;/PATTERN-2/,/PATTERN-3/{//!d}&#39;</span> file.txt</span></span></code></pre></div>
 <p>Delete all the lines between PATTERN-2 and PATTERN-3 including the patterns:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-2/,/PATTERN-3/d&#39;</span> file.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;/PATTERN-2/,/PATTERN-3/d&#39;</span> file.txt</span></span></code></pre></div>
 <h2 id="delete-all-lines-from-a-pattern"><strong>Delete All Lines From a Pattern</strong></h2>
 <p>Delete all lines from PATTERN-3 and on including the pattern:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-3/,$d&#39;</span> file.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;/PATTERN-3/,$d&#39;</span> file.txt</span></span></code></pre></div>
 <p>Delete all lines from PATTERN-3 not including the pattern:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sed -i <span class="s1">&#39;/PATTERN-3/,//{//!d}&#39;</span> file.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;/PATTERN-3/,//{//!d}&#39;</span> file.txt</span></span></code></pre></div>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>You should now be able to delete lines or strings between two patterns with sed. sed is a very powerful tool in the linux arsenal that you should be familiar and comfortable with.</p>
 <p>For more sed commands, check out my other <a href="https://techstop.github.io/manipulate-text-files-sed/">sed tutorial</a>.</p>
@@ -376,15 +376,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

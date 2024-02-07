@@ -151,13 +151,13 @@
 <h2 id="how-to-install-xfce-414-on-xubuntu-1804"><strong>How To Install Xfce 4.14 on Xubuntu 18.04</strong></h2>
 <p>To install xfce 4.14 on xubuntu 18.04 we will be adding the staging <a href="https://launchpad.net/~xubuntu-dev/+archive/ubuntu/staging" target="_blank">PPA</a> for xubuntu. I&rsquo;ll also show you how to revert back to your original xfce 4.12 in case you don&rsquo;t like xfce 4.14.</p>
 <p>Run the following in your terminal&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:xubuntu-dev/staging
-sudo apt-get update</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo add-apt-repository ppa:xubuntu-dev/staging
+</span></span><span class="line"><span class="cl">sudo apt-get update</span></span></code></pre></div>
 <p>That is all. You can now update to Xfce 4.14. Enjoy!</p>
 <h2 id="revert-back-from-xfce-414-to-412-on-xubuntu-1804"><strong>Revert Back From Xfce 4.14 to 4.12 on Xubuntu 18.04</strong></h2>
 <p>To revert back to xfce 4.14 you will need ppa-purge. Just run the following commands in terminal and you&rsquo;ll be right back to xfce 4.12&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install ppa-purge
-sudo ppa-purge ppa:xubuntu-dev/staging</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install ppa-purge
+</span></span><span class="line"><span class="cl">sudo ppa-purge ppa:xubuntu-dev/staging</span></span></code></pre></div>
 <p>After this you&rsquo;ll be right back on xfce 4.12. I recommend you reboot your pc for good measure.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -348,15 +348,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

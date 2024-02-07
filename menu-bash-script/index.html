@@ -151,44 +151,44 @@
 <h2 id="creating-a-bash-script-menu"><strong>Creating a Bash Script Menu</strong></h2>
 <p>You will need to place your menu at the bottom of your script since we will be calling functions from the menu and functions need to be placed at the top. Code that makes calls to functions needs to be below the functions.</p>
 <p>Taking a look at the following example script you can see that all code is in functions except the menu code.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-menu_option_one<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="s2">&#34;Hello John!!!&#34;</span>
-<span class="o">}</span>
-
-menu_option_two<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="s2">&#34;Some super cool code by John.&#34;</span>
-<span class="o">}</span>
-
-press_enter<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
-  <span class="nb">echo</span> -n <span class="s2">&#34;	Press Enter to continue &#34;</span>
-  <span class="nb">read</span>
-  clear
-<span class="o">}</span>
-
-incorrect_selection<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">echo</span> <span class="s2">&#34;Incorrect selection! Try again.&#34;</span>
-<span class="o">}</span>
-
-<span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span>
-  clear
-  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
-  <span class="nb">echo</span> <span class="s2">&#34;    	1  -  Menu Option 1&#34;</span>
-  <span class="nb">echo</span> <span class="s2">&#34;    	2  -  Menu Option 2&#34;</span>
-  <span class="nb">echo</span> <span class="s2">&#34;    	0  -  Exit&#34;</span>
-  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
-  <span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span>
-  <span class="nb">read</span> selection
-  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
-  <span class="k">case</span> <span class="nv">$selection</span> in
-    <span class="m">1</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_one <span class="p">;</span> press_enter <span class="p">;;</span>
-    <span class="m">2</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_two <span class="p">;</span> press_enter <span class="p">;;</span>
-    <span class="m">0</span> <span class="o">)</span> clear <span class="p">;</span> <span class="nb">exit</span> <span class="p">;;</span>
-    * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
-  <span class="k">esac</span>
-<span class="k">done</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">menu_option_one<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Hello John!!!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">menu_option_two<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Some super cool code by John.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">press_enter<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> -n <span class="s2">&#34;	Press Enter to continue &#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">read</span>
+</span></span><span class="line"><span class="cl">  clear
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">incorrect_selection<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Incorrect selection! Try again.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  clear
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;    	1  -  Menu Option 1&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;    	2  -  Menu Option 2&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;    	0  -  Exit&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">read</span> selection
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="nv">$selection</span> in
+</span></span><span class="line"><span class="cl">    <span class="m">1</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_one <span class="p">;</span> press_enter <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    <span class="m">2</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_two <span class="p">;</span> press_enter <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    <span class="m">0</span> <span class="o">)</span> clear <span class="p">;</span> <span class="nb">exit</span> <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">esac</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
 <p>Create a file called &ldquo;<strong>file.sh</strong>&rdquo; and copy the code above to it and give it execute permissions then run it in a terminal. Try all the menu options to give yourself a better understanding before you continue with this tutorial.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -204,18 +204,18 @@ incorrect_selection<span class="o">()</span> <span class="o">{</span>
 
 <p>Now lets break things down a bit to learn what&rsquo;s going on in this script.</p>
 <p>The menu is a loop that repeats itself until the selection is zero &ldquo;0&rdquo;. Since the menu is not in a function, it will load as soon as you run the script.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">until</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$selection</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span></span></span></code></pre></div>
 <p>Looking at the following line, you&rsquo;ll notice an echo command prompting the user to enter a selection. The &ldquo;-n&rdquo; flag for this echo command keeps the cursor on the same line rather then on the next.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> -n <span class="s2">&#34;  Enter selection: &#34;</span></span></span></code></pre></div>
 <p>Once the user enters the selection, the read command passes the selection to the case statement.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">read</span> selection</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">read</span> selection</span></span></code></pre></div>
 <p>Now if you look at the case statement, each option starts with the clear command. This clears the screen and removes the input line to make the script appear more like a GUI.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="k">case</span> <span class="nv">$selection</span> in
-  <span class="m">1</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_one <span class="p">;</span> press_enter <span class="p">;;</span>
-  <span class="m">2</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_two <span class="p">;</span> press_enter <span class="p">;;</span>
-  <span class="m">0</span> <span class="o">)</span> clear <span class="p">;</span> <span class="nb">exit</span> <span class="p">;;</span>
-  * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
-<span class="k">esac</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">case</span> <span class="nv">$selection</span> in
+</span></span><span class="line"><span class="cl">  <span class="m">1</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_one <span class="p">;</span> press_enter <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">  <span class="m">2</span> <span class="o">)</span> clear <span class="p">;</span> menu_option_two <span class="p">;</span> press_enter <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">  <span class="m">0</span> <span class="o">)</span> clear <span class="p">;</span> <span class="nb">exit</span> <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">  * <span class="o">)</span> clear <span class="p">;</span> incorrect_selection <span class="p">;</span> press_enter <span class="p">;;</span>
+</span></span><span class="line"><span class="cl"><span class="k">esac</span></span></span></code></pre></div>
 <p>Also notice how each command in the case statement is separated by semicolons &ldquo;;&rdquo;. The second command is a call to a function.</p>
 <p>The press_enter function prompts the user so they can continue when ready. This will give the user all the time they need to read any output.</p>
 <p>Now the final option in the case statement is just in case the user enters a selection that does not exist. Since it&rsquo;s the final option, it is defined by an asterisk &ldquo;*&rdquo;.</p>
@@ -413,15 +413,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

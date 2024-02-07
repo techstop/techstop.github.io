@@ -150,19 +150,19 @@
 <h2 id="create-a-bootable-usb"><strong>Create A Bootable USB</strong></h2>
 <p>Once you have downloaded the iso image for the linux distro you&rsquo;d like to test or install, you&rsquo;ll need to plug your usb stick to your computer to get its file system partition path. To do this we will use the (df) command in terminal to get the partition path for the usb stick.</p>
 <p>Open the terminal and run this command:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">df -h</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">df -h</span></span></code></pre></div></p>
 <p>This is what my output looks like after running the df command:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Filesystem      Size  Used Avail Use% Mounted on
-dev             3.7G     0  3.7G   0% /dev
-run             3.7G  1.4M  3.7G   1% /run
-/dev/sda2       117G   34G   78G  30% /
-tmpfs           3.7G   54M  3.6G   2% /dev/shm
-tmpfs           3.7G   56M  3.6G   2% /tmp
-/dev/sda1       300M  288K  300M   1% /boot/efi
-tmpfs           742M   76K  742M   1% /run/user/1000
-/dev/sdb        3.8G  663M  3.2G  18% /run/media/gametheory/Sony</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Filesystem      Size  Used Avail Use% Mounted on
+</span></span><span class="line"><span class="cl">dev             3.7G     0  3.7G   0% /dev
+</span></span><span class="line"><span class="cl">run             3.7G  1.4M  3.7G   1% /run
+</span></span><span class="line"><span class="cl">/dev/sda2       117G   34G   78G  30% /
+</span></span><span class="line"><span class="cl">tmpfs           3.7G   54M  3.6G   2% /dev/shm
+</span></span><span class="line"><span class="cl">tmpfs           3.7G   56M  3.6G   2% /tmp
+</span></span><span class="line"><span class="cl">/dev/sda1       300M  288K  300M   1% /boot/efi
+</span></span><span class="line"><span class="cl">tmpfs           742M   76K  742M   1% /run/user/1000
+</span></span><span class="line"><span class="cl">/dev/sdb        3.8G  663M  3.2G  18% /run/media/gametheory/Sony</span></span></code></pre></div>
 <p>The name of my usb stick is (Sony) which is also the brand. As you can see in the output above, its file system partition is:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/dev/sdb</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/dev/sdb</span></span></code></pre></div>
 <p><mark>If your usb stick is not labeled, you can identify it by its size. Mine shows (3.8G).</mark></p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -177,7 +177,7 @@ tmpfs           742M   76K  742M   1% /run/user/1000
 </script>
 
 <p>This is what the command looks like to create the bootable usb. When you run the command you will need to enter your login password. Once you&rsquo;ve entered the command, just wait a couple minutes for it to finish.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/path/to/file.iso <span class="nv">of</span><span class="o">=</span>/dev/sdb <span class="nv">conv</span><span class="o">=</span>fsync <span class="nv">oflag</span><span class="o">=</span>direct <span class="nv">status</span><span class="o">=</span>progress</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/path/to/file.iso <span class="nv">of</span><span class="o">=</span>/dev/sdb <span class="nv">conv</span><span class="o">=</span>fsync <span class="nv">oflag</span><span class="o">=</span>direct <span class="nv">status</span><span class="o">=</span>progress</span></span></code></pre></div>
 <p>As you can see (if=) contains the path to our iso image file and (of=) contains the usb stick file system partition path.</p>
 <p><strong>Note:</strong> Make sure to change (/path/to/file.iso) to the path where you have your iso file.</p>
 <h2 id="boot-from-usb-stick"><strong>Boot From USB Stick</strong></h2>
@@ -375,15 +375,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

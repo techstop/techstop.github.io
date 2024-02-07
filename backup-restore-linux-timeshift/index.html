@@ -151,17 +151,17 @@
 <h2 id="installing-timeshift"><strong>Installing Timeshift</strong></h2>
 <p>Timeshift is available for most linux distributions from their default graphical package manager. You can also install it from the command-line with the following commands.</p>
 <p><strong>For Ubuntu 20.04 and up:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install timeshift</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install timeshift</span></span></code></pre></div>
 <p><strong>For Ubuntu 18.04 you need to also add the ppa:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt-add-repository -y ppa:teejee2008/ppa
-sudo apt update
-sudo apt install timeshift</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-add-repository -y ppa:teejee2008/ppa
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install timeshift</span></span></code></pre></div>
 <p><strong>For Fedora, CentOS, and RHEL:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo dnf install timeshift</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install timeshift</span></span></code></pre></div>
 <p><strong>For Arch and derivatives:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yay -S timeshift</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yay -S timeshift</span></span></code></pre></div>
 <p><strong>For Manjaro it&rsquo;s available in official repositories:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S timeshift</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S timeshift</span></span></code></pre></div>
 <p>Now that you have Timeshift installed, let&rsquo;s take a look at how to backup and restore linux with Timeshift.</p>
 <h2 id="configure-timeshift"><strong>Configure Timeshift</strong></h2>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
@@ -337,7 +337,7 @@ sudo apt install timeshift</code></pre></div>
 <p>Note: You can also delete snapshots you no longer need at any time by selecting the snapshot and clicking the &ldquo;Delete&rdquo; button.</p>
 <h2 id="bonus"><strong>Bonus</strong></h2>
 <p>If you would like to see the size of each individual timeshift snapshot including the total size of all timeshift snapshots combined, run the following command in a terminal.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo du -sch /timeshift/snapshots/*</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo du -sch /timeshift/snapshots/*</span></span></code></pre></div>
 <p>Adjust the command to reflect the path of your timeshift installation. By default timeshift creates its snapshots in the root directory &ldquo;<strong>/timeshift</strong>&rdquo; unless you chose a different partition during the setup.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>A system backup and restore utility like Timeshift is a must have on any operating system. This will allow you to customize and tinker with your system without much worry. It will also save your system from a faulty update. You can learn more about <a href="https://github.com/teejee2008/timeshift" target="_blank">Timeshift</a> from their official repo page.</p>
@@ -528,15 +528,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

@@ -148,7 +148,7 @@
 
 <p>Grep is a powerful command line utility to search for files containing text string patterns in linux. In this tutorial we&rsquo;ll be using grep with some common options to refine our file searches for better results.</p>
 <p>The syntax for the grep command is as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep <span class="o">[</span>options<span class="o">]</span> <span class="s2">&#34;pattern&#34;</span> /files<span class="p">|</span>directories/to/search</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep <span class="o">[</span>options<span class="o">]</span> <span class="s2">&#34;pattern&#34;</span> /files<span class="p">|</span>directories/to/search</span></span></code></pre></div>
 <p>These are some useful and common options for the grep command:</p>
 <ul>
 <li>(-w) Only show matches containing whole words.</li>
@@ -165,13 +165,13 @@
 <p>Lets take a look at a few examples to find files containing a string pattern with grep.</p>
 <h2 id="find-files-containing-a-string-pattern"><strong>Find Files Containing A String Pattern</strong></h2>
 <p>To find a string (linux is awesome) within all text (.txt) files in a given directory you can use the following command in terminal:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep <span class="s2">&#34;linux is awesome&#34;</span> /home/user/*.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep <span class="s2">&#34;linux is awesome&#34;</span> /home/user/*.txt</span></span></code></pre></div>
 <p>To search in subdirectories you can use the (-r) option:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep -r <span class="s2">&#34;linux is awesome&#34;</span> /home/user/*.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -r <span class="s2">&#34;linux is awesome&#34;</span> /home/user/*.txt</span></span></code></pre></div>
 <p>You can change the file extension to any type of text file you wish to search (.html, .md, .sh, or any other type).</p>
 <h2 id="find-files-with-case-insensitive-strings"><strong>Find Files With Case Insensitive Strings</strong></h2>
 <p>Use the (-i) option to find case insensitive strings:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep -i <span class="s2">&#34;LINUX is awesome&#34;</span> /home/user/*.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -i <span class="s2">&#34;LINUX is awesome&#34;</span> /home/user/*.txt</span></span></code></pre></div>
 <p>If you don&rsquo;t know if the string you&rsquo;re searching for is upper or lower case, then you will need to use this option.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -187,17 +187,17 @@
 
 <h2 id="find-files-with-specific-strings"><strong>Find Files With Specific Strings</strong></h2>
 <p>To find files containing a specific string use the (-rnw) options:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grep -rnw <span class="s2">&#34;linux&#34;</span> /home/user/*.txt</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -rnw <span class="s2">&#34;linux&#34;</span> /home/user/*.txt</span></span></code></pre></div>
 <h2 id="use-grep-in-a-shell-script"><strong>Use grep In A Shell Script</strong></h2>
 <p>grep is an excellent tool to use in shell scripts to automate complex searches.</p>
 <p>In this example we&rsquo;ll search for a string pattern and check if it repeats more than once in each file. If it repeats more than once, we&rsquo;ll print the file names.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">DIR</span><span class="o">=</span>/home/user
-
-<span class="k">for</span> i in <span class="s2">&#34;</span><span class="nv">$DIR</span><span class="s2">&#34;</span>/*.txt<span class="p">;</span> <span class="k">do</span>
-  <span class="k">if</span> <span class="o">[</span> <span class="k">$(</span>grep -ho <span class="s1">&#39;my-search-pattern&#39;</span> <span class="nv">$i</span> <span class="p">|</span> wc -l<span class="k">)</span> -gt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo</span> <span class="k">$(</span>basename <span class="nv">$i</span><span class="k">)</span>
-  <span class="k">fi</span>
-<span class="k">done</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">DIR</span><span class="o">=</span>/home/user
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> i in <span class="s2">&#34;</span><span class="nv">$DIR</span><span class="s2">&#34;</span>/*.txt<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[</span> <span class="k">$(</span>grep -ho <span class="s1">&#39;my-search-pattern&#39;</span> <span class="nv">$i</span> <span class="p">|</span> wc -l<span class="k">)</span> -gt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="k">$(</span>basename <span class="nv">$i</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
 <p>As you can see we are piping the grep command to wc which counts how many times the pattern repeats. Then we use the echo command to print the file names of the files that have the pattern repeat more than once.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>That was our brief look at the grep command to find files containing a text string pattern. You should now have a good understanding of how to use grep with some useful and common options.</p>
@@ -392,15 +392,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

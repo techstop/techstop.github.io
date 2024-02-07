@@ -151,23 +151,23 @@
 <p>Before we go any further, you need to know that there are two versions of the time command on your system. You&rsquo;ll have &ldquo;<strong>/usr/bin/time</strong>&rdquo; and the shell built-in time command. The shell built-in time has less options and not suitable for all use cases.</p>
 <p><strong>Timing the ping command:</strong></p>
 <p>Here we ping the Bing website just for demonstration.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">time</span> ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">time</span> ping bing.com</span></span></code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">PING bing.com (204.79.197.200) 56(84) bytes of data.
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=1 ttl=115 time=70.5 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=2 ttl=115 time=60.7 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=3 ttl=115 time=57.1 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=4 ttl=115 time=69.2 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=5 ttl=115 time=56.1 ms
-64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=6 ttl=115 time=76.5 ms
-
---- bing.com ping statistics ---
-6 packets transmitted, 6 received, 0% packet loss, time 5006ms
-rtt min/avg/max/mdev = 56.187/65.064/76.519/7.522 ms
-
-real	0m5.480s
-user	0m0.002s
-sys	0m0.002s</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PING bing.com (204.79.197.200) 56(84) bytes of data.
+</span></span><span class="line"><span class="cl">64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=1 ttl=115 time=70.5 ms
+</span></span><span class="line"><span class="cl">64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=2 ttl=115 time=60.7 ms
+</span></span><span class="line"><span class="cl">64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=3 ttl=115 time=57.1 ms
+</span></span><span class="line"><span class="cl">64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=4 ttl=115 time=69.2 ms
+</span></span><span class="line"><span class="cl">64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=5 ttl=115 time=56.1 ms
+</span></span><span class="line"><span class="cl">64 bytes from a-0001.a-msedge.net (204.79.197.200): icmp_seq=6 ttl=115 time=76.5 ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--- bing.com ping statistics ---
+</span></span><span class="line"><span class="cl">6 packets transmitted, 6 received, 0% packet loss, time 5006ms
+</span></span><span class="line"><span class="cl">rtt min/avg/max/mdev = 56.187/65.064/76.519/7.522 ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">real	0m5.480s
+</span></span><span class="line"><span class="cl">user	0m0.002s
+</span></span><span class="line"><span class="cl">sys	0m0.002s</span></span></code></pre></div>
 <p>The final three lines are your time results. In real time, the ping command took 5 seconds.</p>
 <ul>
 <li><strong>real:</strong> The wall clock time. This is the complete elapsed time it took this operation from beginning to end. This is the time most commonly used.</li>
@@ -188,67 +188,67 @@ sys	0m0.002s</code></pre></div>
 </script>
 
 <p>To use the &ldquo;-f&rdquo; switch we need to use &ldquo;/usr/bin/time&rdquo; instead of the shell built-in time.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ping bing.com</span></span></code></pre></div>
 <p><strong>Output:</strong></p>
 <p>As you can see, we now only get a normal clock output showing the operation took 5 seconds.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">PING bing.com (13.107.21.200) 56(84) bytes of data.
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=113 time=154 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=113 time=147 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=113 time=170 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=4 ttl=113 time=190 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=5 ttl=113 time=169 ms
-
---- bing.com ping statistics ---
-6 packets transmitted, 5 received, 16% packet loss, time 5006ms
-rtt min/avg/max/mdev = 147.314/166.390/190.495/14.935 ms
-0:05.11</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PING bing.com (13.107.21.200) 56(84) bytes of data.
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=113 time=154 ms
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=113 time=147 ms
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=113 time=170 ms
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=4 ttl=113 time=190 ms
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=5 ttl=113 time=169 ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--- bing.com ping statistics ---
+</span></span><span class="line"><span class="cl">6 packets transmitted, 5 received, 16% packet loss, time 5006ms
+</span></span><span class="line"><span class="cl">rtt min/avg/max/mdev = 147.314/166.390/190.495/14.935 ms
+</span></span><span class="line"><span class="cl">0:05.11</span></span></code></pre></div>
 <p><strong>Get a detailed output of the time command:</strong></p>
 <p>If you find that you need more detailed information for the time command output, you can use the &ldquo;-v&rdquo; switch as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -v ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/bin/time -v ping bing.com</span></span></code></pre></div>
 <p><strong>Output:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">PING bing.com (13.107.21.200) 56(84) bytes of data.
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=113 time=195 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=113 time=169 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=113 time=193 ms
-64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=6 ttl=113 time=235 ms
-
---- bing.com ping statistics ---
-7 packets transmitted, 4 received, 42% packet loss, time 6057ms
-rtt min/avg/max/mdev = 169.307/198.564/235.162/23.584 ms
-	Command being timed: &#34;ping bing.com&#34;
-	User time (seconds): 0.00
-	System time (seconds): 0.00
-	Percent of CPU this job got: 0%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.74
-	Average shared text size (kbytes): 0
-	Average unshared data size (kbytes): 0
-	Average stack size (kbytes): 0
-	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 2924
-	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 136
-	Voluntary context switches: 15
-	Involuntary context switches: 0
-	Swaps: 0
-	File system inputs: 0
-	File system outputs: 0
-	Socket messages sent: 0
-	Socket messages received: 0
-	Signals delivered: 0
-	Page size (bytes): 4096
-	Exit status: 0</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">PING bing.com (13.107.21.200) 56(84) bytes of data.
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=1 ttl=113 time=195 ms
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=2 ttl=113 time=169 ms
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=3 ttl=113 time=193 ms
+</span></span><span class="line"><span class="cl">64 bytes from 13.107.21.200 (13.107.21.200): icmp_seq=6 ttl=113 time=235 ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--- bing.com ping statistics ---
+</span></span><span class="line"><span class="cl">7 packets transmitted, 4 received, 42% packet loss, time 6057ms
+</span></span><span class="line"><span class="cl">rtt min/avg/max/mdev = 169.307/198.564/235.162/23.584 ms
+</span></span><span class="line"><span class="cl">	Command being timed: &#34;ping bing.com&#34;
+</span></span><span class="line"><span class="cl">	User time (seconds): 0.00
+</span></span><span class="line"><span class="cl">	System time (seconds): 0.00
+</span></span><span class="line"><span class="cl">	Percent of CPU this job got: 0%
+</span></span><span class="line"><span class="cl">	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.74
+</span></span><span class="line"><span class="cl">	Average shared text size (kbytes): 0
+</span></span><span class="line"><span class="cl">	Average unshared data size (kbytes): 0
+</span></span><span class="line"><span class="cl">	Average stack size (kbytes): 0
+</span></span><span class="line"><span class="cl">	Average total size (kbytes): 0
+</span></span><span class="line"><span class="cl">	Maximum resident set size (kbytes): 2924
+</span></span><span class="line"><span class="cl">	Average resident set size (kbytes): 0
+</span></span><span class="line"><span class="cl">	Major (requiring I/O) page faults: 0
+</span></span><span class="line"><span class="cl">	Minor (reclaiming a frame) page faults: 136
+</span></span><span class="line"><span class="cl">	Voluntary context switches: 15
+</span></span><span class="line"><span class="cl">	Involuntary context switches: 0
+</span></span><span class="line"><span class="cl">	Swaps: 0
+</span></span><span class="line"><span class="cl">	File system inputs: 0
+</span></span><span class="line"><span class="cl">	File system outputs: 0
+</span></span><span class="line"><span class="cl">	Socket messages sent: 0
+</span></span><span class="line"><span class="cl">	Socket messages received: 0
+</span></span><span class="line"><span class="cl">	Signals delivered: 0
+</span></span><span class="line"><span class="cl">	Page size (bytes): 4096
+</span></span><span class="line"><span class="cl">	Exit status: 0</span></span></code></pre></div>
 <p><strong>Time a bash script:</strong></p>
 <p>If you&rsquo;re running a bash script with plenty of commands and long operations, you can simply time the script as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ./script.sh</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/bin/time -f <span class="s2">&#34;%E&#34;</span> ./script.sh</span></span></code></pre></div>
 <p><strong>Redirect the time output to a file:</strong></p>
 <p>If you ever have the need to log the time into a file, you can use the &ldquo;-o&rdquo; switch and point to the file as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -o /path/to/file.txt ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/bin/time -o /path/to/file.txt ping bing.com</span></span></code></pre></div>
 <p>To append the time log to an already existing file, you can use the &ldquo;-a&rdquo; switch as follows:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/usr/bin/time -a /path/to/file.txt ping bing.com</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/bin/time -a /path/to/file.txt ping bing.com</span></span></code></pre></div>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>To time a command in linux is easy to use and quite useful. It&rsquo;s excellent for timing those long operations while you are away from your system. The time command has plenty more switches and options which you can view in your terminal by viewing the manual as follows&hellip;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">man time</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">man time</span></span></code></pre></div>
 <p>That will be all for this quick look at the time command.</p>
     <ul class="share-buttons">
     <li>Share this article:</li>
@@ -441,15 +441,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

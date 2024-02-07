@@ -150,18 +150,18 @@
 <p>A good example of using watch would be to monitor your cpu clock speeds. We will be using this as an example to demonstrate how to use watch.</p>
 <h2 id="watch-command-usage"><strong>watch Command Usage</strong></h2>
 <p>Here&rsquo;s what the syntax for the watch command looks like:
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">watch <span class="o">[</span>options<span class="o">]</span> command</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">watch <span class="o">[</span>options<span class="o">]</span> command</span></span></code></pre></div></p>
 <p>Lets take a look at how the watch command works by using it to monitor the cpu clock speeds.</p>
 <p>Here we use the grep command to filter the output to only show the cpu clock speed &ldquo;MHz&rdquo;. watch is repeatedly running the grep command to display the cpu clock speeds in real time.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">watch grep <span class="s2">&#34;MHz&#34;</span> /proc/cpuinfo</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">watch grep <span class="s2">&#34;MHz&#34;</span> /proc/cpuinfo</span></span></code></pre></div></p>
 <p>To exit the watch command use the keyboard shortcut &ldquo;ctrl+c&rdquo;.</p>
 <p><strong>Terminal output:</strong>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">Every 2.0s: grep MHz /proc/cpuinfo                 arch: Wed Mar 23 19:26:58 2022
-
-cpu MHz         : 1397.028
-cpu MHz         : 1400.000
-cpu MHz         : 1400.000
-cpu MHz         : 2700.000</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Every 2.0s: grep MHz /proc/cpuinfo                 arch: Wed Mar 23 19:26:58 2022
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cpu MHz         : 1397.028
+</span></span><span class="line"><span class="cl">cpu MHz         : 1400.000
+</span></span><span class="line"><span class="cl">cpu MHz         : 1400.000
+</span></span><span class="line"><span class="cl">cpu MHz         : 2700.000</span></span></code></pre></div></p>
 <p>As you can see from the output above, the top left displays a 2 second interval followed by the command being repeated at that interval. By default, watch repeats a command every 2 seconds. At the top right, the host name, date and time are displayed.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8645513020646755"
      crossorigin="anonymous"></script>
@@ -183,12 +183,12 @@ cpu MHz         : 2700.000</code></pre></div></p>
 <li>&ldquo;-g&rdquo; Exit when the output of command changes.</li>
 </ul>
 <p>We will now run the same command as before, but with some of the options illustrated above.
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">watch -n <span class="m">1</span> -p -t grep <span class="s2">&#34;MHz&#34;</span> /proc/cpuinfo</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">watch -n <span class="m">1</span> -p -t grep <span class="s2">&#34;MHz&#34;</span> /proc/cpuinfo</span></span></code></pre></div></p>
 <p><strong>Terminal output:</strong>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">cpu MHz         : 1400.000
-cpu MHz         : 1800.000
-cpu MHz         : 1400.000
-cpu MHz         : 1400.000</code></pre></div></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">cpu MHz         : 1400.000
+</span></span><span class="line"><span class="cl">cpu MHz         : 1800.000
+</span></span><span class="line"><span class="cl">cpu MHz         : 1400.000
+</span></span><span class="line"><span class="cl">cpu MHz         : 1400.000</span></span></code></pre></div></p>
 <p>Looking at the output above, we are now only viewing a clean output of the cpu clock speeds without all the extra information. We also set the interval to repeat every &ldquo;1&rdquo; second.</p>
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>This concludes our quick look at the linux watch command. You should now have a good understanding of how to make use of watch. For more watch command options you can view the manual by entering &ldquo;<strong>man watch</strong>&rdquo; in your terminal.</p>
@@ -383,15 +383,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>

@@ -152,7 +152,7 @@
 <h2 id="remove-unused-kernels"><strong>Remove Unused Kernels</strong></h2>
 <p>It&rsquo;s a good idea to view the list of installed kernels on your system to be sure that there are old kernels to remove.</p>
 <p>You can list all the kernels on your system with the following dpkg command.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dpkg --list <span class="p">|</span> egrep -i <span class="s1">&#39;linux-image|linux-headers&#39;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dpkg --list <span class="p">|</span> egrep -i <span class="s1">&#39;linux-image|linux-headers&#39;</span></span></span></code></pre></div>
 <p>Your output should list all the kernels installed on your system like this:</p>
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/lh0.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="550px">
@@ -189,7 +189,7 @@
 </script>
 
 <p>To remove the unused kernels you can run the following command:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt --purge autoremove</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt --purge autoremove</span></span></code></pre></div>
 <p>Here&rsquo;s what the output of apt looks like:</p>
 <div class="myImgContainer">
 <img class="myImg" src="https://techstop.github.io/images/linux/lh1.png" alt="Remove Unused Kernels Ubuntu 18.04" title="Remove Unused Kernels Ubuntu 18.04"  width="500px">
@@ -419,15 +419,15 @@ if (currentTheme) {
 <footer class="main-footer">
   <div class="container clearfix">
     <a class="icon-rss" href="https://techstop.github.io/post/index.xml" title="RSS" target="_blank"></a>
-    <div class="font-row-one">&copy; 2019 &#8208; 2023 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
+    <div class="font-row-one">&copy; 2019 &#8208; 2024 &middot; <a href="https://techstop.github.io/" title="techStop">techStop</a></div>
     <div><a href="https://techstop.github.io/about/" class="font-row-two">About</a> &middot; <a href="https://techstop.github.io/sitemap.xml" class="font-row-two">Sitemap</a> &middot; <a href="https://techstop.github.io/privacy-policy/" class="font-row-two">Privacy Policy</a></div>
   </div>
-  <script src="https://techstop.github.io/bundle.min.55437212d8cad12a151d7e1d1e4ee22bd8ac91361f95a90fbed1bde1e54fcbd1.js"></script>
+  <script src="https://techstop.github.io/bundle.min.3ea8adc71951d193aa52b3713327b79a51f8d7c7e0cb72655a5af14196354bc8.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>window.jQuery || document.write('<script src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
+  <script>window.jQuery || document.write('\x3Cscript src="https:\/\/techstop.github.io\/$jquery"><\/script>')</script>
   <script src="https://techstop.github.io/js/plugins.js"></script>
 </footer>
 </body>
