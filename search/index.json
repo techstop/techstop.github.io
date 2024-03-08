@@ -1,4 +1,6 @@
 [{
+  "ref": "https://techstop.github.io/KDE-Plasma-6/","title": "KDE Plasma 6","cats": "linux","tags": "linux"},
+{
   "ref": "https://techstop.github.io/backup-restore-linux-timeshift/","title": "Backup and Restore Linux With Timeshift","cats": "linux","tags": "tutorials, linux"},
 {
   "ref": "https://techstop.github.io/failed-to-start-pkgfile-database-update/","title": "Failed to Start pkgfile Database Update","cats": "linux","tags": "tutorials, linux"},

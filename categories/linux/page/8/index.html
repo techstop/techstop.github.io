@@ -111,6 +111,91 @@
     
         <article>
   
+  <h1><a href="https://techstop.github.io/open-file-as-root/" title="Open File as Root">Open File as Root</a></h1>
+
+<div class="post-info">Published: May 8, 2018 &middot; Updated: Mar 26, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>
+
+  <p><p><div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/open-as-root/open-file-as-root-0.png" alt="Open File as Root" title="Open File as Root"  width="300px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+<div class="myImgContainer">
+<img class="myImg" src="https://techstop.github.io/images/open-as-root/open-file-as-root-1.png" alt="Open File as Root" title="Open File as Root"  width="300px">
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+	
+	var modal = document.getElementById('myModal');
+	var i;
+	
+	var img = document.getElementsByClassName('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	for(i = 0; i < img.length; i++) {
+		img[i].onclick = function() {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+	}
+	
+	var span = document.getElementsByClassName("close")[0];
+
+	
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+</p>
+<p>If you need to open a file as root in linux you should never use sudo. Sudo can cause files and folders in your home directory to be owned by root. The key is to open graphical applications with root privileges while maintaining user ownership. The proper way was to use gksu or gksudo which are the graphical variants of sudo. These prevented files and folders from being owned by root. Unfortunately gksu and gksudo are no longer available for most linux distributions.</p></p>
+  
+    Tags:
+    
+      <a href="https://techstop.github.io/tags/linux">linux</a>, 
+    
+      <a href="https://techstop.github.io/tags/tutorials">tutorials</a>, 
+    
+      <a href="https://techstop.github.io/tags/command-line">command line</a>
+    
+  
+  <p><a class="read-more" href="https://techstop.github.io/open-file-as-root/" title="Open File as Root">Read more &raquo;</a></p>
+  <hr>
+</article>
+
+    
+        <article>
+  
   <h1><a href="https://techstop.github.io/install-adb-on-linux/" title="Install ADB On Linux">Install ADB On Linux</a></h1>
 
 <div class="post-info">Published: May 7, 2018 &middot; Updated: Mar 26, 2022 &middot; By: <a href="https://techstop.github.io/about/" title="Antonio T.">Antonio T.</a></div>

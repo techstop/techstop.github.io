@@ -6,8 +6,15 @@
     <description>Recent content in Linux on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://techstop.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KDE Plasma 6</title>
+      <link>https://techstop.github.io/KDE-Plasma-6/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://techstop.github.io/KDE-Plasma-6/</guid>
+      <description>&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/kde-plasma-6-001.png&#34; alt=&#34;KDE-Plasma-6&#34; title=&#34;KDE-Plasma-6&#34;  width=&#34;800px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;kde-plasma-6-a-major-update-for-your-linux-desktop&#34;&gt;&lt;strong&gt;KDE Plasma 6: A Major Update for Your Linux Desktop&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;KDE Plasma 6, the latest iteration of the popular Linux desktop environment, arrived on February 28th, 2024, and it&amp;rsquo;s packed with exciting new features, improvements, and a fresh coat of paint. Whether you&amp;rsquo;re a seasoned KDE user or just dipping your toes into the world of Linux desktops, Plasma 6 offers something for everyone.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Backup and Restore Linux With Timeshift</title>
       <link>https://techstop.github.io/backup-restore-linux-timeshift/</link>
