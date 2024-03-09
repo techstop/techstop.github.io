@@ -6,8 +6,15 @@
     <description>Recent content in Linux on techStop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://techstop.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Top 10 Linux Distributions</title>
+      <link>https://techstop.github.io/top-10-linux-distributions/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://techstop.github.io/top-10-linux-distributions/</guid>
+      <description>&lt;p&gt;Here are some of the top 10 Linux distributions you can consider. These are well known distros that are well suited for users of all levels of experience. Whether you need something beginner friendly or a distro for power users, this list got you covered.&lt;/p&gt;&#xA;&lt;p&gt;This list is in no particular order.&lt;/p&gt;&#xA;&lt;h2 id=&#34;manjaro&#34;&gt;&lt;strong&gt;Manjaro:&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;div class=&#34;myImgContainer&#34;&gt;&#xD;&#xA;&lt;img class=&#34;myImg&#34; src=&#34;https://techstop.github.io/images/linux/Manjaro.png&#34; alt=&#34;Manjaro&#34; title=&#34;Manjaro&#34;  width=&#34;600px&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;&#xD;&#xA;  &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;&#xD;&#xA;  &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;&#xD;&#xA;  &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var modal = document.getElementById(&#39;myModal&#39;);&#xD;&#xA;&#x9;var i;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var img = document.getElementsByClassName(&#39;myImg&#39;);&#xD;&#xA;&#x9;var modalImg = document.getElementById(&#34;img01&#34;);&#xD;&#xA;&#x9;var captionText = document.getElementById(&#34;caption&#34;);&#xD;&#xA;&#x9;for(i = 0; i &lt; img.length; i++) {&#xD;&#xA;&#x9;&#x9;img[i].onclick = function() {&#xD;&#xA;&#x9;&#x9;&#x9;modal.style.display = &#34;block&#34;;&#xD;&#xA;&#x9;&#x9;&#x9;modalImg.src = this.src;&#xD;&#xA;&#x9;&#x9;&#x9;captionText.innerHTML = this.alt;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;var span = document.getElementsByClassName(&#34;close&#34;)[0];&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;span.onclick = function() { &#xD;&#xA;&#x9;&#x9;modal.style.display = &#34;none&#34;;&#xD;&#xA;&#x9;}&#xD;&#xA;&lt;/script&gt;</description>
+    </item>
     <item>
       <title>KDE Plasma 6</title>
       <link>https://techstop.github.io/KDE-Plasma-6/</link>
